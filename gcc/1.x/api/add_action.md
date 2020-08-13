@@ -16,8 +16,6 @@ Add an action/operation to the list table. The way to do that its simple:
 4. Add a CSS class. Remember that at the theme of datatables a CSS class includes images , for example :  `ui-icon-image`, `ui-icon-plus`, e.t.c.
 5. You can even add your own url callback. If you don't want the default transformation of the url, you can use this paremeter to add your own algorithm of the url transformation.
 
-> Quick Tip
->
 > One of the most common usages of add_action method is the combination of [Image CRUD](/image-crud).
 >
 > Image CRUD is a Photo Gallery generator and is created by John Skoumbourdis by having in mind the simplicity of usage of Grocery CRUD.
