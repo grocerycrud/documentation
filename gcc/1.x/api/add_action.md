@@ -10,13 +10,13 @@ next: add_fields
     
 Add an action/operation to the list table. The way to do that its simple:
 
-- Add the label of your subject, for example "Photo Gallery".
-- Add an image url . Notice that in the flexigrid theme is a required field.
-- Add your custom url. This url will be connected with the `site_url` function and the primary key. For example if you add `'my_controller/photo/'` then it will transform to `site_url('my_controller/photo/'.$primary_key_for_each_row)`
-- Add a CSS class. Remember that at the theme of datatables a CSS class includes images , for example :  `ui-icon-image`, `ui-icon-plus`, e.t.c.
-- You can even add your own url callback. If you don't want the default transformation of the url, you can use this paremeter to add your own algorithm of the url transformation.
+1. Add the label of your subject, for example "Photo Gallery".
+2. Add an image url . Notice that in the flexigrid theme is a required field.
+3. Add your custom url. This url will be connected with the `site_url` function and the primary key. For example if you add `'my_controller/photo/'` then it will transform to `site_url('my_controller/photo/'.$primary_key_for_each_row)`
+4. Add a CSS class. Remember that at the theme of datatables a CSS class includes images , for example :  `ui-icon-image`, `ui-icon-plus`, e.t.c.
+5. You can even add your own url callback. If you don't want the default transformation of the url, you can use this paremeter to add your own algorithm of the url transformation.
 
-> Quiick Tip
+> Quick Tip
 >
 > One of the most common usages of add_action method is the combination of [Image CRUD](/image-crud).
 >
