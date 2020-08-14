@@ -55,7 +55,7 @@ Below you can see a full working example with 3 different types of usage for dat
      
         $crud->add_action('More', '', 'demo/action_more','ui-icon-plus');
         $crud->add_action('Photos', '', '','ui-icon-image',array($this,'just_a_test'));
-        $crud->add_action('Smileys', 'http://www.grocerycrud.com/assets/uploads/general/smiley.png', 'demo/action_smiley');
+        $crud->add_action('Smileys', '/assets/uploads/general/smiley.png', 'demo/action_smiley');
      
         $output = $crud->render();
      
