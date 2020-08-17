@@ -1,7 +1,7 @@
 ---
 id: add-fields
 title: addFields
-permalink: docs/add-fields
+permalink: docs/gcc/2.x/add-fields
 next: clone-fields
 ---
 
