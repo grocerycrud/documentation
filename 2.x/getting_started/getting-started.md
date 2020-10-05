@@ -15,3 +15,5 @@ The main unique feature of Grocery CRUD is that the CSS and the JavaScript used 
  
 
 [Why Grocery CRUD?](why-grocery-crud)
+
+[Installation Guide](docs/installation)
