@@ -2,8 +2,8 @@
 id: why-grocery-crud
 title: Why grocery CRUD?
 permalink: why-grocery-crud
-previous: getting-started
-next: installation-guide
+previous: installation
+next: 
 ---
 
 # Why grocery CRUD?

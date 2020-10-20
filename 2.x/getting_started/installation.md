@@ -2,7 +2,8 @@
 id: installation-guide
 title: Installation guide
 permalink: docs/gcc/2.x/getting-started/installation-guide
-next: default-routes
+previous: getting-started
+next: why-grocery-crud
 ---
 
 # Installation guide

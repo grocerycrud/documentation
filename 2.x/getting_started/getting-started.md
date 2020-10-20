@@ -3,7 +3,7 @@ id: getting-started
 title: Getting Started
 permalink: docs
 previous: 
-next: installation-guide
+next: installation
 ---
 
 # Getting started
