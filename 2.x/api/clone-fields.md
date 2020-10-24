@@ -3,7 +3,7 @@ id: clone-fields
 title: cloneFields
 permalink: docs/gcc/2.x/clone-fields
 previous: add-fields
-next: 
+next: replace-state
 ---
 
 # cloneFields
