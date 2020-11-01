@@ -8,11 +8,11 @@ next: callback-add-form
 
 # callbackAddField
 
-<pre><code class="php">callbackAddField(string $fieldName, callable $callback)</code></pre>
+<pre><code class="language-php">callbackAddField(string $fieldName, callable $callback)</code></pre>
 Create a custom field with a callback for add form. As this is add form, there is not any parameters added to the callback. You can return any custom HTML you wish. 
 
 ## Full Example
-<pre><code class="php">$crud->callbackAddField('contact_last_name', function ($fieldType, $fieldName) {
+<pre><code class="language-php">$crud->callbackAddField('contact_last_name', function ($fieldType, $fieldName) {
     /** $fieldType will look like this:
      GroceryCrud\Core\Model\ModelFieldType Object
     (
@@ -34,7 +34,7 @@ Create a custom field with a callback for add form. As this is add form, there i
 
 Have in mind that from PHP 5.4 and later there is an extra functionality with keywork <code>use</code>, so that means that you can pass any extra parameters at the callback from outside the callback if you wish it. For example:
 
-<pre><code class="php">
+<pre><code class="language-php">
 $username = 'john';
 $crud->callbackAddField('contact_telephone_number', function () use ($username) {
      // You have access now at the extra custom variable $username
@@ -43,7 +43,7 @@ $crud->callbackAddField('contact_telephone_number', function () use ($username) 
 
 <strong>Notice 1:</strong> Grocery CRUD Enterprise is all about performance and hence we are caching at the first call the callback add field. That means, that you can't change the callaback add field without a refresh. An example in order to understand what we mean is if you use the below callback:
 
-<pre><code class="php">
+<pre><code class="language-php">
 $crud->callbackAddField('contact_telephone_number', function () {
     // Warning: Do NOT use this code
     return time();

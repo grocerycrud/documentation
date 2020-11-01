@@ -53,27 +53,27 @@ By the end of the installation, your folder structure should look similar to thi
 
 The app/Controllers/Examples.php will look like this:
 
-	<?php namespace App\Controllers;
+<pre><code class="language-php">&lt;?php namespace App\Controllers;
 
-	use App\Libraries\GroceryCrud;
+use App\Libraries\GroceryCrud;
 
-	class Examples extends BaseController
-	{
-        public function customers_management()
-	    {
-	        $crud = new GroceryCrud();
+class Examples extends BaseController
+{
+    public function customers_management()
+    {
+        $crud = new GroceryCrud();
 
-            $crud->setTable('customers');
+        $crud->setTable('customers');
 
-            $output = $crud->render();
+        $output = $crud->render();
 
-            return $this->_exampleOutput($output);
-	    }
+        return $this->_exampleOutput($output);
+    }
 
-	    private function _exampleOutput($output = null) {
-	        return view('example', (array)$output);
-	    }
-	}
+    private function _exampleOutput($output = null) {
+        return view('example', (array)$output);
+    }
+}</code></pre>
 
 The only required configurations is to add your database credentials into a .env file  if you haven't already done that.
 
@@ -111,33 +111,33 @@ Below you see an example of a print_r of a variable `$output` :
     
 The view at `app/Views/example.php` is a simple Codeigniter view file and includes the below code:
 
-	<!DOCTYPE html>
-	<html>
-	<head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<?php 
-	foreach($css_files as $file): ?>
-		<link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
-	<?php endforeach; ?>
-	</head>
-	<body>
-		<div>
-		    <a href='<?php echo site_url('examples/customers_management')?>'>Customers</a> |
-		    <a href='<?php echo site_url('examples/orders_management')?>'>Orders</a> |
-		    <a href='<?php echo site_url('examples/products_management')?>'>Products</a> |
-		    <a href='<?php echo site_url('examples/offices_management')?>'>Offices</a> | 
-		    <a href='<?php echo site_url('examples/employees_management')?>'>Employees</a> |		 
-		    <a href='<?php echo site_url('examples/film_management')?>'>Films</a>
-		</div>
-		<div style='height:20px;'></div>  
-	    <div style="padding: 10px">
-			<?php echo $output; ?>
-	    </div>
-	    <?php foreach($js_files as $file): ?>
-	        <script src="<?php echo $file; ?>"></script>
-	    <?php endforeach; ?>
-	</body>
-	</html>
+<pre><code class="language-php">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;?php 
+foreach($css_files as $file): ?&gt;
+	&lt;link type="text/css" rel="stylesheet" href="&lt;?php echo $file; ?&gt;" /&gt;
+&lt;?php endforeach; ?&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div&gt;
+	    &lt;a href='&lt;?php echo site_url('examples/customers_management')?&gt;'&gt;Customers&lt;/a&gt; |
+	    &lt;a href='&lt;?php echo site_url('examples/orders_management')?&gt;'&gt;Orders&lt;/a&gt; |
+	    &lt;a href='&lt;?php echo site_url('examples/products_management')?&gt;'&gt;Products&lt;/a&gt; |
+	    &lt;a href='&lt;?php echo site_url('examples/offices_management')?&gt;'&gt;Offices&lt;/a&gt; | 
+	    &lt;a href='&lt;?php echo site_url('examples/employees_management')?&gt;'&gt;Employees&lt;/a&gt; |		 
+	    &lt;a href='&lt;?php echo site_url('examples/film_management')?&gt;'&gt;Films&lt;/a&gt;
+	&lt;/div&gt;
+	&lt;div style='height:20px;'&gt;&lt;/div&gt;  
+    &lt;div style="padding: 10px"&gt;
+		&lt;?php echo $output; ?&gt;
+    &lt;/div&gt;
+    &lt;?php foreach($js_files as $file): ?&gt;
+        &lt;script src="&lt;?php echo $file; ?&gt;"&gt;&lt;/script&gt;
+    &lt;?php endforeach; ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 
     

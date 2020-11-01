@@ -8,12 +8,12 @@ next:
 
 # replaceState
 
-<pre><code class="php">replaceState(string $stateName, StateInterface $newState)</code></pre>
+<pre><code class="language-php">replaceState(string $stateName, StateInterface $newState)</code></pre>
 Replace the default state by the custom object state that we are adding as an input.
 
 ## Full Example
 
-<pre><code class="php">$exportState = new MyCustomExportState($crud);
+<pre><code class="language-php">$exportState = new MyCustomExportState($crud);
 $crud->replaceState('Export', $exportState);</code></pre>
 
 A most common use of this state is on export, where we would like to have a different export way for your data. The below example still uses the queries from Zend Db calls but you can literally use your own libraries even for database calls (e.g. when we have more than 10.000 rows).
@@ -24,7 +24,7 @@ A most common use of this state is on export, where we would like to have a diff
 
 <strong>Step 2.</strong> Create a custom State that will implement the <code>GroceryCrud\Core\State\StateInterface</code> (required). We have a complete example by using the php_xlswriter library below:
 
-    <?php
+    &lt;?php
     namespace MyCustomStates;
 
     use GroceryCrud\Core\GroceryCrud as GCrud;
@@ -118,7 +118,7 @@ A most common use of this state is on export, where we would like to have a diff
 
 <strong>Step 3.</strong> Include the PHP library into your CRUD by adding at the beginning of your file (e.g. Controller if we are talking about Codeigniter):
 
-<pre><code class="php">// states is the folder that I have all my custom states
+<pre><code class="language-php">// states is the folder that I have all my custom states
 include('states/ExportState.php');
 
 // It is better to use namespaces so it will not be conflicted with other libraries
@@ -127,7 +127,7 @@ use MyCustomStates\ExportState;</code></pre>
 <strong>Step 4.</strong> Lastly, let's replace our default ExportState with our custom one. Please have in mind that the library is completely replacing the default one so if you are going to use this you will also need to make sure that you have validated the input data:
 
 
-<pre><code class="php">// ExportState is from MyCustomStates\ExportState
+<pre><code class="language-php">// ExportState is from MyCustomStates\ExportState
 $exportState = new ExportState($crud);
 $crud->replaceState('Export', $exportState);</code></pre>
 

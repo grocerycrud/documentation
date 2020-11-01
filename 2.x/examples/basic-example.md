@@ -9,7 +9,7 @@ next:
 #Basic Example
 
 A very simple example to start with is the below 4 lines of code. These are the most common functions that you will use:
-<pre><code class="php">$crud->setTable('customers');
+<pre><code class="language-php">$crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
 $crud->columns(['customerName','phone','addressLine1','creditLimit']);
 
