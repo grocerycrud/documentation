@@ -3,7 +3,7 @@ id: render
 title: render
 permalink: docs/render
 previous: basic-example
-next: set-subject
+next: set-table
 ---
 
 # render
