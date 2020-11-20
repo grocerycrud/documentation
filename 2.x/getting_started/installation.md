@@ -1,5 +1,5 @@
 ---
-id: installation-guide
+id: installation
 title: Installation guide
 permalink: docs/gcc/2.x/getting-started/installation-guide
 previous: getting-started

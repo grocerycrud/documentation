@@ -22,7 +22,7 @@ $crud->columns(['customerName','phone','addressLine1','creditLimit']);
 $output = $crud->render();
 </code></pre>
 
-You can get the below output (without any JavaScript knowledge):
+You can get the below output:
 
 `embed:demo_customers`
 
