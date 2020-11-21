@@ -29,4 +29,4 @@ $crud->displayAs('officeCode','City');
 
 $output = $crud->render();</code></pre>
 
-[demo]demo_set_relation[/demo]
+`embed:demo_set_database_relation`
