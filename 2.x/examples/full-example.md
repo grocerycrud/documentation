@@ -2,11 +2,11 @@
 id: full-example
 title: Full Example
 permalink: docs/full-example
-previous: 
-next: 
+previous: basic-example
+next: set-validation-rules
 ---
 
-#Full Example
+# Full Example
 
 Below you can see a full example with the most popular functions that are in use.
 
@@ -30,4 +30,4 @@ As you will also notice, we are not repeating the <code>$crud</code> code all th
 
 The below grid is the result of the above code:
 
-[demo]demo_full_example[/demo]
+`embed:demo_full_example`
