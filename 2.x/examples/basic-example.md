@@ -24,6 +24,8 @@ More specifically let's describe what the functions are doing:
 	<li>render: The render function is the function that all the magic is happening. Without this function, nothing works really. The render method is recognising automatically it's state through the URL and the parameters of the request.</li>
 </ol>
 
+## Basic Example
+
 Let's see what the above code will give us as a result:
 
 `embed:demo_customers`
