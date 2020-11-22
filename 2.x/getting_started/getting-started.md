@@ -30,14 +30,14 @@ Below you can find pretty much everything you need in order to get started with 
 
 ## Installation
  
-[Installation Guide](installation)
+[Installation Guide](docs/installation)
 
-[Why Grocery CRUD?](why-grocery-crud)
+[Why Grocery CRUD?](docs/why-grocery-crud)
 
 ## Examples
 
-- [Basic Example](basic-example)
-- [Full Example](full-example)
+- [Basic Example](docs/basic-example)
+- [Full Example](docs/full-example)
 
 ## API and function list
 
