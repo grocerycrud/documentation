@@ -22,7 +22,7 @@ You can find more about setting a relation from the documentation of <a href="ht
 Now as you probably mentioned, we didn't add any primary key of the related table and this is because Grocery CRUD is doing it automatically for you. If you need to add a different primary key you should use the <a href="/enterprise/api-and-function-list/setPrimaryKey">setPrimaryKey</a> function as well. 
 
 You can see a full working example below:
-<pre><code class="php">$crud->setTable('employees');
+<pre><code class="language-php">$crud->setTable('employees');
 $crud->setSubject('Employee', 'Employees');
 $crud->setRelation('officeCode','offices','city');
 $crud->displayAs('officeCode','City');

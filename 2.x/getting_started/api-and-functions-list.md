@@ -2,8 +2,8 @@
 id: api-and-functions-list
 title: API and Functions list
 permalink: docs/api-and-functions-list
-previous: installation
-next:
+previous: why-grocery-crud
+next: basic-example
 ---
 
 # API and Functions list

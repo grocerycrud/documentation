@@ -11,7 +11,7 @@ next: set-database-relation
 A common usage of a CRUD is to use validation rules. For that reason Grocery CRUD Enterprise is using validitron for validation. For more you can read the full documentation at: https://www.grocerycrud.com/enterprise/api-and-function-list/setRule
 
 A full example with validations can be found below:
-<pre><code class="php">$crud->setTable('products');
+<pre><code class="language-php">$crud->setTable('products');
 $crud->setSubject('Product', 'Products');
 $crud->columns(['productName', 'buyPrice', 'quantityInStock']);
 
