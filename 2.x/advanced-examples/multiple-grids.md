@@ -153,7 +153,9 @@ if ($output-&gt;isJSONResponse) {
     throw new \Exception('Wrong data');
 }</code></pre>
 All the above example can of course be written with a much smarter and optimised way, especially when you are using multiple grids all the time and you also hate copy-pasting the same code again and again (I do!)
-<h2>Working Example</h2>
+
+## Working Example
+
 So let's have a real example at this page. As you've already have guessed this website is using Codeigniter framework. And hence we have a simpler code to have multiple grids in one page. The code is as follows:
 <pre><code class="language-php">protected function _getGroceryCrudEnterprise() {
     $db = include('path/to/database.php');

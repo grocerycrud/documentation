@@ -12,6 +12,8 @@ In case you would like to have the latest theme for bootstrap version 4 then you
 
 <pre><code class="language-php">$crud->setSkin('bootstrap-v3');</code></pre>
 
+## Example
+
 Below you can find a full working example with bootstrap version 3 theme:
 
 <pre><code class="language-php">

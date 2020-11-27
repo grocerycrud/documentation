@@ -18,7 +18,7 @@ By using custom models we can have the below benefits:
 </ol>
 With the above benefits in mind, let's see first of all how we can create a custom model. All the documentation for custom model, can also be found here: <a href="https://www.grocerycrud.com/enterprise/api-and-function-list/setModel">set Model documentation</a>
 
-<h2>A full example in Codeigniter 3 Framework</h2>
+## A full example in Codeigniter 3 Framework
 
 The below example is with Codeigniter framework but of course as different frameworks has different queries, you can use your own one. So first of all we are creating a file with name: CustomersModel.php. We did create the code based on <a href="https://gist.github.com/scoumbourdis/2b75b1910b343ea00ce1fb310fffe02c" target="_blank">this generic model</a> that you can copy in order to start with.
 
