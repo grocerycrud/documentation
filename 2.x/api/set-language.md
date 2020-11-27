@@ -50,6 +50,8 @@ The functionality also known as Locale or i18n (shortcut of Internationalization
 <li>pt-PT.Portuguese</li>
 </ol>
 
+## Example
+
 A more specific example can be found below:
 
 <pre><code class="language-php">$crud->setTable('customers');

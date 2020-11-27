@@ -29,7 +29,7 @@ The subject plural is not required so you can also have something like this:
 
 However it is highly recommended to add the plural of your subject as it may be a good indicator in some cases for your end-user.
 
-## Full Example
+## Example
 
 <pre><code class="language-php">$crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
@@ -39,4 +39,4 @@ $output = $crud->render();</code></pre>
 
 with a result:
 
-[demo]demo_customers[/demo]
+`embed:demo_customers`

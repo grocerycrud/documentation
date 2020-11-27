@@ -16,7 +16,9 @@ The usage is simple. You have to provide the database table name that you will u
 
 <pre><code class="language-php">$crud->setTable('customers');</code></pre>
 
-So a more complete example is that with the code:
+## Example
+
+You can find a complete working example with the below code:
 
 <pre><code class="language-php">$crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
@@ -24,6 +26,6 @@ $crud->columns(['customerName','phone','addressLine1','creditLimit']);
 
 $output = $crud->render();</code></pre>
 
-You will produce the following working code:
+The result of the above code would be:
 
-[demo]demo_customers[/demo]
+`embed:demo_customers`
