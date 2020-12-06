@@ -8,3 +8,35 @@ next: callback-before-delete
 
 # callbackAfterUpload
 
+
+<pre><code class="php">callbackAfterUpload(callable $callback)</code></pre>
+The callback that will be triggered right after the upload.
+
+For example the below code will show us an error at the page (so we can dump the data after the upload):
+<pre><code class="php">$crud->callbackAfterUpload(function ($test1) {
+    var_dump($test1);
+
+    return false;
+});</code></pre>
+
+<pre><code>object(stdClass)[91]
+  public 'filename' => string 'my-image.png',
+  public 'filePath' => string '/Uploads/my-image.png',
+  public 'fieldName' => string 'profile_thumbnail' // &lt;-- Available at version 2.4.0 or higher</code></pre>
+
+A very common usage of the callbackAfterUpload in order to resize the image right after the upload. For example:
+<pre><code class="php">
+// Add this at the beginning of your file. 
+// For more instructions of how to install it with composer
+// go to: https://github.com/eventviva/php-image-resize
+use Eventviva\ImageResize;
+...
+$crud->callbackAfterUpload(function ($data = null) {
+   $fullPath = '/path/to/upload/folder/' . $data->filename;   
+
+   $image = new ImageResize($fullPath);
+   $image->resizeToBestFit(500, 300);
+   $image->save($fullPath);
+
+    return $data;
+});</code></pre>
