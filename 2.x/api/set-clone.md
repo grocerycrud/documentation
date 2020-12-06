@@ -14,7 +14,7 @@ Enabling the clone functionality. Once this function is used you will see a <cod
 
 You can see a full working example below to understand how it works:
 
-<pre><code class="php">$crud->setSubject('Customer', 'Customers');
+<pre><code class="language-php">$crud->setSubject('Customer', 'Customers');
 $crud->setTable('customers');
 $crud->columns(['customerName', 'contactLastName', 'phone', 'city', 'country']);
 $crud->displayAs('customerName', 'Name');

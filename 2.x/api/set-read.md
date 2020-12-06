@@ -9,14 +9,14 @@ next: set-relation
 # setRead
 
 
-<pre><code class="php">setRead(void)</code></pre>
+<pre><code class="language-php">setRead(void)</code></pre>
 The view of the form (read only) is false by default. In order to enable the "View" button at your grid you will need to use the function <code>setRead</code>. 
 
 The usage is simple:
-<pre><code class="php">$crud->setRead()</code></pre>
+<pre><code class="language-php">$crud->setRead()</code></pre>
 
 You can see a simple and fully working example below:
-<pre><code class="php">$crud->setTable('customers');
+<pre><code class="language-php">$crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
 $crud->columns(['customerName','phone','addressLine1','creditLimit']);
 $crud->setRead();

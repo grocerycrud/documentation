@@ -7,13 +7,13 @@ next: clone-fields
 ---
 
 # addFields
-<pre><code class="php">addFields(array $addFields)</code></pre>
+<pre><code class="language-php">addFields(array $addFields)</code></pre>
 The fields that will be visible to the end user for add/insert form. For example:
 
-<pre><code class="php">$crud->addFields(['first_name', 'last_name', 'fullname', 'address'])</code></pre>
+<pre><code class="language-php">$crud->addFields(['first_name', 'last_name', 'fullname', 'address'])</code></pre>
 
 You can see a full working example below:
-<pre><code class="php">$crud->setTable('customers');
+<pre><code class="language-php">$crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
 $crud->addFields(['customerName','phone','addressLine1','creditLimit']);
 

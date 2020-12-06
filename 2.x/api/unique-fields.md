@@ -9,14 +9,14 @@ next: unset-add
 # uniqueFields
 
 
-<pre><code class="php">uniqueFields(array $fields)</code></pre>
+<pre><code class="language-php">uniqueFields(array $fields)</code></pre>
 It is common to have some fields that are unique (that needs to make sure that the value is unique to the whole table) such as url, product number,... e.t.c. This is a very common validation, however it can be a bit more hard as there are lot of things to check. The <code>uniqueFields</code> was created to solve that complexity. The syntax is simple and you just need to add the fields that are unique. Nothing more than that! Once the add or edit form validates that the field is not unique, it will show a validation error that the user will need to solve.
 
 The syntax is simple:
-<pre><code class="php">$crud->uniqueFields(['url', 'reference_id'])</code></pre>
+<pre><code class="language-php">$crud->uniqueFields(['url', 'reference_id'])</code></pre>
 
 It is better to see it working to understand 100% the functionality. So at the below example:
-<pre><code class="php">$crud->setTable('customers');
+<pre><code class="language-php">$crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
 $crud->columns(['customerName','phone','addressLine1','creditLimit']);
 

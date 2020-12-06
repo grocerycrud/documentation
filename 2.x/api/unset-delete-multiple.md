@@ -9,7 +9,7 @@ next: unset-edit
 # unsetDeleteMultiple
 
 
-<pre><code class="php">unsetDelete(void)</code></pre>
+<pre><code class="language-php">unsetDelete(void)</code></pre>
 The method <code>unsetDeleteMultiple</code> is removing completely the multiple Delete operation for the end-user. This is mainly a function that it is used when you don't want the user to have the ability to batch remove too many records at once. Have in mind that the user <strong>can</strong> remove rows one by one (even all of them!) but by removing this functionality it is just that you don't make it as easy to do and at the same time prevent them to do it.
 
 More specifically:
@@ -20,11 +20,11 @@ More specifically:
 </ol>
 
 The syntax is simple. You can find an example below:
-<pre><code class="php">$crud->unsetDeleteMultiple();</code></pre>
+<pre><code class="language-php">$crud->unsetDeleteMultiple();</code></pre>
 
 You can also see a full working example:
 
-<pre><code class="php">$crud->setTable('customers');
+<pre><code class="language-php">$crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
 $crud->columns(['customerName','phone','addressLine1','creditLimit']);
 $crud->unsetDeleteMultiple();

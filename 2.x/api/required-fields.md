@@ -9,7 +9,7 @@ next: set-action-button
 # requiredFields
 
 
-<pre><code class="php">requiredFields(array $fields)</code></pre>
+<pre><code class="language-php">requiredFields(array $fields)</code></pre>
 A common validation for pretty much all the forms is the validation of required fields. Use the <code>requiredFields</code> method to add all the fields that are required. By adding a field as required you are getting:
 <ol>
 	<li>An asterisk at the left of the name so the user can understand that this field is required</li>
@@ -18,10 +18,10 @@ A common validation for pretty much all the forms is the validation of required 
 </ol>
 
 The syntax is simple, you just need to add the field names from the database that are required. For example:
-<pre><code class="php">$crud->requiredFields(['first_name', 'last_name'])</code></pre>
+<pre><code class="language-php">$crud->requiredFields(['first_name', 'last_name'])</code></pre>
 
 You can see a full working example below:
-<pre><code class="php">$crud->setTable('customers');
+<pre><code class="language-php">$crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
 $crud->columns(['customerName','phone','addressLine1','creditLimit']);
 

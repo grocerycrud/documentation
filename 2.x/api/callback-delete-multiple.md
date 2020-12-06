@@ -9,7 +9,7 @@ next: callback-edit-field
 # callbackDeleteMultiple
 
 
-<pre><code class="php">callbackDeleteMultiple(callable $callback)</code></pre>
+<pre><code class="language-php">callbackDeleteMultiple(callable $callback)</code></pre>
 Replaces the default multiple delete functionality with the callback specified.
 
 <p class="bg-warning" style="padding:10px;"><strong><span class="fa fa-exclamation-triangle"></span> Warning!</strong> Please be aware that you should also add a callback into the <code>callbackDelete</code> in order to make sure that the callback is always triggered. For more also check: <a href="https://www.grocerycrud.com/enterprise/api-and-function-list/callbackDelete">callbackDelete</a> documentation</p>
@@ -19,7 +19,7 @@ The <code>callbackDeleteMultiple</code> is getting as a parameter a callback. Th
 
 For example:
 
-<pre><code class="php">$crud->callbackDelete(function ($stateParameters) {
+<pre><code class="language-php">$crud->callbackDelete(function ($stateParameters) {
     
     print_r($stateParameters); // An example for debugging purposes!
     /** This will export something like this: 
@@ -39,7 +39,7 @@ For example:
 
 You can also see a full example below. Try to remove by clicking the checkboxes and then click the Delete button. You will notice that the field with name <code>extension</code> will take the value <code>[DELETED]</code> instead of getting deleted:
 
-<pre><code class="php">$crud->setTable('employees');
+<pre><code class="language-php">$crud->setTable('employees');
 $crud->setSubject('Employee', 'Employees');
 $crud->setRelation('officeCode','offices','city');
 $crud->displayAs('officeCode','City');

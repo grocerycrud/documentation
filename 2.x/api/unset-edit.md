@@ -9,7 +9,7 @@ next: unset-edit-fields
 # unsetEdit
 
 
-<pre><code class="php">unsetEdit(void)</code></pre>
+<pre><code class="language-php">unsetEdit(void)</code></pre>
 The method <code>unsetEdit</code> is removing completely the Edit operation for the end-user. More specifically:
 <ol>
    <li>It is removing the button "Edit"</li>
@@ -17,11 +17,11 @@ The method <code>unsetEdit</code> is removing completely the Edit operation for 
 </ol>
 
 The syntax is simple. You can find an example below:
-<pre><code class="php">$crud->unsetEdit();</code></pre>
+<pre><code class="language-php">$crud->unsetEdit();</code></pre>
 
 You can also see a full working example:
 
-<pre><code class="php">$crud->setTable('customers');
+<pre><code class="language-php">$crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
 $crud->columns(['customerName','phone','addressLine1','creditLimit']);
 $crud->unsetEdit();

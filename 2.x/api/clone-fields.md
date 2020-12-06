@@ -7,11 +7,11 @@ next: replace-state
 ---
 
 # cloneFields
-<pre><code class="php">cloneFields(array $cloneFields)</code></pre>
+<pre><code class="language-php">cloneFields(array $cloneFields)</code></pre>
 The fields that will be visible to the end user for Clone form. For example:
-<pre><code class="php">$crud-&gt;cloneFields(['first_name', 'last_name', 'fullname', 'address'])</code></pre>
+<pre><code class="language-php">$crud-&gt;cloneFields(['first_name', 'last_name', 'fullname', 'address'])</code></pre>
 You can see a full working example below:
-<pre><code class="php">$crud-&gt;setTable('customers');
+<pre><code class="language-php">$crud-&gt;setTable('customers');
 $crud-&gt;setSubject('Customer', 'Customers');
 
 $crud-&gt;setClone();

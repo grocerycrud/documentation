@@ -9,15 +9,15 @@ next: set-export
 # setEdit
 
 
-<pre><code class="php">setEdit(void)</code></pre>
+<pre><code class="language-php">setEdit(void)</code></pre>
 The <code>setEdit</code> method is rarely used as the edit functionality is enabled by default. The common usage is in case you are disabling all the operations and only setting back again the ones that the user has permission of.
 
 The syntax is simple:
-<pre><code class="php">$crud->setEdit()</code></pre>
+<pre><code class="language-php">$crud->setEdit()</code></pre>
 
 Below you can see a full working example to fully understand what the setEdit function is enabling. At the beginning we are disabling all the operations so we can see which functionality the <code>setEdit</code> function is enabling:
 
-<pre><code class="php">$crud->setTable('customers');
+<pre><code class="language-php">$crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
 $crud->columns(['customerName','phone','addressLine1','creditLimit']);
 

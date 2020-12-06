@@ -9,10 +9,10 @@ next: callback-upload
 # callbackUpdate
 
 
-<pre><code class="php">callbackUpdate(callable $callback)</code></pre>
+<pre><code class="language-php">callbackUpdate(callable $callback)</code></pre>
 The function <code>callbackUpdate</code> is used when we need to completely skip the default update functionality of Grocery CRUD Enterprise. The usage is simple, for example:
 
-<pre><code class="php">$crud->callbackUpdate(function ($stateParameters) {
+<pre><code class="language-php">$crud->callbackUpdate(function ($stateParameters) {
     // Your code goes here
 
     return $stateParameters;
@@ -20,7 +20,7 @@ The function <code>callbackUpdate</code> is used when we need to completely skip
 
 You can see a full working example below:
 
-<pre><code class="php">$crud->setTable('orders');
+<pre><code class="language-php">$crud->setTable('orders');
 $crud->setSubject('Order', 'Orders');
 $crud->setRelation('customerNumber','customers','contactLastName');
 

@@ -9,14 +9,14 @@ next: set-theme-path
 # setTheme
 
 
-<pre><code class="php">setTheme(string $theme)</code></pre>
+<pre><code class="language-php">setTheme(string $theme)</code></pre>
 The setTheme is used in order to change the default theme (bootstrap). Have in mind that a theme is the full HTML,JS and CSS so it is not only re-skinning. The syntax is simple:
 
-<pre><code class="php">$crud->setTheme('myCustomTheme')</code></pre>
+<pre><code class="language-php">$crud->setTheme('myCustomTheme')</code></pre>
 
 Example:
 
-<pre><code class="php">$crud->setTheme('darklyBootstrap');
+<pre><code class="language-php">$crud->setTheme('darklyBootstrap');
 $crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
 $crud->columns(['customerName','phone','addressLine1','creditLimit']);</code></pre>

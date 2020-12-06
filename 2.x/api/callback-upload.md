@@ -9,12 +9,12 @@ next: clone-fields
 # callbackUpload
 
 
-<pre><code class="php">callbackUpload(string $fieldName, callable $callback)</code></pre>
+<pre><code class="language-php">callbackUpload(string $fieldName, callable $callback)</code></pre>
 The callbackUpload is used when we need to replace the default upload functionality of Grocery CRUD Enterprise.
 
 For example the below code will show us an error at the page (so we can dump the data after the upload):
 
-<pre><code class="php">$crud->callbackUpload(function ($test1 = null) {
+<pre><code class="language-php">$crud->callbackUpload(function ($test1 = null) {
     var_dump($test1);
     var_dump($_FILES);
 
@@ -46,7 +46,7 @@ Please have in mind that this is completely <strong>replacing</strong> the funct
 
 For example you can see a full working example below. The example is pretty big as it handles all of the above bullet points.
 
-<pre><code class="php">// At this example we are using the library of: https://packagist.org/packages/codeguy/upload
+<pre><code class="language-php">// At this example we are using the library of: https://packagist.org/packages/codeguy/upload
 // So please make sure that if you are going to use the below code you will need to install this library first
 
 $crud->callbackUpload(function ($uploadData)  {

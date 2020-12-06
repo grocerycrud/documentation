@@ -9,13 +9,13 @@ next: set-theme
 # setTexteditor
 
 
-<pre><code class="php">setTexteditor(array $fields)</code></pre>
+<pre><code class="language-php">setTexteditor(array $fields)</code></pre>
 The method setTexteditor is used when we want to specify one field as text that will be edited with a texteditor. The default texteditor is CKeditor. For example:
 
-<pre><code class="php">$crud->setTexteditor(['notes', 'full_text']);</code></pre>
+<pre><code class="language-php">$crud->setTexteditor(['notes', 'full_text']);</code></pre>
 
 You can find a full working example below:
-<pre><code class="php">$crud->setTable('film');
+<pre><code class="language-php">$crud->setTable('film');
 $crud->setSubject('Film', 'Films');
 $crud->setTexteditor(['description']);
 

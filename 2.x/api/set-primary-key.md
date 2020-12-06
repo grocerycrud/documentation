@@ -9,7 +9,7 @@ next: set-print
 # setPrimaryKey
 
 
-<pre><code class="php">setPrimaryKey(string $primaryKey, string $tableName)</code></pre>
+<pre><code class="language-php">setPrimaryKey(string $primaryKey, string $tableName)</code></pre>
 
 Set a custom primary key for a table. The common usage for this function is:
 <ol>
@@ -34,11 +34,11 @@ For example, let's say that we have the below tables <strong>orders</strong> and
 
 These two tables has the <em>`id`</em> as a PRIMARY KEY. As you can guess though from the tables, the orders table is linked with products table by the reference_id and not by the product it. In that case if you use the setRelation with the above line of code:
 
-<pre><code class="php">$crud->setRelation('product_reference_id', 'products', 'name');</code></pre>
+<pre><code class="language-php">$crud->setRelation('product_reference_id', 'products', 'name');</code></pre>
 
 This will join by default with the <em>`products`.`id`</em> rather than the <em>`products`.`reference_id`</em> as by default the primary key of the products table is the <em>`id`</em>. In that case in order to achieve the expected behaviour, you should write the extra line:
 
-<pre><code class="php">$crud->setPrimaryKey('reference_id', 'products');
+<pre><code class="language-php">$crud->setPrimaryKey('reference_id', 'products');
 $crud->setRelation('product_reference_id', 'products', 'name');
 </code></pre>
 

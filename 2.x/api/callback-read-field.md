@@ -9,7 +9,7 @@ next: callback-read-form
 # callbackReadField
 
 
-<pre><code class="php">callbackReadField(string $fieldName, callable $callback)</code></pre>
+<pre><code class="language-php">callbackReadField(string $fieldName, callable $callback)</code></pre>
 Create a custom field with a callback for read/view form. As parameters we are getting two parameters: 
 
 <ol>
@@ -18,13 +18,13 @@ Create a custom field with a callback for read/view form. As parameters we are g
 </ol>
 
 For example:
-<pre><code class="php">$crud->callbackReadField('contact_telephone_number', function ($fieldValue, $primaryKeyValue) {
+<pre><code class="language-php">$crud->callbackReadField('contact_telephone_number', function ($fieldValue, $primaryKeyValue) {
     return '+30 ' . $fieldValue;
 });</code></pre>
 
 Have in mind that from PHP 5.4 and later there is an extra functionality with keywork <code>use</code>, so that means that you can pass any extra parameters at the callback from outside the callback if you wish it. For example:
 
-<pre><code class="php">
+<pre><code class="language-php">
 $username = 'john';
 $crud->callbackReadField('contact_telephone_number', function ($fieldValue, $primaryKeyValue) use ($username) {
      // You have access now at the extra custom variable $username

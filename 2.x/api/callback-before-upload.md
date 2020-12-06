@@ -9,12 +9,12 @@ next: callback-clone-field
 # callbackBeforeUpload
 
 
-<pre><code class="php">callbackBeforeUpload(string $fieldName, callable $callback)</code></pre>
+<pre><code class="language-php">callbackBeforeUpload(string $fieldName, callable $callback)</code></pre>
 The callback is used in cases we need to filter the uploaded data before the upload functionality. This can also be used to cancel an upload in case that it doesn't fit with the requirements.
 
 First of all, if we just want to dump the data that we will receive we can easily do it with the below code:
 
-<pre><code class="php">$crud->callbackBeforeUpload(function ($test1 = null) {
+<pre><code class="language-php">$crud->callbackBeforeUpload(function ($test1 = null) {
     var_dump($test1);
     var_dump($_FILES);
 
@@ -38,7 +38,7 @@ will result the below output:
 
 The most common usage of callback before upload is when we need to validate the data with some extra custom validation. For example at the below example we are validating the upload to make sure that it has an image extension only. A full example will be as follows:
 
-<pre><code class="php">$crud->callbackBeforeUpload(function ($uploadData) {
+<pre><code class="language-php">$crud->callbackBeforeUpload(function ($uploadData) {
     $fieldName = $uploadData->field_name;
 
     $filename = isset($_FILES[$fieldName]) ? $_FILES[$fieldName]['name'] : null;

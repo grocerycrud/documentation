@@ -9,9 +9,9 @@ next: set-sequence-name
 # setRules
 
 
-<pre><code class="php">setRules(array $rules)</code></pre>
+<pre><code class="language-php">setRules(array $rules)</code></pre>
 <code>setRules</code> method is to combine multiple <a href="/enterprise/api-and-function-list/setRule">setRule</a> methods into one. The syntax is simple. You just need to provide an array with the below form:
-<pre><code class="php">[
+<pre><code class="language-php">[
     'fieldName' => 'fieldName',
     'rule' => 'rule',
     'parameters' => 'parameters'
@@ -20,7 +20,7 @@ next: set-sequence-name
 For example:
 
 
-<pre><code class="php">$crud->setRules(
+<pre><code class="language-php">$crud->setRules(
     [
         [
             'fieldName' => 'creditLimit',
@@ -37,13 +37,13 @@ For example:
 
 The above code is equivalent to:
 
-<pre><code class="php">$crud->setRule('creditLimit', 'min', '100');
+<pre><code class="language-php">$crud->setRule('creditLimit', 'min', '100');
 $crud->setRule('postalCode', 'lengthBetween', ['4','6']);</code></pre>
 
 For more information about the setRule please read the <a href="/enterprise/api-and-function-list/setRule">setRule</a> method
 
 A full working example can be found below:
-<pre><code class="php">
+<pre><code class="language-php">
 $crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
 $crud->columns(['customerName','phone','addressLine1','creditLimit']);

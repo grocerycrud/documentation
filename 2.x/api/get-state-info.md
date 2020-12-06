@@ -9,7 +9,7 @@ next: read-fields
 # getStateInfo
 
 
-<pre><code class="php">getStateInfo()</code></pre>
+<pre><code class="language-php">getStateInfo()</code></pre>
 Get all the information about the state, inlcuding:
 <ol>
 	<li>The state as string</li>

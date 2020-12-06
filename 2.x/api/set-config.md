@@ -9,12 +9,12 @@ next: set-csrf-token-name
 # setConfig
 
 
-<pre><code class="php">setConfig(string $configName, mixed $configValue)</code></pre>
+<pre><code class="language-php">setConfig(string $configName, mixed $configValue)</code></pre>
 Quickly set a configuration name that will be specific for your CRUD. Really useful for some CRUD that have slightly different configurations than the generic configurations.
 
 <h2>Example:</h2>
 
-<pre><code class="php">$crud->setTable('customers');
+<pre><code class="language-php">$crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
 
 // Example: Disable backend cache only for customers CRUD as 

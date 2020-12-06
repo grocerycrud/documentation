@@ -9,7 +9,7 @@ next: callback-column
 # callbackCloneField
 
 
-<pre><code class="php">callbackCloneField(string $fieldName, callable $callback)</code></pre>
+<pre><code class="language-php">callbackCloneField(string $fieldName, callable $callback)</code></pre>
 Create a custom field with a callback for clone form. The main callback get as parameters: 
 
 <ol>
@@ -18,6 +18,6 @@ Create a custom field with a callback for clone form. The main callback get as p
 </ol>
 
 For example:
-<pre><code class="php">$crud->callbackCloneField('telephone_number', function ($fieldValue, $primaryKeyValue, $rowData) {
+<pre><code class="language-php">$crud->callbackCloneField('telephone_number', function ($fieldValue, $primaryKeyValue, $rowData) {
     return '+30 &lt;input name="telephone_number" value="' . $fieldValue . '"  /&gt;';
 });</code></pre>

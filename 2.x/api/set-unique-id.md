@@ -9,18 +9,18 @@ next: unique-fields
 # setUniqueId
 
 
-<pre><code class="php">setUniqueId(string $uniqueId)</code></pre>
+<pre><code class="language-php">setUniqueId(string $uniqueId)</code></pre>
 The <code>setUniqueId</code> method is a useful tool to know for client side caching. This is the unique id that you give in order to cache some preferences such as per-page, ordering,... e.t.c. when the user refreshes the page or come back in after a while.
 
 The syntax is simple, you just need to add a unique value (unique to the other tables)
 
-<pre><code class="php">$crud->setUniqueId('customers_1234');</code></pre>
+<pre><code class="language-php">$crud->setUniqueId('customers_1234');</code></pre>
 
 By default the uniqueId is auto set by the hash of the URL so you don't have to. However there are cases that the URL is changing although we are referring to the same CRUD. In that case it is suggested to use the <code>setUniqueId</code> method.
 
 Below you can find a full example:
 
-<pre><code class="php">$crud->setTable('customers');
+<pre><code class="language-php">$crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
 $crud->columns(['customerName','country','state','addressLine1']);
 

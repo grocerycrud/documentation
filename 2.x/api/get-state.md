@@ -9,11 +9,11 @@ next: get-state-info
 # getState
 
 
-<pre><code class="php">string getState()</code></pre>
+<pre><code class="language-php">string getState()</code></pre>
 Simply get the state as a string. This is useful when you need to add a very specific implementation that it is outside of grocery CRUD Enterprise. A common usage to use the <code>getState</code> method is mainly if you need to have some permissions checks. Of course as this is something custom, you can specify the usage for <code>getState</code> for your own needs.
 
 For example:
-<pre><code class="php">if ($crud->getState() === 'EditForm') {
+<pre><code class="language-php">if ($crud->getState() === 'EditForm') {
     // Mocking a minimal response of GroceryCRUD with an error message
     $output = (object)[
         'isJSONResponse' => true,

@@ -9,11 +9,11 @@ next: callback-before-delete-multiple
 # callbackBeforeDelete
 
 
-<pre><code class="php">callbackBeforeDelete(callable $callback)</code></pre>
+<pre><code class="language-php">callbackBeforeDelete(callable $callback)</code></pre>
 The callback that will be used right before the delete. The only parameter that the state will have is the primary key value. 
 
 Example:
-<pre><code class="php">$crud->callbackBeforeDelete(function ($stateParameters) {
+<pre><code class="language-php">$crud->callbackBeforeDelete(function ($stateParameters) {
     // Your code here    
 
     return $stateParameters;
@@ -21,7 +21,7 @@ Example:
 
 The <code>$stateParameters</code> variable is at the below form:
 
-<pre><code class="php">$stateParameters = (object)[
+<pre><code class="language-php">$stateParameters = (object)[
     'primaryKeyValue' => '1234'
 ];</code></pre>
 
@@ -29,7 +29,7 @@ Below there is a working example of the <code>callbackBeforeDelete</code> method
 
 <code>Notice:</code> At the below example we are using the database from Codeigniter as this website is built in Codeigniter framework. At your project of course you can use your framework's database queries to get some manual parameters.
 
-<pre><code class="php">$crud->setTable('offices');
+<pre><code class="language-php">$crud->setTable('offices');
         $crud->setSubject('Office', 'Offices');
         $crud->columns(['city','country','phone','addressLine1','postalCode']);
         $crud->callbackDelete(function ($stateParameters) {

@@ -9,13 +9,13 @@ next: fields
 # editFields
 
 
-<pre><code class="php">editFields(array $editFields)</code></pre>
+<pre><code class="language-php">editFields(array $editFields)</code></pre>
 The fields that will be visible to the end user for edit/update form. For example:
 
-<pre><code class="php">$crud->editFields(['first_name', 'last_name', 'fullname', 'address'])</code></pre>
+<pre><code class="language-php">$crud->editFields(['first_name', 'last_name', 'fullname', 'address'])</code></pre>
 
 You can see a full working example below:
-<pre><code class="php">$crud->setTable('customers');
+<pre><code class="language-php">$crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
 $crud->editFields(['customerName','phone','addressLine1','creditLimit']);
 

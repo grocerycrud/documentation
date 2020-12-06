@@ -9,7 +9,7 @@ next: unset-delete-multiple
 # unsetDelete
 
 
-<pre><code class="php">unsetDelete(void)</code></pre>
+<pre><code class="language-php">unsetDelete(void)</code></pre>
 The method <code>unsetDelete</code> is removing completely the Delete operation for the end-user. More specifically:
 <ol>
    <li>It is removing the button "Delete"</li>
@@ -17,11 +17,11 @@ The method <code>unsetDelete</code> is removing completely the Delete operation 
 </ol>
 
 The syntax is simple. You can find an example below:
-<pre><code class="php">$crud->unsetDelete();</code></pre>
+<pre><code class="language-php">$crud->unsetDelete();</code></pre>
 
 You can also see a full working example:
 
-<pre><code class="php">$crud->setTable('customers');
+<pre><code class="language-php">$crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
 $crud->columns(['customerName','phone','addressLine1','creditLimit']);
 $crud->unsetDelete();

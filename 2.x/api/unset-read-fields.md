@@ -9,14 +9,14 @@ next: unset-search-columns
 # unsetReadFields
 
 
-<pre><code class="php">unsetReadFields(array $fields)</code></pre>
+<pre><code class="language-php">unsetReadFields(array $fields)</code></pre>
 There are cases that we have lots of fields and we just need to say "I need all of them expect these 3". Well <code>unsetReadFields</code> is doing just that! This function is really useful especially when the development of the database is on going. The syntax is simple:
 
-<pre><code class="php">$crud->unsetReadFields(['address_1', 'address_2', 'credit_limit']);</code></pre>
+<pre><code class="language-php">$crud->unsetReadFields(['address_1', 'address_2', 'credit_limit']);</code></pre>
 
 You can see a full working example below:
 
-<pre><code class="php">$crud->setTable('customers');
+<pre><code class="language-php">$crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
 $crud->setRead();
 $crud->unsetReadFields(['salesRepEmployeeNumber','creditLimit']);

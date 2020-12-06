@@ -9,14 +9,14 @@ next: unset-print
 # unsetOperations
 
 
-<pre><code class="php">unsetOperations(void)</code></pre>
+<pre><code class="language-php">unsetOperations(void)</code></pre>
 The method <code>unsetOperations</code> is removing completely any of the operations for the end-user.
 
 The syntax is simple. You can find an example below:
-<pre><code class="php">$crud->unsetOperations();</code></pre>
+<pre><code class="language-php">$crud->unsetOperations();</code></pre>
 
 The above line is exactly the same as:
-<pre><code class="php">$crud->unsetAdd();
+<pre><code class="language-php">$crud->unsetAdd();
 $crud->unsetClone();
 $crud->unsetEdit();
 $crud->unsetRead();
@@ -32,7 +32,7 @@ More specifically the <code>unsetOperations</code>:
 
 You can also see a full working example:
 
-<pre><code class="php">$crud->setTable('customers');
+<pre><code class="language-php">$crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
 $crud->columns(['customerName','phone','addressLine1','creditLimit']);
 $crud->unsetOperations();

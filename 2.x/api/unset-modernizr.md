@@ -9,4 +9,4 @@ next: unset-operations
 # unsetModernizr
 
 
-<pre><code class="php">unsetModernizr(void)</code></pre>
+<pre><code class="language-php">unsetModernizr(void)</code></pre>

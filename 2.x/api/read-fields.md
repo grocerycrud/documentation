@@ -9,16 +9,16 @@ next: read-only-add-fields
 # readFields
 
 
-<pre><code class="php">readFields(array $readFields)</code></pre>
+<pre><code class="language-php">readFields(array $readFields)</code></pre>
 The fields that will be visible when the end-user navigates to the view form.
 
 For example:
-<pre><code class="php">$crud->readFields(['first_name', 'last_name', 'fullname', 'address'])</code></pre>
+<pre><code class="language-php">$crud->readFields(['first_name', 'last_name', 'fullname', 'address'])</code></pre>
 
 <strong>Note:</strong> It is important to know that by default the read/view button is hidden. This is mainly for the reason that it is not commonly used. If you want to enable it you will need to simply add the code: <code>$crud->setRead();</code>.
 
 You can find a fully working example below:
-<pre><code class="php">$crud->setTable('customers');
+<pre><code class="language-php">$crud->setTable('customers');
 $crud->setRead();
 $crud->setSubject('Customer', 'Customers');
 $crud->readFields(['customerName','phone','addressLine1','creditLimit']);
