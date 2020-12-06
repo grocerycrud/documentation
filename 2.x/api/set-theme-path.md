@@ -8,3 +8,23 @@ next: set-unique-id
 
 # setThemePath
 
+
+<pre><code class="php">setThemePath(string $themePath)</code></pre>
+<code>setThemePath</code> is used when we want to change the folder that the theme exists. This is usually a case when we need to create a custom theme that will not be included at the default core of Grocery CRUD. 
+
+To change the default theme path is easy. For example:
+
+<pre><code class="php">$crud->setThemePath('/my/custom/theme/path/')</code></pre>
+
+You can see a full example below:
+
+<pre><code class="php">$crud->setTable('customers');
+$crud->setSubject('Customer', 'Customers');
+$crud->columns(['customerName','phone','addressLine1','creditLimit']);
+
+$crud->setTheme('Cyborg');
+$crud->setThemePath('private/themes/');
+
+$output = $crud->render();</code></pre>
+
+[demo]demo_set_theme_path[/demo]

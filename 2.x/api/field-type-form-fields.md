@@ -8,3 +8,24 @@ next: field-type-read-form
 
 # fieldTypeFormFields
 
+
+<pre><code class="php">fieldTypeFormFields(string $fieldName, string|ModelFieldType $fieldType)</code></pre>
+This function is really just a facade function to call all the 4 functions at once:
+<ol>
+	<li>fieldTypeAddForm</li>
+	<li>fieldTypeEditForm</li>
+	<li>fieldTypeReadForm</li>
+        <li>fieldTypeCloneForm</li>
+</ol>
+
+<h2>Example</h2>
+For example the below code:
+
+<pre><code class="php">$crud->fieldTypeFormFields('date_birth_year', 'numeric');</code></pre>
+
+is exactly the same as:
+<pre><code class="php">$crud->fieldTypeAddForm('date_birth_year', 'numeric');
+$crud->fieldTypeEditForm('date_birth_year', 'numeric');
+$crud->fieldTypeReadForm('date_birth_year', 'numeric');
+$crud->fieldTypeCloneForm('date_birth_year', 'numeric');
+</code></pre>

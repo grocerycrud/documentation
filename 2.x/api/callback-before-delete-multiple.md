@@ -8,3 +8,6 @@ next: callback-before-insert
 
 # callbackBeforeDeleteMultiple
 
+
+<pre><code class="php">callbackBeforeDeleteMultiple(callable $callback)</code></pre>
+Similar functionality with <code>callbackBeforeDelete</code> it is just that this callback will be used for the delete multiple functionality.
