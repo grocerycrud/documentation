@@ -24,7 +24,7 @@ $output = $crud->render();
 
 You can get the below output:
 
-`embed:demo_customers`
+`embed:demo_getting-started`
 
 Below you can find pretty much everything you need in order to get started with Grocery CRUD
 

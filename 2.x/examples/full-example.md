@@ -30,4 +30,4 @@ As you will also notice, we are not repeating the <code>$crud</code> code all th
 
 The below grid is the result of the above code:
 
-`embed:demo_full_example`
+`embed:demo_full-example`
