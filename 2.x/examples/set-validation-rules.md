@@ -29,4 +29,4 @@ $output = $crud->render();
 
 As you can see from the above code, the labels for productName, buyPrice, quantityInStock will change and this will also be the label at the error. For example at the below example try to add a non numeric value as a price. You will see that the error will give you the displayAs label.
 
-`embed:demo_set_validation_rules`
+`embed:demo_set-validation-rules`
