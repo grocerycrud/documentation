@@ -42,7 +42,7 @@ $crud->callbackAfterInsert(function ($stateParameters) use ($addFieldsModel) {
 
 The above code will give you the below results:
 
-`embed:demo_callback_after_insert`
+`embed:demo_callback-after-insert`
 
 `$addFieldsModel` is using Grocery CRUD [Custom Model](/docs/custom-model) but you can also use your own custom model.
 

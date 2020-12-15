@@ -48,4 +48,4 @@ $output =  $crud->render();</code></pre>
 
 Try to add any order and you will see that without adding the information of the status, the status will always automatically going to be "Disputed"
 
-`embed:demo_callback_before_insert`
+`embed:demo_callback-before-insert`

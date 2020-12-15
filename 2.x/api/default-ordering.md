@@ -20,7 +20,9 @@ $crud->defaultOrdering('customers.country', 'desc');
 
 $output = $crud->render();</code></pre>
 
-You can also have multiple default ordering by adding an array (for version 2.5.1 or higher). For example:
+You can also have multiple default ordering by adding an array.
+
+## Example
 
 <pre><code class="language-php">$crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
@@ -32,4 +34,6 @@ $crud->defaultOrdering([
 ]);
 
 $output = $crud->render();</code></pre>
+
+`embed:demo_default-ordering`
 

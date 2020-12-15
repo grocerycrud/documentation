@@ -198,4 +198,4 @@ $crud-&gt;displayAs('count_orders','Orders');
 
 $output = $crud-&gt;render();</code></pre>
 
-`embed:demo_custom_model_customers`
+`embed:demo_custom-model`
