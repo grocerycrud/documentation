@@ -55,4 +55,4 @@ Below there is a working example of the <code>callbackAfterDelete</code> method.
         $output = $crud->render();
 </code></pre>
 
-[demo]demo_callback_after_delete[/demo]
+`embed:demo_callback-after-delete`

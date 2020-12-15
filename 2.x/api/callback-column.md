@@ -32,4 +32,4 @@ $crud-&gt;callbackColumn('customerName', function ($value, $row) {
 $output = $crud-&gt;render();</code></pre>
 As you will notice the data for the column <code>customerName</code> are links to a profile page that opens in new tab. The search is working as expected as the actual value is not changing.
 
-[demo]demo_callback_column[/demo]
+`embed:demo_callback-column`

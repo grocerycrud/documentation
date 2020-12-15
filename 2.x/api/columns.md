@@ -24,4 +24,4 @@ $output = $crud->render();</code></pre>
 
 So the above code will produce the below working example:
 
-`embed:demo_customers`
+`embed:demo_columns`

@@ -49,4 +49,4 @@ $crud->callbackDelete(function ($stateParameters) {
 $output = $crud->render();</code></pre>
 
 Try to remove one row at the below example to see exactly the functionality of the above example:
-[demo]demo_callback_delete[/demo]
+`embed:demo_callback-delete`

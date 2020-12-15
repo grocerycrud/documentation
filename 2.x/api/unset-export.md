@@ -29,4 +29,4 @@ $output = $crud->render();</code></pre>
 
 You can see the results of the above example here. As you can see by your own, the operation Export is completely removed:
 
-[demo]demo_unset_export[/demo]
+`embed:demo_unset-export`

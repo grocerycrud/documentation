@@ -37,4 +37,4 @@ $crud->setActionButton('Avatar', 'fa fa-user', function ($row) {
 $output = $crud->render();</code></pre>
 
 You can see the result of the above code here. In order to see the functionality of the action buttons, press the More button in any of the rows.
-[demo]demo_set_action_button[/demo]
+`embed:demo_set-action-button`

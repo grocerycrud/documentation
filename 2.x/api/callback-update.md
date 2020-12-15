@@ -39,4 +39,4 @@ Notice: The <code>$this->db</code> is from Codeigniter as this example is instal
 
 With the below live example you can see that when we are updating any row then the text "[Update - day Month]" is prepend at the beginning of the field comments.
 
-[demo]demo_callback_update[/demo]
+`embed:demo_callback-update`

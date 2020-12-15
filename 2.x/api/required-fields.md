@@ -30,4 +30,4 @@ $crud->requiredFields(['customerName', 'contactLastName', 'contactFirstName']);
 $output = $crud->render();</code></pre>
 
 You can see live the required fields if you try to add or edit any row and save the form without a value for either one of the 3 required fields
-[demo]demo_required_fields[/demo]
+`embed:demo_required-fields`

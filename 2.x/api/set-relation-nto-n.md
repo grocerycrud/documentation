@@ -52,4 +52,4 @@ $crud->setRelationNtoN('categories', 'film_category', 'category', 'film_id', 'ca
 $output = $crud->render();</code></pre>
 
 The result of the above code is here. As you can see we now have two new fields (actors and categories) with multiple select functionality.
-[demo]demo_set_relation_n_to_n[/demo]
+`embed:demo_set-relation-n-to-n`

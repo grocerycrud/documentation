@@ -47,4 +47,4 @@ $output = $crud->render();</code></pre>
 
 The result of the above code can be found here:
 
-[demo]demo_unset_read[/demo]
+`embed:demo_unset-read`

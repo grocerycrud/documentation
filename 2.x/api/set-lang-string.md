@@ -26,4 +26,4 @@ $output = $crud->render();</code></pre>
 
 You can also notice that we don't have the default strings and the strings are replaced by the custom text that we did use at the <code>setLangString</code> function:
 
-[demo]demo_set_lang_string[/demo]
+`embed:demo_set-lang-string`

@@ -26,4 +26,4 @@ $output = $crud->render();</code></pre>
 
 As you can also see by your own at the below live example, in every area all the fields/columns are visible <strong>expect</strong> the ones at the Clone form modal. More specifically you will notice that the fields <code>salesRepEmployeeNumber</code> and <code>creditLimit</code> are missing when you press "Clone Customer" in any row:
 
-[demo]demo_unset_clone_fields[/demo]
+`embed:demo_unset-clone-fields`

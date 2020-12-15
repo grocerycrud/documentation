@@ -23,4 +23,4 @@ $output = $crud->render();</code></pre>
 
 
 You can see the result of the above code below.The main difference that you will notice is that when you will press the "Edit customer" button at any row. The fields are less when you edit one (these are the fields that was specified at the editFields functions). You can simply compare the differences by also trying to press the "Add customer" button and see all the existing fields.
-[demo]demo_edit_fields[/demo]
+`embed:demo_edit-fields`

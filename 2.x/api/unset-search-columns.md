@@ -21,4 +21,4 @@ $crud->unsetSearchColumns(['creditLimit', 'salesRepEmployeeNumber']);
 
 $output = $crud->render();</code></pre>
 
-[demo]demo_unset_search_columns[/demo]
+`embed:demo_unset-search-columns`

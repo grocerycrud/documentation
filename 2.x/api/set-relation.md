@@ -47,4 +47,4 @@ $crud-&gt;displayAs('officeCode','City');
 $output = $crud-&gt;render();</code></pre>
 You can see the result of the above code at the below datagrid. As you can see there is a dropdown list at the city (we did rename the officeCode as City to be more readable to the end user)
 
-[demo]demo_set_relation[/demo]
+`embed:demo_set-relation`

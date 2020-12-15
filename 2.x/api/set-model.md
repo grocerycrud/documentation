@@ -45,4 +45,4 @@ class customModel extends Model {
 <strong>Note:</strong> There will be a separate section that will show you how to create your own unique models for advanced needs. This example is to help you understand the basic usage
 
 The result of the above code is:
-[demo]demo_set_model[/demo]
+`embed:demo_set-model`

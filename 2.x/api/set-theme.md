@@ -25,4 +25,4 @@ $crud->columns(['customerName','phone','addressLine1','creditLimit']);</code></p
 
 Also it is suggested to use the <a href="/enterprise/api-and-function-list/setThemePath">setThemePath</a> as well with the setTheme to use your own path when you are creating a theme.
 
-[demo]demo_set_theme[/demo]
+`embed:demo_set-theme`

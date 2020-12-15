@@ -42,6 +42,6 @@ if (user_text_editor_not_allowed()) {
 }</code></pre>
 
 Below you can see an example by unsetting the 'description' field to have a texteditor. 
-[demo]demo_unset_texteditor[/demo]
+`embed:demo_unset-texteditor`
 
 

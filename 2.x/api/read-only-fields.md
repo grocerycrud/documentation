@@ -15,4 +15,4 @@ Specifying the fields that can't be edited and will only be viewed. The rule wil
 Example:
 <pre><code class="language-php">$crud->readOnlyFields(['referenceId', 'insertDate']);</code></pre>
 
-[demo]demo_readonly_fields[/demo]
+`embed:demo_readonly-fields`

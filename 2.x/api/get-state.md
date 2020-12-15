@@ -34,4 +34,4 @@ For example:
 
 You can check the result of the above code below. Simply try to edit any customer. The above code is just an example but of course you
 
-[demo]demo_get_state[/demo]
+`embed:demo_get-state`

@@ -27,4 +27,4 @@ $crud->setThemePath('private/themes/');
 
 $output = $crud->render();</code></pre>
 
-[demo]demo_set_theme_path[/demo]
+`embed:demo_set-theme-path`

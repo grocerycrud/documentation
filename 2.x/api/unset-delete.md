@@ -30,4 +30,4 @@ $output = $crud->render();</code></pre>
 
 You can see the results of the above example here. As you can see by your own, the operation Delete is completely removed:
 
-[demo]demo_unset_delete[/demo]
+`embed:demo_unset-delete`

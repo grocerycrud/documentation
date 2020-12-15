@@ -22,4 +22,4 @@ $crud->setTexteditor(['description']);
 $output = $crud->render();</code></pre>
 
 The result of the above example can be found below. Press the add or the edit button in order to see the editor working:
-[demo]demo_set_texteditor[/demo]
+`embed:demo_set-texteditor`

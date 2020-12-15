@@ -26,4 +26,4 @@ $crud->readFields(['customerName','phone','addressLine1','creditLimit']);
 $output = $crud->render();</code></pre>
 
 As you will see, only when the button view is pressed (go to any row and press "More" -> "View") the fields are less than when we press "Add" or "Edit". When the View form is opened then only the fields that are mentioned at the readFields function are visible.
-[demo]demo_read_fields[/demo]
+`embed:demo_read-fields`

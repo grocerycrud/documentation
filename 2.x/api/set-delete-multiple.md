@@ -32,4 +32,4 @@ $output = $crud->render();</code></pre>
 
 You can see the result of the above code at the below datagrid. As you will also notice only the multiple delete functionality is enabled
 
-[demo]demo_set_delete_multiple[/demo]
+`embed:demo_set-delete-multiple`

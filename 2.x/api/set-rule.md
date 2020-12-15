@@ -83,4 +83,4 @@ $crud-&gt;setRule('postalCode', 'lengthBetween', ['4','6']);
 
 $output = $crud-&gt;render();</code></pre>
 You can try the validation rules below. Try to add a creditLimit lower than 100 or try to add a postalCode that doesn't have length between 4-6 digits. As you will also notice, empty values <strong>are</strong> acceptable. In case we need a validation of a field to be required although you can use the Valitron required, it is recommended to use the GroceryCRUD function <a href="/enterprise/api-and-function-list/requiredFields">requiredFields</a> instead of the rule.
-[demo]demo_set_rule[/demo]
+`embed:demo_set-rule`

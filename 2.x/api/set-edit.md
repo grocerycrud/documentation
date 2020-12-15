@@ -32,4 +32,4 @@ $output = $crud->render();</code></pre>
 
 And the result of the above code is below. As you will also notice only the Update functionality is enabled
 
-[demo]demo_set_edit[/demo]
+`embed:demo_set-edit`

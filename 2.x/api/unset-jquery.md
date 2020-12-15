@@ -28,4 +28,4 @@ $output = $crud->render();</code></pre>
 
 The result of the above code you can see it here. However it is hard for you to see the difference! So in order to do that you will need see the source of this page (by pressing right click "View Page Source"). If you scroll at the bottom of the source (right before the <code>&lt;/body&gt;</code>) There you can see that we've already loaded the jQuery from the CDN of jQuery and we don't need to load it again. And hence we will need to unset jQuery from loading from grocery CRUD.
 
-[demo]demo_unset_jquery[/demo]
+`embed:demo_unset-jquery`

@@ -52,4 +52,4 @@ Below there is a working example of the <code>callbackBeforeDelete</code> method
         $output = $crud->render();
 </code></pre>
 
-[demo]demo_callback_before_delete[/demo]
+`embed:demo_callback-before-delete`

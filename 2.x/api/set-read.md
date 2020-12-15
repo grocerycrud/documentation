@@ -25,4 +25,4 @@ $output = $crud->render();</code></pre>
 
 The result of the above code can be found below. As you can also see in order to have more space the grid is creating the "More" button in order to fit efficiently the "View" Button.
 
-[demo]demo_set_read[/demo]
+`embed:demo_set-read`

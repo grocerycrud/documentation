@@ -26,4 +26,4 @@ return $crud->render();</code></pre>
 
 We did set as unique field the salesRepEmployeeNumber. In order to get the error on your page, try to add a value at the field SalesRepEmployeeNumber (e.g. 1234) and then try to edit another row and edit the same number (e.g. try 1234). The form will not let you to add this value and it will throw a validation error "SalesRepEmployeeNumber must contain a unique value.". You can see by your own at the below datagrid:
 
-[demo]demo_unique_fields[/demo]
+`embed:demo_unique-fields`

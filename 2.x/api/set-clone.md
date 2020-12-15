@@ -26,4 +26,4 @@ $output = $crud->render();
 </code></pre>
 
 You can see the results of the above code below:
-[demo]demo_clone[/demo]
+`embed:demo_clone`

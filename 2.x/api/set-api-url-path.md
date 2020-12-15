@@ -25,4 +25,4 @@ $crud-&gt;fields(['customerName','phone','addressLine1','creditLimit']);
 $output = $crud-&gt;render();</code></pre>
 And this is simply giving the below result. So all the ajax requests are going to: <code>/demo_set_api_url_path</code> instead of <code>/enterprise/api-and-function-list/setApiUrlPath</code>. You can see by your own at the live example:
 
-[demo]demo_set_api_url_path[/demo]
+`embed:demo_set-api-url-path`

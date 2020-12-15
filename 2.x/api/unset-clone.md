@@ -46,5 +46,5 @@ $crud->unsetClone();
 $output = $crud->render();</code></pre>
 
 Below you can see the results of the above code:
-[demo]demo_unset_clone[/demo]
+`embed:demo_unset-clone`
 

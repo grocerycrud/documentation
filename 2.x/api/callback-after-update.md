@@ -47,4 +47,4 @@ $crud->callbackAfterUpdate(function ($stateParameters) {
 
 The result of the above code can be found here:
 
-[demo]demo_callback_after_update[/demo]
+`embed:demo_callback-after-update`

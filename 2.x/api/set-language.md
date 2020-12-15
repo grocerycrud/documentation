@@ -70,4 +70,4 @@ $output = $crud->render();
 </code></pre>
 
 As you can also see all the dynamic strings (expect of the database field names) are translated in Spanish:
-[demo]demo_set_language[/demo]
+`embed:demo_set-language`

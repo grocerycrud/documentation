@@ -33,4 +33,4 @@ $output = $crud->render();</code></pre>
 
 You can see the results of the above example here. As you can see by your own, the operation multiple Delete is completely removed:
 
-[demo]demo_unset_delete_multiple[/demo]
+`embed:demo_unset-delete-multiple`

@@ -31,4 +31,4 @@ $output = $crud->render();</code></pre>
 
 You can see the result of the above code at the below datagrid. As you will also notice only the Print functionality is enabled
 
-[demo]demo_set_print[/demo]
+`embed:demo_set-print`

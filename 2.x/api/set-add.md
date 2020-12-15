@@ -31,4 +31,4 @@ $output = $crud->render();</code></pre>
 
 And the result of the above code is below. As you will also notice only the Insert functionality is enabled
 
-[demo]demo_set_add[/demo]
+`embed:demo_set-add`

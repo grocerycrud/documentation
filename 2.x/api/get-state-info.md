@@ -18,4 +18,4 @@ Get all the information about the state, inlcuding:
 
 For example if you have an insert state then the state parameters are all the data for insert.
 
-[demo]demo_get_state_info[/demo]
+`embed:demo_get-state-info`

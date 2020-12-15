@@ -75,4 +75,4 @@ $output = $crud->render();
 
 The above example will render the following result:
 
-[demo]demo_callback_delete_multiple[/demo]
+`embed:demo_callback-delete-multiple`

@@ -29,4 +29,4 @@ $output = $crud->render();</code></pre>
 
 You can see the results of the above example here. As you can see by your own, the operation Add is completely removed:
 
-[demo]demo_unset_add[/demo]
+`embed:demo_unset-add`

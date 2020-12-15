@@ -41,4 +41,4 @@ $output = $crud->render();</code></pre>
 
 You can see the results of the above example here. As you can see by your own the end-user can only see the datagrid and have the ability to print or export. Rather than that any other operation is not allowed to the user
 
-[demo]demo_unset_operations[/demo]
+`embed:demo_unset-operations`

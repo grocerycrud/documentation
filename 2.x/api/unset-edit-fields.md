@@ -25,4 +25,4 @@ $output = $crud->render();</code></pre>
 
 As you can also see by your own at the below live example, in every area all the fields/columns are visible <strong>expect</strong> the ones at the edit form modal. More specifically you will notice that the fields "salesRepEmployeeNumber" and "creditLimit" are missing when you press "Edit Customer" in any row:
 
-[demo]demo_unset_edit_fields[/demo]
+`embed:demo_unset-edit-fields`

@@ -41,4 +41,4 @@ $crud->callbackInsert(function ($stateParameters) {
 $output =  $crud->render();</code></pre>
 
 Try adding any order and write any comments. You will notice that your comment will be appended with the current date (of the server).
-[demo]demo_callback_insert[/demo]
+`embed:demo_callback-insert`

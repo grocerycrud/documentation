@@ -32,4 +32,4 @@ $crud->fields(['customerName','phone','addressLine1','creditLimit']);
 $output $crud->render();</code></pre>
 
 You can see the result of the above code here:
-[demo]demo_fields[/demo]
+`embed:demo_fields`

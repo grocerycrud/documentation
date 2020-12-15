@@ -26,4 +26,4 @@ $output = $crud->render();</code></pre>
 
 The result of the above code you can see it here. However it is hard for you to see the difference! So in order to do that you will need see the source of this page (by pressing right click "View Page Source"). At the <code>&lt;head&gt;</code> tag at the top, you can see that the bootstrap CSS is loaded from the template and not Grocery CRUD. This is because the site that you are looking at the moment has the twitter bootstrap as base and didn't want to have conflicts. So basically... this website is using this method as well :)
 
-[demo]demo_unset_bootstrap[/demo]
+`embed:demo_unset-bootstrap`

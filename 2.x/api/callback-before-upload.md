@@ -52,4 +52,4 @@ The most common usage of callback before upload is when we need to validate the 
     return $uploadData;
 });</code></pre>
 
-[demo]demo_callback_before_upload[/demo]
+`embed:demo_callback-before-upload`

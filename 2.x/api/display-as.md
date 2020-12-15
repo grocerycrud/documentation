@@ -51,4 +51,4 @@ $output = $crud->render();</code></pre>
 
 You can see that the fields changed to the columns and also at add/edit/view form. You can see the result of the above code here:
 
-[demo]demo_display_as[/demo]
+`embed:demo_display-as`

@@ -32,4 +32,4 @@ $output = $crud->render();</code></pre>
 
 You can see the result of the above code is here. As you will also notice only the Delete functionality is enabled
 
-[demo]demo_set_delete[/demo]
+`embed:demo_set-delete`

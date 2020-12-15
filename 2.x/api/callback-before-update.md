@@ -41,4 +41,4 @@ $crud->callbackBeforeUpdate(function ($stateParameters) {
 
 The result of the above code can be found here:
 
-[demo]demo_callback_before_update[/demo]
+`embed:demo_callback-before-update`

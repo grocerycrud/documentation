@@ -37,4 +37,4 @@ There is not much to see at the bottom example, however you can check your local
         <li>Now you can see that there is a value named <code>'gcrudInitialData_customers_1234'</code> </li>
         <li>Now refresh the page and you will see that the browser "remembers" your last sorting</li>
 </ol>
-[demo]demo_set_unique_id[/demo]
+`embed:demo_set-unique-id`

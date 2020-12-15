@@ -49,7 +49,7 @@ $(document).ready(function () {
 
 It will output the below result:
 
-[demo]demo_unset_autoload_javascript[/demo]
+`embed:demo_unset-autoload-javascript`
 
 So far we have two options that you can add at the groceryCRUD JavaScript function:
 <ol>
