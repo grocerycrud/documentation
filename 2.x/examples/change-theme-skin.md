@@ -26,4 +26,4 @@ $output = $crud->render();</code></pre>
 
 You can see the results of the above code below:
 
-`embed:demo_change_theme_skin`
+`embed:demo_change-theme-skin`
