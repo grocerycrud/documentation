@@ -8,7 +8,6 @@ next: callback-read-form
 
 # callbackReadField
 
-
 <pre><code class="language-php">callbackReadField(string $fieldName, callable $callback)</code></pre>
 Create a custom field with a callback for read/view form. As parameters we are getting two parameters: 
 
