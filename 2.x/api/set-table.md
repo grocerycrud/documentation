@@ -28,4 +28,4 @@ $output = $crud->render();</code></pre>
 
 The result of the above code would be:
 
-`embed:demo_customers`
+`embed:demo_set-table`

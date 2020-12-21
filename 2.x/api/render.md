@@ -24,4 +24,4 @@ $output = $crud->render();
 
 Can have the below result. The below code is <strong>not</strong> an iframe so you can also check the code produced by simply checking the page source of the webpage
 
-`embed:demo_customers`
+`embed:demo_render`

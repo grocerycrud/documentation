@@ -39,4 +39,4 @@ $output = $crud->render();</code></pre>
 
 with a result:
 
-`embed:demo_customers`
+`embed:demo_set-subject`
