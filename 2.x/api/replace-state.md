@@ -11,7 +11,7 @@ next:
 <pre><code class="language-php">replaceState(string $stateName, StateInterface $newState)</code></pre>
 Replace the default state by the custom object state that we are adding as an input.
 
-## Full Example
+## Example
 
 <pre><code class="language-php">$exportState = new MyCustomExportState($crud);
 $crud->replaceState('Export', $exportState);</code></pre>

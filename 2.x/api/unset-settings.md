@@ -21,3 +21,4 @@ $crud->unsetSettings();
 
 $output = $crud->render();</code></pre>
 
+`embed:demo_unset-settings`

@@ -20,3 +20,5 @@ $crud->columns(['customerName','phone','addressLine1','creditLimit']);
 $crud->unsetFilters();
 
 $output = $crud->render();</code></pre>
+
+`embed:demo_unset-filters`

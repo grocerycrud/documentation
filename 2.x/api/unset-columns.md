@@ -13,7 +13,7 @@ There are cases that we have lots of columns and we just need to say "I need all
 
 <pre><code class="language-php">$crud->unsetColumns(['address_1', 'address_2', 'credit_limit']);</code></pre>
 
-You can see a full working example below:
+## Example
 
 <pre><code class="language-php">$crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');

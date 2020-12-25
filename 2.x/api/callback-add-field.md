@@ -11,7 +11,7 @@ next: callback-add-form
 <pre><code class="language-php">callbackAddField(string $fieldName, callable $callback)</code></pre>
 Create a custom field with a callback for add form. As this is add form, there is not any parameters added to the callback. You can return any custom HTML you wish. 
 
-## Full Example
+## Example
 <pre><code class="language-php">$crud->callbackAddField('contact_last_name', function ($fieldType, $fieldName) {
     /** $fieldType will look like this:
      GroceryCrud\Core\Model\ModelFieldType Object
