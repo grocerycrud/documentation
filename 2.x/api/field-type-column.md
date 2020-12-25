@@ -23,3 +23,18 @@ or:
 <pre><code class="language-php">$crud-&gt;fieldTypeColumn('order_datetime', 'date');</code></pre>
 
 And the above example will safely change the fieldType but only for the columns of the datagrid.
+
+## Example
+
+<pre><code class="language-php">$crud->setTable('orders');
+$crud->setSubject('Order', 'Orders');
+$crud->setRelation('customerNumber','customers','contactLastName');
+$crud->displayAs('customerNumber','Customer');
+$crud->unsetAdd();
+$crud->unsetDelete();
+
+// We are hiding requiredDate only on the columns. We can edit or
+// filter the value of requiredDate
+$crud->fieldTypeColumn('requiredDate', 'invisible');</code></pre>
+
+`embed:demo_field-type-column`

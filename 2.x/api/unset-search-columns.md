@@ -11,7 +11,7 @@ next: unset-texteditor
 <pre><code class="language-php">unsetSearchColumns(array $columns)</code></pre>
 Unset the search on the datagrid from quick column search and from filtering. Especially useful when you use a custom field type or callbackColumn.
 
-Example:
+## Example
 
 <pre><code class="language-php">$crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');

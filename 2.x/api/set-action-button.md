@@ -29,12 +29,11 @@ A full working example can be found below:
 $crud->setSubject('Employee', 'Employees');
 $crud->setRelation('officeCode','offices','city');
 $crud->displayAs('officeCode','City');
+$crud->unsetDelete();
 
 $crud->setActionButton('Avatar', 'fa fa-user', function ($row) {
-    return '/demo_view_avatar/' . $row->employeeNumber;
-}, true);
-
-$output = $crud->render();</code></pre>
+    return '#/avatar/' . $row->employeeNumber;
+}, false);</code></pre>
 
 You can see the result of the above code here. In order to see the functionality of the action buttons, press the More button in any of the rows.
 `embed:demo_set-action-button`
