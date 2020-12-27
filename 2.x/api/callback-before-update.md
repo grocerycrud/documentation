@@ -33,8 +33,11 @@ $crud->setSubject('Office', 'Offices');
 $crud->columns(['city','country','phone','addressLine1','postalCode']);
 
 $crud->callbackBeforeUpdate(function ($stateParameters) {
+    $city = $stateParameters->data['city'];
 
-    $stateParameters->data['city'] = '[BEFORE UPDATE] ' . $stateParameters->data['city'];
+    if (!strstr($city, '[BEFORE UPDATE]')) {
+        $stateParameters->data['city'] = '[BEFORE UPDATE] ' . $city;
+    }
 
     return $stateParameters;
 });</code></pre>

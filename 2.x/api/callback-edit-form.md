@@ -13,7 +13,7 @@ next: callback-insert
 
 This callback is used in case we need to append, filter or change the data that are going to appear on the edit form.
 
-Example:
+## Example
 
 <pre><code class="language-php">$crud->callbackEditForm(function ($data) {
     // The reference id always starts with 0098_ and 
