@@ -76,14 +76,14 @@ $crud->where(['customers.country' => 'USA']);
 
 $crud->unsetAdd();
 $crud->setRead();
-$crud->columns(['customerName', 'contactLastName', 'phone', 'city', 'country']);
+$crud->columns(['customerName', 'contactLastName', 'phone', 'city']);
 $crud->fields(['customerName', 'contactLastName', 'phone', 'city']);
 $crud->displayAs('customerName', 'Name');
 $crud->displayAs('contactLastName', 'Last Name');
 
 $output = $crud->render();</code></pre>
 
-[demo]demo_where_example_1[/demo]
+`embed:demo_where`
 
 The above example will never have a scenario to update the country as the user does not have access to change country. Even if a user try to hijack the AJAX call and send a country field, Grocery CRUD will protect that.
 
@@ -101,6 +101,7 @@ $crud->fields(['customerName', 'contactLastName', 'phone', 'city', 'country']);
 
 $crud->callbackBeforeUpdate(function ($stateParameters) {
     if ($stateParameters->data['country'] !== 'USA') {
+        // Custom error message only available on enterprise
         $callback = new \GroceryCrud\Core\Error\ErrorMessage();
         $callback->setMessage('We are sorry but you are not allowed to change the country');
         return $callback;
@@ -113,8 +114,6 @@ $crud->displayAs('customerName', 'Name');
 $crud->displayAs('contactLastName', 'Last Name');
 
 return $crud->render();</code></pre>
-
-[demo]demo_where_example_2[/demo]
 
 
 
