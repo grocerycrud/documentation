@@ -53,6 +53,7 @@ namespace App\Models;
 use GroceryCrud\Core\Model;
 use Zend\Db\Sql\Sql;
 
+// This specific custom model example is for Grocery CRUD Enterprise edition
 class AddFields extends Model {
     public function updateCustomerName($customerId) {
 
