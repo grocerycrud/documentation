@@ -4,6 +4,7 @@ title: setFieldBlob
 permalink: docs/set-field-blob
 previous: set-export
 next: set-field-upload
+enterprise: 1
 ---
 
 # setFieldBlob
@@ -18,10 +19,10 @@ Enable the upload functionality for Blob field type. For example: BLOB, MEDIUMBL
 	<li><strong>$maxUploadSize:</strong> One letter maximum file size. For example: '1M' equals with 1MB, '256K' equals '256KB',.... e.t.c. This is a required field as we are not always certain about the specific maximum upload size that we would like our system to support. If you would like to use the standard fixed maximum size per field type you can use <code>GroceryCrud\Core\Helpers\BlobFieldTypeHelper</code>. For more you can also check the <a href="#full-example">full example</a> below</li>
 </ul>
 
-Example:
+For example:
 <pre><code class="language-php">$crud->setFieldBlob('my_blob', 'blob_filename',  'application/private/tmp', '2M');</code></pre>
 
-<h2 id='full-example'>Full example:</h2>
+## Example
 
 <pre><code class="language-php">
 
