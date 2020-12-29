@@ -51,5 +51,3 @@ The most common usage of callback before upload is when we need to validate the 
     // Don't forget to return the uploadData at the end
     return $uploadData;
 });</code></pre>
-
-`embed:demo_callback-before-upload`

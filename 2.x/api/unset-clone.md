@@ -34,12 +34,15 @@ if (user_not_allowed_for_clone()) {
 
 $output = $crud->render();</code></pre>
 
+## Example
+
 Below we have an example of setting and then right after unsetting the clone just to see that it will work:
 
 <pre><code class="language-php">$crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
 $crud->columns(['customerName','phone','addressLine1','creditLimit']);
 
+// It doesn't make much sense to do that but for the sake of the example...
 $crud->setClone();
 $crud->unsetClone();
 

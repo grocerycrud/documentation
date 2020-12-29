@@ -110,6 +110,3 @@ $crud->callbackUpload(function ($uploadData)  {
 
     return $uploadData;
 });</code></pre>
-
-
-`embed:demo_callback-upload`

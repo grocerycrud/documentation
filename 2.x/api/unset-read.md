@@ -40,6 +40,7 @@ Below we have an example of setting and then right after unsetting the read just
 $crud->setSubject('Customer', 'Customers');
 $crud->columns(['customerName','phone','addressLine1','creditLimit']);
 
+// Yeah, I know! It doesn't make much sense to do that but hey!
 $crud->setRead();
 $crud->unsetRead();
 

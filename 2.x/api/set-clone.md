@@ -20,10 +20,11 @@ $crud->columns(['customerName', 'contactLastName', 'phone', 'city', 'country']);
 $crud->displayAs('customerName', 'Name');
 $crud->displayAs('contactLastName', 'Last Name');
 
+$crud->unsetDelete();
 $crud->setClone();
 
 $output = $crud->render();
 </code></pre>
 
 You can see the results of the above code below:
-`embed:demo_clone`
+`embed:demo_set-clone`

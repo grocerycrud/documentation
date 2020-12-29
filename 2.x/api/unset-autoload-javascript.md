@@ -1,7 +1,7 @@
 ---
-id: unset-autoload-java-script
+id: unset-autoload-javascript
 title: unsetAutoloadJavaScript
-permalink: docs/unset-autoload-java-script
+permalink: docs/unset-autoload-javascript
 previous: unset-add-fields
 next: unset-bootstrap
 ---
@@ -27,12 +27,12 @@ $output->js_files[] = base_url() . 'assets/custom/js/custom-gc-load.js';
 will output everything that it is necessary for Grocery CRUD but without the initial load. The initial call will need to be manually triggered through the code:
 
 (JavaScript)
-<pre><code class="javascript">$('.gc-container').groceryCrud();</code></pre>
+<pre><code class="language-javascript">$('.gc-container').groceryCrud();</code></pre>
 
 So if in our example we create a button like this:
 
 (JavaScript)
-<pre><code class="javascript">// custom-gc-load.js
+<pre><code class="language-javascript">// custom-gc-load.js
 $(document).ready(function () {
     $('.load-grocery-crud-button').click(function () {
          $('.gc-container').groceryCrud({
@@ -44,7 +44,7 @@ $(document).ready(function () {
 });</code></pre>
 
 (HTML)
-<pre><code class="html">&lt;button class="load-grocery-crud-button btn btn-default"&gt;Press Button to load GroceryCRUD&lt;/button&gt;</code></pre>
+<pre><code class="language-html">&lt;button class="load-grocery-crud-button btn btn-default"&gt;Press Button to load GroceryCRUD&lt;/button&gt;</code></pre>
 
 
 It will output the below result:

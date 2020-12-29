@@ -34,12 +34,11 @@ $crud-&gt;fieldTypeReadForm('date_of_birth', $myField);</code></pre>
 
 The default value of the <code>ModelFieldType</code> object is <code>'varchar'</code> so for example if you have the below line:
 
-<code>$crud-&gt;fieldTypeReadForm('date_of_birth', new ModelFieldType());</code>
+<pre><code class="language-php">$crud-&gt;fieldTypeReadForm('date_of_birth', new ModelFieldType());</code></pre>
 
 or:
 
-<pre><code class="language-php">
-$myField = new ModelFieldType();
+<pre><code class="language-php">$myField = new ModelFieldType();
 $crud-&gt;fieldTypeReadForm('date_of_birth', $myField);</code></pre>
 
-the field type for read form will be <code>'varchar'</code>
+the field type for read form will be `varchar`

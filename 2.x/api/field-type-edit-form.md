@@ -21,8 +21,9 @@ or:
 
 You can also use the ModelFieldType object as an input. For example:
 
-<pre><code class="language-php">
-// At the beginning of the file
+<pre><code class="language-php">&lt;?php
+// ModelFieldType is only available on Grocery CRUD Enterprise
+// Add the below code at the beginning of the file
 use GroceryCrud\Core\Model\ModelFieldType;
 ...
 // At your code

@@ -17,7 +17,7 @@ Create a custom field with a callback for clone form. The main callback get as p
 	<li>The primary key value of the row in case you need to use it for an extra manual query</li>
 </ol>
 
-For example:
+## Example
 <pre><code class="language-php">$crud->callbackCloneField('telephone_number', function ($fieldValue, $primaryKeyValue, $rowData) {
     return '+30 &lt;input name="telephone_number" value="' . $fieldValue . '"  /&gt;';
 });</code></pre>

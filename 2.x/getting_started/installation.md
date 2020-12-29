@@ -1,7 +1,7 @@
 ---
 id: installation
 title: Installation guide
-permalink: docs/gcc/2.x/getting-started/installation-guide
+permalink: docs/installation
 previous: getting-started
 next: why-grocery-crud
 ---
