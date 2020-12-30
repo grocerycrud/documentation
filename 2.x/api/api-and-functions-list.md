@@ -70,18 +70,18 @@ next: basic-example
 
 | Function name  | Small description |
 | ------------- | ------------- |
-| callbackAddField   |  A callback that is used in case you need to create a custom field for the add form. |
-| callbackAfterDelete   |  The callback that will be used right after the delete. |
-| callbackAfterInsert   | The callback that will be used right after the insert of the data. |
-| callbackAfterUpdate   |  The callback that will be used right after the update of the data. |
-| callbackBeforeDelete   |  The callback will be triggered before the delete functionality. |
-| callbackBeforeInsert   |  The callback is used in cases we need to add or change data before the insert functionality. |
-| callbackBeforeUpdate   | The callback is used in cases we need to add or change data before the update functionality. |
-| callbackCloneField   | A callback that is used in case you need to create a custom field for the clone form. |
-| callbackColumn   | The method callbackColumn is the transformation of the data for a column at the datagrid. |
-| callbackDelete   | The basic usage of callbackDelete is when we want to replace the default delete functionality. |
-| callbackEditField   | A callback that is used in case you need to create a custom field for the edit/update form. |
-| callbackInsert   | The callback is used when we need to replace the default functionality of the insert. |
-| callbackReadField   | This is a callback in order to create a custom field at the read/view form. |
-| callbackUpdate   | The callback is used when we need to replace the default update functionality. |
+| [callbackAddField](/docs/callback-add-field)   |  A callback that is used in case you need to create a custom field for the add form. |
+| [callbackAfterDelete](/docs/callback-after-delete)   |  The callback that will be used right after the delete. |
+| [callbackAfterInsert](/docs/callback-after-insert)   | The callback that will be used right after the insert of the data. |
+| [callbackAfterUpdate](/docs/callback-after-update)   |  The callback that will be used right after the update of the data. |
+| [callbackBeforeDelete](/docs/callback-before-delete)   |  The callback will be triggered before the delete functionality. |
+| [callbackBeforeInsert](/docs/callback-before-insert)   |  The callback is used in cases we need to add or change data before the insert functionality. |
+| [callbackBeforeUpdate](/docs/callback-before-update)   | The callback is used in cases we need to add or change data before the update functionality. |
+| [callbackCloneField](/docs/callback-clone-field)   | A callback that is used in case you need to create a custom field for the clone form. |
+| [callbackColumn](/docs/callback-column)   | The method callbackColumn is the transformation of the data for a column at the datagrid. |
+| [callbackDelete](/docs/callback-delete)   | The basic usage of callbackDelete is when we want to replace the default delete functionality. |
+| [callbackEditField](/docs/callback-edit-field)   | A callback that is used in case you need to create a custom field for the edit/update form. |
+| [callbackInsert](/docs/callback-insert)   | The callback is used when we need to replace the default functionality of the insert. |
+| [callbackReadField](/docs/callback-read-field)   | This is a callback in order to create a custom field at the read/view form. |
+| [callbackUpdate](/docs/callback-update)   | The callback is used when we need to replace the default update functionality. |
 

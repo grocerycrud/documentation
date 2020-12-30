@@ -32,15 +32,8 @@ A full example is also available for you to understand better:
 $crud->setSubject('Office', 'Offices');
 $crud->columns(['city','country','phone','addressLine1','postalCode']);
 
-$crud->callbackAfterUpdate(function ($stateParameters) {
-    $this->db->where('officeCode', $stateParameters->primaryKeyValue);
-    $customer = $this->db->get('offices')->row();
-
-    if (!empty($customer)) {
-        $this->db->update('offices',
-            ['city' => '[AFTER UPDATE] ' . $customer->city],
-            ['officeCode' => $stateParameters->primaryKeyValue]);
-    }
+$crud->callbackAfterUpdate(function ($stateParameters) use ($callbackAfterUpdateModel) {
+    $callbackAfterUpdateModel->officesAfterUpdate($stateParameters->primaryKeyValue);
 
     return $stateParameters;
 });</code></pre>

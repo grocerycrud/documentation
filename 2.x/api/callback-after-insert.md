@@ -34,8 +34,8 @@ the string "[NEW] " at the beginning of the name.
 $crud->setSubject('Customer', 'Customers');
 $crud->columns(['customerName','phone','addressLine1','creditLimit']);
 
-$crud->callbackAfterInsert(function ($stateParameters) use ($addFieldsModel) {
-    $addFieldsModel->updateCustomerName($stateParameters->insertId);
+$crud->callbackAfterInsert(function ($stateParameters) use ($callbackAfterInsertModel) {
+    $callbackAfterInsertModel->updateCustomerName($stateParameters->insertId);
 
     return $stateParameters;
 });</code></pre>
@@ -44,17 +44,16 @@ The above code will give you the below results:
 
 `embed:demo_callback-after-insert`
 
-`$addFieldsModel` is using Grocery CRUD [Custom Model](/docs/custom-model) but you can also use your own custom model.
+`$callbackAfterInsertModel` is using Grocery CRUD [Custom Model](/docs/custom-model) but you can also use your own framework model, it doesn't really matter as far as you make sure that you validate the user inputs data.
 
-For reference the code for `AddFields` class can be found below:
+For reference the code for `CallbackAfterInsert` class can be found below:
 
 <pre><code class="language-php">&lt;?php
 namespace App\Models;
 use GroceryCrud\Core\Model;
 use Zend\Db\Sql\Sql;
 
-// This specific custom model example is for Grocery CRUD Enterprise edition
-class AddFields extends Model {
+class CallbackAfterInsert extends Model {
     public function updateCustomerName($customerId) {
 
         if (!is_numeric($customerId)) {
