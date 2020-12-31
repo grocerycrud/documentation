@@ -2,8 +2,8 @@
 id: set-clone
 title: setClone
 permalink: docs/set-clone
-previous: set-api-url-path
-next: set-config
+previous: clone-fields
+next: unset-clone
 ---
 
 # setClone

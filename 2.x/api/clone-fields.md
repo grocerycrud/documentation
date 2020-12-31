@@ -2,8 +2,8 @@
 id: clone-fields
 title: cloneFields
 permalink: docs/gcc/2.x/clone-fields
-previous: add-fields
-next: replace-state
+previous: callback-clone-field
+next: set-clone
 ---
 
 # cloneFields
