@@ -64,7 +64,7 @@ next: basic-example
 | [unsetRead](/docs/unset-read)   | The method unsetRead is removing completely the Read operation for the end-user. |
 | [unsetReadFields](/docs/unset-read-fields)   | Unset (do not display) the specified fields for the view (read only) form. |
 | [unsetTexteditor](/docs/unset-texteditor)  |  Unsets the texteditor for the selected fields. This function is really rare to use as by default there is not any load of the texteditor for optimising purposes. |
-| [where](/docs/where)  | Filter the queries with an extra where statement. |[
+| [where](/docs/where)  | Filter the queries with an extra where statement. |
 
 ### Callback Functionality
 

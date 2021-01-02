@@ -24,6 +24,8 @@ $crud->columns(['customerName','phone','addressLine1','creditLimit']);
 // Unsetting all the buttons to see the result of the set function
 $crud->unsetPrint();
 $crud->unsetExport();
+$crud->unsetSettings();
+$crud->unsetFilters();
 $crud->unsetOperations();
 
 $crud->setDeleteMultiple();

@@ -1,7 +1,7 @@
 ---
-id: set-relation-nto-n
+id: set-relation-n-to-n
 title: setRelationNtoN
-permalink: docs/set-relation-nto-n
+permalink: docs/set-relation-n-to-n
 previous: set-relation
 next: set-rule
 ---
