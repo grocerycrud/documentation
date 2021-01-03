@@ -43,8 +43,7 @@ $crud->setRule('postalCode', 'lengthBetween', ['4','6']);</code></pre>
 For more information about the setRule please read the <a href="/enterprise/api-and-function-list/setRule">setRule</a> method
 
 A full working example can be found below:
-<pre><code class="language-php">
-$crud->setTable('customers');
+<pre><code class="language-php">$crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
 $crud->columns(['customerName','phone','addressLine1','creditLimit']);
 

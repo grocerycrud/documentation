@@ -26,5 +26,3 @@ $crud->setTheme('Cyborg');
 $crud->setThemePath('private/themes/');
 
 $output = $crud->render();</code></pre>
-
-`embed:demo_set-theme-path`

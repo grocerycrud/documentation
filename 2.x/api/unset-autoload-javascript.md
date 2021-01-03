@@ -12,6 +12,8 @@ next: unset-bootstrap
 <pre><code class="language-php">unsetAutoloadJavaScript(void)</code></pre>
 Unset the initial load of the GroceryCRUD so we can load it dynamically. That simply means that the Grocery CRUD will NOT load if we will not call it manually from the JavaScript code.
 
+## Example
+
 For example the below code:
 
 <pre><code class="language-php">$crud->setTable('customers');
@@ -21,7 +23,7 @@ $crud->unsetAutoloadJavaScript();
 $output = $crud->render();
 
 // Add a custom JavaScript file to load Grocery CRUD
-$output->js_files[] = base_url() . 'assets/custom/js/custom-gc-load.js'; 
+$output->js_files[] = '/assets/js/custom-gc-load.js'; 
 </code></pre>
 
 will output everything that it is necessary for Grocery CRUD but without the initial load. The initial call will need to be manually triggered through the code:

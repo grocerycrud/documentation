@@ -14,15 +14,28 @@ Grocery CRUD by default use the same URL that was initially called. As Grocery C
 
 As people may still be confused of what the <code>setApiUrlPath</code> is doing let's have an example.
 
-The current page is loaded on the URL: <code>www.grocerycrud.com/enterprise/api-and-function-list/setApiUrlPath</code>, however this page is cached and the routes are a bit more complicated than you think. So for this page in order to show the below example, we are using the function <code>setApiUrlPath</code> like this:
+The current page is loaded on the URL: <code>https://www.grocerycrud.com/docs/set-api-url-path</code>, however this page is cached and the routes are a bit more complicated than you may think! 
 
-<code>$crud-&gt;setApiUrlPath('/demo_set_api_url_path');</code> more specifically the full code is the below:
-<pre><code class="language-php">$crud-&gt;setApiUrlPath('/demo_set_api_url_path');
-$crud-&gt;setTable('customers');
-$crud-&gt;setSubject('Customer', 'Customers');
-$crud-&gt;fields(['customerName','phone','addressLine1','creditLimit']);
+In fact our api is served to a different server so the function `setApiUrlPath` is crucial to see all the examples that we have on our website 😃
 
-$output = $crud-&gt;render();</code></pre>
-And this is simply giving the below result. So all the ajax requests are going to: <code>/demo_set_api_url_path</code> instead of <code>/enterprise/api-and-function-list/setApiUrlPath</code>. You can see by your own at the live example:
+## Example
+
+So for this page specifically we are using the below line:
+
+<pre><code class="language-php">$crud->setApiUrlPath('https://demo.grocerycrud.com/set-api-url-path');</code></pre> 
+
+You can see the full code below:
+
+<pre><code class="language-php">$crud->setTable('customers');
+$crud->setSubject('Customer', 'Customers');
+$crud->fields(['customerName','phone','addressLine1','creditLimit']);
+
+$crud->setApiUrlPath('https://demo.grocerycrud.com/set-api-url-path');
+
+$output = $crud->render();</code></pre>
+
+So all the ajax API requests are going to: <code>https://demo.grocerycrud.com/set-api-url-path</code> instead of <code>https://www.grocerycrud.com/docs/set-api-url-path</code> that would be the default one.
+
+You can see the results of the above code here:
 
 `embed:demo_set-api-url-path`
