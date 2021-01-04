@@ -16,19 +16,21 @@ By default GroceryCRUD is using a Model that already automated for you pretty mu
 <pre><code class="language-php">$model = new customModel($db);
 $crud->setModel($model);</code></pre>
 
+## Example
+
 A more specific example can be the below:
 
 <pre><code class="language-php">$crud->setModel(new customModel($db));
 
 $crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
-$crud->columns(['customerName','country','state','addressLine1']);
+$crud->columns(['customerName', 'country', 'state', 'addressLine1']);
 
 $output = $crud->render();</code></pre>
 
 where <code>$db</code> is the config variable for the database and where customModel is:
 
-<pre><code>&lt;?php 
+<pre><code class="language-php">&lt;?php 
 
 use GroceryCrud\Core\Model;
 
@@ -42,7 +44,10 @@ class customModel extends Model {
     
 }</code></pre>
 
-<strong>Note:</strong> There will be a separate section that will show you how to create your own unique models for advanced needs. This example is to help you understand the basic usage
+<strong>Note:</strong> There is a separate section that you can find at the Advanced Examples [How to create a custom model](/docs/custom-model) that 
+is covering how to create your own unique models for advanced needs. 
+
+This example is to help you understand only the basic usage
 
 The result of the above code is:
 `embed:demo_set-model`

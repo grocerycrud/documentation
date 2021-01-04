@@ -28,7 +28,6 @@ You can see a full working example below:
 
 <pre><code class="language-php">$crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
-$crud->set();
 $crud->unsetFields(['salesRepEmployeeNumber','creditLimit']);
 
 $output = $crud->render();</code></pre>

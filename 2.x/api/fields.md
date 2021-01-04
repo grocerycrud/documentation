@@ -27,7 +27,7 @@ You can see a full working example below. At the below example as you will notic
 
 <pre><code class="language-php">$crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
-$crud->fields(['customerName','phone','addressLine1','creditLimit']);
+$crud->fields(['customerName', 'phone', 'addressLine1', 'creditLimit']);
 
 $output $crud->render();</code></pre>
 
