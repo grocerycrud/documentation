@@ -129,16 +129,17 @@ You can find a full example below:
 $crud->setSubject('Order', 'Orders');
 $crud->unsetAdd();
 
-$crud->fieldType('orderDate', GroceryCrud::FIELD_TYPE_DATETIME);
+$crud->fieldType('orderDate', 'datetime');
 $crud->fieldType('requiredDate', 'datetime');
 $crud->fieldType('shippedDate', 'datetime');
+
 $crud->setRelation('customerNumber','customers','contactLastName');
 
 $output = $crud->render();</code></pre>
 
 As you will also notice at the below example the fields: 'orderDate', 'requiredDate', 'shippedDate' are now a datetime field. GroceryCRUD is recognizing if the browser is supporting the datetime native input and if not it is falling back to a jQuery plugin (in our case this is the jQuery UI for datetime). You can see the difference by opening the page in chrome and the same page in firefox.
 
-`embed:demo_field-types`
+`embed:demo_field-type`
 
 
 
