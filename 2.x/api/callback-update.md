@@ -37,8 +37,6 @@ $crud->callbackUpdate(function ($stateParameters) use ($callbackUpdateModel) {
     return $stateParameters;
 });</code></pre>
 
-Notice: The <code>$this->db</code> is from Codeigniter as this example is installed in a Codeigniter project. You can of course use your own database calls from your framework instead.
-
 With the below live example you can see that when we are updating any row then the text "[Update - day Month]" is prepend at the beginning of the field comments.
 
 `embed:demo_callback-update`

@@ -25,31 +25,21 @@ The <code>$stateParameters</code> variable is at the below form:
     'primaryKeyValue' => '1234'
 ];</code></pre>
 
-Below there is a working example of the <code>callbackBeforeDelete</code> method. As we also wanted to skip the delete so we can update the record, we are also using the <code>callbackDelete</code> at the example just for the demonstration to skip the delete.
+## Example
 
-<code>Notice:</code> At the below example we are using the database from Codeigniter as this website is built in Codeigniter framework. At your project of course you can use your framework's database queries to get some manual parameters.
+Below there is a working example of the <code>callbackBeforeDelete</code> method.
 
 <pre><code class="language-php">$crud->setTable('offices');
-        $crud->setSubject('Office', 'Offices');
-        $crud->columns(['city','country','phone','addressLine1','postalCode']);
-        $crud->callbackDelete(function ($stateParameters) {
-            return $stateParameters;
-        });
+$crud->setSubject('Office', 'Offices');
+$crud->columns(['city','country','phone','addressLine1','postalCode']);
 
-        $crud->callbackBeforeDelete(function ($stateParameters) {
-            $this->db->where('officeCode', $stateParameters->primaryKeyValue);
-            $customer = $this->db->get('offices')->row();
+$crud->callbackBeforeDelete(function ($stateParameters) {
+  // Custom error messages are only available on Grocery CRUD Enterprise
+  $errorMessage = new \GroceryCrud\Core\Error\ErrorMessage();
+  return $errorMessage->setMessage("You don't have permissions to delete this office\n");
+});
 
-            if (!empty($customer)) {
-                $this->db->update('offices',
-                    ['city' => '[BEFORE_DELETE]' . $customer->city],
-                    ['officeCode' => $stateParameters->primaryKeyValue]);
-            }
-
-            return $stateParameters;
-        });
-
-        $output = $crud->render();
+$output = $crud->render();
 </code></pre>
 
 `embed:demo_callback-before-delete`
