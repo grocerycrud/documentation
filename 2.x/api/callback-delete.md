@@ -24,6 +24,8 @@ For example:
     return $stateParameters;
 });</code></pre>
 
+## Example
+
 Below you can see a full example. At the below example we are skipping completely the delete functionality and instead we are updating the row by adding at the title the word "[DELETED]"
 
 <pre><code class="language-php">$crud->setTable('employees');
@@ -31,17 +33,12 @@ $crud->setSubject('Employee', 'Employees');
 $crud->setRelation('officeCode','offices','city');
 $crud->displayAs('officeCode','City');
 
-// Also consider to add a $crud->callbackDeleteMultiple callback here
+// Unsetting the multiple delete for this example. If we need it we also need to
+// consider to add a $crud->callbackDeleteMultiple callback
+$crud->unsetDeleteMultiple();
 
-$crud->callbackDelete(function ($stateParameters) {
-    $this->db->where('employeeNumber', $stateParameters->primaryKeyValue);
-    $customer = $this->db->get('employees')->row();
-
-    if (!empty($customer)) {
-        $this->db->update('employees',
-            ['lastName' => '[DELETED] ' . $customer->lastName],
-            ['employeeNumber' => $stateParameters->primaryKeyValue]);
-    }
+$crud->callbackDelete(function ($stateParameters) use ($callbackDeleteModel) {
+    $callbackDeleteModel->deleteEmployee($stateParameters->primaryKeyValue);
 
     return $stateParameters;
 });
@@ -50,3 +47,46 @@ $output = $crud->render();</code></pre>
 
 Try to remove one row at the below example to see exactly the functionality of the above example:
 `embed:demo_callback-delete`
+
+`$callbackDeleteModel` is using Grocery CRUD [Custom Model](/docs/custom-model) but you are not limited on that. On callbacks you can use any custom libraries.
+
+For reference the code for `CallbackDelete` class can be found below:
+
+<pre><code class="language-php">&lt;?php
+namespace App\Models;
+use GroceryCrud\Core\Exceptions\Exception;
+use GroceryCrud\Core\Model;
+use Zend\Db\Sql\Sql;
+
+class CallbackDelete extends Model {
+    public function deleteEmployee($employeeNumber) {
+        // Validating our data
+        if (!is_numeric($employeeNumber)) {
+            throw new Exception("Wrong input");
+        }
+
+        $sql = new Sql($this->adapter);
+        $select = $sql->select();
+        $select->from('employees');
+        $select->where(['employeeNumber = ?' => $employeeNumber]);
+
+        $employee = $this->getRowFromSelect($select, $sql);
+
+        // More validations
+        if (!empty($employee) && is_array($employee) && count($employee) === 1) {
+            $employeeLastName = $employee[0]['lastName'];
+
+            if (!strstr($employeeLastName, '[DELETED] ')) {
+                $update = $sql->update('employees');
+                $update->where(['employeeNumber = ?' => $employeeNumber]);
+
+                $update->set(['lastName' => '[DELETED] ' . $employeeLastName]);
+
+                $statement = $sql->prepareStatementForSqlObject($update);
+                return $statement->execute();
+            }
+        }
+
+        return false;
+    }
+}</code></pre>

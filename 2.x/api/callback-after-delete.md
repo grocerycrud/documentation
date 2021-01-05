@@ -28,31 +28,73 @@ The <code>$stateParameters</code> variable is at the below form:
     'primaryKeyValue' => '1234'
 ];</code></pre>
 
+## Example
+
 Below there is a working example of the <code>callbackAfterDelete</code> method. As we also wanted to skip the delete so we can update the record, we are also using the <code>callbackDelete</code> at the example just for the demonstration to skip the delete.
 
-<code>Notice:</code> At the below example we are using the database from Codeigniter as this website is built in Codeigniter framework. At your project of course you can use your framework's database queries to get some manual parameters.
+<pre><code class="language-php">$crud->setTable('employees');
+$crud->setSubject('Employee', 'Employees');
+$crud->setRelation('officeCode','offices','city');
+$crud->displayAs('officeCode','City');
+// Unsetting the multiple delete for this example. If we need it we also need to
+// consider to add a $crud->callbackDeleteMultiple callback as well
+$crud->unsetDeleteMultiple();
 
-<pre><code class="language-php">$crud->setTable('offices');
-        $crud->setSubject('Office', 'Offices');
-        $crud->columns(['city','country','phone','addressLine1','postalCode']);
-        $crud->callbackDelete(function ($stateParameters) {
-            return $stateParameters;
-        });
+$crud->callbackDelete(function ($stateParameters) {
+    // Making sure that we skip the delete functionality first!
+    return $stateParameters;
+});
 
-        $crud->callbackAfterDelete(function ($stateParameters) {
-            $this->db->where('officeCode', $stateParameters->primaryKeyValue);
-            $customer = $this->db->get('offices')->row();
+$crud->callbackAfterDelete(function ($stateParameters) use ($callbackDeleteModel) {
+    $callbackDeleteModel->deleteEmployee($stateParameters->primaryKeyValue);
 
-            if (!empty($customer)) {
-                $this->db->update('offices',
-                    ['city' => '[DELETED]' . $customer->city],
-                    ['officeCode' => $stateParameters->primaryKeyValue]);
-            }
+    return $stateParameters;
+});
 
-            return $stateParameters;
-        });
-
-        $output = $crud->render();
+$output = $crud->render();
 </code></pre>
 
 `embed:demo_callback-after-delete`
+
+`$callbackDeleteModel` is using Grocery CRUD [Custom Model](/docs/custom-model) but you are not limited on that. On callbacks you can use any custom libraries.
+
+For reference the code for `CallbackDelete` class can be found below:
+
+<pre><code class="language-php">&lt;?php
+namespace App\Models;
+use GroceryCrud\Core\Exceptions\Exception;
+use GroceryCrud\Core\Model;
+use Zend\Db\Sql\Sql;
+
+class CallbackDelete extends Model {
+    public function deleteEmployee($employeeNumber) {
+        // Validating our data
+        if (!is_numeric($employeeNumber)) {
+            throw new Exception("Wrong input");
+        }
+
+        $sql = new Sql($this->adapter);
+        $select = $sql->select();
+        $select->from('employees');
+        $select->where(['employeeNumber = ?' => $employeeNumber]);
+
+        $employee = $this->getRowFromSelect($select, $sql);
+
+        // More validations
+        if (!empty($employee) && is_array($employee) && count($employee) === 1) {
+            $employeeLastName = $employee[0]['lastName'];
+
+            if (!strstr($employeeLastName, '[DELETED] ')) {
+                $update = $sql->update('employees');
+                $update->where(['employeeNumber = ?' => $employeeNumber]);
+
+                $update->set(['lastName' => '[DELETED] ' . $employeeLastName]);
+
+                $statement = $sql->prepareStatementForSqlObject($update);
+                return $statement->execute();
+            }
+        }
+
+        return false;
+    }
+}</code></pre>
