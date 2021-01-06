@@ -16,7 +16,7 @@ By using custom models we can have the below benefits:
  	<li>Organising your code better. Sometimes it is better to create a file for a custom query, just in case at the future the query will get more complicated. With that good practice in mind you can easily have the freedom to create some custom queries, without having in mind the complexity of the query.</li>
  	<li>It is more understandable from new users that this is the model that is used for your CRUD.</li>
 </ol>
-With the above benefits in mind, let's see first of all how we can create a custom model. All the documentation for custom model, can also be found here: <a href="https://www.grocerycrud.com/enterprise/api-and-function-list/setModel">set Model documentation</a>
+With the above benefits in mind, let's see first of all how we can create a custom model. All the documentation for custom model, can also be found at [setModel](/docs/set-model) documentation.
 
 ## A full example in Codeigniter 3 Framework
 
@@ -153,10 +153,10 @@ You should do something like that:
 
             // Please notice that the APPPATH is used only in Codeigniter Framework
             include(APPPATH . 'models/CustomersModel.php');
-            $db = $this->_getDbData();</strong>
+            $db = $this->_getDbData();
             // If we are not using namespaces, we need to make sure that we are starting with "\" as
             // this way we can guarantee that it will not fail in case we will use namespaces at the future
-            <strong>$model = new \CustomersModel($db);
+            $model = new \CustomersModel($db);
             $crud->setModel($model);
 
             $crud->setSubject('Customer', 'Customers');
