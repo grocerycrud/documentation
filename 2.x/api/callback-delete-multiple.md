@@ -3,7 +3,7 @@ id: callback-delete-multiple
 title: callbackDeleteMultiple
 permalink: docs/callback-delete-multiple
 previous: callback-delete
-next: callback-edit-field
+next: set-delete
 ---
 
 # callbackDeleteMultiple
@@ -19,7 +19,7 @@ The <code>callbackDeleteMultiple</code> is getting as a parameter a callback. Th
 
 For example:
 
-<pre><code class="language-php">$crud->callbackDelete(function ($stateParameters) {
+<pre><code class="language-php">$crud->callbackDeleteMultiple(function ($stateParameters) {
     
     print_r($stateParameters); // An example for debugging purposes!
     /** This will export something like this: 
@@ -37,32 +37,39 @@ For example:
     return $stateParameters;
 });</code></pre>
 
-You can also see a full example below. Try to remove by clicking the checkboxes and then click the Delete button. You will notice that the field with name <code>extension</code> will take the value <code>[DELETED]</code> instead of getting deleted:
+## Example
+
+You can also see a full example below.
 
 <pre><code class="language-php">$crud->setTable('employees');
 $crud->setSubject('Employee', 'Employees');
 $crud->setRelation('officeCode','offices','city');
 $crud->displayAs('officeCode','City');
 
-// Also consider to add a $crud->callbackDelete callback here
+$crud->callbackDelete(function ($stateParameters) use ($callbackDeleteModel) {
+    $callbackDeleteModel->deleteEmployee($stateParameters->primaryKeyValue);
 
-$crud->callbackDeleteMultiple(function ($stateParameters) {
+    return $stateParameters;
+});
+
+$crud->callbackDeleteMultiple(function ($stateParameters) use ($callbackDeleteModel) {
 
     $primaryKeys = [];
     foreach ($stateParameters->primaryKeys as $primaryKey) {
         // For security reasons check if the primary key is numeric
-        if (is_numeric($primaryKey)) { 
+        if (is_numeric($primaryKey)) {
             $primaryKeys[] = $primaryKey;
         }
     }
 
+    if (count($primaryKeys) > 10) {
+        // Custom error messages are only available on Grocery CRUD Enterprise
+        $errorMessage = new \GroceryCrud\Core\Error\ErrorMessage();
+        return $errorMessage->setMessage("For demo purposes you can only delete maximum 10 employees at a time\n");
+    }
 
     if (!empty($primaryKeys)) {
-        $this->db->update(
-            'employees',
-            ['extension' => '[DELETED]'], 
-            'employeeNumber IN (' . implode(',', $primaryKeys) . ')'
-         );
+        $callbackDeleteModel->deleteMultipleEmployees($primaryKeys);
     } else {
         return false;
     }
@@ -73,6 +80,65 @@ $crud->callbackDeleteMultiple(function ($stateParameters) {
 $output = $crud->render();
 </code></pre>
 
-The above example will render the following result:
+The result of the above code can be found here:
 
 `embed:demo_callback-delete-multiple`
+
+`$callbackDeleteModel` is using Grocery CRUD [Custom Model](/docs/custom-model) but you are not limited on that. On callbacks you can use any custom libraries.
+
+For reference the code for `CallbackDelete` class can be found below:
+
+<pre><code class="language-php">&lt;?php
+namespace App\Models;
+use GroceryCrud\Core\Exceptions\Exception;
+use GroceryCrud\Core\Model;
+use Zend\Db\Sql\Sql;
+
+class CallbackDelete extends Model {
+    public function deleteEmployee($employeeNumber) {
+        // Validating our data
+        if (!is_numeric($employeeNumber)) {
+            throw new Exception("Wrong input");
+        }
+
+        $sql = new Sql($this->adapter);
+        $select = $sql->select();
+        $select->from('employees');
+        $select->where(['employeeNumber = ?' => $employeeNumber]);
+
+        $employee = $this->getRowFromSelect($select, $sql);
+
+        // More validations
+        if (!empty($employee) && is_array($employee) && count($employee) === 1) {
+            $employeeLastName = $employee[0]['lastName'];
+
+            if (!strstr($employeeLastName, '[DELETED] ')) {
+                $update = $sql->update('employees');
+                $update->where(['employeeNumber = ?' => $employeeNumber]);
+
+                $update->set(['lastName' => '[DELETED] ' . $employeeLastName]);
+
+                $statement = $sql->prepareStatementForSqlObject($update);
+                return $statement->execute();
+            }
+        }
+
+        return false;
+    }
+
+    public function deleteMultipleEmployees($ids) {
+        $sql = new Sql($this->adapter);
+
+        foreach ($ids as $employeeNumber) {
+            $update = $sql->update('employees');
+            $update->where(['employeeNumber = ?' => $employeeNumber]);
+
+            $update->set(['extension' => '[DELETED]']);
+
+            $statement = $sql->prepareStatementForSqlObject($update);
+            $statement->execute();
+        }
+
+        return true;
+    }
+}</code></pre>
