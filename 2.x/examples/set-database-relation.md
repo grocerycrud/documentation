@@ -3,7 +3,7 @@ id: set-database-relation
 title: Set database relation
 permalink: docs/set-database-relation
 previous: set-validation-rules
-next: 
+next: change-theme-skin
 ---
 
 # Set database relation
@@ -30,5 +30,7 @@ $crud->setRelation('officeCode','offices','city');
 $crud->displayAs('officeCode','City');
 
 $output = $crud->render();</code></pre>
+
+The above code will have as a result the below CRUD:
 
 `embed:demo_set-database-relation`
