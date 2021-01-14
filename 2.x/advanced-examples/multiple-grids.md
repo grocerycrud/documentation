@@ -220,5 +220,3 @@ public function _example_output($output = null) {
 </code></pre>
 
 And the result of the above code is the below. Feel free to click page source to see the source of the multigrid to understand better the code example:
-
-`embed:demo_multiple-grids`

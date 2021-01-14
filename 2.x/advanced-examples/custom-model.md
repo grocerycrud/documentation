@@ -197,5 +197,3 @@ $crud-&gt;readOnlyFields(['count_orders']);
 $crud-&gt;displayAs('count_orders','Orders');
 
 $output = $crud-&gt;render();</code></pre>
-
-`embed:demo_custom-model`
