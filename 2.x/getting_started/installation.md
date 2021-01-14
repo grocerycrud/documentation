@@ -12,7 +12,7 @@ The installation is really easy. You just copy all the files to your project and
 
 The first thing that we obviously need to do is to download Grocery CRUD. You can do that from the webpage [Download](/download).
 
-By the end of the installation, your folder structure should look similar to this: (new folders/files are with bold)
+By the end of the installation, your folder structure should look similar to this:
 
 <pre>├── app
 │   ├── Common.php
