@@ -16,8 +16,8 @@ If you are looking for more specific installation guidance, you can also check t
 <a href="/enterprise/enterprise-documentation/enterprise-codeigniter-installation">1. Installation in Codeigniter v3</a>
 <a href="/enterprise/enterprise-documentation/enterprise-codeigniter-4-installation/">2. Installation in Codeigniter v4</a>
 <a href="/enterprise/enterprise-documentation/laravel-installation">3. Laravel v5 installation</a>
-<h1>Installation</h1>
 <div id="without-composer"></div>
+<h1>Installation</h1>
 <h2>1. Without Composer</h2>
 For many people composer seems too complicated and they prefer the old fashioned copy-paste way. Also if you are using a framework that it is not requiring composer or you are using native PHP then the installation without composer is the best choice. There is nothing bad with the installation without composer, it is just that on updates it will require more manual work.
 
@@ -255,8 +255,8 @@ $output = $output-&gt;output;
 // Then you can basically include the results of the output and the CSS/JS files to your own framework's output or template
 include('view.php');
 </code></pre>
-Now from the above code you will have a full working CRUD without the need to do anything else! You can now enjoy all the power of Grocery CRUD at the documentation (and you didn't use any terminal at all).
 <div id="with-composer"></div>
+Now from the above code you will have a full working CRUD without the need to do anything else! You can now enjoy all the power of Grocery CRUD at the documentation (and you didn't use any terminal at all).
 <h2>2. Installation with composer</h2>
 If you prefer the video tutorials well... we did create a <a href="https://www.youtube.com/watch?v=buIwAipWSqo" target="_blank" rel="noopener noreferrer">video tutorial</a> with all the below information into one video.
 
