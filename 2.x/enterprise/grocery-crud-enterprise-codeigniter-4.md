@@ -1,0 +1,208 @@
+---
+id: grocery-crud-enterprise-codeigniter-4
+title: Codeigniter 4 Installation
+permalink: docs/grocery-crud-enterprise-codeigniter-4
+previous:
+next:
+---
+
+# Codeigniter 4 Installation
+
+This is a full tutorial of a suggested way to install Grocery CRUD Enterprise to your already existing project with Codeigniter 4 framework. For some people this tutorial may require too many steps. However have in mind that if you follow the instructions step by step you will have a successful installation as this page is actively updated.
+
+<strong>Step 1.</strong> From the email that you've received or from the user's page (you will get instructions at the email of how to access user's page) download the file that say's "Without composer". Once you've downloaded it, unzip it!
+The folder structure that you will get is the following:
+<pre>├── examples
+│   ├── config.php
+│   ├── database.php
+│   ├── example.php
+│   └── view.php
+├── libraries
+│   ├── autoload.php
+│   ├── bin
+│   ├── composer
+│   ├── ...
+│   ├── phpunit
+│   ├── symfony
+│   └── zendframework
+└── public
+    └── grocery-crud
+        ├── css
+        ├── fonts
+        ├── images
+        └── js</pre>
+<strong>Step 2.</strong> rename the folder <code>libraries</code> to <code>GroceryCrudEnterprise</code> and move it to your project at the following path <code>app/Libraries/GroceryCrudEnterprise</code> with this structure we simply follow the "Codeigniter way" of adding libraries.
+
+<strong>Notice:</strong> Have in mind here that although the folder of Grocery CRUD Enterprise has the name <code>libraries</code> (with lowercase) that has almost nothing to do with the Codeigniter folder <code>Libraries</code> (with capital L). This is a very common confusion that people may have during the installation. As per step 2. you will basically rename the folder <code>libraries</code> to <code>GroceryCrudEnterprise</code> to also avoid this confusion.
+
+<strong>Step 3.</strong> go to the folder <code>public</code> and copy the folder <code>grocery-crud</code> to your <code>public</code> folder of your Codeigniter project.
+
+<strong>Step4.</strong> We did currently installed Grocery CRUD Enterprise in our project and we need to create our configuration files in order to make it work! Go to <code>app/Config</code> and create a file with name <code>GroceryCrudEnterprise.php</code>. As the configuration is different than other frameworks we will use a custom one that will look like this (just copy really the code below)
+<script src="https://gist.github.com/scoumbourdis/fe5c4661e0f47504e37ce870d8f1a973.js"></script>
+<div id="final-structure">In order to confirm that so far you did copy the correct files, your folder structure will look something like this:</div>
+<pre>.
+├── LICENSE
+├── README.md
+├── _support
+├── app
+│   ├── Common.php
+│   ├── Config
+│   │   ├── App.php
+│   │   ├── Autoload.php
+│   │   ├── ...
+│   │   ├── Format.php
+│   │   ├── <strong>GroceryCrudEnterprise.php</strong>
+│   │   ├── Honeypot.php
+│   │   ├── ...
+│   │   └── View.php
+│   ├── Controllers
+│   │   ├── BaseController.php
+│   │   └── Home.php
+│   ├── Database
+│   │   ├── Migrations
+│   │   └── Seeds
+│   ├── Filters
+│   ├── Helpers
+│   ├── Language
+│   ├── Libraries
+│   │   ├── <strong>GroceryCrudEnterprise</strong>
+│   │   │   ├── <strong>autoload.php</strong>
+│   │   │   ├── <strong>bin</strong>
+│   │   │   ├── <strong>composer</strong>
+│   │   │   ├── ...
+│   │   │   ├── <strong>phpunit</strong>
+│   │   │   ├── <strong>symfony</strong>
+│   │   │   └── <strong>zendframework</strong>
+│   ├── Models
+│   ├── ThirdParty
+│   ├── Views
+│   │   ├── errors
+│   │   └── welcome_message.php
+│   └── index.html
+├── composer.json
+├── contributing.md
+├── env
+├── license.txt
+├── phpunit.xml.dist
+├── public
+│   ├── <strong>grocery-crud</strong>
+│   │   ├── <strong>css</strong>
+│   │   ├── <strong>fonts</strong>
+│   │   ├── <strong>images</strong>
+│   │   └── <strong>js</strong>
+│   ├── favicon.ico
+│   ├── index.php
+│   └── robots.txt
+├── spark
+├── system
+├── tests
+└── writable</pre>
+<strong>Step5.</strong> Now you are ready basically to use grocery CRUD Enterprise. You only need some small modifications. The easiest way to create two private methods to your controller that it will look like this:
+<pre><code class="language-php">&lt;?php namespace App\Controllers;
+
+// Add those two lines at the beginning of your controller
+include(APPPATH . 'libraries/GroceryCrudEnterprise/autoload.php');
+use GroceryCrud\Core\GroceryCrud;
+
+...
+
+private function _getDbData() {
+$db = (new \Config\Database())-&gt;default;
+return [
+'adapter' =&gt; [
+'driver' =&gt; 'Pdo_Mysql',
+'host'     =&gt; $db['hostname'],
+'database' =&gt; $db['database'],
+'username' =&gt; $db['username'],
+'password' =&gt; $db['password'],
+'charset' =&gt; 'utf8'
+]
+];
+}
+private function _getGroceryCrudEnterprise($bootstrap = true, $jquery = true) {
+$db = $this-&gt;_getDbData();
+$config = (new \Config\GroceryCrudEnterprise())-&gt;getDefaultConfig();
+
+        $groceryCrud = new GroceryCrud($config, $db);
+        return $groceryCrud;
+}</code></pre>
+And now when you want to use groceryCRUD enterprise you will simply do this:
+<pre><code class="language-php">// Your function at your controller
+public function customers()
+{
+    $crud = $this-&gt;_getGroceryCrudEnterprise();
+    $crud-&gt;setTable('customers');
+    $crud-&gt;setSubject('Customer', 'Customers');
+
+    $output = $crud-&gt;render();
+    
+    return $this-&gt;_example_output($output);
+}
+
+private function _example_output($output = null) {
+    if (isset($output-&gt;isJSONResponse) &amp;&amp; $output-&gt;isJSONResponse) {
+                header('Content-Type: application/json; charset=utf-8');
+                echo $output-&gt;output;
+                exit;
+    }
+
+    return view('example.php', (array)$output);
+}
+</code></pre>
+A full working example of a controller with name <code>Example</code> located at <code>app/Controllers/Example.php</code> can be found here:
+
+<script src="https://gist.github.com/scoumbourdis/3258706a8c51c2cddd95771b813af2b1.js"></script>
+
+Go to <code>app/Views</code> and create a file with name <code>example.php</code> and it is the exact same view that we were using as an example at Community edition. More specifically the view <em>example.php</em> will contain the below code:
+
+<script src="https://gist.github.com/scoumbourdis/195d89c1a454d60dad90505ef0a22330.js"></script>
+
+If you would like you can also check the above steps into a video tutorial:
+
+<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/XIoMR38ANnE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+<strong>1. Getting the message "Ooooops, something went wrong!"</strong>
+The most common mistake of the installation of grocery CRUD Enteprise is when the assets_folder has a wrong path. If you did follow all the steps and you see that your webpage looks like that:
+
+<img style="border: 1px solid #DDD;" src="/assets/uploads/general/wrong-codeigniter-installation.png" alt="wrong-codeigniter-installation" />
+
+then make sure that you have configured your <code>app/Config/App.php</code>
+file at the line <code>public $baseURL = 'http://localhost:8080';</code>. For example if your project URL looks like this:
+<code>http://localhost/my-test-project/public/index.php</code> then your <code>baseURL</code> should look like this:
+<code>public $baseURL = 'http://localhost/my-test-project/public/';</code>
+
+It is really important to also don't forget the trailing slash at the end of the URL.
+
+The most common approach, best for security and suggested way of Codeigniter 4 installation is to configure your URL to point directly to your public folder. For example for apache virtual hosts you will probably have an apache configuration that is looking like this:
+
+<script src="https://gist.github.com/scoumbourdis/793449ad89cacf9da4933d422bad02b0.js"></script>
+
+At the above example your <code>$baseURL</code> should look like this:
+
+<code>public $baseURL = 'http://my-test-project.local/';</code>
+
+<strong>2. Getting an empty box with a border</strong>
+If you are getting an empty box with a border that is looking like this:
+
+<img style="border: 1px solid #DDD;" src="/assets/uploads/general/gcrud-enterpise-empty-box.png" alt="wrong-codeigniter-installation" />
+
+This is because by default Codeigniter 4 has as <code>CI_ENVIRONMENT=production</code> in simple words Codeigniter is trying to hide all of the errors by default and you will not get any errors. You can bypass that by renaming the <code>env</code> that you have at the root to <code>.env</code> and uncomment the below line:
+<pre><code class="language-php"># CI_ENVIRONMENT = production</code></pre>
+And replace it with:
+<pre><code class="language-php">CI_ENVIRONMENT = development</code></pre>
+If you are using Google Chrome press right click "Inspect Element" and then go to the Network tab and check where the response is red (or else it returns header 500). Once you click on the URL you can see the error as per below screenshot:
+
+<img style="border: 1px solid #DDD;" src="/assets/uploads/general/inspect-error.png" alt="inspect-error" />
+
+You can also press right click "Open in new Tab" to see the error at full screen rather than the "Preview" tab.
+
+For example in our case we've forgot to change the default database credentials to our ones. So by going to <code>.env</code> file and uncommenting this lines:
+<pre><code class="language-php"># database.default.hostname = localhost
+# database.default.database = ci4
+# database.default.username = root
+# database.default.password = root
+# database.default.DBDriver = MySQLi</code></pre>
+to your specific database credentials everything is just working smoothly.
+
+<strong>Notice:</strong> Grocery CRUD Enterprise is a framework agnostic library. That simply means that it doesn't matter which framework you are using and it doesn't matter the architecture you are using. This tutorial is taking some architecture decisions basically for you. If you need to have the full freedom of what structure to choose we are suggesting to see the full installation guide <a href="/enterprise/enterprise-documentation/installation-guide">here</a>.
