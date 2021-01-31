@@ -277,7 +277,7 @@ a:hover
 &lt;/html&gt;
 </code></pre>
 
-<strong>Notice:</strong> Grocery CRUD Enterprise is a framework agnostic library. That simply means that it doesn't matter which framework you are using and it doesn't matter the architecture you are using. This tutorial is taking some architecture decisions basically for you. If you need to have the full freedom of what structure to choose we are suggesting to see the full installation guide <a href="/enterprise/enterprise-documentation/installation-guide">here</a>.
+<strong>Notice:</strong> Grocery CRUD Enterprise is a framework agnostic library. That simply means that it doesn't matter which framework you are using and it doesn't matter the architecture you are using. This tutorial is taking some architecture decisions basically for you. If you need to have the full freedom of what structure to choose we are suggesting to see the full installation guide <a href="/docs/grocery-crud-enterprise-installation">here</a>.
 
 <strong>Update:</strong> If you would like to see a quick video tutorial of how to install Grocery CRUD Enterprise with Codeigniter from scratch you can go straight away and see the video here: <a href="https://www.youtube.com/watch?v=FC54Db7LOG0">Grocery CRUD Enterprise - Installation for Codeigniter</a>
 

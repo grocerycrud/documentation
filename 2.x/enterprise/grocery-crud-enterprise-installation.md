@@ -9,13 +9,15 @@ next:
 # Installation Guide
 
 There are 2 ways to install grocery CRUD Enterprise to your project:
-<a href="#without-composer">1. Without Composer</a> (recommended for people that are not using PHP frameworks and/or composer)
-<a href="#with-composer">2. Composer</a> (recommended for PHP frameworks like Laravel,... e.t.c.)
+
+- <a href="#without-composer">Without Composer</a> (recommended for people that are not using PHP frameworks and/or composer)
+- <a href="#with-composer">Composer</a> (recommended for PHP frameworks like Laravel,... e.t.c.)
 
 If you are looking for more specific installation guidance, you can also check the below tutorials:
-<a href="/enterprise/enterprise-documentation/enterprise-codeigniter-installation">1. Installation in Codeigniter v3</a>
-<a href="/enterprise/enterprise-documentation/enterprise-codeigniter-4-installation/">2. Installation in Codeigniter v4</a>
-<a href="/enterprise/enterprise-documentation/laravel-installation">3. Laravel v5 installation</a>
+- <a href="/docs/grocery-crud-enterprise-codeigniter-3">Installation in Codeigniter v3</a>
+- <a href="/docs/grocery-crud-enterprise-codeigniter-4">Installation in Codeigniter v4</a>
+- <a href="/docs/grocery-crud-enterprise-laravel-8-installation">Laravel v8 installation</a>
+
 <div id="without-composer"></div>
 <h1>Installation</h1>
 <h2>1. Without Composer</h2>
