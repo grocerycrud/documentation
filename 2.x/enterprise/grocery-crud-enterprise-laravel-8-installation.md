@@ -13,7 +13,7 @@ to your already existing project with Laravel version 8.
 
 <blockquote><strong>Notice:</strong> Grocery CRUD Enterprise is a framework agnostic library. That simply means that it doesn't matter which framework you are using and it doesn't matter which architecture you are using. It can work in any PHP platform! This tutorial is taking some architecture decisions basically for you! If you need to have the full freedom of what structure to choose we are suggesting to see the full installation guide <a href="/docs/grocery-crud-enterprise-installation">here</a>.</blockquote>
 
-## Step 1. Copying the zip file to the correct folder
+**Step 1. Copying the zip file to the correct folder**
 
 From the email that you've received or from the user's page (you will get instructions at the email of how to access user's page) download the zip file that say's "With composer".
 
@@ -43,7 +43,7 @@ Your file will look something like this: <code>grocery-crud-enterprise-v2.8.7.zi
 └── webpack.mix.js
 </pre>
 
-## Step 2. Update composer.json
+**Step 2. Update composer.json**
 
 Add the "repositories" name with the below code:
 
@@ -146,7 +146,7 @@ So your <code>composer.json</code> will look something like this:
 }
 </code></pre>
 
-## Step 3. Update composer from the console
+**Step 3. Update composer from the console**
 
 Update composer in order to get the library of Grocery CRUD Enterprise at the <code>vendor</code> folder
 Now go to your root folder with your terminal and simply type:
@@ -174,7 +174,7 @@ Now Grocery CRUD Enterprise is available through composer so you could see the b
 ├── hamcrest
 ...</pre>
 
-## Step 4. Copying the assets folder to our project
+**Step 4. Copying the assets folder to our project**
 
 Now that we have available the package through vendor, we will also need to copy the public folders to our project. More specifically, navigate to: <code>vendor/grocerycrud/enterprise/public</code> and you will see the folder with name <code>grocery-crud</code>. Now go to your public folder and create a new folder with name <code>assets</code>. Then copy the folder <code>grocery-crud</code> to the <code>assets</code> folder. The final folder structure will look something like this:
 
@@ -213,7 +213,7 @@ Now that we have available the package through vendor, we will also need to copy
 ├── vendor
 └── webpack.mix.js</pre>
 
-## Step 5. Create the configuration file for Grocery CRUD Enterprise
+**Step 5. Create the configuration file for Grocery CRUD Enterprise**
 Go to your project's <code>config</code> folder and create a file with name <code>grocerycrud.php</code> that will include the below code:
 
 <script src="https://gist.github.com/scoumbourdis/3ef911b3615a19ed153d8195194ebd48.js"></script>
@@ -226,7 +226,7 @@ to your original project path. For example:
 
 <pre><code>APP_URL=http://local.grocerycrud.com</code></pre>
 
-## Step 6. Configuring our routes and creating our controller to render our CRUD
+**Step 6. Configuring our routes and creating our controller to render our CRUD**
 Now we will need to create our routes to point to our controller. Let's start by configuring routes! Go to routes/web.php and add those two lines of code:
 
 <pre><code class="php">// web.php
