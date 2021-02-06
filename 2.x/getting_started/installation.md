@@ -81,11 +81,11 @@ The only required configurations is to add your database credentials into a .env
 
 In order to access the URL file for customers_management your URL will look something like this:
 
-http://www.example.com/index.php/examples/customers_management
+<code>https:&#47;&#47;www.example.com/index.php/examples/customers_management</code>
 
 or:
 
-http://www.example.com/examples/customers_management
+<code>https:&#47;&#47;www.example.com/examples/customers_management</code>
 
 The variable $output is an object that always includes the following properties - output, js_files, css_files. 
 Below you see an example of a print_r of a variable `$output` :

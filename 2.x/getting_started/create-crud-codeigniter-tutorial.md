@@ -252,15 +252,6 @@ body
     font-family: Arial;
     font-size: 14px;
 }
-a {
-    color: blue;
-    text-decoration: none;
-    font-size: 14px;
-}
-a:hover
-{
-    text-decoration: underline;
-}
 &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;

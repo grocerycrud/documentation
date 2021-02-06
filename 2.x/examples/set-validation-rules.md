@@ -8,7 +8,9 @@ next: set-database-relation
 
 # Set validation rules
 
-A common usage of a CRUD is to use validation rules. For that reason Grocery CRUD Enterprise is using validitron for validation. For more you can read the full documentation at: https://www.grocerycrud.com/enterprise/api-and-function-list/setRule
+A common usage of a CRUD is to use validation rules. 
+For that reason Grocery CRUD Enterprise is using validitron for validation. 
+For more you can read the full documentation at: [setRule](/docs/set-rule)
 
 ## Example
 

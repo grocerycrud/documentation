@@ -40,7 +40,7 @@ For example a common usage will look like this:
      'actor.state' => 'public'
 ]);</code></pre>
 
-<h2>Full example</h2>
+## Full example
 
 A full working example can be found below:
 <pre><code class="language-php">$crud->setTable('film');
