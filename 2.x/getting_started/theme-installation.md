@@ -36,8 +36,9 @@ You can do that by adding the below line at your basic Controller functions
 <pre><code class="language-php">$crud = new GroceryCrud();
 $crud->setTheme('bootstrap-v4');
 </code></pre>
-<br/>
-<h2>Adding a default theme at the config file</h2>
+
+## Adding a default theme at the config file
+
 If you are sure that this theme is your favorite one, then you can also add it to your configuration file as a default theme. 
 More specifically if you go at the file: <code>app/Config/GroceryCrud.php</code> and change the below line:
 
@@ -121,7 +122,8 @@ class GroceryCrud
 With the above change you will not need to add the same extra line at all your functions. Easy-peasy 😃
 <br/>
 
-<h2>A full working example</h2>
+## Example
+
 A full working example can be find below:
 
 <pre><code class="language-php">$crud->setTable('customers');
