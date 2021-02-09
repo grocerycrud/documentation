@@ -3,17 +3,20 @@ id: grocery-crud-enterprise-laravel-8-installation
 title: Install Grocery CRUD Enterprise in Laravel 8
 permalink: docs/grocery-crud-laravel-8-installation
 previous:
-next:
+next: basic-example
 ---
 
 # Laravel 8 installation
 
-This is a full tutorial of a suggested way to install Grocery CRUD Enterprise 
+**Table of contents:**
+
+1. [Download Grocery CRUD zip file](#download-grocery-crud-zip-file)
+2. [Install Grocery CRUD Enterprise via composer](#install-grocery-crud-enterprise-via-composer)
+
+This is a full tutorial of a suggested way to install Grocery CRUD Enterprise
 to your already existing project with Laravel version 8.
 
-<blockquote><strong>Notice:</strong> Grocery CRUD Enterprise is a framework agnostic library. That simply means that it doesn't matter which framework you are using and it doesn't matter which architecture you are using. It can work in any PHP platform! This tutorial is taking some architecture decisions basically for you! If you need to have the full freedom of what structure to choose we are suggesting to see the full installation guide <a href="/docs/grocery-crud-enterprise-installation">here</a>.</blockquote>
-
-**Step 1. Copying the zip file to the correct folder**
+## Download Grocery CRUD zip file
 
 From the email that you've received or from the user's page (you will get instructions at the email of how to access user's page) download the zip file that say's "With composer".
 
@@ -43,7 +46,7 @@ Your file will look something like this: <code>grocery-crud-enterprise-v2.8.7.zi
 └── webpack.mix.js
 </pre>
 
-**Step 2. Update composer.json**
+## Install Grocery CRUD Enterprise via composer
 
 Add the "repositories" name with the below code:
 
@@ -146,8 +149,6 @@ So your <code>composer.json</code> will look something like this:
 }
 </code></pre>
 
-**Step 3. Update composer from the console**
-
 Update composer in order to get the library of Grocery CRUD Enterprise at the <code>vendor</code> folder
 Now go to your root folder with your terminal and simply type:
 
@@ -174,7 +175,7 @@ Now Grocery CRUD Enterprise is available through composer so you could see the b
 ├── hamcrest
 ...</pre>
 
-**Step 4. Copying the assets folder to our project**
+## Copy assets folder
 
 Now that we have available the package through vendor, we will also need to copy the public folders to our project. More specifically, navigate to: <code>vendor/grocerycrud/enterprise/public</code> and you will see the folder with name <code>grocery-crud</code>. Now go to your public folder and create a new folder with name <code>assets</code>. Then copy the folder <code>grocery-crud</code> to the <code>assets</code> folder. The final folder structure will look something like this:
 
@@ -213,7 +214,8 @@ Now that we have available the package through vendor, we will also need to copy
 ├── vendor
 └── webpack.mix.js</pre>
 
-**Step 5. Create the configuration file for Grocery CRUD Enterprise**
+## Configuration file
+
 Go to your project's <code>config</code> folder and create a file with name <code>grocerycrud.php</code> that will include the below code:
 
 <pre><code class="language-php">&lt;?php
@@ -310,22 +312,53 @@ to your original project path. For example:
 
 <pre><code>APP_URL=http://local.grocerycrud.com</code></pre>
 
-**Step 6. Configuring our routes and creating our controller to render our CRUD**
-Now we will need to create our routes to point to our controller. Let's start by configuring routes! Go to routes/web.php and add those two lines of code:
+## Routes Configuration
+Now we will need to create our routes to point to our controller. Let's start by configuring routes! Go to `routes/web.php` and add those two lines of code:
 
-<pre><code class="php">// web.php
-Route::get('customers', 'CustomersController@datagrid');
-Route::post('customers', 'CustomersController@datagrid');</code></pre>
+<pre><code class="language-php">&lt;?php
+// routes/web.php
+use App\Http\Controllers\AdminController;
 
-As you can see at the above code, we are simply saying that if you have at the first parameter the word <code>customers</code> then direct the user to <code>CustomersController</code> and the function <code>datagrid</code>. Now a common mistake that we are often seeing is that developers are forgetting to also allow <code>post</code> requests to be available. Grocery CRUD Enterprise is using <em>GET</em> and <em>POST</em> requests in order to work.
+...
 
-Now that we've created our routes let's create our empty for now Controller. In order to do that go to: <code>app/Http/Controllers/</code> and create a new file with name <code>CustomersController.php</code>. There add a simple controller like the one below:
+Route::get('/admin/customers-management', [AdminController::class, 'customers']);
+Route::get('/admin/customers-management/{operation}', [AdminController::class, 'customers']);
+Route::get('/admin/customers-management/{operation}/{id}', [AdminController::class, 'customers']);
+Route::post('/admin/customers-management/{operation}', [AdminController::class, 'customers']);
+Route::post('/admin/customers-management/{operation}/{id}', [AdminController::class, 'customers']);</code></pre>
 
-<script src="https://gist.github.com/scoumbourdis/19ac4287427fa581a53e517ffe47283e.js"></script>
+As you can see at the above code, we are simply saying that for the URL `/admin/customers-management` for `POST` or `GET` method then load the Controller `AdminController` and the function `customers`.
+For now, I am just adding 5 lines of code for the simplicity of the installation. However you can always create a specific function that can do that for you so you will not need to copy-paste 5 lines of code all the time.
+
+
+Now that we've created our routes let's create our empty for now Controller. In order to do that go to: <code>app/Http/Controllers/</code> and create a new file with name <code>AdminController.php</code>. 
+There add a simple controller like the one below:
+
+<pre><code class="language-php">&lt;?php
+// app/Http/Controllers/AdminController.php
+namespace App\Http\Controllers;
+
+use GroceryCrud\Core\GroceryCrud;
+
+class AdminController extends Controller
+{
+    /**
+     * Grocery CRUD Example
+     *
+     * @return \Illuminate\View\View
+     */
+    public function customers()
+    {
+        die("Hello World!");
+    }
+}
+</code></pre>
 
 As you can also see from the above code, we did also add the <code>use GroceryCrud\Core\GroceryCrud;</code> in order to make sure that Grocery CRUD Enterprise can load. In case this line doesn't work for you, please make sure that you follow the above steps in order to install Grocery CRUD Enterprise with composer first.
 
-Now our datagrid has just a response "Hello World!" So if you go to your website and navigate to: example.com/customers you should see the phrase "Hello World!". If you see this message that means that your routes are configured correctly and that we can load Grocery CRUD Enterprise
+Now our datagrid has just a response "Hello World!" So if you go to your website and navigate to: `example.com/admin/customers-management` you should see the phrase "Hello World!". If you see this message that means that your routes are configured correctly and that we can load Grocery CRUD Enterprise 🎉. 
+
+You've already did great! This was the most difficult part. Take a deep breath and let's continue as we have few more steps to cover!
 
 <div id="step-7">
     <strong>Step 7. Preparing our blade view for a generic template to load our output string, JS and CSS files</strong> 
@@ -460,4 +493,5 @@ Don't forget to celebrate your installation. Take a break and drink some coffee 
 
 In case you have issues with the installation also consider to check the most common mistakes of Grocery CRUD here: <a href="https://youtu.be/X0gnDD0qTS8" target="_blank" rel="noopener noreferrer">https://youtu.be/X0gnDD0qTS8</a>. This video has examples for Codeigniter framework but you can follow the same instructions for Laravel framework as well.
 
+<blockquote><strong>Notice:</strong> Grocery CRUD Enterprise is a framework agnostic library. That simply means that it doesn't matter which framework you are using and it doesn't matter which architecture you are using. It can work in any PHP platform! This tutorial is taking some architecture decisions basically for you! If you need to have the full freedom of what structure to choose we are suggesting to see the full installation guide <a href="/docs/grocery-crud-enterprise-installation">here</a>.</blockquote>
 
