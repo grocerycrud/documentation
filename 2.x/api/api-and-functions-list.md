@@ -13,7 +13,6 @@ next: basic-example
 | [addFields](/docs/add-fields)  |The fields that will be visible to the end user for add/insert form.  |
 | [cloneFields](/docs/clone-fields)  |The fields that will be visible to the end user for clone form.  |
 | [columns](/docs/columns)  |Specifying the fields that the end user will see as the datagrid columns.  |
-| [defaultOrdering](/docs/default-ordering)  |The default ordering that the datagrid will have before the user will press any button to order by column.  |
 | [displayAs](/docs/display-as)  |Displaying the field name with a more readable label to the end-user.  |
 | [editFields](/docs/edit-fields)  | The fields that will be visible to the end user for edit/update form.  |
 | [fieldType](/docs/field-type)  | Changing the default field type from the database to fit to our needs.  |
@@ -85,3 +84,40 @@ next: basic-example
 | [callbackReadField](/docs/callback-read-field)   | This is a callback in order to create a custom field at the read/view form. |
 | [callbackUpdate](/docs/callback-update)   | The callback is used when we need to replace the default update functionality. |
 
+### Grocery CRUD Enterprise
+
+| Function name  | Small description |
+| ------------- | ------------- |
+| [defaultOrdering](/docs/default-ordering)  |The default ordering that the datagrid will have before the user will press any button to order by column.  |
+| [setSkin](/docs/set-skin)  | Choose between two skins: Bootstrap v3 and Bootstrap V4.  |
+| [unsetFilters](/docs/unset-filters)  | Removing the "Filters" button from the datagrid. |
+| [unsetSearchColumns](/docs/unset-search-columns)  | Unset the search on the datagrid from quick column search and from filtering. |
+| [unsetSettings](/docs/unset-settings)  | Removing the "Settings" button from the datagrid. |
+| [callbackAfterDeleteMultiple](/docs/callback-after-delete-multiple)  | The callback that will be used right after the multiple delete functionality. |
+| [callbackBeforeDeleteMultiple](/docs/callback-before-delete-multiple)  | Similar functionality with callbackBeforeDelete it is just that this callback will be used for the delete multiple functionality. |
+| [callbackDeleteMultiple](/docs/callback-delete-multiple)  | Replaces the default multiple delete functionality with the callback specified. |
+| [setDeleteMultiple](/docs/set-delete-multiple)  | The setDeleteMultiple method is rarely used as the multiple delete functionality is enabled by default. |
+| [readOnlyAddFields](/docs/read-only-add-fields)  | There are cases, that we need some fields to be read only but only to the add form modal.|
+| [readOnlyCloneFields](/docs/read-only-clone-fields)  | There are cases, that we need some fields to be read only but only to the clone form modal. |
+| [readOnlyEditFields](/docs/read-only-edit-fields)  | There are cases, that we need some fields to be read only but only to the edit form modal. |
+| [readOnlyFields](/docs/read-only-edit-fields)  | Specifying the fields that can't be edited and will only be viewed. |
+| [callbackAfterUpload](/docs/callback-after-upload)  | The callback that will be triggered right after the upload. |
+| [callbackAfterUpload](/docs/callback-after-upload)  | The callback that will be triggered right after the upload. |
+| [callbackBeforeUpload](/docs/callback-before-upload)  | The callback is used in cases we need to filter the uploaded data before the upload functionality. |
+| [callbackUpload](/docs/callback-upload)  | The callbackUpload is used when we need to replace the default upload functionality of Grocery CRUD Enterprise. |
+| [setFieldUpload](/docs/set-field-upload)  | There is a special type of field for uploading data or images and in order to trigger this type, you will need to use the setFieldUpload method. |
+| [setCsrfTokenName](/docs/set-csrf-token-name)  | Specify the token name for CSRF protection. |
+| [setCsrfTokenValue](/docs/set-csrf-token-value)  | Specify the token value for CSRF protection. |
+| [setDatabaseSchema](/docs/set-database-schema)  | Set the database schema (currently only tested on PostgresSQL databases). |
+| [setDependentRelation](/docs/set-dependent-relation)  | There are cases that dropdown list that was built from setRelation has dependencies between them. |
+| [setSequenceName](/docs/set-sequence-name)  | Postgres database is recognising the insert id with a sequence key. |
+| [fieldTypeAddForm](/docs/field-type-add-form)  | This function is used for cases that you need to change the field type but only for the add/insert form. |
+| [fieldTypeCloneForm](/docs/field-type-clone-form)  | This function is used for cases that you need to change the field type but only for the Clone form. |
+| [fieldTypeColumn](/docs/field-type-column)  | This function is used for cases that you need to change the field type but only for the datagrid column. |
+| [fieldTypeEditForm](/docs/field-type-edit-form)  | This function is used for cases that you need to change the field type but only for the edit/update form. |
+| [fieldTypeFormFields](/docs/field-type-form-fields)  | This function is really just a facade function to call all the functions of field-types for the form data. |
+| [fieldTypeReadForm](/docs/field-type-read-form)  | This function is used when you need to change the field type but only for the read/view form. |
+| [setFieldBlob](/docs/set-field-blob)  | Enable the upload functionality for Blob field type. |
+| [setConfig](/docs/set-config)  | Quickly set a configuration name that will be specific for your CRUD. |
+| [setLanguagePath](/docs/set-language-path)  | setLanguagePath is used in order to change the default path of the language folder. |
+| [setThemePath](/docs/set-theme-path)  | The method setThemePath is used when we want to change the folder of the theme. |

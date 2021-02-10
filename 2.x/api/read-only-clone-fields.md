@@ -10,7 +10,7 @@ next: read-only-edit-fields
 
 
 <pre><code class="language-php">readOnlyCloneFields(array $fields)</code></pre>
-There are cases, that we need some fields to be read only but only to the edit form modal. In that case we can use the “Read Only Clone Fields” method like this:
+There are cases, that we need some fields to be read only but only to the clone form modal. In that case we can use the “Read Only Clone Fields” method like this:
 
 <pre><code class="language-php">$crud->readOnlyCloneFields(['reference_id', 'email']);</code></pre>
 
