@@ -12,6 +12,13 @@ next: basic-example
 
 1. [Download Grocery CRUD zip file](#download-grocery-crud-zip-file)
 2. [Install Grocery CRUD Enterprise via composer](#install-grocery-crud-enterprise-via-composer)
+3. [Copy assets folder](#copy-assets-folder)
+4. [Configuration file](#configuration-file)
+5. [Routes Configuration](#routes-configuration)
+6. [Preparing our Resources](#preparing-our-resources)
+7. [See it working 👀](#see-it-working)
+8. [Let's refactor our Controller](#let's-refactor-our-controller)
+9. [Celebrate 🎉](#celebrate)
 
 This is a full tutorial of a suggested way to install Grocery CRUD Enterprise
 to your already existing project with Laravel version 8.
@@ -324,6 +331,7 @@ use App\Http\Controllers\AdminController;
 Route::get('/admin/customers-management', [AdminController::class, 'customers']);
 Route::get('/admin/customers-management/{operation}', [AdminController::class, 'customers']);
 Route::get('/admin/customers-management/{operation}/{id}', [AdminController::class, 'customers']);
+Route::post('/admin/customers-management', [AdminController::class, 'customers']);
 Route::post('/admin/customers-management/{operation}', [AdminController::class, 'customers']);
 Route::post('/admin/customers-management/{operation}/{id}', [AdminController::class, 'customers']);</code></pre>
 
@@ -360,9 +368,8 @@ Now our datagrid has just a response "Hello World!" So if you go to your website
 
 You've already did great! This was the most difficult part. Take a deep breath and let's continue as we have few more steps to cover!
 
-<div id="step-7">
-    <strong>Step 7. Preparing our blade view for a generic template to load our output string, JS and CSS files</strong> 
-</div>
+## Preparing our Resources
+
 In Grocery CRUD Enterprise we are using the function render() to render 3 main things:
 <ul>
 	<li>The HTML output string</li>
@@ -370,16 +377,49 @@ In Grocery CRUD Enterprise we are using the function render() to render 3 main t
 	<li>The JavaScript files</li>
 </ul>
 
-So it is important to have a template that can load all of the above. Usually in our project we've already have a template to load the CSS and JS files but in case we don't, we can create a new template view like the below. Go to: <code>resources/views/</code> and create a new file with name: <code>default_template.blade.php</code>. Then copy the below code:
-<script src="https://gist.github.com/scoumbourdis/861efc53ee1ffd1b731f00f3c76ebf9f.js"></script>
+So it is important to have a template that can load all the above. Usually in our project we've already have a template to load the CSS and JS files but in case we don't, we can create a new template view like the below. Go to: <code>resources/views/</code> and create a new file with name: <code>default_template.blade.php</code>. Then copy the below code:
+
+<pre><code class="language-php">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title&gt;Example&lt;/title&gt;
+
+	&lt;meta name="csrf-token" content="{{ csrf_token() }}"&gt;
+
+	@foreach ($css_files as $css_file)
+    	&lt;link rel="stylesheet" href="{{ $css_file }}"&gt;
+	@endforeach
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div style="padding: 20px"&gt;
+		{!! $output !!}
+	&lt;/div&gt;
+
+	@foreach ($js_files as $js_file)
+    	&lt;script src="{{ $js_file }}"&gt;&lt;/script&gt;
+	@endforeach
+	&lt;script&gt;
+		if (typeof $ !== 'undefined') {
+			$(document).ready(function () {
+				$.ajaxSetup({
+				    headers: {
+				        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+				    }
+				});
+			});
+		}
+	&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 
 As you may also notice (and this is the second most common mistake for Laravel installations) we are also adding the CSRF token as a meta tag on the header:
 
-<pre><code class="php">&lt;meta name="csrf-token" content="{{ csrf_token() }}"&gt;</code></pre>
+<pre><code class="language-php">&lt;meta name="csrf-token" content="{{ csrf_token() }}"&gt;</code></pre>
 
 And we are are having the CSRF token as a default header with the below code:
 
-<pre><code class="javascript">$(document).ready(function () {
+<pre><code class="language-javascript">$(document).ready(function () {
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -389,13 +429,70 @@ And we are are having the CSRF token as a default header with the below code:
 
 As this will be a generic template we are also making sure that we are checking if jQuery exists with the below code:
 
-<pre><code class="javascript">if (typeof $ !== 'undefined') {</code></pre>
+<pre><code class="language-javascript">if (typeof $ !== 'undefined') {</code></pre>
 
-<strong>Step 9. Load Grocery CRUD Enterprise and make it work!</strong>
+## See it working!
 
-Now finally after 9 steps it is time to see Grocery CRUD Enterprise working on your screen! In order to do that your final controller will look like below:
+Now finally after 6 steps it is time to see Grocery CRUD Enterprise working on your screen 👀! In order to do that your final controller will look like below:
 
-<script src="https://gist.github.com/scoumbourdis/48e13bac40d43b0e95d4f5d0beac9795.js"></script>
+<pre><code class="language-php">&lt;?php
+// app/Http/Controllers/AdminController.php
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use GroceryCrud\Core\GroceryCrud;
+
+class AdminController extends Controller
+{
+
+    /**
+     * Grocery CRUD Example
+     *
+     * @return \Illuminate\Http\Response|\Illuminate\View\View
+     */
+    public function customers()
+    {
+        $database = $this->_getDatabaseConnection();
+        $config = config('grocerycrud');
+
+        $crud = new GroceryCrud($config, $database);
+
+        $crud->setTable('customers');
+        $crud->setSubject('Customer', 'Customers');
+
+        $output = $crud->render();
+
+        if ($output->isJSONResponse) {
+            return response($output->output, 200)
+                ->header('Content-Type', 'application/json')
+                ->header('charset', 'utf-8');
+        }
+
+        $css_files = $output->css_files;
+        $js_files = $output->js_files;
+        $output = $output->output;
+
+        return view('default_template', [
+            'output' => $output,
+            'css_files' => $css_files,
+            'js_files' => $js_files
+        ]);
+    }
+
+    private function _getDatabaseConnection() {
+
+        return [
+            'adapter' => [
+                'driver' => 'Pdo_Mysql',
+                'database' => env('DB_DATABASE'),
+                'username' => env('DB_USERNAME'),
+                'password' => env('DB_PASSWORD'),
+                'charset' => 'utf8'
+            ]
+        ];
+    }
+
+}</code></pre>
 
 Let's explain a little bit what we did at the controller. Grocery CRUD Enterprise needs two kind of configurations:
 
@@ -404,28 +501,23 @@ Let's explain a little bit what we did at the controller. Grocery CRUD Enterpris
 	<li>The Grocery CRUD Enterprise configurations</li>
 </ul>
 
-The database configuration can be taken dynamically from Laravel as it is already located at: <code>config/database.php</code>. So in order to retrieve the database connection data we are simply doing this:
+The database configuration can be taken dynamically from the `.env` file
 
-<pre><code class="php">$databaseConnection = config('database.default');
-$databaseConfig = config('database.connections.' . $databaseConnection);
-</code></pre>
+In our case, our default database is MySQL and that's why we have as hardcoded the value of the Zend driver as <code>Pdo_Mysql</code>.
+So the final result of the configuration is:
 
-In our case, our default database is MySQL and that's why we have as hardcoded the value of the Zend driver as <code>Pdo_Mysql</code> So the final result of the configuration is:
+<pre><code class="language-php">private function _getDatabaseConnection() {
 
-<pre><code class="php">private function _getDatabaseConnection() {
-        $databaseConnection = config('database.default');
-        $databaseConfig = config('database.connections.' . $databaseConnection);
         return [
             'adapter' => [
                 'driver' => 'Pdo_Mysql',
-                'database' => $databaseConfig['database'],
-                'username' => $databaseConfig['username'],
-                'password' => $databaseConfig['password'],
+                'database' => env('DB_DATABASE'),
+                'username' => env('DB_USERNAME'),
+                'password' => env('DB_PASSWORD'),
                 'charset' => 'utf8'
             ]
         ];
-}
-</code></pre>
+    }</code></pre>
 
 Please have in mind that for different databases you will need to change the adapter driver. For example you can use the following drivers:
 
@@ -437,13 +529,13 @@ Please have in mind that for different databases you will need to change the ada
 
 And you can also see all the available database connections from <a href="https://framework.zend.com/manual/2.4/en/modules/zend.db.adapter.html">Zend Db adapter</a>.
 
-The next configuration is the configuration that we did describe at step 5 and we are simply calling this configuration like this:
+The very next configuration is the configuration that we did describe earlier about grocery CRUD:
 
-<pre><code class="php">$config = config('grocerycrud');</code></pre>
+<pre><code class="language-php">$config = config('grocerycrud');</code></pre>
 
 Now let's explain quickly what the below code is doing:
 
-<pre><code class="php">if ($output->isJSONResponse) {
+<pre><code class="language-php">if ($output->isJSONResponse) {
     return response($output->output, 200)
           ->header('Content-Type', 'application/json')
           ->header('charset', 'utf-8');
@@ -452,15 +544,97 @@ Now let's explain quickly what the below code is doing:
 
 At the above code, we are checking if the response is JSON and if not we are calling our main template view. In case the response is JSON then we are simply returning the JSON response that it is already formatted as a string by Grocery CRUD Enterprise with some JSON headers.
 
-<strong>Step 10. [IMPORTANT] Some advices about the best way to structure your controller</strong>
+## Let's refactor our Controller
 
 With Grocery CRUD Enterprise, we've notice that we are repeating the same code again and again. That's why it is strongly recommended to move the initial call with the configurations and the final output code into two separate functions. For example the above controller can be refactored with the below one:
 
-<script src="https://gist.github.com/scoumbourdis/42b8164c0a199510554ce1869564babc.js"></script>
+<pre><code class="language-php">&lt;?php
+// app/Http/Controllers/AdminController.php
+namespace App\Http\Controllers;
+
+use GroceryCrud\Core\GroceryCrud;
+
+class AdminController extends Controller
+{
+
+    /**
+     * Grocery CRUD Example
+     *
+     * @return \Illuminate\Http\Response|\Illuminate\View\View
+     */
+    public function customers()
+    {
+        $crud = $this->_getGroceryCrudEnterprise();
+
+        $crud->setTable('customers');
+        $crud->setSubject('Customer', 'Customers');
+
+        $output = $crud->render();
+
+        return $this->_showOutput($output);
+    }
+
+    /**
+     * Get everything we need in order to load Grocery CRUD
+     *
+     * @return GroceryCrud
+     * @throws \GroceryCrud\Core\Exceptions\Exception
+     */
+    private function _getGroceryCrudEnterprise() {
+        $database = $this->_getDatabaseConnection();
+        $config = config('grocerycrud');
+
+        $crud = new GroceryCrud($config, $database);
+
+        return $crud;
+    }
+
+
+    /**
+     * Grocery CRUD Output
+     *
+     * @return \Illuminate\Http\Response|\Illuminate\View\View
+     */
+    private function _showOutput($output) {
+        if ($output->isJSONResponse) {
+            return response($output->output, 200)
+                ->header('Content-Type', 'application/json')
+                ->header('charset', 'utf-8');
+        }
+
+        $css_files = $output->css_files;
+        $js_files = $output->js_files;
+        $output = $output->output;
+
+        return view('default_template', [
+            'output' => $output,
+            'css_files' => $css_files,
+            'js_files' => $js_files
+        ]);
+    }
+
+    /**
+     * Get database credentials as a Zend Db Adapter configuration
+     * @return array[]
+     */
+    private function _getDatabaseConnection() {
+
+        return [
+            'adapter' => [
+                'driver' => 'Pdo_Mysql',
+                'database' => env('DB_DATABASE'),
+                'username' => env('DB_USERNAME'),
+                'password' => env('DB_PASSWORD'),
+                'charset' => 'utf8'
+            ]
+        ];
+    }
+
+}</code></pre>
 
 So as you can also see our current implementation of customers is only the below lines:
 
-<pre><code class="php">public function datagrid()
+<pre><code class="language-php">public function customers()
 {
     $crud = $this->_getGroceryCrudEnterprise();
 
@@ -469,13 +643,13 @@ So as you can also see our current implementation of customers is only the below
 
     $output = $crud->render();
 
-    return $this->_show_output($output);
+    return $this->_showOutput($output);
 }</code></pre>
 
 And of course we can only now copy those few lines of code in case we need to create another CRUD.
 
 For example:
-<pre><code class="php">public function offices()
+<pre><code class="language-php">public function offices()
 {
     $crud = $this->_getGroceryCrudEnterprise();
 
@@ -484,12 +658,14 @@ For example:
 
     $output = $crud->render();
 
-    return $this->_show_output($output);
+    return $this->_showOutput($output);
 }</code></pre>
 
-<strong>Step 11. Enjoy ❤️</strong>
+## Celebrate
 
-Don't forget to celebrate your installation. Take a break and drink some coffee ☕ , tea or water and enjoy the power of Grocery CRUD Enterprise at your project!
+Don't forget to celebrate your installation 🎉. Take a break and drink some coffee ☕ tea or water, you deserve it! 
+
+After that short break enjoy the power of Grocery CRUD Enterprise at your project! From now one with few lines of PHP you can get a full working CRUD for your project 🤗
 
 In case you have issues with the installation also consider to check the most common mistakes of Grocery CRUD here: <a href="https://youtu.be/X0gnDD0qTS8" target="_blank" rel="noopener noreferrer">https://youtu.be/X0gnDD0qTS8</a>. This video has examples for Codeigniter framework but you can follow the same instructions for Laravel framework as well.
 
