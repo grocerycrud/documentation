@@ -10,7 +10,7 @@ next: why-grocery-crud
 
 The installation is really easy. You just copy all the files to your project and you are ready to use grocery CRUD!
 
-The first thing that we obviously need to do is to download Grocery CRUD. You can do that from the webpage [Download](/download).
+The first thing that we obviously need to do is to download Grocery CRUD. You can do that from the webpage [Download](/docs/download).
 
 By the end of the installation, your folder structure should look similar to this:
 
