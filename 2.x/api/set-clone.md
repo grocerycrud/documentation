@@ -9,8 +9,6 @@ next: unset-clone
 
 # setClone
 
-
-<div class="quick-description">Available from version >= 2.5.6</div>
 Enabling the clone functionality. Once this function is used you will see a <code>Clone</code> button at the datagrid actions when you press the <code>More</code> dropdown list. Once you press the <code>Clone</code> button you will see an insert form with all the data filled from the data of the row. 
 
 You can see a full working example below to understand how it works:
