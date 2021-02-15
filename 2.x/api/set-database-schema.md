@@ -1,6 +1,7 @@
 ---
 id: set-database-schema
 title: setDatabaseSchema
+description: 
 permalink: docs/set-database-schema
 previous: set-csrf-token-value
 next: set-delete

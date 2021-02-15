@@ -1,6 +1,7 @@
 ---
 id: getting-started
 title: Getting Started
+description: 
 permalink: docs
 previous: 
 next: installation

@@ -1,6 +1,7 @@
 ---
 id: basic-example
 title: Basic Example
+description: 
 permalink: docs/basic-example
 previous: 
 next: full-example

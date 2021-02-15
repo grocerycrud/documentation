@@ -1,6 +1,7 @@
 ---
 id: set-config
 title: setConfig
+description: 
 permalink: docs/set-config
 previous: set-clone
 next: set-csrf-token-name

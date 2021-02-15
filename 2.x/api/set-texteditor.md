@@ -1,6 +1,7 @@
 ---
 id: set-texteditor
 title: setTexteditor
+description: 
 permalink: docs/set-texteditor
 previous: set-table
 next: set-theme

@@ -1,6 +1,7 @@
 ---
 id: set-delete
 title: setDelete
+description: 
 permalink: docs/set-delete
 previous: set-database-schema
 next: set-delete-multiple

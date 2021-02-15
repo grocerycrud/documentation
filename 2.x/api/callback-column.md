@@ -1,6 +1,7 @@
 ---
 id: callback-column
 title: callbackColumn
+description: 
 permalink: docs/callback-column
 previous: callback-clone-field
 next: callback-delete

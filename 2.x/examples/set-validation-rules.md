@@ -1,6 +1,7 @@
 ---
 id: set-validation-rules
 title: Set validation rules
+description: 
 permalink: docs/set-validation-rules
 previous: full-example
 next: set-database-relation

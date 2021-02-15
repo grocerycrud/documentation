@@ -1,6 +1,7 @@
 ---
 id: field-type
 title: fieldType
+description: 
 permalink: docs/field-type
 previous: fields
 next: field-type-add-form

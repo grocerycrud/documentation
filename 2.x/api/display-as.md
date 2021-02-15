@@ -1,6 +1,7 @@
 ---
 id: display-as
 title: displayAs
+description: 
 permalink: docs/display-as
 previous: default-ordering
 next: edit-fields

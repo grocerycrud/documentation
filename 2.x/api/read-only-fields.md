@@ -1,6 +1,7 @@
 ---
 id: read-only-fields
 title: readOnlyFields
+description: 
 permalink: docs/read-only-fields
 previous: read-only-edit-fields
 next: render

@@ -1,6 +1,7 @@
 ---
 id: change-theme-skin
 title: Change theme skin
+description: 
 permalink: docs/change-theme-skin
 previous: set-database-relation
 next: 

@@ -1,6 +1,7 @@
 ---
 id: field-type-edit-form
 title: fieldTypeEditForm
+description: 
 permalink: docs/field-type-edit-form
 previous: field-type-column
 next: field-type-form-fields

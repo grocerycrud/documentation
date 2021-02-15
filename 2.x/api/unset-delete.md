@@ -1,6 +1,7 @@
 ---
 id: unset-delete
 title: unsetDelete
+description: 
 permalink: docs/unset-delete
 previous: unset-columns
 next: unset-delete-multiple

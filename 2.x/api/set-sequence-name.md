@@ -1,6 +1,7 @@
 ---
 id: set-sequence-name
 title: setSequenceName
+description: 
 permalink: docs/set-sequence-name
 previous: set-rules
 next: set-skin

@@ -1,6 +1,7 @@
 ---
 id: callback-before-delete
 title: callbackBeforeDelete
+description: 
 permalink: docs/callback-before-delete
 previous: callback-after-upload
 next: callback-before-delete-multiple

@@ -1,6 +1,7 @@
 ---
 id: set-skin
 title: setSkin
+description: 
 permalink: docs/set-skin
 previous: set-language
 next: columns

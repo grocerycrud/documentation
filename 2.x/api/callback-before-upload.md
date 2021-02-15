@@ -1,6 +1,7 @@
 ---
 id: callback-before-upload
 title: callbackBeforeUpload
+description: 
 permalink: docs/callback-before-upload
 previous: callback-before-update
 next: callback-clone-field

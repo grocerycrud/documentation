@@ -1,6 +1,7 @@
 ---
 id: set-relation-n-to-n
 title: setRelationNtoN
+description: 
 permalink: docs/set-relation-n-to-n
 previous: set-relation
 next: set-rule

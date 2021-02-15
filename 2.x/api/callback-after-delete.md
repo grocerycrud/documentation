@@ -1,6 +1,7 @@
 ---
 id: callback-after-delete
 title: callbackAfterDelete
+description: 
 permalink: docs/callback-after-delete
 previous: callback-add-form
 next: callback-after-delete-multiple

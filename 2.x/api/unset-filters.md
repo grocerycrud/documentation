@@ -1,6 +1,7 @@
 ---
 id: unset-filters
 title: unsetFilters
+description: 
 permalink: docs/unset-filters
 previous: unset-search-columns
 next: unset-settings

@@ -1,6 +1,7 @@
 ---
 id: set-theme
 title: setTheme
+description: 
 permalink: docs/set-theme
 previous: set-texteditor
 next: set-theme-path

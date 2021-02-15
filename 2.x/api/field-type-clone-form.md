@@ -1,6 +1,7 @@
 ---
 id: field-type-clone-form
 title: fieldTypeCloneForm
+description: 
 permalink: docs/field-type-clone-form
 previous: clone-fields
 next: set-clone

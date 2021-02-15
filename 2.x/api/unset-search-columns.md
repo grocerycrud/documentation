@@ -1,6 +1,7 @@
 ---
 id: unset-search-columns
 title: unsetSearchColumns
+description: 
 permalink: docs/unset-search-columns
 previous: unset-read-fields
 next: unset-texteditor

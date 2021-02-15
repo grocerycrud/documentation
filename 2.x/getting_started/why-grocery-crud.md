@@ -1,6 +1,7 @@
 ---
 id: why-grocery-crud
 title: Why grocery CRUD?
+description: 
 permalink: why-grocery-crud
 previous: installation
 next: api-and-functions-list

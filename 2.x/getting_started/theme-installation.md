@@ -1,6 +1,7 @@
 ---
 id: theme-installation
 title: How to install a theme
+description: 
 permalink: docs/theme-installation
 previous: 
 next:

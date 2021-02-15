@@ -1,6 +1,7 @@
 ---
 id: get-state-info
 title: getStateInfo
+description: 
 permalink: docs/get-state-info
 previous: get-state
 next: read-fields

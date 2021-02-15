@@ -1,6 +1,7 @@
 ---
 id: unset-columns
 title: unsetColumns
+description: 
 permalink: docs/unset-columns
 previous: unset-clone-fields
 next: unset-delete

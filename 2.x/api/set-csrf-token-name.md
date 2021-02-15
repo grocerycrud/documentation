@@ -1,6 +1,7 @@
 ---
 id: set-csrf-token-name
 title: setCsrfTokenName
+description: 
 permalink: docs/set-csrf-token-name
 previous: set-config
 next: set-csrf-token-value

@@ -1,6 +1,7 @@
 ---
 id: add-fields
 title: addFields
+description: 
 permalink: docs/gcc/2.x/add-fields
 previous: 
 next: clone-fields

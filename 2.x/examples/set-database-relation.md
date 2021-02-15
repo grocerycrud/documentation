@@ -1,6 +1,7 @@
 ---
 id: set-database-relation
 title: Set database relation
+description: 
 permalink: docs/set-database-relation
 previous: set-validation-rules
 next: change-theme-skin

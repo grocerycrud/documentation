@@ -1,6 +1,7 @@
 ---
 id: grocery-crud-enterprise-codeigniter-3
 title: Codeigniter 3 Installation
+description: 
 permalink: docs/grocery-crud-enterprise-codeigniter-3
 previous:
 next:

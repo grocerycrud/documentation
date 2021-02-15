@@ -1,6 +1,7 @@
 ---
 id: read-only-add-fields
 title: readOnlyAddFields
+description: 
 permalink: docs/read-only-add-fields
 previous: read-fields
 next: read-only-clone-fields

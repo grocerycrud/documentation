@@ -1,6 +1,7 @@
 ---
 id: unset-jquery
 title: unsetJquery
+description: 
 permalink: docs/unset-jquery
 previous: unset-bootstrap
 next: unset-jquery-ui

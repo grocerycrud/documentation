@@ -1,6 +1,7 @@
 ---
 id: set-field-blob
 title: setFieldBlob
+description: 
 permalink: docs/set-field-blob
 previous: set-export
 next: set-field-upload

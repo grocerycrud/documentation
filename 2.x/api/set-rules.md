@@ -1,6 +1,7 @@
 ---
 id: set-rules
 title: setRules
+description: 
 permalink: docs/set-rules
 previous: set-rule
 next: set-sequence-name

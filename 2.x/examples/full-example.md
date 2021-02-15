@@ -1,6 +1,7 @@
 ---
 id: full-example
 title: Full Example
+description: 
 permalink: docs/full-example
 previous: basic-example
 next: set-validation-rules

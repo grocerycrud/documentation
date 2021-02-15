@@ -1,6 +1,7 @@
 ---
 id: columns
 title: columns
+description: 
 permalink: docs/columns
 previous: set-skin
 next: callback-column

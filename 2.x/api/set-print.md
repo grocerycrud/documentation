@@ -1,6 +1,7 @@
 ---
 id: set-print
 title: setPrint
+description: 
 permalink: docs/set-print
 previous: set-primary-key
 next: set-read

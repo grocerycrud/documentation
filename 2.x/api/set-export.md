@@ -1,6 +1,7 @@
 ---
 id: set-export
 title: setExport
+description: 
 permalink: docs/set-export
 previous: set-edit
 next: set-field-blob

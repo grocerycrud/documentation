@@ -1,6 +1,7 @@
 ---
 id: create-crud-codeigniter-tutorial
 title: Your first Codeigniter CRUD
+description: 
 permalink: docs/create-crud-codeigniter-tutorial
 previous: 
 next: 

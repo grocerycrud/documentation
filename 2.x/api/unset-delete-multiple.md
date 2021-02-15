@@ -1,6 +1,7 @@
 ---
 id: unset-delete-multiple
 title: unsetDeleteMultiple
+description: 
 permalink: docs/unset-delete-multiple
 previous: unset-delete
 next: unset-edit

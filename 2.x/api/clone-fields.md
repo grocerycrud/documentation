@@ -1,6 +1,7 @@
 ---
 id: clone-fields
 title: cloneFields
+description: 
 permalink: docs/gcc/2.x/clone-fields
 previous: callback-clone-field
 next: set-clone

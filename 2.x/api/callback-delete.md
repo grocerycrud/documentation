@@ -1,6 +1,7 @@
 ---
 id: callback-delete
 title: callbackDelete
+description: 
 permalink: docs/callback-delete
 previous: callback-column
 next: callback-delete-multiple

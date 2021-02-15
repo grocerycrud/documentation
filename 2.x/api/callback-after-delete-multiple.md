@@ -1,6 +1,7 @@
 ---
 id: callback-after-delete-multiple
 title: callbackAfterDeleteMultiple
+description: 
 permalink: docs/callback-after-delete-multiple
 previous: callback-after-delete
 next: callback-after-insert

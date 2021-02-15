@@ -1,6 +1,7 @@
 ---
 id: field-type-read-form
 title: fieldTypeReadForm
+description: 
 permalink: docs/field-type-read-form
 previous: field-type-form-fields
 next: get-state

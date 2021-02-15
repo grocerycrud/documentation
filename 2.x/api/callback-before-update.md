@@ -1,6 +1,7 @@
 ---
 id: callback-before-update
 title: callbackBeforeUpdate
+description: 
 permalink: docs/callback-before-update
 previous: callback-before-insert
 next: callback-before-upload

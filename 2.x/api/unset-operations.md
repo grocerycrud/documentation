@@ -1,6 +1,7 @@
 ---
 id: unset-operations
 title: unsetOperations
+description: 
 permalink: docs/unset-operations
 previous: unset-modernizr
 next: unset-print

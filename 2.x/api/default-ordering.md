@@ -1,6 +1,7 @@
 ---
 id: default-ordering
 title: defaultOrdering
+description: 
 permalink: docs/default-ordering
 previous: columns
 next: display-as

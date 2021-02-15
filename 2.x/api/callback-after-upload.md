@@ -1,6 +1,7 @@
 ---
 id: callback-after-upload
 title: callbackAfterUpload
+description: 
 permalink: docs/callback-after-upload
 previous: callback-after-update
 next: callback-before-delete
