@@ -66,7 +66,7 @@ next: basic-example
 | [unsetTexteditor](/docs/unset-texteditor)  |  Unsets the texteditor for the selected fields. This function is really rare to use as by default there is not any load of the texteditor for optimising purposes. |
 | [where](/docs/where)  | Filter the queries with an extra where statement. |
 
-### Callback Functionality
+## Callback Functionality
 
 | Function name  | Small description |
 | ------------- | ------------- |
@@ -85,7 +85,7 @@ next: basic-example
 | [callbackReadField](/docs/callback-read-field)   | This is a callback in order to create a custom field at the read/view form. |
 | [callbackUpdate](/docs/callback-update)   | The callback is used when we need to replace the default update functionality. |
 
-### Grocery CRUD Enterprise
+## Grocery CRUD Enterprise
 
 | Function name  | Small description |
 | ------------- | ------------- |
