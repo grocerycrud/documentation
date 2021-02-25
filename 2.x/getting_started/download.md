@@ -1,7 +1,7 @@
 ---
 id: download
 title: Download
-description: 
+description: At this page you can download the latest version of grocery CRUD for Codeigniter 4.
 permalink: docs/download
 previous:
 next:

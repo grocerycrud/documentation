@@ -1,7 +1,7 @@
 ---
 id: installation
 title: Installation guide
-description: 
+description: The installation is really easy. You just copy all the files to your project and you are ready to use grocery CRUD!
 permalink: docs/installation
 previous: getting-started
 next: why-grocery-crud
