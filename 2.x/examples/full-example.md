@@ -1,7 +1,7 @@
 ---
 id: full-example
 title: Full Example
-description: 
+description: A full example with the most common functions. 
 permalink: docs/full-example
 previous: basic-example
 next: set-validation-rules

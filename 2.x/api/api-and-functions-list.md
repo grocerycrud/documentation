@@ -1,7 +1,7 @@
 ---
 id: api-and-functions-list
 title: API and Functions list
-description: 
+description: You can find a full API list of all the functions of Grocery CRUD
 permalink: docs/api-and-functions-list
 previous: why-grocery-crud
 next: basic-example
