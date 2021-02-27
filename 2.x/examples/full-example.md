@@ -1,7 +1,7 @@
 ---
 id: full-example
 title: Full Example
-description: A full example with the most common functions. 
+description: A full example with the most common functions that are used with Grocery CRUD. 
 permalink: docs/full-example
 previous: basic-example
 next: set-validation-rules

@@ -1,7 +1,7 @@
 ---
 id: basic-example
 title: Basic Example
-description: With literally 4 lines of code you can get everything you need.
+description: With literally 4 lines of code you can get a full working CRUD.
 permalink: docs/basic-example
 previous: 
 next: full-example
