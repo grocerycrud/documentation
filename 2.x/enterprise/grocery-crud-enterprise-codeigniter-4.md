@@ -355,7 +355,7 @@ If you would like you can also check the above steps into a video tutorial:
 
 <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/XIoMR38ANnE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<h2 id="troubleshooting">Troubleshooting</h2>
+## Troubleshooting
 <strong>1. Getting the message "Ooooops, something went wrong!"</strong>
 The most common mistake of the installation of grocery CRUD Enteprise is when the assets_folder has a wrong path. If you did follow all the steps and you see that your webpage looks like that:
 
