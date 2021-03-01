@@ -1,7 +1,7 @@
 ---
 id: render
 title: render
-description: 
+description: In simple words... make it work! This is the most basic function that exists in grocery CRUD.
 permalink: docs/render
 previous: basic-example
 next: set-table

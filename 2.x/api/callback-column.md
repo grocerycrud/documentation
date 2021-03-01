@@ -1,7 +1,7 @@
 ---
 id: callback-column
 title: callbackColumn
-description: 
+description: This callback runs on each datagrid column. It escapes the auto column value and runs the callback. 
 permalink: docs/callback-column
 previous: callback-clone-field
 next: callback-delete

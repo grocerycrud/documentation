@@ -1,7 +1,7 @@
 ---
 id: columns
 title: columns
-description: 
+description: Specify the fields that the end user will see as the datagrid columns. 
 permalink: docs/columns
 previous: set-skin
 next: callback-column
@@ -11,7 +11,7 @@ next: callback-column
 
 <pre><code class="language-php">columns(array $columns)</code></pre>
 
-Simply specify the fields that the end user will see as the datagrid columns. An example of the syntax is the below:
+Specify the fields that the end user will see as the datagrid columns. An example of the syntax is the below:
 
 <pre><code class="language-php">$crud->columns(['first_name', 'last_name', 'age']);</code></pre>
 

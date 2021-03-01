@@ -1,7 +1,7 @@
 ---
 id: set-table
 title: setTable
-description: 
+description: The main database table that you will use for your CRUD.  
 permalink: docs/set-table
 previous: render
 next: set-subject

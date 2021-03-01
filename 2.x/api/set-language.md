@@ -1,7 +1,7 @@
 ---
 id: set-language
 title: setLanguage
-description: 
+description: Change the default language of the CRUD with more than 34 languages to choose from. 
 permalink: docs/set-language
 previous: set-subject
 next: set-skin
