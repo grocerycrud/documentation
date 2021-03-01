@@ -1,7 +1,7 @@
 ---
 id: set-action-button
 title: setActionButton
-description: 
+description: setActionButton is used when we need to add extra action buttons to the rows of the datagrid.  
 permalink: docs/set-action-button
 previous: required-fields
 next: set-add
