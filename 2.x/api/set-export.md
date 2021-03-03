@@ -3,8 +3,8 @@ id: set-export
 title: setExport
 description: Setting the export functionality. This function is rarely used as the default is already enabled. 
 permalink: docs/set-export
-previous: set-edit
-next: set-field-blob
+previous: set-action-button
+next: set-print
 ---
 
 # setExport

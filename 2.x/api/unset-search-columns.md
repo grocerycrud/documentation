@@ -1,10 +1,10 @@
 ---
 id: unset-search-columns
 title: unsetSearchColumns
-description: 
+description: Unset the search on the datagrid from quick column search and from filtering. 
 permalink: docs/unset-search-columns
-previous: unset-read-fields
-next: unset-texteditor
+previous: unset-print
+next: unset-filters
 ---
 
 # unsetSearchColumns

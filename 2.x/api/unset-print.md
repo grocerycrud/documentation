@@ -1,10 +1,10 @@
 ---
 id: unset-print
 title: unsetPrint
-description: 
+description: The method unsetPrint is removing the Print button for the current CRUD. 
 permalink: docs/unset-print
-previous: unset-operations
-next: unset-react
+previous: unset-export
+next: unset-search-columns
 ---
 
 # unsetPrint

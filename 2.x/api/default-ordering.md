@@ -3,8 +3,8 @@ id: default-ordering
 title: defaultOrdering
 description: The default ordering that the datagrid will have before the user will press any button to order by column.
 permalink: docs/default-ordering
-previous: columns
-next: display-as
+previous: callback-column
+next: set-action-button
 ---
 
 # defaultOrdering

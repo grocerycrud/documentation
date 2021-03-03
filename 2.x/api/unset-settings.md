@@ -1,7 +1,7 @@
 ---
 id: unset-settings
 title: unsetSettings
-description: 
+description: The method unsetSettings is removing the "Settings" button from the datagrid. 
 permalink: docs/unset-settings
 previous: unset-filters
 next: add-fields

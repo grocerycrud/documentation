@@ -1,10 +1,10 @@
 ---
 id: unset-export
 title: unsetExport
-description: 
+description: Removing the export functionality for the current CRUD. 
 permalink: docs/unset-export
-previous: unset-edit-fields
-next: unset-fields
+previous: unset-columns
+next: unset-print
 ---
 
 # unsetExport

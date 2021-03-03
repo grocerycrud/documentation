@@ -3,8 +3,8 @@ id: callback-column
 title: callbackColumn
 description: This callback runs on each datagrid column. It escapes the auto column value and runs the callback. 
 permalink: docs/callback-column
-previous: callback-clone-field
-next: callback-delete
+previous: columns
+next: default-ordering
 ---
 
 # callbackColumn

@@ -1,7 +1,7 @@
 ---
 id: unset-filters
 title: unsetFilters
-description: 
+description: The method unsetFilters is removing the "Filters" button from the datagrid.
 permalink: docs/unset-filters
 previous: unset-search-columns
 next: unset-settings

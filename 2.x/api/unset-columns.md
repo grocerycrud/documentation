@@ -1,10 +1,10 @@
 ---
 id: unset-columns
 title: unsetColumns
-description: 
+description: Unset the search on the datagrid from quick column search and from filtering.
 permalink: docs/unset-columns
-previous: unset-clone-fields
-next: unset-delete
+previous: set-print
+next: unset-export
 ---
 
 # unsetColumns
