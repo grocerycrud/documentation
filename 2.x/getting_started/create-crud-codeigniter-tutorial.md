@@ -11,7 +11,7 @@ next:
 
 If you are totally new to the codeigniter experience and you can't still understand the way that you can create a CRUD, this codeigniter CRUD tutorial is just for you. Below you will see with steps how to make grocery CRUD work and how to install it to a new project. All the examples below are for codeigniter 2.x but the same exact implementation stands for version 3.X as well.
 
-Step 1. First of all <a href="http://www.codeigniter.com/download" target="_blank">download codeigniter</a> and make sure that you project have  the welcome screen. So if your first screen of your project looks like the image below, you just installed codeigniter framework to your project.
+Step 1. First of all <a href="https://www.codeigniter.com/download" target="_blank">download codeigniter</a> and make sure that you project have  the welcome screen. So if your first screen of your project looks like the image below, you just installed codeigniter framework to your project.
 <img src="https://d328ce9sgcu5lp.cloudfront.net/assets/themes/responsive/images/pages/codeigniter-welcome.png" alt="Welcome Page Codeigniter" />
 
 2nd Step. Now we are ready to configure our database to our codeigniter project. The database connection for codeigniter can be configured at: your_project/application/config/database.php The file will look something like this:
