@@ -1,10 +1,10 @@
 ---
 id: set-add
 title: setAdd
-description: 
+description: Setting the insert functionality. This function is rare to use as the default is already enabled. 
 permalink: docs/set-add
-previous: set-action-button
-next: set-api-url-path
+previous: callback-insert
+next: unset-add
 ---
 
 # setAdd

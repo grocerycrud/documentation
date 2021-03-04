@@ -1,9 +1,9 @@
 ---
 id: callback-add-field
 title: callbackAddField
-description: 
+description: A callback that is used in case you need to create a custom field for the add form.
 permalink: docs/callback-add-field
-previous: 
+previous: add-fields
 next: callback-add-form
 ---
 

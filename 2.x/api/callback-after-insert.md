@@ -1,10 +1,10 @@
 ---
 id: callback-after-insert
 title: callbackAfterInsert
-description: 
+description: The callback that will be used right after the insert of the data.
 permalink: docs/callback-after-insert
-previous: callback-after-delete-multiple
-next: callback-after-update
+previous: callback-add-form
+next: callback-before-insert
 ---
 
 # callbackAfterInsert

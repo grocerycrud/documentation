@@ -1,10 +1,10 @@
 ---
 id: callback-before-insert
 title: callbackBeforeInsert
-description: 
+description: The callback is used in cases we need to add or change data before the insert functionality. 
 permalink: docs/callback-before-insert
-previous: callback-before-delete-multiple
-next: callback-before-update
+previous: callback-after-insert
+next: callback-insert
 ---
 
 # callbackBeforeInsert

@@ -1,10 +1,10 @@
 ---
 id: callback-add-form
 title: callbackAddForm
-description: 
+description: A callback in order to change the default data before the add form modal will display. 
 permalink: docs/callback-add-form
 previous: callback-add-field
-next: callback-after-delete
+next: callback-after-insert
 ---
 
 # callbackAddForm
@@ -14,9 +14,10 @@ This callback is used in case we need to change the default data that will appea
 
 Example:
 <pre><code class="language-php">$crud->callbackAddForm(function ($data) {
-    // The reference id always starts with 0098_ and 
-    // hence we are adding it as a default value 
-    // instead of empty
+    // At this example we assume that 
+    // the reference id always starts with 0098_  
+    // and hence we are adding it as a default  
+    // value instead of empty
     $data['reference_id'] = '0098_';
 
     return $data;

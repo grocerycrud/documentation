@@ -1,10 +1,10 @@
 ---
 id: callback-insert
 title: callbackInsert
-description: 
+description: The callback is used when we need to replace the default functionality of the insert. 
 permalink: docs/callback-insert
-previous: callback-edit-form
-next: callback-read-field
+previous: callback-before-insert
+next: set-add
 ---
 
 # callbackInsert

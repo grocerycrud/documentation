@@ -1,10 +1,10 @@
 ---
 id: add-fields
 title: addFields
-description: 
-permalink: docs/gcc/2.x/add-fields
-previous: 
-next: clone-fields
+description: The fields that will be visible to the end user for add/insert form.
+permalink: docs/add-fields
+previous: unset-settings
+next: callback-add-field
 ---
 
 # addFields

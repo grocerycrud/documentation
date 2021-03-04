@@ -1,10 +1,10 @@
 ---
 id: unset-add-fields
 title: unsetAddFields
-description: 
+description: Unset (do not display) the specified fields for the insert form.
 permalink: docs/unset-add-fields
 previous: unset-add
-next: unset-autoload-java-script
+next: callback-after-update
 ---
 
 # unsetAddFields
