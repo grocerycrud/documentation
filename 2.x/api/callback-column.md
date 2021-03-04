@@ -21,13 +21,20 @@ You can find a simple example for the usage of the callback column:
 <pre><code class="language-php">$crud-&gt;callbackColumn('menu_title', function ($value, $row) {
     return "&lt;a href='" . site_url('menu/' . $row-&gt;id) . "'&gt;$value&lt;/a&gt;";
 });</code></pre>
+
+## Example
 A full example is also available below:
 <pre><code class="language-php">$crud-&gt;setTable('customers');
 $crud-&gt;setSubject('Customer', 'Customers');
 $crud-&gt;columns(['customerName','phone','addressLine1','creditLimit']);
 
 $crud-&gt;callbackColumn('customerName', function ($value, $row) {
-     return "&lt;a href='/demo_view_customer/" . $row-&gt;customerNumber."' target='blank'&gt;$value&lt;/a&gt;";
+    if (!empty($value)) {
+        return "&lt;a href='/demo_view_customer/" . $row-&gt;customerNumber."' target='blank'&gt;$value&lt;/a&gt;";
+    } else {
+        // Make sure that you return white space or else the cell may break on print layout
+        return '&amp;nbsp;';
+    }
 });
 
 $output = $crud-&gt;render();</code></pre>
