@@ -28,9 +28,9 @@ next: basic-example
 | [setAdd](/docs/set-add)  | Setting the insert functionality. This function is rare to use as the default is already enabled.  |
 | [setApiUrlPath](/docs/set-api-url-path)  | Change the default API URL path and instead use the provided URL. Useful when we use Routes. |
 | [setClone](/docs/set-clone)  | Enabling the clone functionality for the datagrid. Clone is basically copying all the data to an insert form. |
-| [setDelete](/docs/set-delete)  | Setting the delete functionality. This function is rare to use as the default is already enabled.. |
-| [setEdit](/docs/set-edit)  | Setting the update functionality. This function is rare to use as the default is already enabled. |
-| [setExport](/docs/set-export)  | Setting the export functionality. This function is rare to use as the default is already enabled. |
+| [setDelete](/docs/set-delete)  | Set the delete functionality. This function is rare to use as the default is already enabled. |
+| [setEdit](/docs/set-edit)  | Set the update functionality. This function is rare to use as the default is already enabled. |
+| [setExport](/docs/set-export)  | Set the export functionality. This function is rare to use as the default is already enabled. |
 | [setLangString](/docs/set-lang-string)  | Change any handle of the translation. |
 | [setLanguage](/docs/set-language)  | Set the language of the CRUD. All the languages that Grocery CRUD supports are listed at the [Languages Support](#languages-support) section. |
 | [setModel](/docs/set-model)  | Changing the default model with a custom one. |
@@ -52,7 +52,7 @@ next: basic-example
 | [unsetClone](/docs/unset-clone)  |  The method unsetClone is removing completely the Clone operation for the end-user. |
 | [unsetCloneFields](/docs/unset-clone-fields)  |  Unset (do not display) the specified fields from the clone form. |
 | [unsetColumns](/docs/unset-columns)   | Unset (do not display) the specified columns. |
-| [unsetDelete](/docs/unset-delete)  | Unset (and do not display) the delete functionality (also unsetting the delete multiple functionality) |
+| [unsetDelete](/docs/unset-delete)  | Unset and do not display the delete functionality Also unsetting the delete multiple functionality. |
 | [unsetEdit](/docs/unset-edit)   | Removing the edit operation for the end-user (from the frontend and the backend) |
 | [unsetEditFields](/docs/unset-edit-fields)   | Unset (do not display) the specified fields for the update form. |
 | [unsetExport](/docs/unset-export)   | Removing the export functionality for the current CRUD. |
@@ -99,6 +99,7 @@ next: basic-example
 | [callbackDeleteMultiple](/docs/callback-delete-multiple)  | Replaces the default multiple delete functionality with the callback specified. |
 | [callbackEditForm](/docs/callback-edit-form)  | This callback is used in case we need to append, filter or change the data that are going to appear on the edit form. |
 | [setDeleteMultiple](/docs/set-delete-multiple)  | The setDeleteMultiple method is rarely used as the multiple delete functionality is enabled by default. |
+| [unsetDeleteMultiple](/docs/unset-delete-multiple)  | This function is used when you don't want the user to have the ability to batch remove too many records at once. Have in mind that the user can remove rows one by one. |
 | [readOnlyAddFields](/docs/read-only-add-fields)  | There are cases, that we need some fields to be read only but only to the add form modal.|
 | [readOnlyCloneFields](/docs/read-only-clone-fields)  | There are cases, that we need some fields to be read only but only to the clone form modal. |
 | [readOnlyEditFields](/docs/read-only-edit-fields)  | There are cases, that we need some fields to be read only but only to the edit form modal. |

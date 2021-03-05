@@ -1,14 +1,13 @@
 ---
 id: unset-delete-multiple
 title: unsetDeleteMultiple
-description: 
+description: This function is used when you don't want the user to have the ability to batch remove too many records at once. Have in mind that the user can remove rows one by one.
 permalink: docs/unset-delete-multiple
 previous: unset-delete
-next: unset-edit
+next: callback-read-field
 ---
 
 # unsetDeleteMultiple
-
 
 <pre><code class="language-php">unsetDelete(void)</code></pre>
 The method <code>unsetDeleteMultiple</code> is removing completely the multiple Delete operation for the end-user. This is mainly a function that it is used when you don't want the user to have the ability to batch remove too many records at once. Have in mind that the user <strong>can</strong> remove rows one by one (even all of them!) but by removing this functionality it is just that you don't make it as easy to do and at the same time prevent them to do it.

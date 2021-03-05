@@ -1,10 +1,10 @@
 ---
 id: callback-after-delete-multiple
 title: callbackAfterDeleteMultiple
-description: 
+description: The callback that will be used right after the multiple delete functionality.
 permalink: docs/callback-after-delete-multiple
 previous: callback-after-delete
-next: callback-after-insert
+next: callback-before-delete
 ---
 
 # callbackAfterDeleteMultiple

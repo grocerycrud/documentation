@@ -1,14 +1,13 @@
 ---
 id: set-delete
 title: setDelete
-description: 
+description: Set the delete functionality. This function is rare to use as the default is already enabled.
 permalink: docs/set-delete
-previous: set-database-schema
+previous: callback-delete-multiple
 next: set-delete-multiple
 ---
 
 # setDelete
-
 
 <pre><code class="language-php">setDelete(void)</code></pre>
 The <code>setDelete</code> method is rarely used as the delete functionality is enabled by default. The common usage is in case you are disabling all the operations and only setting back again the ones that the user has permission of.

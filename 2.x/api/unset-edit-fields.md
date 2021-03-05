@@ -9,7 +9,6 @@ next: callback-after-delete
 
 # unsetEditFields
 
-
 <pre><code class="language-php">unsetEditFields(array $fields)</code></pre>
 There are cases that we have lots of fields and we just need to say "I need all of them expect these 3". Well <code>unsetEditFields</code> is doing just that! This function is really useful especially when the development of the database is on going. The syntax is simple:
 

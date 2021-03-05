@@ -1,14 +1,13 @@
 ---
 id: callback-before-delete
 title: callbackBeforeDelete
-description: 
+description: The callback will be triggered before the delete functionality.
 permalink: docs/callback-before-delete
-previous: callback-after-upload
+previous: callback-after-delete-multiple
 next: callback-before-delete-multiple
 ---
 
 # callbackBeforeDelete
-
 
 <pre><code class="language-php">callbackBeforeDelete(callable $callback)</code></pre>
 The callback that will be used right before the delete. The only parameter that the state will have is the primary key value. 

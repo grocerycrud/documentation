@@ -1,14 +1,13 @@
 ---
 id: callback-delete
 title: callbackDelete
-description: 
+description: The basic usage of callbackDelete is when we want to replace the default delete functionality.
 permalink: docs/callback-delete
-previous: callback-column
+previous: callback-before-delete-multiple
 next: callback-delete-multiple
 ---
 
 # callbackDelete
-
 
 <pre><code class="language-php">callbackDelete(callable $callback)</code></pre>
 The basic usage of <code>callbackDelete</code> is when you want to skip the delete functionality. If the <code>callbackDelete</code> is called then that means that the actual default delete functionality of Grocery CRUD Enterprise will not triggered.

@@ -1,9 +1,9 @@
 ---
 id: callback-after-delete
 title: callbackAfterDelete
-description: 
+description: The callback that will be used right after the delete.
 permalink: docs/callback-after-delete
-previous: callback-add-form
+previous: unset-edit-fields
 next: callback-after-delete-multiple
 ---
 

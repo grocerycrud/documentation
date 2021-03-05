@@ -1,14 +1,13 @@
 ---
 id: callback-delete-multiple
 title: callbackDeleteMultiple
-description: 
+description: Replaces the default multiple delete functionality with the callback specified.
 permalink: docs/callback-delete-multiple
 previous: callback-delete
 next: set-delete
 ---
 
 # callbackDeleteMultiple
-
 
 <pre><code class="language-php">callbackDeleteMultiple(callable $callback)</code></pre>
 Replaces the default multiple delete functionality with the callback specified.

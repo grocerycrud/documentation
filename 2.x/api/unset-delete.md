@@ -1,14 +1,13 @@
 ---
 id: unset-delete
 title: unsetDelete
-description: 
+description: Unset and do not display the delete functionality Also unsetting the delete multiple functionality.
 permalink: docs/unset-delete
-previous: unset-columns
+previous: set-delete-multiple
 next: unset-delete-multiple
 ---
 
 # unsetDelete
-
 
 <pre><code class="language-php">unsetDelete(void)</code></pre>
 The method <code>unsetDelete</code> is removing completely the Delete operation for the end-user. More specifically:
