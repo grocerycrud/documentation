@@ -1,14 +1,13 @@
 ---
 id: set-edit
 title: setEdit
-description: 
+description: Setting the update functionality. This function is rare to use as the default is already enabled.
 permalink: docs/set-edit
-previous: set-dependent-relation
-next: set-export
+previous: edit-fields
+next: unset-edit
 ---
 
 # setEdit
-
 
 <pre><code class="language-php">setEdit(void)</code></pre>
 The <code>setEdit</code> method is rarely used as the edit functionality is enabled by default. The common usage is in case you are disabling all the operations and only setting back again the ones that the user has permission of.

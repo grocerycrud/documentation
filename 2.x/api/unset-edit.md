@@ -1,14 +1,13 @@
 ---
 id: unset-edit
 title: unsetEdit
-description: 
+description: Removing the edit operation for the end-user (from the frontend and the backend).
 permalink: docs/unset-edit
-previous: unset-delete-multiple
+previous: set-edit
 next: unset-edit-fields
 ---
 
 # unsetEdit
-
 
 <pre><code class="language-php">unsetEdit(void)</code></pre>
 The method <code>unsetEdit</code> is removing completely the Edit operation for the end-user. More specifically:
@@ -19,6 +18,8 @@ The method <code>unsetEdit</code> is removing completely the Edit operation for 
 
 The syntax is simple. You can find an example below:
 <pre><code class="language-php">$crud->unsetEdit();</code></pre>
+
+## Example
 
 You can also see a full working example:
 

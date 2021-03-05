@@ -1,14 +1,13 @@
 ---
 id: edit-fields
 title: editFields
-description: 
+description: The fields that will be visible to the end user for edit/update form.
 permalink: docs/edit-fields
-previous: display-as
-next: fields
+previous: callback-update
+next: set-edit
 ---
 
 # editFields
-
 
 <pre><code class="language-php">editFields(array $editFields)</code></pre>
 The fields that will be visible to the end user for edit/update form. For example:

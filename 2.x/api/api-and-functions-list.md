@@ -97,6 +97,7 @@ next: basic-example
 | [callbackAfterDeleteMultiple](/docs/callback-after-delete-multiple)  | The callback that will be used right after the multiple delete functionality. |
 | [callbackBeforeDeleteMultiple](/docs/callback-before-delete-multiple)  | Similar functionality with callbackBeforeDelete it is just that this callback will be used for the delete multiple functionality. |
 | [callbackDeleteMultiple](/docs/callback-delete-multiple)  | Replaces the default multiple delete functionality with the callback specified. |
+| [callbackEditForm](/docs/callback-edit-form)  | This callback is used in case we need to append, filter or change the data that are going to appear on the edit form. |
 | [setDeleteMultiple](/docs/set-delete-multiple)  | The setDeleteMultiple method is rarely used as the multiple delete functionality is enabled by default. |
 | [readOnlyAddFields](/docs/read-only-add-fields)  | There are cases, that we need some fields to be read only but only to the add form modal.|
 | [readOnlyCloneFields](/docs/read-only-clone-fields)  | There are cases, that we need some fields to be read only but only to the clone form modal. |

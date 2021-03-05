@@ -1,14 +1,13 @@
 ---
 id: callback-edit-form
 title: callbackEditForm
-description: 
+description: This callback is used in case we need to append, filter or change the data that are going to appear on the edit form.
 permalink: docs/callback-edit-form
 previous: callback-edit-field
-next: callback-insert
+next: callback-update
 ---
 
 # callbackEditForm
-
 
 <pre><code class="language-php">callbackEditForm(callable $callback)</code></pre>
 

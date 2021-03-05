@@ -1,10 +1,10 @@
 ---
 id: callback-after-update
 title: callbackAfterUpdate
-description: 
+description: The callback that will be used right after the update of the data.
 permalink: docs/callback-after-update
-previous: callback-after-insert
-next: callback-after-upload
+previous: unset-add-fields
+next: callback-before-update
 ---
 
 # callbackAfterUpdate

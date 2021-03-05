@@ -1,9 +1,9 @@
 ---
 id: callback-edit-field
 title: callbackEditField
-description: 
+description: A callback that is used in case you need to create a custom field for the edit/update form.
 permalink: docs/callback-edit-field
-previous: callback-delete-multiple
+previous: callback-before-update
 next: callback-edit-form
 ---
 

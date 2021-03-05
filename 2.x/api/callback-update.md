@@ -1,14 +1,13 @@
 ---
 id: callback-update
 title: callbackUpdate
-description: 
+description: The callback is used when we need to replace the default update functionality.
 permalink: docs/callback-update
-previous: callback-read-form
-next: callback-upload
+previous: callback-edit-form
+next: edit-fields
 ---
 
 # callbackUpdate
-
 
 <pre><code class="language-php">callbackUpdate(callable $callback)</code></pre>
 The function <code>callbackUpdate</code> is used when we need to completely skip the default update functionality of Grocery CRUD Enterprise. The usage is simple, for example:
