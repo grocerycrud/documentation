@@ -1,14 +1,13 @@
 ---
 id: unset-read
 title: unsetRead
-description: 
+description: The method unsetRead is removing completely the Read operation for the end-user.
 permalink: docs/unset-read
 previous: unset-react
 next: unset-read-fields
 ---
 
 # unsetRead
-
 
 <pre><code class="language-php">unsetRead(void)</code></pre>
 The method <code>unsetRead</code> is removing completely the Read operation for the end-user. More specifically:

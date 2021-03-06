@@ -4,7 +4,7 @@ title: Change theme skin
 description: Change the default theme of Grocery CRUD Enterprise.
 permalink: docs/change-theme-skin
 previous: set-database-relation
-next: 
+next: api-and-functions-list
 ---
 
 # Change theme skin

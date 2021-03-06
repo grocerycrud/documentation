@@ -1,9 +1,9 @@
 ---
 id: callback-read-field
 title: callbackReadField
-description: 
+description: This is a callback in order to create a custom field at the read/view form.
 permalink: docs/callback-read-field
-previous: callback-insert
+previous: unset-delete-multiple
 next: callback-read-form
 ---
 

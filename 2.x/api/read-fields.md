@@ -1,14 +1,13 @@
 ---
 id: read-fields
 title: readFields
-description: 
+description: The fields that will be visible when the end-user navigates to the view form.
 permalink: docs/read-fields
-previous: get-state-info
+previous: callback-read-form
 next: read-only-add-fields
 ---
 
 # readFields
-
 
 <pre><code class="language-php">readFields(array $readFields)</code></pre>
 The fields that will be visible when the end-user navigates to the view form.

@@ -1,14 +1,13 @@
 ---
 id: set-read
 title: setRead
-description: 
+description: In order to enable the “View” button at your grid you will need to use the function setRead. The view of the form (read only) is false by default.
 permalink: docs/set-read
-previous: set-print
-next: set-relation
+previous: read-only-fields
+next: unset-read
 ---
 
 # setRead
-
 
 <pre><code class="language-php">setRead(void)</code></pre>
 The view of the form (read only) is false by default. In order to enable the "View" button at your grid you will need to use the function <code>setRead</code>. 

@@ -1,14 +1,13 @@
 ---
 id: read-only-fields
 title: readOnlyFields
-description: 
+description: Specifying the fields that can't be edited and will only be viewed. 
 permalink: docs/read-only-fields
 previous: read-only-edit-fields
-next: render
+next: set-read
 ---
 
 # readOnlyFields
-
 
 <pre><code class="language-php">readOnlyFields(array $fields)</code></pre>
 Specifying the fields that can't be edited and will only be viewed. The rule will be the same for the insert and update operations. 

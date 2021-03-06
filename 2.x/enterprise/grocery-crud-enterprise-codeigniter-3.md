@@ -3,8 +3,8 @@ id: grocery-crud-enterprise-codeigniter-3
 title: Codeigniter 3 Installation
 description: Step by step tutorial. Install Grocery CRUD Enterprise on Codeigniter version 3.
 permalink: docs/grocery-crud-enterprise-codeigniter-3
-previous:
-next:
+previous: api-and-functions-list
+next: basic-example
 ---
 
 # Codeigniter 3 Installation

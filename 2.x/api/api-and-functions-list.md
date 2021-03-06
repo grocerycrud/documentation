@@ -4,7 +4,7 @@ title: API and Functions list
 description: You can find a full API list of all the functions of Grocery CRUD
 permalink: docs/api-and-functions-list
 previous: why-grocery-crud
-next: basic-example
+next: getting-started
 ---
 
 # API and Functions list
@@ -97,6 +97,7 @@ next: basic-example
 | [callbackAfterDeleteMultiple](/docs/callback-after-delete-multiple)  | The callback that will be used right after the multiple delete functionality. |
 | [callbackBeforeDeleteMultiple](/docs/callback-before-delete-multiple)  | Similar functionality with callbackBeforeDelete it is just that this callback will be used for the delete multiple functionality. |
 | [callbackDeleteMultiple](/docs/callback-delete-multiple)  | Replaces the default multiple delete functionality with the callback specified. |
+| [callbackReadForm](/docs/callback-read-form)  | A callback to change the read data that will display at the read/view modal. |
 | [callbackEditForm](/docs/callback-edit-form)  | This callback is used in case we need to append, filter or change the data that are going to appear on the edit form. |
 | [setDeleteMultiple](/docs/set-delete-multiple)  | The setDeleteMultiple method is rarely used as the multiple delete functionality is enabled by default. |
 | [unsetDeleteMultiple](/docs/unset-delete-multiple)  | This function is used when you don't want the user to have the ability to batch remove too many records at once. Have in mind that the user can remove rows one by one. |

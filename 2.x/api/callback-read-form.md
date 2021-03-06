@@ -1,14 +1,13 @@
 ---
 id: callback-read-form
 title: callbackReadForm
-description: 
+description: A callback to change the read data that will display at the read/view modal.
 permalink: docs/callback-read-form
 previous: callback-read-field
-next: callback-update
+next: read-fields
 ---
 
 # callbackReadForm
-
 
 <pre><code class="language-php">callbackReadForm(callable $callback)</code></pre>
 This callback is used in case you need to change the representation of the value on view form.
