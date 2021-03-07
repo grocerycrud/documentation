@@ -1,14 +1,13 @@
 ---
 id: set-field-upload
 title: setFieldUpload
-description: 
+description: There is a special type of field for uploading data or images and in order to trigger this type, you will need to use the setFieldUpload method.
 permalink: docs/set-field-upload
-previous: set-field-blob
-next: set-lang-string
+previous: callback-upload
+next: set-csrf-token-name
 ---
 
 # setFieldUpload
-
 
 <pre><code class="language-php">setFieldUpload(string $fieldName, string $privateUploadFolder, string $publicFolderPath)</code></pre>
 There is a special type of field for uploading data or images and in order to trigger this type, you will need to use the <code>setFieldUpload</code> method. The usage is fairly easy and everything will work out of the box. You just need to make sure that the server has access to the specified folders.

@@ -1,14 +1,13 @@
 ---
 id: unset-clone
 title: unsetClone
-description: 
+description: The method unsetClone is removing completely the Clone operation for the end-user.
 permalink: docs/unset-clone
-previous: unset-bootstrap
+previous: set-clone
 next: unset-clone-fields
 ---
 
 # unsetClone
-
 
 <pre><code class="language-php">unsetClone(void)</code></pre>
 The method <code>unsetClone</code> is removing completely the Clone operation for the end-user. More specifically:

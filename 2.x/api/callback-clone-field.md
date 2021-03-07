@@ -1,14 +1,13 @@
 ---
 id: callback-clone-field
 title: callbackCloneField
-description: 
+description: A callback that is used in case you need to create a custom field for the clone form.
 permalink: docs/callback-clone-field
 previous: unset-read-fields
 next: clone-fields
 ---
 
 # callbackCloneField
-
 
 <pre><code class="language-php">callbackCloneField(string $fieldName, callable $callback)</code></pre>
 Create a custom field with a callback for clone form. The main callback get as parameters: 

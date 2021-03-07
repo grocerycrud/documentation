@@ -1,14 +1,13 @@
 ---
 id: callback-after-upload
 title: callbackAfterUpload
-description: 
+description: The callback that will be triggered right after the upload.
 permalink: docs/callback-after-upload
-previous: callback-after-update
-next: callback-before-delete
+previous: unset-clone-fields
+next: callback-before-upload
 ---
 
 # callbackAfterUpload
-
 
 <pre><code class="language-php">callbackAfterUpload(callable $callback)</code></pre>
 The callback that will be triggered right after the upload.

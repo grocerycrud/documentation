@@ -1,7 +1,7 @@
 ---
 id: clone-fields
 title: cloneFields
-description: 
+description: The fields that will be visible to the end user for clone form.
 permalink: docs/gcc/2.x/clone-fields
 previous: callback-clone-field
 next: set-clone

@@ -1,14 +1,13 @@
 ---
 id: callback-before-upload
 title: callbackBeforeUpload
-description: 
+description: The callback is used in cases we need to filter the uploaded data before the upload functionality.
 permalink: docs/callback-before-upload
-previous: callback-before-update
-next: callback-clone-field
+previous: callback-after-upload
+next: callback-upload
 ---
 
 # callbackBeforeUpload
-
 
 <pre><code class="language-php">callbackBeforeUpload(string $fieldName, callable $callback)</code></pre>
 The callback is used in cases we need to filter the uploaded data before the upload functionality. This can also be used to cancel an upload in case that it doesn't fit with the requirements.

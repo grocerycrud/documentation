@@ -1,7 +1,7 @@
 ---
 id: set-clone
 title: setClone
-description: 
+description: Enabling the clone functionality for the datagrid. Clone is basically copying all the data to an insert form. 
 permalink: docs/set-clone
 previous: clone-fields
 next: unset-clone

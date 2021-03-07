@@ -1,14 +1,13 @@
 ---
 id: unset-clone-fields
 title: unsetCloneFields
-description: 
+description: Don't display the specified fields from the clone form.
 permalink: docs/unset-clone-fields
 previous: unset-clone
-next: unset-columns
+next: callback-after-upload
 ---
 
 # unsetCloneFields
-
 
 <pre><code class="language-php">unsetCloneFields(array $fields)</code></pre>
 There are cases that we have lots of fields and we just need to say "I need all of them expect these 3". Well <code>unsetCloneFields</code> is doing just that! This function is really useful especially when the development of the database is ongoing. The syntax is simple:

@@ -1,14 +1,13 @@
 ---
 id: callback-upload
 title: callbackUpload
-description: 
+description: The callbackUpload is used when we need to replace the default upload functionality of Grocery CRUD Enterprise.
 permalink: docs/callback-upload
-previous: callback-update
-next: clone-fields
+previous: callback-before-upload
+next: set-field-upload
 ---
 
 # callbackUpload
-
 
 <pre><code class="language-php">callbackUpload(string $fieldName, callable $callback)</code></pre>
 The callbackUpload is used when we need to replace the default upload functionality of Grocery CRUD Enterprise.
@@ -47,12 +46,13 @@ Please have in mind that this is completely <strong>replacing</strong> the funct
 
 For example you can see a full working example below. The example is pretty big as it handles all of the above bullet points.
 
-<pre><code class="language-php">// At this example we are using the library of: https://packagist.org/packages/codeguy/upload
-// So please make sure that if you are going to use the below code you will need to install this library first
+<pre><code class="language-php">// At this example we are using the library of https://packagist.org/packages/codeguy/upload 
+// so please make sure that if you are going to use the below code,
+// you will need to install this library first
 
 $crud->callbackUpload(function ($uploadData)  {
-    // Hardcoded paths. Please make sure that in case you just copy the below code that you replace these
-    // two variables with yours
+    // Hardcoded paths. Please make sure that in case you just copy the below code 
+    // that you replace these two variables with yours
     $uploadPath = '/real/upload/path/'; // directory of the drive
     $publicPath = '/Uploads/'; // public directory (at the URL)
 
@@ -67,7 +67,8 @@ $crud->callbackUpload(function ($uploadData)  {
         return false;
     }
 
-    // The library that we are using want us to remove the file extension as it is adding it by itself!
+    // The library that we are using want us to remove the file 
+    // extension as it is adding it by itself!
     $filename = preg_replace('/\\.[^.\\s]{3,4}$/', '', $filename);
     // Replace illegal characters with an underscore
     $filename = preg_replace("/([^a-zA-Z0-9\-\_]+?){1}/i", '_', $filename);
@@ -95,7 +96,8 @@ $crud->callbackUpload(function ($uploadData)  {
     } catch (\Upload\Exception\UploadException $e) {
         // Upload error, return a custom message
         $errors = print_r($file->getErrors(), true);
-        return (new \GroceryCrud\Core\Error\ErrorMessage())->setMessage("There was an error with the upload:\n" . $errors);
+        return (new \GroceryCrud\Core\Error\ErrorMessage())
+                     ->setMessage("There was an error with the upload:\n" . $errors);
     } catch (\Exception $e) {
         throw $e;
     }
