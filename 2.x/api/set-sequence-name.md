@@ -1,18 +1,17 @@
 ---
 id: set-sequence-name
 title: setSequenceName
-description: 
+description: Postgres database recognise the insert id with a sequence key.
 permalink: docs/set-sequence-name
-previous: set-rules
-next: set-skin
+previous: set-relation-n-to-n
+next: display-as
 ---
 
 # setSequenceName
 
-
 <pre><code class="language-php">setSequenceName(string $sequenceName)</code></pre>
 
-Postgres database is recognising the insert id with a sequence key. This key can be easily guessed automatically but there are many cases that we are adding the key as a different name. In that case we can use the function:
+Postgres database recognise the insert id with a sequence key. This key can be easily guessed automatically but there are many cases that we are adding the key as a different name. In that case we can use the function:
 
 <pre><code class="language-php">$crud->setSequenceName('my_sequence_name');</code></pre>
 

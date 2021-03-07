@@ -1,14 +1,13 @@
 ---
 id: set-dependent-relation
 title: setDependentRelation
-description: 
+description: There are cases that dropdown list that was built from setRelation has dependencies between them.
 permalink: docs/set-dependent-relation
-previous: set-delete-multiple
-next: set-edit
+previous: set-database-schema
+next: set-model
 ---
 
 # setDependentRelation
-
 
 <pre><code class="language-php">setDependentRelation(string $fieldName, string $dependencyFromField, string $fieldNameRelation)</code></pre>
 <div class="quick-description">Available from version >= 2.6.1</div>

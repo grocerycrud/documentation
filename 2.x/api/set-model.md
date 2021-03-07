@@ -1,9 +1,9 @@
 ---
 id: set-model
 title: setModel
-description: 
+description: Changing the default model with a custom one. 
 permalink: docs/set-model
-previous: set-language-path
+previous: set-dependent-relation
 next: set-primary-key
 ---
 

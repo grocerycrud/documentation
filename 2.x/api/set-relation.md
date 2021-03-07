@@ -1,19 +1,18 @@
 ---
 id: set-relation
 title: setRelation
-description: 
+description: This is the function that is used to connect two tables with a 1 to n (1:n) relation.
 permalink: docs/set-relation
-previous: set-read
-next: set-relation-nto-n
+previous: set-primary-key
+next: set-relation-n-to-n
 ---
 
 # setRelation
 
-
 <pre><code class="language-php">setRelation(string $fieldName , string $relatedTable, string $relatedTitleField)</code></pre>
 A simple database relation between tables is very common. For example if we would like to set a relation for the below tables:
 
-<img src="/assets/uploads/general/relation-example.png" alt="Set Relation tables" />
+<img src="/uploads/documentation/relation-example.png" alt="Set Relation tables" />
 
 The primary key of the basic table (employees) and the primary key of the relational table (offices) is recognised automatically . So you need to add only three strings.
 <ol>
@@ -32,13 +31,14 @@ You can also use multiple fields from the relation table by adding brackets ( <c
 
 <h2 id="where-statement">Where statement at the setRelation function</h2>
 
-You can also include a 4th parameter at the setRelation function with the same syntax that is used with <a href="https://www.grocerycrud.com/enterprise/api-and-function-list/where-3"  target="_blank" rel="noopener noreferrer">where</a> function. You can see some examples below:
+You can also include a 4th parameter at the setRelation function with the same syntax that is used with [where](/docs/where) function. You can see some examples below:
 
 <pre><code class="language-php">$crud-&gt;setRelation('officeCode', 'offices', 'city', ['is_deleted' => 'no'])</code></pre>
 
-For more about how to use the 4th parameter of where you can also check the full documentation of <a href="https://www.grocerycrud.com/enterprise/api-and-function-list/where-3" target="_blank" rel="noopener noreferrer">where</a> method.
+For more about how to use the 4th parameter of where you can also check the full documentation of [where](/docs/where) method.
 
-<h2>Full Example</h2>
+## Example
+
 A full working example can be found here:
 <pre><code class="language-php">$crud-&gt;setTable('employees');
 $crud-&gt;setSubject('Employee', 'Employees');

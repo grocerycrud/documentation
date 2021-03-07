@@ -1,14 +1,13 @@
 ---
 id: set-primary-key
 title: setPrimaryKey
-description: 
+description: Set manually the primary key for a database table.
 permalink: docs/set-primary-key
 previous: set-model
-next: set-print
+next: set-relation
 ---
 
 # setPrimaryKey
-
 
 <pre><code class="language-php">setPrimaryKey(string $primaryKey, string $tableName)</code></pre>
 
