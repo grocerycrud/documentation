@@ -1,17 +1,16 @@
 ---
 id: set-database-schema
 title: setDatabaseSchema
-description: 
+description: Set database schema for PostgresSQL databases.
 permalink: docs/set-database-schema
 previous: set-csrf-token-value
-next: set-delete
+next: set-dependent-relation
 ---
 
 # setDatabaseSchema
 
-
 <pre><code class="language-php">setDatabaseSchema(string $databaseSchema)</code></pre>
-Set the database schema (currently only tested on PostgresSQL databases)
+Set database schema for PostgresSQL databases.
 
 <pre><code class="language-php">$crud->setDatabaseSchema('example_schema');</code></pre>
 

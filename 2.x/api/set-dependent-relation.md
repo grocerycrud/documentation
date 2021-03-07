@@ -54,7 +54,3 @@ $output = $output->render();
 </code></pre>
 
 In case you would like to see the results of the above example we do have the data copied here: <a href="https://gist.github.com/scoumbourdis/bc72fce984fedb2d57e4256bc438c4ae">https://gist.github.com/scoumbourdis/bc72fce984fedb2d57e4256bc438c4ae</a>
-
-<strong>Notice:</strong> Please have in mind that for the performance of the website we did add the full list of cities only for Greece and United Kingdom. Other than that they are few cities for France and Italy in case you would like to test it.
-
-`embed:demo_set-dependent-relation`

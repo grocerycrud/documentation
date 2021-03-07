@@ -1,14 +1,13 @@
 ---
 id: set-csrf-token-value
 title: setCsrfTokenValue
-description: 
+description: Specify the token value for CSRF protection. 
 permalink: docs/set-csrf-token-value
 previous: set-csrf-token-name
 next: set-database-schema
 ---
 
 # setCsrfTokenValue
-
 
 <pre><code class="language-php">setCsrfTokenValue(string $tokenValue)</code></pre>
 Specify the token value for CSRF protection. This value will only be sent through AJAX calls if it is not empty.

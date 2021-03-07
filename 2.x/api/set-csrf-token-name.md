@@ -1,9 +1,9 @@
 ---
 id: set-csrf-token-name
 title: setCsrfTokenName
-description: 
+description: Specify the token name for CSRF protection.
 permalink: docs/set-csrf-token-name
-previous: set-config
+previous: set-field-upload
 next: set-csrf-token-value
 ---
 
