@@ -4,7 +4,7 @@ title: setSubject
 description: Set a subject title for all the CRUD operations for this object.
 permalink: docs/set-subject
 previous: set-table
-next: set-language
+next: display-as
 ---
 
 # setSubject

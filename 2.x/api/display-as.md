@@ -1,14 +1,13 @@
 ---
 id: display-as
 title: displayAs
-description: 
+description: Displaying the field name with a more readable label to the end-user.
 permalink: docs/display-as
-previous: default-ordering
-next: edit-fields
+previous: set-subject
+next: set-language
 ---
 
 # displayAs
-
 
 <pre><code class="language-php">displayAs(string $fieldName, string $displayAs)</code></pre>
 or

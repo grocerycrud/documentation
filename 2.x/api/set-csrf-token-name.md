@@ -3,7 +3,7 @@ id: set-csrf-token-name
 title: setCsrfTokenName
 description: Specify the token name for CSRF protection.
 permalink: docs/set-csrf-token-name
-previous: set-field-upload
+previous: unset-react
 next: set-csrf-token-value
 ---
 

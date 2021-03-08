@@ -3,8 +3,8 @@ id: where
 title: where
 description: 
 permalink: docs/where
-previous: columns
-next: 
+previous: set-language
+next: set-skin
 ---
 
 # where

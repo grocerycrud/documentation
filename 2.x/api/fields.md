@@ -1,14 +1,13 @@
 ---
 id: fields
 title: fields
-description: 
+description: This function is really just a facade function to call all the 4 functions at once: addFields, editFields, readFields and cloneFields. 
 permalink: docs/fields
-previous: edit-fields
-next: field-type
+previous:
+next: required-fields
 ---
 
 # fields
-
 
 <pre><code class="language-php">fields(array $fields);</code></pre>
 

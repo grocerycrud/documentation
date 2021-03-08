@@ -3,7 +3,7 @@ id: field-type
 title: fieldType
 description: 
 permalink: docs/field-type
-previous: fields
+previous:
 next: field-type-add-form
 ---
 

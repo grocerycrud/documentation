@@ -3,8 +3,8 @@ id: unset-texteditor
 title: unsetTexteditor
 description: 
 permalink: docs/unset-texteditor
-previous: unset-search-columns
-next: where
+previous: set-texteditor
+next:
 ---
 
 # unsetTexteditor

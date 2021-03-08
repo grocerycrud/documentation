@@ -24,7 +24,7 @@ if ($crud->getState() === 'EditForm') {
         'isJSONResponse' => true,
         'output' => json_encode(
             (object)[
-                'message' => 'I am really sorry! It seems that you don\'t have access to edit this customer.',
+                'message' => 'It seems that you don\'t have access to edit this customer.',
                 'status' => 'failure'
             ]
         )

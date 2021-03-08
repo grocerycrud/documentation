@@ -1,14 +1,13 @@
 ---
 id: unset-fields
 title: unsetFields
-description: 
+description: Do not display the specified fields for insert, update, clone and view form. This method is simply combining the methods: unsetAddFields, unsetEditFields, unsetCloneFields, unsetReadFields.
 permalink: docs/unset-fields
-previous: unset-export
-next: unset-jquery
+previous: required-fields
+next: unset-operations
 ---
 
 # unsetFields
-
 
 <pre><code class="language-php">unsetFields(array $fields)</code></pre>
 There are cases that we have lots of fields and we just need to say "I need all of them expect these 3". Well <code>unsetFields</code> is doing just that! This function is really useful especially when the development of the database is on going. The unsetFields is removing the fields on add/edit and view form modal. Have in mind that it is <strong>not</strong> removing any columns. If you need to do the same but for columns, you should use the method <a href="/enterprise/api-and-function-list/unsetColumns">unsetColumns</a> instead

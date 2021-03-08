@@ -1,14 +1,13 @@
 ---
 id: required-fields
 title: requiredFields
-description: 
+description: The most common validation. Checks is the field provided by the user for our CRUD is empty.
 permalink: docs/required-fields
-previous: render
-next: set-action-button
+previous: fields
+next: unset-fields
 ---
 
 # requiredFields
-
 
 <pre><code class="language-php">requiredFields(array $fields)</code></pre>
 A common validation for pretty much all the forms is the validation of required fields. Use the <code>requiredFields</code> method to add all the fields that are required. By adding a field as required you are getting:
