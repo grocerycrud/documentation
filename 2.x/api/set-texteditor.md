@@ -1,14 +1,13 @@
 ---
 id: set-texteditor
 title: setTexteditor
-description: 
+description: The method setTexteditor is used to specify the fields that will open with a texteditor (ckeditor). 
 permalink: docs/set-texteditor
-previous: set-table
-next: set-theme
+previous: set-field-blob
+next: unset-texteditor
 ---
 
 # setTexteditor
-
 
 <pre><code class="language-php">setTexteditor(array $fields)</code></pre>
 The method setTexteditor is used when we want to specify one field as text that will be edited with a texteditor. The default texteditor is CKeditor. For example:

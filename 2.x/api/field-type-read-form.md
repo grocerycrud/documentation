@@ -1,14 +1,13 @@
 ---
 id: field-type-read-form
 title: fieldTypeReadForm
-description: 
+description: The function fieldTypeReadForm is used when you need to change the field type but only for the read/view form.
 permalink: docs/field-type-read-form
 previous: field-type-form-fields
-next: get-state
+next: set-field-blob
 ---
 
 # fieldTypeReadForm
-
 
 <pre><code class="language-php">fieldTypeReadForm(string $fieldName, string|ModelFieldType $fieldType)</code></pre>
 This function is used when you need to change the field type but only for the read/view form.  You can choose any field type from the <a href="https://www.grocerycrud.com/enterprise/api-and-function-list/fieldType">list of field types</a>.

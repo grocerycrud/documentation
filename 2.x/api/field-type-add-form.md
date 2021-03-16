@@ -1,14 +1,13 @@
 ---
 id: field-type-add-form
 title: fieldTypeAddForm
-description: 
+description: This function is used for cases that you need to change the field type but only for the add/insert form. 
 permalink: docs/field-type-add-form
 previous: field-type
 next: field-type-clone-form
 ---
 
 # fieldTypeAddForm
-
 
 <pre><code class="language-php">fieldTypeAddForm(string $fieldName, string|ModelFieldType $fieldType)</code></pre>
 This function is used for cases that you need to change the field type but only for the add/insert form. You can choose any field type from the <a href="https://www.grocerycrud.com/enterprise/api-and-function-list/fieldType">list of field types</a>.

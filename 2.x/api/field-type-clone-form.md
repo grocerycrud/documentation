@@ -1,14 +1,13 @@
 ---
 id: field-type-clone-form
 title: fieldTypeCloneForm
-description: 
+description: The function fieldTypeCloneForm is used for cases that you need to change the field type but only for the Clone form.
 permalink: docs/field-type-clone-form
-previous: clone-fields
-next: set-clone
+previous: field-type-add-form
+next: field-type-column
 ---
 
 # fieldTypeCloneForm
-
 
 <pre><code class="language-php">fieldTypeCloneForm(string $fieldName, string|ModelFieldType $fieldType)</code></pre>
 This function is used for cases that you need to change the field type but only for the Clone form. You can choose any field type from the <a href="https://www.grocerycrud.com/enterprise/api-and-function-list/fieldType">list of field types</a>.

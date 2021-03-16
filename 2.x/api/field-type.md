@@ -1,14 +1,13 @@
 ---
 id: field-type
 title: fieldType
-description: 
+description: Changing the default field type from the database to fit to our needs. 
 permalink: docs/field-type
 previous:
 next: field-type-add-form
 ---
 
 # fieldType
-
 
 <pre><code class="language-php">fieldType(string $fieldName, string $fieldType[, array $permittedValues[, array $options]])</code></pre>
 

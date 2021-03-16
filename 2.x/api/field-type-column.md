@@ -1,7 +1,7 @@
 ---
 id: field-type-column
 title: fieldTypeColumn
-description: 
+description: The function fieldTypeColumn is used for cases that you need to change the field type but only for the datagrid column. 
 permalink: docs/field-type-column
 previous: field-type-clone-form
 next: field-type-edit-form

@@ -1,14 +1,13 @@
 ---
 id: field-type-form-fields
 title: fieldTypeFormFields
-description: 
+description: The function fieldTypeFormFields is a facade function to call all the functions of field-types for the form data.
 permalink: docs/field-type-form-fields
 previous: field-type-edit-form
 next: field-type-read-form
 ---
 
 # fieldTypeFormFields
-
 
 <pre><code class="language-php">fieldTypeFormFields(string $fieldName, string|ModelFieldType $fieldType)</code></pre>
 This function is really just a facade function to call all the 4 functions at once:

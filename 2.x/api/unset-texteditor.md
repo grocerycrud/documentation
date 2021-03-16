@@ -1,14 +1,13 @@
 ---
 id: unset-texteditor
 title: unsetTexteditor
-description: 
+description: Unsets the texteditor for the selected fields. This function is really rare to use as by default there is not any load of the texteditor for optimising purposes.
 permalink: docs/unset-texteditor
 previous: set-texteditor
 next:
 ---
 
 # unsetTexteditor
-
 
 <pre><code class="language-php">unsetTexteditor(array $fields)</code></pre>
 The function <code>unsetTexteditor</code> is really rare to use as by default there is not any load of the texteditor for optimising purposes (too big file). It maybe used in case you are enabling all the text-editors by default and then you need to disable it.
