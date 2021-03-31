@@ -190,7 +190,7 @@ class GroceryCrudEnterprise extends BaseConfig
 <pre><code class="language-php">&lt;?php namespace App\Controllers;
 
 // Add those two lines at the beginning of your controller
-include(APPPATH . 'libraries/GroceryCrudEnterprise/autoload.php');
+include(APPPATH . 'Libraries/GroceryCrudEnterprise/autoload.php');
 use GroceryCrud\Core\GroceryCrud;
 
 ...
