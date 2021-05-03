@@ -9,7 +9,6 @@ next: unset-bootstrap
 
 # unsetAutoloadJavaScript
 
-
 <pre><code class="language-php">unsetAutoloadJavaScript(void)</code></pre>
 Unset the initial load of the GroceryCRUD so we can load it dynamically. That simply means that the Grocery CRUD will NOT load if we will not call it manually from the JavaScript code.
 
@@ -52,7 +51,7 @@ $(document).ready(function () {
 
 It will output the below result:
 
-`embed:demo_unset-autoload-javascript`
+`embed--no-min-height:demo_unset-autoload-javascript`
 
 So far we have two options that you can add at the groceryCRUD JavaScript function:
 <ol>
@@ -70,7 +69,95 @@ So far we have two options that you can add at the groceryCRUD JavaScript functi
 
 An example will be:
 
-<script src="https://gist.github.com/scoumbourdis/3e0f8d775452e1a96c9fd4f23291a16e.js"></script>
+<pre><code class="language-javascript">$(document).ready(function () {
+
+	$('.gc-container').groceryCrud({
+		openInModal: false, // Prevent forms to open in modal. (Default = true)
+		hashEvents: false, // Remove the hash events from the URL (Default = true)
+		callbackBeforeInsert: function (currentForm) {
+		    console.log('callback that is called right before the insert');
+		},
+		callbackBeforeUpdate: function (currentForm) {
+		    console.log('callback that is called right before the update');
+		},
+		callbackAfterInsert: function (currentForm) {
+		    console.log('callback that is called right after a successful insert');
+		},
+		callbackAfterUpdate: function (currentForm) {
+		    console.log('callback that is called right after a successful update');
+		},
+		callbackBeforeDelete: function(itemIds) {  // itemIds variable is always an array
+		    console.log('callback that is called right before the confirmation of the delete is pressed');
+		},
+		callbackAfterDelete: function(itemIds) { // itemIds variable is always an array
+		    console.log('callback that is called right after a successful delete operation');
+		},
+		onRowMount: function (primaryKeyField) { // When the row loads for the very first time
+		    console.log('row mounted for:' + primaryKeyField);
+		},
+		onRowUpdate: function (primaryKeyField) { // When the row is getting updated (e.g. it is not re-rendered)
+		    console.log('row updated for:' + primaryKeyField);
+		},
+		onRowUnmount: function (primaryKeyField) { // When the row is getting removed (e.g. to destroy an instance)
+		    console.log('row was unmounted for:' + primaryKeyField);
+		},      
+		actionsButtons: [{
+		 iconCssClass: 'fa fa-smile-o',
+		 label: 'Smiley',
+		 onClick: function (primaryKeyValue) {
+		     console.log('Smiley is clicked with primary key:' + primaryKeyValue);
+		 }
+		}],
+		// addFields, editFields, cloneFields and readFields works only
+		// with the combination of: 
+		// callbackAddField for addFields
+		// callbackEditField for editFields... e.t.c.
+		addFields: [ // works with $crud->callbackAddField
+		    {
+		        fieldName: 'contact_last_name',
+		        onMount: function onMount() {
+		            console.log('on mount!!');
+		        },
+		        onUnmount: function onUnmount() {
+		            console.log('hmmm unmount');
+		        }
+		    }
+		],
+		editFields: [ // works with $crud->callbackEditField
+		    {
+		        fieldName: 'contact_last_name',
+		        onMount: function onMount() {
+		            console.log('on mount!!');
+		        },
+		        onUnmount: function onUnmount() {
+		            console.log('hmmm unmount');
+		        }
+		    }
+		],
+		cloneFields: [ // works with $crud->callbackCloneField
+		    {
+		        fieldName: 'contact_last_name',
+		        onMount: function onMount() {
+		            console.log('clone on mount!!');
+		        },
+		        onUnmount: function onUnmount() {
+		            console.log('clone on unmount');
+		        }
+		    }
+		],
+		readFields: [ // works with $crud->callbackReadField
+		    {
+		        fieldName: 'contact_last_name',
+		        onMount: function onMount() {
+		            console.log('read on mount!!');
+		        },
+		        onUnmount: function onUnmount() {
+		            console.log('read on unmount');
+		        }
+		    }
+		]
+	});
+});</code></pre>
 
 
 
