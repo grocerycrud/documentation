@@ -30,7 +30,7 @@ return [
 
 And this should be it! You will now be able to use all the features that Grocery CRUD Enterprise is offering with PostgreSQL database.
 
-## Controller example with Codeigniter Framework v4
+## Codeigniter 4 Example
 
 You can also find a full example of a Codeigniter Framework version 4 controller below:
 
