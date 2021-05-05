@@ -1,10 +1,10 @@
 ---
 id: postgresql-connection
 title: Connect with PostgreSQL database
-description: 
-permalink: docs/connect-with-postgresql-database
-previous: 
-next:
+description: Step-by-step guide, on how to connect with a PostgreSQL database
+permalink: docs/postgresql-connection
+previous: api-and-functions-list
+next: basic-example
 ---
 
 # PostgreSQL connection
