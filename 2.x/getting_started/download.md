@@ -27,7 +27,7 @@ In case you are intrested to download Grocery CRUD Enterprise you will need to [
 
 ## Older Downloads
 
-If you are looking for Codeigniter 3 download page checkout the URL: <a href="https://www.grocerycrud.com/downloads">Grocery CRUD with Codeigniter 3</a>
+If you are looking for Codeigniter 3 download page checkout the URL: [Grocery CRUD with Codeigniter 3](/v1.x/downloads)
 
 
 
