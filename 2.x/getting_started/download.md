@@ -14,7 +14,7 @@ You can download straight away the latest stable version from here:
 
 <a class="btn btn-success btn-large" href="https://github.com/scoumbourdis/grocery-crud-codeigniter-4/archive/2.0.1.zip" rel="nofollow">
     <span class="icon icon-download"></span>
-    Grocery CRUD version 2.0.1
+    &nbsp;Download v2.0.1
 </a>
 
 Compatible with Codeigniter version <strong>4.x</strong><br>
