@@ -43,7 +43,7 @@ The `RedirectResponse` class as a return value is available to the following fun
 - `callbackBeforeDelete`
 - `callbackBeforeUpload`
 
-We strongly recommend to use `RedirectResponse` only the `after` callbacks to make sure that the 
+We strongly recommend to use `RedirectResponse` only with the `After` callbacks to make sure that the 
 operation has been completed first.
 
 
