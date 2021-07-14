@@ -4,7 +4,7 @@ title: unsetColumns
 description: Unset the search on the datagrid from quick column search and from filtering.
 permalink: docs/unset-columns
 previous: set-print
-next: unset-export
+next: unset-print
 ---
 
 # unsetColumns

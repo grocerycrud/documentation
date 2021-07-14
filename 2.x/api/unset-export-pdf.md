@@ -3,8 +3,8 @@ id: unset-export-pdf
 title: unsetExportPdf
 description: The method unsetExportPdf is removing only the "PDF" export button from the datagrid. 
 permalink: docs/unset-export-pdf
-previous: unset-search-columns
-next: unset-pdf-export
+previous: unset-export
+next: unset-export-excel
 ---
 
 # unsetExportPdf

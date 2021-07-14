@@ -3,8 +3,8 @@ id: unset-export-excel
 title: unsetExportExcel
 description: The method unsetExportExcel is removing only the "Excel" export button from the datagrid. 
 permalink: docs/unset-export-excel
-previous: unset-search-columns
-next: unset-pdf-export
+previous: unset-export-pdf
+next: unset-filters
 ---
 
 # unsetExportExcel

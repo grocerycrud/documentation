@@ -3,7 +3,7 @@ id: unset-filters
 title: unsetFilters
 description: The method unsetFilters is removing the "Filters" button from the datagrid.
 permalink: docs/unset-filters
-previous: unset-search-columns
+previous: unset-export-excel
 next: unset-settings
 ---
 

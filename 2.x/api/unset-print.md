@@ -3,7 +3,7 @@ id: unset-print
 title: unsetPrint
 description: The method unsetPrint is removing the Print button for the current CRUD. 
 permalink: docs/unset-print
-previous: unset-export
+previous: unset-columns
 next: unset-search-columns
 ---
 
