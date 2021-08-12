@@ -5,6 +5,7 @@ description: There is a special type of field for uploading data or images and i
 permalink: docs/set-field-upload
 previous: callback-upload
 next: set-csrf-token-name
+enterprise: 1
 ---
 
 # setFieldUpload
