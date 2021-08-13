@@ -34,10 +34,13 @@ A full working example can be found below:
 $crud->setSubject('Employee', 'Employees');
 $crud->setRelation('officeCode','offices','city');
 $crud->displayAs('officeCode','City');
-$crud->unsetDelete();
+$crud->unsetEdit();
 
 // For demo purposes we are using the # so we will not have a new URL redirection
 $crud->setActionButtonMultiple('Avatar', 'fa fa-user', '#/avatar/');
+
+// Although this is not required, it is better for a usability perspective to 
+// also include the button for a single use
 $crud->setActionButton('Avatar', 'fa fa-user', function ($row) {
     return '#/avatar/' . $row->employeeNumber;
 }, false);
