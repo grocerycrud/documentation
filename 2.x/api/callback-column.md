@@ -22,8 +22,34 @@ You can find a simple example for the usage of the callback column:
     return "&lt;a href='" . site_url('menu/' . $row-&gt;id) . "'&gt;$value&lt;/a&gt;";
 });</code></pre>
 
+
+## Invisible field
+
+There are many cases that we would like to use a field from the `$row` object from a field that is not on the datagrid. 
+On Grocery CRUD Enterprise edition for security and performance reasons we have removed any unused fields from the 
+datagrid so if you would like to have an extra field value to use you should use the `invisible` fieldType. 
+To make it even more specific you could specify that this field is invisible only on the datagrid column. 
+
+So for example let's say that we would like to use the column `profile_url` although we don't want to show it to the end
+user. In that case you should add it to the `columns` function but it will never be shown. With this way this will be 
+used by the callback `callbackColumn`. Let's see a more specific example:
+
+<pre><code class="language-php">$crud-&gt;setTable('customers');
+$crud-&gt;setSubject('Customer', 'Customers');
+$crud-&gt;columns(['customerName','phone','addressLine1','creditLimit', 'profile_url']);
+
+// With the below line the `profile_url` is not visible at the datagrid from the end user
+$crud->fieldTypeColumn('profile_url', 'invisible');
+
+$crud-&gt;callbackColumn('customerName', function ($value, $row) {
+    // $row-&gt;profile_url is now available as invisible field
+    return "&lt;a href='" . site_url('menu/' . $row-&gt;profile_url) . "'&gt;$value&lt;/a&gt;";
+});
+
+$output = $crud-&gt;render();</code></pre>
+
 ## Example
-A full example is also available below:
+A full example of a standard implementation is also available below:
 <pre><code class="language-php">$crud-&gt;setTable('customers');
 $crud-&gt;setSubject('Customer', 'Customers');
 $crud-&gt;columns(['customerName','phone','addressLine1','creditLimit']);

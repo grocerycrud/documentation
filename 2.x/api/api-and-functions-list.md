@@ -47,7 +47,7 @@ next: getting-started
 | [uniqueFields](/docs/unique-fields)  |  Check if the data for the specified fields are unique. This is used at the insert and the update operation. |
 | [unsetAdd](/docs/unset-add)  |  Removing the insert functionality at the current CRUD. |
 | [unsetAddFields](/docs/unset-add-fields)  |  Unset (do not display) the specified fields for the insert form. |
-| [unsetBackToDatagrid](/docs/unset-back-to-datagrid)  |  Unsets everything that has to do with buttons or links with go back to datagrid message |
+| unsetBackToDatagrid  |  Unsets everything that has to do with buttons or links with go back to datagrid message. Currently only available for community version. |
 | [unsetBootstrap](/docs/unset-bootstrap)  |  Do not load Bootstrap CSS. This is used when the Bootstrap CSS is already loaded at the template. |
 | [unsetClone](/docs/unset-clone)  |  The method unsetClone is removing completely the Clone operation for the end-user. |
 | [unsetCloneFields](/docs/unset-clone-fields)  |  Unset (do not display) the specified fields from the clone form. |
