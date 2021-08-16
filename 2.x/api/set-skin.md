@@ -15,7 +15,8 @@ Choose between two skins: Bootstrap v3 and Bootstrap V4
 
 The default skin is Bootstrap V4 or else you can set the skin as 'bootstrap-v4'. In order to change the default skin to Bootstrap V4, you simply need to add the below line of code:
 
-<pre><code class="language-php">$crud->setSkin('bootstrap-v3'); // Choose between 'bootstrap-v3' and 'bootstrap-v4'</code></pre>
+<pre><code class="language-php">// Choose between 'bootstrap-v3', 'bootstrap-v4' and 'bootstrap-v5'
+$crud->setSkin('bootstrap-v3'); </code></pre>
 
 <pre><code class="language-php">
 $crud->setSkin('bootstrap-v3');
