@@ -1,7 +1,7 @@
 ---
 id: custom-model
 title: Custom Model
-description: 
+description: Create a custom model for more complicated queries for Grocery CRUD Enterprise.
 permalink: docs/custom-model
 previous: 
 next:

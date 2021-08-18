@@ -1,7 +1,7 @@
 ---
 id: custom-error-messages
 title: Custom Error Messages
-description: 
+description: Example for showing custom error messages to the end user.
 permalink: docs/custom-error-messages
 previous: 
 next:

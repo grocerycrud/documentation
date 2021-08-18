@@ -1,7 +1,7 @@
 ---
 id: multiple-grids
 title: Multiple Grids
-description: 
+description: Documentation for multiple CRUD into one page.
 permalink: docs/multiple-grids
 previous: 
 next:
