@@ -18,7 +18,11 @@ next: set-sequence-name
         string $referrerTitleField
         [, string $sortingFieldName [, array|string $where]]
 )</code></pre>
-At relational databases it is very common to have many to many relationship (also known as n:n or m:n). Grocery CRUD Enterprise is doing it easy for you to connect 3 tables and also use it in your datagrid and forms. The syntax is easy and you just need to add the tables and the relations. All the primary keys are automatically added so you will not need to. For example:
+At relational databases it is very common to have many to many relationship (also known as n:n or m:n). Grocery CRUD is doing it easy for you to connect 3 tables and also use it in your datagrid and forms. The syntax is easy and you just need to add the tables and the relations. All the primary keys are automatically added so you will not need to. 
+
+<img src="/uploads/documentation/set-relation-n-to-n.png" alt="Set Relation N to N tables" />
+
+For example:
 
 <pre><code class="language-php">$crud->setRelationNtoN('actors', 'film_actor', 'actor', 'film_id', 'actor_id', 'fullname');
 $crud->setRelationNtoN('categories', 'film_category', 'category', 'film_id', 'category_id', 'name');</code></pre>
