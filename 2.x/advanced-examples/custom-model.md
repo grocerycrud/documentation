@@ -68,7 +68,7 @@ class CustomersModel extends Model {
         return $customer;
     }
 
-    protected function _getQueryModelObject() {
+    protected function _getQueryModelObject($withLimit = true) {
         $order_by = $this->orderBy;
         $sorting = $this->sorting;
 
@@ -109,7 +109,10 @@ class CustomersModel extends Model {
             }
         }
 
-        $this->db->limit($this->limit, ($this->limit * ($this->page - 1)));
+        if ($withLimit) {
+            $this->db->limit($this->limit, ($this->limit * ($this->page - 1)));
+        }
+        
         return $this->db->get($this->tableName);
     }
 
@@ -120,7 +123,7 @@ class CustomersModel extends Model {
     public function getTotalItems()
     {
         if (!empty($this->_filters)) {
-            return $this->_getQueryModelObject()->num_rows();
+            return $this->_getQueryModelObject(false)->num_rows();
         }
 
         // If we don't have any filtering it is faster to have the default total items
