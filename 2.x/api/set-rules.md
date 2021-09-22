@@ -1,7 +1,7 @@
 ---
 id: set-rules
 title: setRules
-description: 
+description: setRules method combines multiple setRule methods into one
 permalink: docs/set-rules
 previous: set-rule
 next: set-sequence-name

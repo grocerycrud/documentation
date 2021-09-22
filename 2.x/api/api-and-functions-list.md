@@ -90,6 +90,8 @@ next: getting-started
 | Function name  | Small description |
 | ------------- | ------------- |
 | [defaultOrdering](/docs/default-ordering)  |The default ordering that the datagrid will have before the user will press any button to order by column.  |
+| [setRules](/docs/set-rules)  | setRules method combines multiple setRule methods into one.  |
+| [setActionButtonMultiple](/docs/set-action-button-multiple)  | Action button for multiple selections with checkboxes.  |
 | [setSkin](/docs/set-skin)  | Choose between two skins: Bootstrap v3 and Bootstrap V4.  |
 | [unsetFilters](/docs/unset-filters)  | Removing the "Filters" button from the datagrid. |
 | [unsetSearchColumns](/docs/unset-search-columns)  | Unset the search on the datagrid from quick column search and from filtering. |
@@ -110,6 +112,7 @@ next: getting-started
 | [callbackBeforeUpload](/docs/callback-before-upload)  | The callback is used in cases we need to filter the uploaded data before the upload functionality. |
 | [callbackUpload](/docs/callback-upload)  | The callbackUpload is used when we need to replace the default upload functionality of Grocery CRUD Enterprise. |
 | [setFieldUpload](/docs/set-field-upload)  | There is a special type of field for uploading data or images and in order to trigger this type, you will need to use the setFieldUpload method. |
+| setFieldUploadMultiple | Multiple Uploads functionality in one field with comma separated values. |
 | [setCsrfTokenName](/docs/set-csrf-token-name)  | Specify the token name for CSRF protection. |
 | [setCsrfTokenValue](/docs/set-csrf-token-value)  | Specify the token value for CSRF protection. |
 | [setDatabaseSchema](/docs/set-database-schema)  | Set the database schema (currently only tested on PostgresSQL databases). |
