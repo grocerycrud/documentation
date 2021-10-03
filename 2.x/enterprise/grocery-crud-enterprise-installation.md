@@ -31,7 +31,7 @@ In case you prefer a video tutorial, we did create the below steps into a video 
 <strong>Step 1.</strong>
 
 Download the zip file for installation without composer. You can also download the newest zip file from: https://www.grocerycrud.com/users . 
-In order to have a more specific example from now on we will use the name:  <code>grocery-crud-enterprise-v2.8.7-without-composer.zip</code> as the zip file
+In order to have a more specific example from now on we will use the name:  <code>grocery-crud-enterprise-v2.9.0-without-composer.zip</code> as the zip file
 
 <strong>Step2.</strong>
 
@@ -268,7 +268,7 @@ If you prefer the video tutorials well... we did create a <a href="https://www.y
 
 The most recommended way to install PHP libraries nowadays is through <a href="https://getcomposer.org/" target="_blank" rel="noopener noreferrer">composer</a>. Grocery CRUD Enterprise has private code and you should have one more step from the normal composer installations. This extra step will change at the future however this work is still in progress and currently you will need to do these 2 extra steps.
 <strong>Step 1. </strong>
-Download the version of groceryCRUD Enterpirse from https://www.grocerycrud.com/users or through the email that you did get. For example the file to download is: <code>grocery-crud-enterprise-v2.8.7.zip</code>
+Download the version of groceryCRUD Enterpirse from https://www.grocerycrud.com/users or through the email that you did get. For example the file to download is: <code>grocery-crud-enterprise-v2.9.0.zip</code>
 
 <strong>Step 2.</strong>
 

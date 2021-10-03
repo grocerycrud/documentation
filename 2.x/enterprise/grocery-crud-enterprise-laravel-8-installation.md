@@ -28,10 +28,10 @@ to your already existing project with Laravel version 8.
 
 From the email that you've received or from the user's page (you will get instructions at the email of how to access user's page) download the zip file that say's "With composer".
 
-Your file will look something like this: <code>grocery-crud-enterprise-v2.8.7.zip</code>. Now at your root directory create a new directory with name <code>artifacts</code> and copy the zip file there <strong>without</strong> unziping it. The final file structure will look something like this:
+Your file will look something like this: <code>grocery-crud-enterprise-v2.9.0.zip</code>. Now at your root directory create a new directory with name <code>artifacts</code> and copy the zip file there <strong>without</strong> unziping it. The final file structure will look something like this:
 <pre>├── app
 <strong>├── artifacts
-│   └── grocery-crud-enterprise-v2.8.7.zip</strong>
+│   └── grocery-crud-enterprise-v2.9.0.zip</strong>
 ├── artisan
 ├── bootstrap
 ├── composer.json
@@ -164,7 +164,7 @@ Now go to your root folder with your terminal and simply type:
 
 You will be able to see many updates such us zend db but you will also see this:
 
-<pre><code> - Installing grocerycrud/enterprise (2.8.7)</code></pre>
+<pre><code> - Installing grocerycrud/enterprise (2.9.0)</code></pre>
 
 Now Grocery CRUD Enterprise is available through composer so you could see the below folder structure at your <code>vendor</code> folder:
 
