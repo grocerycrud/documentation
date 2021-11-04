@@ -4,7 +4,7 @@ title: setFieldUpload
 description: There is a special type of field for uploading data or images and in order to trigger this type, you will need to use the setFieldUpload method.
 permalink: docs/set-field-upload
 previous: callback-upload
-next: set-csrf-token-name
+next: set-field-upload-multiple
 enterprise: 1
 ---
 
