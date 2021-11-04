@@ -13,6 +13,39 @@ next: get-state-info
 <pre><code class="language-php">string getState()</code></pre>
 Simply get the state as a string. This is useful when you need to add a very specific implementation that it is outside of grocery CRUD Enterprise. A common usage to use the <code>getState</code> method is mainly if you need to have some permissions checks. Of course as this is something custom, you can specify the usage for <code>getState</code> for your own needs.
 
+Below you can find the list of possible states for Grocery CRUD Enterprise edition that we have so far:
+
+- AddForm
+- AjaxSearch
+- BlobView
+- CloneForm
+- Clone
+- Datagrid
+- DependedRelation
+- EditForm
+- ExportPdf
+- Export
+- Initial
+- Insert
+- Main
+- PrintPage
+- Print
+- ReadForm
+- RemoveMultiple
+- RemoveOne
+- Update
+- UploadMultiple
+- Upload
+
+The most important states that are not so obvious to understand straight away are:
+
+- `Main` state is the state where all the assets and some basic resources are loaded.
+Keep in mind that this state doesn't have any calls to the database to make sure that at least the Main state 
+will always load
+- `Initial` state is the state where all the basic info for the CRUD is loaded only the first time we load our CRUD.
+- `Datagrid` state is the request for the datagrid data. In simple words the data list that we load in the beginning
+and for every search, ordering and any operation of the CRUD table.
+
 ## Example
 <pre><code class="language-php">$crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
