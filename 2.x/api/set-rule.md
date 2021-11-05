@@ -17,7 +17,7 @@ as we are using the core validation of Codeigniter 4.
 
 ## Community edition
 
-<pre><code class="language-php">setRule(string $fieldName, string $label , string $rule[, array $parameters])</code></pre>
+<pre><code class="language-php">setRule(string $fieldName, string $label , string $rules[, array $errors])</code></pre>
 
 Set validation backend rules with the core implementation of Codeigniter 4. For more about examples and syntax please
 check the official documentation for <a href="https://codeigniter4.github.io/userguide/libraries/validation.html#setrule" target="_blank">Codeigniter 4 setRule</a>
