@@ -164,6 +164,9 @@ return [
     // In case you would like though to use the ordering for the setRelation field, and you don't have big tables
     // you can set this to `false` and you will probably not notice any difference
     'optimize_sql_queries' => true,
+
+    // Remember the quick search upon refresh. The search information is stored in the browser local storage
+    'remember_quick_search' => false,
 ];</code></pre>
 
 <div class="tip">
