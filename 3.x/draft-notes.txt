@@ -1,0 +1,8 @@
+window.GroceryCrudConfiguration = {
+    // Laravel 8 example extra headers for Grocery CRUD version 3
+    requestHeaders: {
+        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')
+            ? document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            : undefined
+    }
+}
