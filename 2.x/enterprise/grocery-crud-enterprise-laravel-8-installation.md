@@ -665,13 +665,14 @@ For example:
     return $this->_showOutput($output);
 }</code></pre>
 
+
 ## Celebrate
 
 Don't forget to celebrate your installation 🎉. Take a break and drink some coffee ☕ tea or water, you deserve it! 
 
 After that short break enjoy the power of Grocery CRUD Enterprise at your project! From now one with few lines of PHP you can get a full working CRUD for your project 🤗
 
-In case you have issues with the installation also consider to check the most common mistakes of Grocery CRUD here: <a href="https://youtu.be/X0gnDD0qTS8" target="_blank" rel="noopener noreferrer">https://youtu.be/X0gnDD0qTS8</a>. This video has examples for Codeigniter framework but you can follow the same instructions for Laravel framework as well.
+In case you still have issues with the installation also consider checking the video tutorial: <a target="_blank" href="https://www.youtube.com/watch?v=bCJTU6PWhYs">Troubleshooting Grocery CRUD Enteprise part 1</a>.
 
 <blockquote><strong>Notice:</strong> Grocery CRUD Enterprise is a framework agnostic library. That simply means that it doesn't matter which framework you are using and it doesn't matter which architecture you are using. It can work in any PHP platform! This tutorial is taking some architecture decisions basically for you! If you need to have the full freedom of what structure to choose we are suggesting to see the full installation guide <a href="/docs/grocery-crud-enterprise-installation">here</a>.</blockquote>
 

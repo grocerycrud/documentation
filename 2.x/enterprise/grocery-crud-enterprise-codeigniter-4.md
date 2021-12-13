@@ -388,6 +388,8 @@ At the above example your <code>$baseURL</code> should look like this:
 
 <code>public $baseURL = 'http://my-test-project.local/';</code>
 
+Too lazy to read the documentation? We have also created a video tutorial for that: <a target="_blank" href="https://www.youtube.com/watch?v=bCJTU6PWhYs">Troubleshooting Grocery CRUD Enteprise part 1</a>.
+
 <strong>2. Getting an empty box with a border</strong>
 If you are getting an empty box with a border that is looking like this:
 
