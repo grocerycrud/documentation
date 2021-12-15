@@ -3,8 +3,8 @@ id: replace-state
 title: replaceState
 description: 
 permalink: docs/replace-state
-previous: clone-fields
-next: 
+previous: map-column
+next: set-api-url-path
 ---
 
 # replaceState

@@ -4,7 +4,7 @@ title: getStateInfo
 description: 
 permalink: docs/get-state-info
 previous: get-state
-next: read-fields
+next: map-column
 ---
 
 # getStateInfo

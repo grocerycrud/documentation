@@ -3,8 +3,8 @@ id: map-column
 title: mapColumn
 description: Map a column field name with another. Useful for field names that doesn't exist within the database.
 permalink: docs/map-column
-previous: callback-column
-next: default-ordering
+previous: get-state-info
+next: replace-state
 enterprise: 1
 ---
 
