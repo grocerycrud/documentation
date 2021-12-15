@@ -10,21 +10,35 @@ enterprise: 1
 
 # mapColumn
 
-<pre><code class="language-php">mapColumn(string $columnName, string $mapColumnName)</code></pre>
+<pre><code class="language-php">mapColumn(string $mappedColumnName, string $originalColumnName)</code></pre>
 
-⚠️ Documentation in progress ⚠️
+Map a column field with another. Use the same column field for multiple columns. Useful to combine it with callbackColumn.
 
+Syntax example:
 <pre><code class="language-php">$crud->mapColumn('customer_name', 'full_name');</code></pre>
 
-The most common case to use the mapColumn is with the combination of callbackColumn when the field doesn't exist.
+The most common usage is with callbackColumn when a field doesn't exist in the database.
 
 ## Example
 
-<pre><code class="language-php">$crud->columns(['full_name','phone','addressLine1','creditLimit']);
+<pre><code class="language-php">$crud->setSubject('Customer', 'Customers');
+$crud->setTable('customers');
+
+$crud->columns(['full_name','phone','addressLine1','creditLimit', 'contactFirstName']);
+
+// Make sure that you have a field type or else
+// mapColumn will not work with callbackColumn
 $crud->fieldTypeColumn('full_name', 'varchar');
-$crud->mapColumn('customerName', 'full_name');
+
+// We would like to hide contactFirstName just to use it into the callbackColumn
+$crud->fieldTypeColumn('contactFirstName', 'invisible');
+
+$crud->mapColumn('full_name', 'contactLastName');
 $crud->callbackColumn('full_name', function ($value, $row) {
-    return "<div style='background:red'>$value</div>";
+    // the $value in our case is contactLastName
+    return $value . ' ' . $row->contactFirstName;
 });
 
 $output = $crud->render();</code></pre>
+
+`embed:demo_map-column`
