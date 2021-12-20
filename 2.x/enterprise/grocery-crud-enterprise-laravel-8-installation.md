@@ -324,14 +324,17 @@ to your original project path. For example:
 <pre><code>APP_URL=http://local.grocerycrud.com</code></pre>
 
 ## Routes Configuration
-Now we will need to create our routes to point to our controller. Let's start by configuring routes! Go to `routes/web.php` and add those two lines of code:
+Now we will need to create our routes to point to our controller. Let's start by configuring routes! Go to `routes/web.php` and add the below lines of code:
 
 <pre><code class="language-php">&lt;?php
 // routes/web.php
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AdminController; // <-- don't forget the use
 
-...
+Route::get('/', function () {
+    return view('welcome');
+});
 
+// New code
 Route::get('/admin/customers-management', [AdminController::class, 'customers']);
 Route::get('/admin/customers-management/{operation}', [AdminController::class, 'customers']);
 Route::get('/admin/customers-management/{operation}/{id}', [AdminController::class, 'customers']);
