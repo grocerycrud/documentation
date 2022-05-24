@@ -16,7 +16,7 @@ There are cases that dropdown list that was built from setRelation has dependenc
 
 You can see an example of the expected results here:
 
-<img src="https://www.grocerycrud.com/forums/index.php?app=core&module=attach&section=attach&attach_rel_module=post&attach_id=1316" />
+<img src="/uploads/documentation/depended-relation.gif" alt="Depended Relation Animated" />
 
 The usage is coming with an <strong>extra</strong> line of code that is looking like this:
 
