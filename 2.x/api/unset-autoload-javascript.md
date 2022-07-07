@@ -101,7 +101,7 @@ An example will be:
 		onRowUnmount: function (primaryKeyField) { // When the row is getting removed (e.g. to destroy an instance)
 		    console.log('row was unmounted for:' + primaryKeyField);
 		},      
-		actionsButtons: [{
+		actionButtons: [{
 		 iconCssClass: 'fa fa-smile-o',
 		 label: 'Smiley',
 		 onClick: function (primaryKeyValue) {
