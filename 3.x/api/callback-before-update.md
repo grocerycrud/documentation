@@ -2,7 +2,7 @@
 id: callback-before-update
 title: callbackBeforeUpdate
 description: The callback is used in cases we need to add or change data before the update functionality.
-permalink: docs/callback-before-update
+canonical: docs/callback-before-update
 previous: callback-after-update
 next: callback-edit-field
 ---

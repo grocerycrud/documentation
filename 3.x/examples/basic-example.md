@@ -2,7 +2,7 @@
 id: basic-example
 title: Basic Example
 description: With literally 4 lines of code you can get a full working CRUD.
-permalink: docs/basic-example
+canonical: docs/basic-example
 previous: api-and-functions-list
 next: full-example
 ---

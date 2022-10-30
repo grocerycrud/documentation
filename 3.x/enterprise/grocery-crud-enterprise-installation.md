@@ -2,7 +2,7 @@
 id: grocery-crud-enterprise-installation
 title: Installation Guide
 description: Step by Step installation of Grocery CRUD Enterprise with or without composer.
-permalink: docs/grocery-crud-enterprise-installation
+canonical: docs/grocery-crud-enterprise-installation
 previous: api-and-functions-list
 next: basic-example
 ---

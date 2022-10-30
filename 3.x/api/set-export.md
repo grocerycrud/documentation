@@ -2,7 +2,7 @@
 id: set-export
 title: setExport
 description: Setting the export functionality. This function is rarely used as the default is already enabled. 
-permalink: docs/set-export
+canonical: docs/set-export
 previous: set-action-button
 next: set-print
 ---

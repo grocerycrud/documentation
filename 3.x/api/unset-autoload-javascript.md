@@ -2,7 +2,7 @@
 id: unset-autoload-javascript
 title: unsetAutoloadJavaScript
 description: 
-permalink: docs/unset-autoload-javascript
+canonical: docs/unset-autoload-javascript
 previous: unset-add-fields
 next: unset-bootstrap
 ---

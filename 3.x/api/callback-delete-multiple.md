@@ -2,7 +2,7 @@
 id: callback-delete-multiple
 title: callbackDeleteMultiple
 description: Replaces the default multiple delete functionality with the callback specified.
-permalink: docs/callback-delete-multiple
+canonical: docs/callback-delete-multiple
 previous: callback-delete
 next: set-delete
 ---

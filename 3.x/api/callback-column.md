@@ -2,7 +2,7 @@
 id: callback-column
 title: callbackColumn
 description: This callback runs on each datagrid column. It escapes the auto column value and runs the callback. 
-permalink: docs/callback-column
+canonical: docs/callback-column
 previous: columns
 next: default-ordering
 ---

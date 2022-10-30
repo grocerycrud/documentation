@@ -2,7 +2,7 @@
 id: set-texteditor
 title: setTexteditor
 description: The method setTexteditor is used to specify the fields that will open with a texteditor (ckeditor). 
-permalink: docs/set-texteditor
+canonical: docs/set-texteditor
 previous: set-field-blob
 next: unset-texteditor
 ---

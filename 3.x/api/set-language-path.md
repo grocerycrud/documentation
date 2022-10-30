@@ -2,7 +2,7 @@
 id: set-language-path
 title: setLanguagePath
 description: 
-permalink: docs/set-language-path
+canonical: docs/set-language-path
 previous: set-language
 next: set-model
 ---

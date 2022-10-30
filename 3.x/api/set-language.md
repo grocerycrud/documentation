@@ -2,7 +2,7 @@
 id: set-language
 title: setLanguage
 description: Change the default language of the CRUD with more than 34 languages to choose from. 
-permalink: docs/set-language
+canonical: docs/set-language
 previous: set-subject
 next: where
 ---

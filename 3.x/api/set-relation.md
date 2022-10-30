@@ -2,7 +2,7 @@
 id: set-relation
 title: setRelation
 description: This is the function that is used to connect two tables with a 1 to n (1:n) relation.
-permalink: docs/set-relation
+canonical: docs/set-relation
 previous: set-primary-key
 next: set-relation-n-to-n
 ---

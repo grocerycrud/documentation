@@ -2,7 +2,7 @@
 id: add-fields
 title: addFields
 description: The fields that will be visible to the end user for add/insert form.
-permalink: docs/add-fields
+canonical: docs/add-fields
 previous: unset-settings
 next: callback-add-field
 ---

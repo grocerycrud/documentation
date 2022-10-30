@@ -2,7 +2,7 @@
 id: set-relation-n-to-n
 title: setRelationNtoN
 description: A connection for 3 tables with n-n relation (also known as n:n or m:n).
-permalink: docs/set-relation-n-to-n
+canonical: docs/set-relation-n-to-n
 previous: set-relation
 next: set-sequence-name
 ---

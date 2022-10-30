@@ -2,7 +2,7 @@
 id: unset-delete-multiple
 title: unsetDeleteMultiple
 description: This function is used when you don't want the user to have the ability to batch remove too many records at once. Have in mind that the user can remove rows one by one.
-permalink: docs/unset-delete-multiple
+canonical: docs/unset-delete-multiple
 previous: unset-delete
 next: callback-read-field
 ---

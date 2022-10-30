@@ -2,7 +2,7 @@
 id: callback-upload
 title: callbackUpload
 description: The callbackUpload is used when we need to replace the default upload functionality of Grocery CRUD Enterprise.
-permalink: docs/callback-upload
+canonical: docs/callback-upload
 previous: callback-before-upload
 next: set-field-upload
 ---

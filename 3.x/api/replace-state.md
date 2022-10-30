@@ -2,7 +2,7 @@
 id: replace-state
 title: replaceState
 description: 
-permalink: docs/replace-state
+canonical: docs/replace-state
 previous: map-column
 next: set-api-url-path
 ---

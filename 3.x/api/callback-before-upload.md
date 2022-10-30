@@ -2,7 +2,7 @@
 id: callback-before-upload
 title: callbackBeforeUpload
 description: The callback is used in cases we need to filter the uploaded data before the upload functionality.
-permalink: docs/callback-before-upload
+canonical: docs/callback-before-upload
 previous: callback-after-upload
 next: callback-upload
 ---

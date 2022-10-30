@@ -2,7 +2,7 @@
 id: field-type-edit-form
 title: fieldTypeEditForm
 description: 	The function fieldTypeEditForm is used for cases that you need to change the field type but only for the edit/update form.
-permalink: docs/field-type-edit-form
+canonical: docs/field-type-edit-form
 previous: field-type-column
 next: field-type-form-fields
 ---

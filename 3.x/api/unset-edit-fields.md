@@ -2,7 +2,7 @@
 id: unset-edit-fields
 title: unsetEditFields
 description: Unset (do not display) the specified fields for the update form. 
-permalink: docs/unset-edit-fields
+canonical: docs/unset-edit-fields
 previous: unset-edit
 next: callback-after-delete
 ---

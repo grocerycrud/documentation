@@ -2,7 +2,7 @@
 id: set-skin
 title: setSkin
 description: Change the default skin for the CRUD. So far we have two skins: bootstrap v3 and bootstrap v4. 
-permalink: docs/set-skin
+canonical: docs/set-skin
 previous: where
 next: columns
 ---

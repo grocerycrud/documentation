@@ -2,7 +2,7 @@
 id: set-csrf-token-value
 title: setCsrfTokenValue
 description: Specify the token value for CSRF protection. 
-permalink: docs/set-csrf-token-value
+canonical: docs/set-csrf-token-value
 previous: set-csrf-token-name
 next: get-state
 ---

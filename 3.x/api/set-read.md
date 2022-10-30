@@ -2,7 +2,7 @@
 id: set-read
 title: setRead
 description: In order to enable the “View” button at your grid you will need to use the function setRead. The view of the form (read only) is false by default.
-permalink: docs/set-read
+canonical: docs/set-read
 previous: read-only-fields
 next: unset-read
 ---

@@ -2,7 +2,7 @@
 id: set-primary-key
 title: setPrimaryKey
 description: Set manually the primary key for a database table.
-permalink: docs/set-primary-key
+canonical: docs/set-primary-key
 previous: set-model
 next: set-relation
 ---

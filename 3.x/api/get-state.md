@@ -2,7 +2,7 @@
 id: get-state
 title: getState
 description: 
-permalink: docs/get-state
+canonical: docs/get-state
 previous: field-type-read-form
 next: get-state-info
 ---

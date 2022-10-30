@@ -2,7 +2,7 @@
 id: set-print
 title: setPrint
 description: Setting the print functionality. This function is rarely used as it is already enabled by default.
-permalink: docs/set-print
+canonical: docs/set-print
 previous: set-export
 next: unset-columns
 ---

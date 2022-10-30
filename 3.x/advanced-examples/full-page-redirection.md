@@ -2,7 +2,7 @@
 id: full-page-redirection
 title: Full Page Redirection
 description: Example for a full page redirection after a user action.
-permalink: docs/full-page-redirection
+canonical: docs/full-page-redirection
 previous: 
 next:
 ---

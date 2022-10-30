@@ -2,7 +2,7 @@
 id: unset-add-fields
 title: unsetAddFields
 description: Unset (do not display) the specified fields for the insert form.
-permalink: docs/unset-add-fields
+canonical: docs/unset-add-fields
 previous: unset-add
 next: callback-after-update
 ---

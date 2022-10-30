@@ -2,7 +2,7 @@
 id: unset-operations
 title: unsetOperations
 description: Removing all CRUD permissions for any operation for the end-user.
-permalink: docs/unset-operations
+canonical: docs/unset-operations
 previous: unset-fields
 next:
 ---

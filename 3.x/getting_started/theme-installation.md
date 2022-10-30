@@ -2,7 +2,7 @@
 id: theme-installation
 title: How to install a theme
 description: To install a new theme it is fairly easy. Usually the theme is in a folder structure to just copy it to your project.
-permalink: docs/theme-installation
+canonical: docs/theme-installation
 previous: 
 next:
 ---

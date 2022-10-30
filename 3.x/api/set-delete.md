@@ -2,7 +2,7 @@
 id: set-delete
 title: setDelete
 description: Set the delete functionality. This function is rare to use as the default is already enabled.
-permalink: docs/set-delete
+canonical: docs/set-delete
 previous: callback-delete-multiple
 next: set-delete-multiple
 ---

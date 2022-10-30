@@ -2,7 +2,7 @@
 id: unset-read
 title: unsetRead
 description: The method unsetRead is removing completely the Read operation for the end-user.
-permalink: docs/unset-read
+canonical: docs/unset-read
 previous: unset-react
 next: unset-read-fields
 ---

@@ -2,7 +2,7 @@
 id: getting-started
 title: Getting Started
 description: This page is an overview of Grocery CRUD documentation and related resources.
-permalink: docs
+canonical: docs
 previous: 
 next: installation
 ---

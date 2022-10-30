@@ -2,7 +2,7 @@
 id: unset-delete
 title: unsetDelete
 description: Unset and do not display the delete functionality Also unsetting the delete multiple functionality.
-permalink: docs/unset-delete
+canonical: docs/unset-delete
 previous: set-delete-multiple
 next: unset-delete-multiple
 ---

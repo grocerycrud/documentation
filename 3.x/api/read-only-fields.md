@@ -2,7 +2,7 @@
 id: read-only-fields
 title: readOnlyFields
 description: Specifying the fields that can't be edited and will only be viewed. 
-permalink: docs/read-only-fields
+canonical: docs/read-only-fields
 previous: read-only-edit-fields
 next: set-read
 ---

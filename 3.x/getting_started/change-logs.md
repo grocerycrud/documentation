@@ -2,7 +2,7 @@
 id: change-logs
 title: Change Logs
 description: All the changes for each new version in one page.
-permalink: docs/change-logs
+canonical: docs/change-logs
 previous:
 next:
 ---

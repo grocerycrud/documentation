@@ -2,7 +2,7 @@
 id: unset-export
 title: unsetExport
 description: Removing the export functionality for the current CRUD. 
-permalink: docs/unset-export
+canonical: docs/unset-export
 previous: unset-search-columns
 next: unset-export-pdf
 ---

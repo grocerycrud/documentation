@@ -2,7 +2,7 @@
 id: set-api-url-path
 title: setApiUrlPath
 description: 
-permalink: docs/set-api-url-path
+canonical: docs/set-api-url-path
 previous: set-add
 next: set-clone
 ---

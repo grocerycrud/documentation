@@ -2,7 +2,7 @@
 id: field-type-clone-form
 title: fieldTypeCloneForm
 description: The function fieldTypeCloneForm is used for cases that you need to change the field type but only for the Clone form.
-permalink: docs/field-type-clone-form
+canonical: docs/field-type-clone-form
 previous: field-type-add-form
 next: field-type-column
 ---

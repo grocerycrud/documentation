@@ -2,7 +2,7 @@
 id: field-type-form-fields
 title: fieldTypeFormFields
 description: The function fieldTypeFormFields is a facade function to call all the functions of field-types for the form data.
-permalink: docs/field-type-form-fields
+canonical: docs/field-type-form-fields
 previous: field-type-edit-form
 next: field-type-read-form
 ---

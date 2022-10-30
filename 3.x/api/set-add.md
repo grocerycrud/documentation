@@ -2,7 +2,7 @@
 id: set-add
 title: setAdd
 description: Setting the insert functionality. This function is rare to use as the default is already enabled. 
-permalink: docs/set-add
+canonical: docs/set-add
 previous: callback-insert
 next: unset-add
 ---
