@@ -2,7 +2,7 @@
 id: callback-read-form
 title: callbackReadForm
 description: A callback to change the read data that will display at the read/view modal.
-permalink: docs/callback-read-form
+canonical: docs/callback-read-form
 previous: callback-read-field
 next: read-fields
 ---

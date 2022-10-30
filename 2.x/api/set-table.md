@@ -2,7 +2,7 @@
 id: set-table
 title: setTable
 description: The main database table that you will use for your CRUD.  
-permalink: docs/set-table
+canonical: docs/set-table
 previous: render
 next: set-subject
 ---

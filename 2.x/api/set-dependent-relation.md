@@ -2,7 +2,7 @@
 id: set-dependent-relation
 title: setDependentRelation
 description: There are cases that dropdown list that was built from setRelation has dependencies between them.
-permalink: docs/set-dependent-relation
+canonical: docs/set-dependent-relation
 previous: set-database-schema
 next: set-model
 ---

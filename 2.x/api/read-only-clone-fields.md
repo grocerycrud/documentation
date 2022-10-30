@@ -2,7 +2,7 @@
 id: read-only-clone-fields
 title: readOnlyCloneFields
 description: There are cases, that we need some fields to be read only but only to the clone form modal.
-permalink: docs/read-only-clone-fields
+canonical: docs/read-only-clone-fields
 previous: read-only-add-fields
 next: read-only-edit-fields
 ---

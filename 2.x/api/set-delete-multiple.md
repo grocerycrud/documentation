@@ -2,7 +2,7 @@
 id: set-delete-multiple
 title: setDeleteMultiple
 description: The setDeleteMultiple method is rarely used as the multiple delete functionality is enabled by default.
-permalink: docs/set-delete-multiple
+canonical: docs/set-delete-multiple
 previous: set-delete
 next: unset-delete
 ---

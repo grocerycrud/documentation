@@ -2,7 +2,7 @@
 id: set-database-schema
 title: setDatabaseSchema
 description: Set database schema for PostgresSQL databases.
-permalink: docs/set-database-schema
+canonical: docs/set-database-schema
 previous: set-csrf-token-value
 next: set-dependent-relation
 ---

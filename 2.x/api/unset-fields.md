@@ -2,7 +2,7 @@
 id: unset-fields
 title: unsetFields
 description: Do not display the specified fields for insert, update, clone and view form. This method is simply combining the methods: unsetAddFields, unsetEditFields, unsetCloneFields, unsetReadFields.
-permalink: docs/unset-fields
+canonical: docs/unset-fields
 previous: required-fields
 next: unset-operations
 ---

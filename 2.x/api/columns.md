@@ -2,7 +2,7 @@
 id: columns
 title: columns
 description: Specify the fields that the end user will see as the datagrid columns. 
-permalink: docs/columns
+canonical: docs/columns
 previous: set-skin
 next: callback-column
 ---

@@ -2,7 +2,7 @@
 id: set-database-relation
 title: Set database relation
 description: Set a 1-n database relation field in Grocery CRUD with one line of code. 
-permalink: docs/set-database-relation
+canonical: docs/set-database-relation
 previous: set-validation-rules
 next: change-theme-skin
 ---

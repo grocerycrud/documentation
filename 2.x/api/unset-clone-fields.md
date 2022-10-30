@@ -2,7 +2,7 @@
 id: unset-clone-fields
 title: unsetCloneFields
 description: Don't display the specified fields from the clone form.
-permalink: docs/unset-clone-fields
+canonical: docs/unset-clone-fields
 previous: unset-clone
 next: callback-after-upload
 ---

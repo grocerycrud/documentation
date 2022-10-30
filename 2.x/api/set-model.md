@@ -2,7 +2,7 @@
 id: set-model
 title: setModel
 description: Changing the default model with a custom one. 
-permalink: docs/set-model
+canonical: docs/set-model
 previous: set-dependent-relation
 next: set-primary-key
 ---

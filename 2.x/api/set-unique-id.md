@@ -2,7 +2,7 @@
 id: set-unique-id
 title: setUniqueId
 description: 
-permalink: docs/set-unique-id
+canonical: docs/set-unique-id
 previous: set-theme-path
 next: unique-fields
 ---

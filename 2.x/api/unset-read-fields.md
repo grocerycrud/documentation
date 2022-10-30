@@ -2,7 +2,7 @@
 id: unset-read-fields
 title: unsetReadFields
 description: Unset (do not display) the specified fields for the view (read only) form.
-permalink: docs/unset-read-fields
+canonical: docs/unset-read-fields
 previous: unset-read
 next: callback-clone-field
 ---

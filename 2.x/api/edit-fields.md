@@ -2,7 +2,7 @@
 id: edit-fields
 title: editFields
 description: The fields that will be visible to the end user for edit/update form.
-permalink: docs/edit-fields
+canonical: docs/edit-fields
 previous: callback-update
 next: set-edit
 ---

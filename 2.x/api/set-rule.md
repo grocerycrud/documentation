@@ -2,7 +2,7 @@
 id: set-rule
 title: setRule
 description: The setRule is the validation rule that you add for the insert/update form.
-permalink: docs/set-rule
+canonical: docs/set-rule
 previous: set-relation-nto-n
 next: set-rules
 ---

@@ -2,7 +2,7 @@
 id: set-edit
 title: setEdit
 description: Setting the update functionality. This function is rare to use as the default is already enabled.
-permalink: docs/set-edit
+canonical: docs/set-edit
 previous: edit-fields
 next: unset-edit
 ---

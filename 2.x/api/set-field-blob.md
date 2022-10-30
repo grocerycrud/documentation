@@ -2,7 +2,7 @@
 id: set-field-blob
 title: setFieldBlob
 description: The function setFieldBlob is used to enable the upload functionality for Blob field type. 
-permalink: docs/set-field-blob
+canonical: docs/set-field-blob
 previous: field-type-read-form
 next: set-texteditor
 enterprise: 1

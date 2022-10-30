@@ -2,7 +2,7 @@
 id: unset-texteditor
 title: unsetTexteditor
 description: Unsets the texteditor for the selected fields. This function is really rare to use as by default there is not any load of the texteditor for optimising purposes.
-permalink: docs/unset-texteditor
+canonical: docs/unset-texteditor
 previous: set-texteditor
 next:
 ---

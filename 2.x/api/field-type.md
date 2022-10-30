@@ -2,7 +2,7 @@
 id: field-type
 title: fieldType
 description: Changing the default field type from the database to fit to our needs. 
-permalink: docs/field-type
+canonical: docs/field-type
 previous:
 next: field-type-add-form
 ---

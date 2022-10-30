@@ -2,7 +2,7 @@
 id: ms-sql-connection
 title: Connect with Microsoft SQL database
 description: Step-by-step guide, on how to connect with a Microsoft SQL database
-permalink: docs/ms-sql-connection
+canonical: docs/ms-sql-connection
 previous: api-and-functions-list
 next: basic-example
 ---

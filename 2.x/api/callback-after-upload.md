@@ -2,7 +2,7 @@
 id: callback-after-upload
 title: callbackAfterUpload
 description: The callback that will be triggered right after the upload.
-permalink: docs/callback-after-upload
+canonical: docs/callback-after-upload
 previous: unset-clone-fields
 next: callback-before-upload
 ---

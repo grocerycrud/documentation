@@ -2,7 +2,7 @@
 id: read-only-add-fields
 title: readOnlyAddFields
 description: There are cases, that we need some fields to be read only but only to the add form modal. 
-permalink: docs/read-only-add-fields
+canonical: docs/read-only-add-fields
 previous: read-fields
 next: read-only-clone-fields
 ---

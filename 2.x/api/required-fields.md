@@ -2,7 +2,7 @@
 id: required-fields
 title: requiredFields
 description: The most common validation. Checks is the field provided by the user for our CRUD is empty.
-permalink: docs/required-fields
+canonical: docs/required-fields
 previous: fields
 next: unset-fields
 ---

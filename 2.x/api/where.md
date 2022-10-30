@@ -2,7 +2,7 @@
 id: where
 title: where
 description: 
-permalink: docs/where
+canonical: docs/where
 previous: set-language
 next: set-skin
 ---

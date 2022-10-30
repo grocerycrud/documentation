@@ -2,7 +2,7 @@
 id: set-theme-path
 title: setThemePath
 description: 
-permalink: docs/set-theme-path
+canonical: docs/set-theme-path
 previous: set-theme
 next: set-unique-id
 ---

@@ -2,7 +2,7 @@
 id: get-state-info
 title: getStateInfo
 description: 
-permalink: docs/get-state-info
+canonical: docs/get-state-info
 previous: get-state
 next: map-column
 ---

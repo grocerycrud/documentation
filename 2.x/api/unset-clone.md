@@ -2,7 +2,7 @@
 id: unset-clone
 title: unsetClone
 description: The method unsetClone is removing completely the Clone operation for the end-user.
-permalink: docs/unset-clone
+canonical: docs/unset-clone
 previous: set-clone
 next: unset-clone-fields
 ---

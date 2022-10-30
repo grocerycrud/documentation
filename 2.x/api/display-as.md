@@ -2,7 +2,7 @@
 id: display-as
 title: displayAs
 description: Displaying the field name with a more readable label to the end-user.
-permalink: docs/display-as
+canonical: docs/display-as
 previous: set-subject
 next: set-language
 ---

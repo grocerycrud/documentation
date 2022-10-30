@@ -2,7 +2,7 @@
 id: fields
 title: fields
 description: This function is really just a facade function to call all the 4 functions at once: addFields, editFields, readFields and cloneFields. 
-permalink: docs/fields
+canonical: docs/fields
 previous:
 next: required-fields
 ---

@@ -2,7 +2,7 @@
 id: create-crud-codeigniter-tutorial
 title: Your first Codeigniter CRUD
 description: A codeigniter CRUD tutorial for newbies. Use grocery CRUD to do things faster.
-permalink: docs/create-crud-codeigniter-tutorial
+canonical: docs/create-crud-codeigniter-tutorial
 previous: 
 next: 
 ---

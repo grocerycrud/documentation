@@ -2,7 +2,7 @@
 id: unset-jquery-ui
 title: unsetJqueryUi
 description: 
-permalink: docs/unset-jquery-ui
+canonical: docs/unset-jquery-ui
 previous: unset-jquery
 next: unset-modernizr
 ---

@@ -2,7 +2,7 @@
 id: read-fields
 title: readFields
 description: The fields that will be visible when the end-user navigates to the view form.
-permalink: docs/read-fields
+canonical: docs/read-fields
 previous: callback-read-form
 next: read-only-add-fields
 ---

@@ -2,7 +2,7 @@
 id: field-type-add-form
 title: fieldTypeAddForm
 description: This function is used for cases that you need to change the field type but only for the add/insert form. 
-permalink: docs/field-type-add-form
+canonical: docs/field-type-add-form
 previous: field-type
 next: field-type-clone-form
 ---

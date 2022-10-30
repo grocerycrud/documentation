@@ -2,7 +2,7 @@
 id: unset-react
 title: unsetReact
 description: 
-permalink: docs/unset-react
+canonical: docs/unset-react
 previous: unset-print
 next: unset-read
 ---

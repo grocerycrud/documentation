@@ -2,7 +2,7 @@
 id: unset-edit
 title: unsetEdit
 description: Removing the edit operation for the end-user (from the frontend and the backend).
-permalink: docs/unset-edit
+canonical: docs/unset-edit
 previous: set-edit
 next: unset-edit-fields
 ---

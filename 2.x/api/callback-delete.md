@@ -2,7 +2,7 @@
 id: callback-delete
 title: callbackDelete
 description: The basic usage of callbackDelete is when we want to replace the default delete functionality.
-permalink: docs/callback-delete
+canonical: docs/callback-delete
 previous: callback-before-delete-multiple
 next: callback-delete-multiple
 ---

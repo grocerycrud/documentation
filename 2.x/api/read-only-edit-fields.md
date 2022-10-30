@@ -2,7 +2,7 @@
 id: read-only-edit-fields
 title: readOnlyEditFields
 description: There are cases, that we need some fields to be read only but only to the edit form modal. 
-permalink: docs/read-only-edit-fields
+canonical: docs/read-only-edit-fields
 previous: read-only-clone-fields
 next: read-only-fields
 ---

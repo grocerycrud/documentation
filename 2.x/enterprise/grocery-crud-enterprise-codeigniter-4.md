@@ -2,7 +2,7 @@
 id: grocery-crud-enterprise-codeigniter-4
 title: Codeigniter 4 Installation
 description: Step-by-step installation of Grocery CRUD Enterprise on Codeigniter version 4.
-permalink: docs/grocery-crud-enterprise-codeigniter-4
+canonical: docs/grocery-crud-enterprise-codeigniter-4
 previous: api-and-functions-list
 next: basic-example
 ---

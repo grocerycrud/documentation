@@ -2,7 +2,7 @@
 id: callback-update
 title: callbackUpdate
 description: The callback is used when we need to replace the default update functionality.
-permalink: docs/callback-update
+canonical: docs/callback-update
 previous: callback-edit-form
 next: edit-fields
 ---

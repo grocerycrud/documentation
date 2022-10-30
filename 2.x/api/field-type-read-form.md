@@ -2,7 +2,7 @@
 id: field-type-read-form
 title: fieldTypeReadForm
 description: The function fieldTypeReadForm is used when you need to change the field type but only for the read/view form.
-permalink: docs/field-type-read-form
+canonical: docs/field-type-read-form
 previous: field-type-form-fields
 next: set-field-blob
 ---

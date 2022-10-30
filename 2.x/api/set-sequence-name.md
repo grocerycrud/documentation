@@ -2,7 +2,7 @@
 id: set-sequence-name
 title: setSequenceName
 description: Postgres database recognise the insert id with a sequence key.
-permalink: docs/set-sequence-name
+canonical: docs/set-sequence-name
 previous: set-relation-n-to-n
 next: display-as
 ---

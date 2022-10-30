@@ -2,7 +2,7 @@
 id: set-field-upload-multiple
 title: setFieldUploadMultiple
 description: Upload data with the same use of setFieldUpload but with multiple uploads separated by comma in one field
-permalink: docs/set-field-upload-multiple
+canonical: docs/set-field-upload-multiple
 previous: set-field-upload
 next: set-model
 enterprise: 1

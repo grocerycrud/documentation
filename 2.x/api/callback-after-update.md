@@ -2,7 +2,7 @@
 id: callback-after-update
 title: callbackAfterUpdate
 description: The callback that will be used right after the update of the data.
-permalink: docs/callback-after-update
+canonical: docs/callback-after-update
 previous: unset-add-fields
 next: callback-before-update
 ---

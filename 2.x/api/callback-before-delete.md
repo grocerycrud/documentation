@@ -2,7 +2,7 @@
 id: callback-before-delete
 title: callbackBeforeDelete
 description: The callback will be triggered before the delete functionality.
-permalink: docs/callback-before-delete
+canonical: docs/callback-before-delete
 previous: callback-after-delete-multiple
 next: callback-before-delete-multiple
 ---

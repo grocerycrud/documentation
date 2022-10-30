@@ -2,7 +2,7 @@
 id: callback-add-form
 title: callbackAddForm
 description: A callback in order to change the default data before the add form modal will display. 
-permalink: docs/callback-add-form
+canonical: docs/callback-add-form
 previous: callback-add-field
 next: callback-after-insert
 ---

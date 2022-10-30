@@ -2,7 +2,7 @@
 id: unique-fields
 title: uniqueFields
 description: 
-permalink: docs/unique-fields
+canonical: docs/unique-fields
 previous: set-unique-id
 next: unset-add
 ---

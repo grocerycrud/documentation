@@ -2,7 +2,7 @@
 id: javascript-events
 title: JavaScript Events
 description: Example for JavaScript events that Grocery CRUD uses for custom development through JavaScript.
-permalink: docs/javascript-events
+canonical: docs/javascript-events
 previous: 
 next:
 ---
