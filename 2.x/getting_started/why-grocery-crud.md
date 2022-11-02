@@ -2,7 +2,7 @@
 id: why-grocery-crud
 title: Why grocery CRUD?
 description: Grocery CRUD is not just another Codeigniter grid generator. With few simple PHP lines of code you can have all the functionality that you need to create your CRUD.
-permalink: why-grocery-crud
+canonical: docs/why-grocery-crud
 previous: installation
 next: api-and-functions-list
 ---
