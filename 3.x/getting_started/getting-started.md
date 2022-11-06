@@ -31,18 +31,6 @@ You can get the below output:
 
 `embed:demo_getting-started`
 
-Below you can find pretty much everything you need in order to get started with Grocery CRUD
-
-## Installation
- 
-- [Installation Guide](/docs/installation)
-- [Why Grocery CRUD?](/docs/why-grocery-crud)
-
-## Examples
-
-- [Basic Example](/docs/basic-example)
-- [Full Example](/docs/full-example)
-
 ## API and function list
 
-You can find the full list of all the functions that you can use from the [API documentation](docs/api-and-functions-list) link
+You can find the full list of all the functions that you can use from the [API documentation](/v3.x/docs/api-and-functions-list) link
