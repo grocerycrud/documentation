@@ -359,6 +359,20 @@ body
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
+Step 6. Change the routes to correspond to your controller
+
+Since Codeigniter 4.2.0 or later the Routing is not defaulting to auto-routing.
+This means that you will need to add the routes manually. Go to <code>app/Config/Routes.php</code> and add the
+below code for every function that is using grocery CRUD:
+
+<pre><code class="language-php">
+// Make sure that you always add get and post functions
+$routes->get('/example/customers', 'Example::customers');
+$routes->post('/example/customers', 'Example::customers');
+</code></pre>
+
+## Video Tutorial
+
 If you would like you can also check the above steps into a video tutorial:
 
 <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/XIoMR38ANnE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
