@@ -16,9 +16,8 @@ There are 2 ways to install grocery CRUD Enterprise to your project:
 
 
 If you are looking for more specific installation guidance, you can also check the below tutorials:
-- <a href="/v3.x/docs/grocery-crud-enterprise-codeigniter-3">Installation in Codeigniter v3</a>
 - <a href="/v3.x/docs/grocery-crud-enterprise-codeigniter-4">Installation in Codeigniter v4</a>
-- <a href="/v3.x/docs/grocery-crud-enterprise-laravel-8-installation">Laravel v8 installation</a>
+- <a href="/v3.x/docs/grocery-crud-enterprise-laravel-9-installation">Laravel v9 installation</a>
 
 <div id="without-composer"></div>
 

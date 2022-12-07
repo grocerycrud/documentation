@@ -17,20 +17,20 @@ Enterprise users. For more about Grocery CRUD Enterprise version 3 please read t
 
 <div class="blog-posts">
     <div class="blog-post">
-    <div class="blog-post-image-container">
-        <a href="https://www.grocerycrud.com/blog/grocery-crud-v3" title="Grocery CRUD v3">
-                                            <div class="blog-post__image" style="background-image: url('https://www.grocerycrud.com/uploads/blog/thumb_derick-mckinney-TZ8IFQBg9Ao-unsplash-with-version.jpg');"></div>
-                                    </a>
-    </div>
-    <div class="blog-post-description-container">
-        <a href="https://www.grocerycrud.com/blog/grocery-crud-v3">
-            <h2>Grocery CRUD v3</h2>
-        </a>
-        <p>Grocery CRUD v3 is almost done. Here are some things that you need to know about.</p>
-        <p>Nov 06,2022 by <a href="https://www.grocerycrud.com/credits">John Skoubourdis</a></p>
+        <div class="blog-post-image-container">
+            <a href="https://www.grocerycrud.com/blog/grocery-crud-v3" title="Grocery CRUD v3">
+                                                <div class="blog-post__image" style="background-image: url('https://www.grocerycrud.com/uploads/blog/thumb_derick-mckinney-TZ8IFQBg9Ao-unsplash-with-version.jpg');"></div>
+                                        </a>
+        </div>
+        <div class="blog-post-description-container">
+            <a href="https://www.grocerycrud.com/blog/grocery-crud-v3">
+                <h2>Grocery CRUD v3</h2>
+            </a>
+            <p>Grocery CRUD v3 is almost done. Here are some things that you need to know about.</p>
+            <p>Nov 06,2022 by <a href="https://www.grocerycrud.com/credits">John Skoubourdis</a></p>
+        </div>
     </div>
 </div>
-
 
 <div id="example"><h2><a href="#example">Example</a></h2></div>
 
@@ -43,8 +43,6 @@ $crud->columns(['customerName','phone','addressLine1','creditLimit']);
 
 $output = $crud->render();
 </code></pre>
-
-You can get the below output:
 
 `embed:demo_getting-started`
 
