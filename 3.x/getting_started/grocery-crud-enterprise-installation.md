@@ -19,123 +19,68 @@ If you are looking for more specific installation guidance, you can also check t
 - <a href="/v3.x/docs/grocery-crud-enterprise-codeigniter-4">Installation in Codeigniter v4</a>
 - <a href="/v3.x/docs/grocery-crud-enterprise-laravel-9-installation">Laravel v9 installation</a>
 
-<div id="without-composer"></div>
+<div id="with-composer"></div>
 
 <h2>1. Installation with composer</h2>
-If you prefer the video tutorials well... we did create a <a href="https://www.youtube.com/watch?v=buIwAipWSqo" target="_blank" rel="noopener noreferrer">video tutorial</a> with all the below information into one video.
 
 The most recommended way to install PHP libraries nowadays is through <a href="https://getcomposer.org/" target="_blank" rel="noopener noreferrer">composer</a>. 
-Grocery CRUD Enterprise has private code and you should have one more step from the normal composer installations. This extra step will change at the future however this work is still in progress and currently you will need to do these 2 extra steps.
+Grocery CRUD Enterprise has private code and there is two more steps from the normal composer installations. 
+This extra steps will change at the future however this work is still in progress.
 
-<h3>Step 1.</h3>
-Download the version of groceryCRUD Enterpirse from https://www.grocerycrud.com/users or through the email that you did get. For example the file to download is: <code>grocery-crud-enterprise-3.0.0.zip</code>
+<h3>Prerequisites</h3>
 
-<h3>Step 2.</h3>
+- You have purchased <a href="https://www.grocerycrud.com/enterprise" target="_blank">Grocery CRUD Enterprise</a> and
+  you have access to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a>.
+- PHP 7 or later.
+- You already have a `composer.json` file into your project.
+- You've already installed composer to your project and the vendor files by using the command `composer install`.
 
-Store this file through a folder that you are adding your libraries. This can be anywhere at your local environment 
-however it is important to not rename the zip file. As this file is an artifact, we will name our
-folder <code>artifacts</code> you can of course use your own names like
-<code>lib</code> or even more specific <code>grocery-crud</code> if you are going to use artifacts only for 
-groceryCRUD. 
+<h3>Step 1. Download</h3>
+Login to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a> and navigate to 
+"Version 3 BETA" from the sidebar menu.
 
-For the below examples we are going to use the folder `artifacts` which is the suggested folder name that is 
-recommended by Composer.
+![Version 3 Sidebar Menu](/uploads/documentation/version-3-sidebar-menu.png)
 
-<h3>Step 3.</h3>
+Then download the zip file that say's "Installation with composer".
 
-Add the below code at your composer.json
-<pre><code class="js">{
-    "repositories": [
-        {
-            "type": "artifact",
-            "url": "/path/to/artifacts/"
-        }
-    ],
-    "require": {
-        "grocery-crud/enterprise": "version-number"
-    }
-}
-</code></pre>
-For example, for a project that will have only groceryCRUD Enterprise as third party libraries:
+![Download composer zip file](/uploads/documentation/download-composer-zip-file.png)
 
-<pre><code class="js">{
-    "repositories": [
-        {
-            "type": "artifact",
-            "url": "artifacts/"
-        }
-    ],
-    "require": {
-        "grocery-crud/enterprise": "3.*.*@dev"
-    }
-}
-</code></pre>
-As many people are new to composer and sometimes is really annoying to not have real examples, I will give a more specific example of how your composer will look like. So let's say that you have installed <a href="https://laravel.com/" target="_blank" rel="noopener noreferrer">laravel</a> to your project. Your composer.json will look something like this (see with bold the new lines):
-<pre><code class="js">{
-    "name": "laravel/laravel",
-    "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
-    "license": "MIT",
-    "require": {
-        "php": "^8.0.2",
-        "grocery-crud/enterprise": "3.*.*@dev",
-        "guzzlehttp/guzzle": "^7.2",
-        "laravel/framework": "^9.19",
-        "laravel/sanctum": "^3.0",
-        "laravel/tinker": "^2.7"
-    },
-    "require-dev": {
-        "fakerphp/faker": "^1.9.1",
-        "laravel/pint": "^1.0",
-        "laravel/sail": "^1.0.1",
-        "mockery/mockery": "^1.4.4",
-        "nunomaduro/collision": "^6.1",
-        "phpunit/phpunit": "^9.5.10",
-        "spatie/laravel-ignition": "^1.0"
-    },
+Your file will look something like this: <code>grocery-crud-enterprise-3.0.0-beta.1.zip</code>.
+
+<h3>Step 2. Creation of artifacts folder</h3>
+
+Go to your project root folder and create a new folder with the name <code>artifacts</code>. Now copy the zip file as-is.
+Do not extract or change the name of the zip file.
+
+After this change your folder structure will look like this:
+
+<pre>
+├── app
+├── artifacts
+│   └── grocery-crud-enterprise-3.0.0-beta.1.zip
+├── vendor
+├── composer.json
+...
+</pre>
+
+Considering that you've already had a `composer.json` file into your project, run the following command:
+
+<pre><code class="language-sh">composer config repositories.grocery-crud artifact artifacts/</code></pre>
+
+If the above code succeeds, your composer file will look like this:
+
+<pre><code class="language-json">{
+    "name": "johnny/my-awesome-project",
     "autoload": {
         "psr-4": {
-            "App\\": "app/",
-            "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
+            "Johnny\\MyAwesomeProject\\": "src/"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
+    "authors": [
+        {
+            "name": "John Skoubourdis"
         }
-    },
-    "scripts": {
-        "post-autoload-dump": [
-            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
-        ],
-        "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
-        ],
-        "post-root-package-install": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ],
-        "post-create-project-cmd": [
-            "@php artisan key:generate --ansi"
-        ]
-    },
-    "extra": {
-        "laravel": {
-            "dont-discover": []
-        }
-    },
-    "config": {
-        "optimize-autoloader": true,
-        "preferred-install": "dist",
-        "sort-packages": true,
-        "allow-plugins": {
-            "pestphp/pest-plugin": true
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
+    ],
     "repositories": {
         "grocery-crud": {
             "type": "artifact",
@@ -145,11 +90,56 @@ As many people are new to composer and sometimes is really annoying to not have 
 }
 </code></pre>
 
-<h3>Step 4.</h3>
+If the command fails for any reason don't worry too much! You can always copy the sections "repositories" from the above code and paste them in your 
+`composer.json`.
 
-Now just run <code>composer update</code> or <code>composer install</code> if you are running composer for the first time on your project. Now you did install the enterprise version to your project. You will need also to copy the assets and add it to your public folder for all the JavaScript,CSS, fonts... e.t.c.
+<h3>Step 3. Installation</h3>
 
-<h3>Step 5.</h3>
+Now you can install the library with the following command:
+
+<pre><code class="language-sh">composer require "grocery-crud/enterprise:3.*.*@dev"</code></pre>
+
+If the command succeeds, you will see something like this:
+
+![Installing grocery-crud/enterprise 3.0.0-beta.1](/uploads/documentation/composer-success.png)
+
+and your composer file will look like this:
+
+<pre><code class="language-json">{
+    "name": "johnny/my-awesome-project",
+    "autoload": {
+        "psr-4": {
+            "Johnny\\MyAwesomeProject\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "John Skoubourdis"
+        }
+    ],
+    "repositories": {
+        "grocery-crud": {
+            "type": "artifact",
+            "url": "artifacts/"
+        }
+    },
+    "require": {
+        "grocery-crud/enterprise": "3.*.*@dev"
+    }
+}</code></pre>
+
+Now theoretically you've just installed Grocery CRUD. However, there are few more steps in order to make it work.
+
+<h3>Step 4. Copying assets folder</h3>
+
+As Grocery CRUD is a CRUD Generator that also has CSS and JavaScript files we need to make sure that we also have the 
+public assets including in our public folder.
+
+If you are using Laravel 9 you are lucky enough as this can be done with 1 line of code.
+
+<pre><code class="language-sh">php artisan vendor:publish --provider="GroceryCrud\LaravelAssetsServiceProvider"</code></pre>
+
+You will need also to copy the assets and add it to your public folder for all the JavaScript,CSS, fonts... e.t.c.
 
 In order to install all your assets to your project. You need to <strong>manually copy </strong> the folder public to your public structured project.
 
@@ -399,6 +389,8 @@ you may experience:
 
 <br/>
 
+<div id="without-composer"></div>
+
 <h2>2. Installation without Composer</h2>
 For many people composer seems too complicated and they prefer the old fashioned copy-paste way.
 Also if you are using a framework that it is not requiring composer or you are using native PHP then the installation without composer is the best choice.
@@ -639,7 +631,7 @@ $output = $output-&gt;output;
 // Then you can basically include the results of the output and the CSS/JS files to your own framework's output or template
 include('view.php');
 </code></pre>
-<div id="with-composer"></div>
+
 Now from the above code you will have a full working CRUD without the need to do anything else! You can now enjoy all the power of Grocery CRUD at the documentation (and you didn't use any terminal at all).
 
 
