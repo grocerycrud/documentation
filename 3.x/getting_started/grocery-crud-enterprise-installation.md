@@ -14,8 +14,8 @@ There are 2 ways to install grocery CRUD Enterprise to your project:
 - <a href="#with-composer">With Composer</a> (recommended for latest PHP frameworks like Laravel 9 or Codeigniter 4)
 - <a href="#without-composer">Without Composer</a> (recommended for people that are using older PHP Frameworks such as Codeigniter 3)
 
-
 If you are looking for more specific installation guidance, you can also check the below tutorials:
+
 - <a href="/v3.x/docs/grocery-crud-enterprise-codeigniter-4">Installation in Codeigniter v4</a>
 - <a href="/v3.x/docs/grocery-crud-enterprise-laravel-9-installation">Laravel v9 installation</a>
 
@@ -23,8 +23,8 @@ If you are looking for more specific installation guidance, you can also check t
 
 <h2>1. Installation with composer</h2>
 
-The most recommended way to install PHP libraries nowadays is through <a href="https://getcomposer.org/" target="_blank" rel="noopener noreferrer">composer</a>. 
-Grocery CRUD Enterprise has private code and there is two more steps from the normal composer installations. 
+The most recommended way to install PHP libraries nowadays is through <a href="https://getcomposer.org/" target="_blank" rel="noopener noreferrer">composer</a>.
+Grocery CRUD Enterprise has private code and there is two more steps from the normal composer installations.
 This extra steps will change at the future however this work is still in progress.
 
 <h3>Prerequisites</h3>
@@ -36,7 +36,7 @@ This extra steps will change at the future however this work is still in progres
 - You've already installed composer to your project and the vendor files by using the command `composer install`.
 
 <h3>Step 1. Download</h3>
-Login to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a> and navigate to 
+Login to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a> and navigate to
 "Version 3 BETA" from the sidebar menu.
 
 ![Version 3 Sidebar Menu](/uploads/documentation/version-3-sidebar-menu.png)
@@ -90,7 +90,7 @@ If the above code succeeds, your composer file will look like this:
 }
 </code></pre>
 
-If the command fails for any reason don't worry too much! You can always copy the sections "repositories" from the above code and paste them in your 
+If the command fails for any reason don't worry too much! You can always copy the sections "repositories" from the above code and paste them in your
 `composer.json`.
 
 <h3>Step 3. Installation</h3>
@@ -132,78 +132,40 @@ Now theoretically you've just installed Grocery CRUD. However, there are few mor
 
 <h3>Step 4. Copying assets folder</h3>
 
-As Grocery CRUD is a CRUD Generator that also has CSS and JavaScript files we need to make sure that we also have the 
+As Grocery CRUD is a CRUD Generator that also has CSS and JavaScript files we need to make sure that we also have the
 public assets including in our public folder.
 
-If you are using Laravel 9 you are lucky enough as this can be done with 1 line of code.
+In order to install all your assets to your project. You need to <strong>manually copy</strong> the content of the
+folder `public` to your public structured project.
 
-<pre><code class="language-sh">php artisan vendor:publish --provider="GroceryCrud\LaravelAssetsServiceProvider"</code></pre>
+Let's have an example! Let's say that you project structure looks like this:
 
-You will need also to copy the assets and add it to your public folder for all the JavaScript,CSS, fonts... e.t.c.
-
-In order to install all your assets to your project. You need to <strong>manually copy </strong> the folder public to your public structured project.
-
-To have a more specific example. So let's say that you are using laravel and the structure looks like this:
 <pre>├── app
-│   ├── Commands
-│   ├── Console
-│   ├── Events
-│   ├── Exceptions
-│   ├── Handlers
-│   ├── Http
-│   ├── Providers
-│   └── Services
 ├── bootstrap
-├── config
-├── database
-│   ├── migrations
-│   └── seeds
 ├── public
 │   ├── css
 │   └── fonts
-├── resources
-│   ├── assets
-│   ├── lang
-│   └── views
-├── storage
-│   ├── app
-│   ├── framework
-│   └── logs
+...
 ├── tests
 └── vendor
 </pre>
-In that case the best place to have your public folder of groceryCRUD enterprise is at pubic-&gt;grocery-crud folder. So you will need to copy the folder from : <code>vendor/grocerycrud/enterprise/public/grocery-crud/</code> to the public folder of laravel
-So after the copy your folder structure will look like this (in bold you can find the changed ones)
+
+In that case the best place to have your public folder of groceryCRUD enterprise is at `pubic/vendor/grocery-crud`
+folder. So you will need to copy the folders from : <code>vendor/grocery-crud/enterprise/public</code>
+to the public folder of your project. So after the copy of the folders, your new structure will look like this:
+
 <pre>├── app
-│   ├── Commands
-│   ├── Console
-│   ├── Events
-│   ├── Exceptions
-│   ├── Handlers
-│   ├── Http
-│   ├── Providers
-│   └── Services
 ├── bootstrap
-├── config
-├── database
-│   ├── migrations
-│   └── seeds
 ├── public
-│   ├── css
-│   ├── fonts
-<strong>|   └── grocery-crud
-|   |   ├── css
-|   |   ├── fonts
-|   |   ├── images
-|   |   └── js</strong>
-├── resources
-│   ├── assets
-│   ├── lang
-│   └── views
-├── storage
-│   ├── app
-│   ├── framework
-│   └── logs
+│   ├── css
+│   ├── fonts
+│   └── vendor
+│       └── grocery-crud
+│           ├── css
+│           ├── icons
+│           ├── js
+│           └── static
+...
 ├── tests
 └── vendor
 </pre>
@@ -211,14 +173,15 @@ So after the copy your folder structure will look like this (in bold you can fin
 <h3>Step 6.</h3>
 
 Now you need to create your configurations files in order to make grocery CRUD Enterprise to work. So basically there are 3 things that you will need to configured
+
 1. Where the public folder is
 2. The database configurations
-3. The cache folder (this is optional but it is very recommended to do it as your CRUD can be 10X faster.)
 
 You can find all the code below of the examples at:
-<code>vendor/grocerycrud/enterprise/example</code>
+<code>vendor/grocery-crud/enterprise/example</code>
 
 There are 2 config files that you are <strong>required </strong>to configure. The first one is the database connection credentials. A simple database file like the below is required:
+
 <pre><code class="language-php">&lt;?php
 // database.php
 return [
@@ -230,9 +193,12 @@ return [
         'charset' =&gt; 'utf8'
     ]
 ];</code></pre>
-As in grocery CRUD Enterprise we are using the power of Zend Framework the drivers are from Zend Framework DB version 2. For more you can see the documentation at <a href="https://framework.zend.com/manual/2.4/en/modules/zend.db.adapter.html">Zend\Db\Adapter </a>
+
+As in grocery CRUD Enterprise we are using the power of Lamina Framework the drivers are from Lamina Framework DB.
+For more you can see the documentation at <a target="_blank" href="https://docs.laminas.dev/laminas-db/adapter/">Laminas\Db\Adapter\Adapter</a>.
 
 The second configuration file is the one that you need to include for grocery CRUD. The configuration file will look like the below:
+
 <pre><code class="language-php">&lt;?php
 // config.php
 return [
@@ -243,7 +209,7 @@ return [
     'default_language'	=> 'English',
 
     // This is the assets folder where all the JavaScript, CSS, images and font files are located
-    'assets_folder' => '/assets/grocery-crud/',
+    'assets_folder' => '/vendor/grocery-crud/',
 
     // There are only three choices: "uk-date" (dd/mm/yyyy), "us-date" (mm/dd/yyyy) or "sql-date" (yyyy-mm-dd)
     'date_format' => 'uk-date',
@@ -320,15 +286,20 @@ return [
     // Remember the quick search upon refresh. The search information is stored in the browser local storage
     'remember_quick_search' => false,
 ];</code></pre>
-At the config file there are 3 basic sections that we need to be aware of:
+
+At the config file there are 2 basic sections that we need to be aware of:
+
 <ol>
  	<li><strong>The assets_folder: </strong> The assets folder is the folder that can publicly be accessible by the end user. These folders includes: images, JavaScript files, fonts and stylesheets files.</li>
  	<li><strong>The environment: </strong>Make sure that the <code>development</code> environment is the one that you are using when you are developing the project. and <code>production</code> is the one that is used when you are publishing the website to production.</li>
- 	<li><strong>The cache: </strong>Grocery CRUD is based on cache to do as less queries to the database as possible it is <strong>strongly </strong><b>advised </b>to use cache to your project. The default cache is the files cache but of course you can change the cache configurations to add a faster method to cache. All the configurations for the cache can be found at:  <a href="https://framework.zend.com/manual/2.4/en/modules/zend.cache.storage.adapter.html">Zend\Cache\Storage\Adapter</a></li>
 </ol>
 <h3>Step 7.</h3>
 
-And now we are ready to make grocery CRUD Enterprise to put it to work! Let's have an example of the very first use. A first example without any framework installation will look like this:
+And now we are ready to make grocery CRUD Enterprise to put it to work! As per the previous step, the files `view.php` 
+and `example.php` are included in the `vendor/grocery-crud/enterprise/example` folder.
+
+Let's have an example of the very first use. A first example without any framework installation will look like this:
+
 <pre><code class="language-php">&lt;?php
 // example.php
 
@@ -358,7 +329,9 @@ $output = $output->output;
 
 include('view.php');
 </code></pre>
+
 And the <code>view.php</code> is a simple page (of course the implementation can be much better with a framework but this is just a quick example to see how easy you can install grocery CRUD Enterprise):
+
 <pre><code class="language-php">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -378,12 +351,14 @@ And the <code>view.php</code> is a simple page (of course the implementation can
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
+
 And congrats 🍻 ! You have installed grocery CRUD Enterprise with composer. Now you can enjoy all the power of grocery CRUD Enterprise at your project and why not create something AWESOME today!
 
 <h3>Troubleshooting</h3>
 
 In case you have issues with the installation we have created a video tutorial on how to solve some common issues that
 you may experience:
+
 - Getting the "Ooooops, something went wrong! If you can see this message, this is probably a misconfiguration in Grocery
   CRUD Enterprise!" message. Video tutorial: <a target="_blank" href="https://www.youtube.com/watch?v=bCJTU6PWhYs">Troubleshooting Grocery CRUD Enteprise part 1</a>
 
@@ -393,12 +368,25 @@ you may experience:
 
 <h2>2. Installation without Composer</h2>
 For many people composer seems too complicated and they prefer the old fashioned copy-paste way.
-Also if you are using a framework that it is not requiring composer or you are using native PHP then the installation without composer is the best choice.
-There is nothing bad with the installation without composer, it is just that on updates it will require more manual work.
+Also, if you are using a framework that it is not requiring composer or you are using native PHP then the installation without composer is the best choice.
+There is nothing bad with the installation without composer, it is just that on updates it will require more manual steps.
 
 In case you prefer a video tutorial, we did create the below steps into a video see: <a href="https://www.youtube.com/watch?v=JPJPvGKWxtk">Grocery CRUD Enterprise - Installation without composer</a>
 
-<h3>Step 1.</h3>
+<h3>Prerequisites</h3>
+
+- You have purchased <a href="https://www.grocerycrud.com/enterprise" target="_blank">Grocery CRUD Enterprise</a> and
+  you have access to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a>.
+- PHP 7 or later.
+- You have enough patience to copy-paste some files and folders 😃.
+
+<h3>Step 1. Download</h3>
+Login to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a> and navigate to
+"Version 3 BETA" from the sidebar menu.
+
+![Version 3 Sidebar Menu](/uploads/documentation/version-3-sidebar-menu.png)
+
+Then download the zip file that say's "Installation without composer".
 
 Download the zip file for installation without composer. You can also download the newest zip file from: https://www.grocerycrud.com/users .
 In order to have a more specific example from now on we will use the name:  <code>grocery-crud-enterprise-v2.9.0-without-composer.zip</code> as the zip file
@@ -406,6 +394,7 @@ In order to have a more specific example from now on we will use the name:  <c
 <h3>Step2.</h3>
 
 Unzip the file and you will find a file structure like that:
+
 <pre>├── examples
 │   ├── config.php
 │   ├── database.php
@@ -426,12 +415,15 @@ Unzip the file and you will find a file structure like that:
         ├── images
         └── js
 </pre>
+
 The folders have the following files:
+
 1. <code>examples</code> folder has a very basic example so you can simply copy the files and see it working on native PHP.
 2. <code>libraries</code> folder has all the PHP libraries that are required in order groceryCRUD to run. This is basically the folder <code>vendor</code> from composer just renamed to not have conflicts in case you want to use composer on other purposes
 3. <code>public</code> folder is the one that has all the JS,CSS, fonts and images that are required in order to show it on a webpage. The name is public as these files are the one that will be visible from a web browser
 
 Before going to the next step there are 2 config files that you are <strong>required </strong>to configure. The first one is the database connection credentials. A simple database file like the below is required:
+
 <pre><code class="language-php">&lt;?php
 // database.php
 return [
@@ -443,9 +435,11 @@ return [
         'charset' =&gt; 'utf8'
     ]
 ];</code></pre>
+
 As in grocery CRUD Enterprise we are using the power of Zend Framework the drivers are from Zend Framework DB version 2. For more you can see the documentation at <a href="https://framework.zend.com/manual/2.4/en/modules/zend.db.adapter.html" target="_blank" rel="noopener noreferrer">Zend\Db\Adapter </a>
 
 The second configuration file is the one that you need to include for grocery CRUD. The configuration file will look like the below:
+
 <pre><code class="language-php">&lt;?php
 // config.php
 
@@ -534,7 +528,9 @@ return [
     // Remember the quick search upon refresh. The search information is stored in the browser local storage
     'remember_quick_search' => false,
 ];</code></pre>
+
 At the config file there are 3 basic sections that we need to be aware of:
+
 <ol>
  	<li><strong>The assets_folder: </strong> The assets folder is the folder that can publicly be accessible by the end user. These folders includes: images, JavaScript files, fonts and stylesheets files.</li>
  	<li><strong>The environment: </strong>Make sure that the <code>development</code> environment is the one that you are using when you are developing the project. and <code>production</code> is the one that is used when you are publishing the website to production.</li>
@@ -545,17 +541,20 @@ At the config file there are 3 basic sections that we need to be aware of:
 If you are using native PHP (without any framework) then you just need to copy the examples at the desired folder.
 
 As it is always better to have a real example. Let's say that you have a PHP project that has the below structure (usually when people are using native PHP they don't use routes and hence the following structure).
+
 <pre>├── assets
 ├── libs
 ├── index.php
 ├── customers.php
 └── films.php
 </pre>
+
 and all the JavaScript and CSS files are in the <code>assets</code> folder.
 
 Copy the config files: config.php, database.php, example.php, view.php at your app folder.
 
 So now your folder will look like this:
+
 <pre>├── assets
 ├── libs
 ├── index.php
@@ -566,7 +565,9 @@ So now your folder will look like this:
 ├── customers.php
 └── films.php
 </pre>
+
 And the example.php looks like this:
+
 <pre><code class="language-php">&lt?php
 // example.php
 
@@ -595,9 +596,11 @@ $js_files = $output-&gt;js_files;
 $output = $output-&gt;output;
 
 include('view.php');</code></pre>
+
 So now we will basically change just slightly the example.php to fit to our needs for the <code>films.php</code>. So first of all let's assume that the <code>films.php</code> has some code of your own project. For that reason, I will include the <code>...</code> at the below example so you can understand that this is basically your code (e.g. header, footer, some functionality... e.t.c.).
 
 So the final example for films.php will look like this:
+
 <pre><code class="language-php">&lt;?php
 // films.php
 
@@ -634,11 +637,11 @@ include('view.php');
 
 Now from the above code you will have a full working CRUD without the need to do anything else! You can now enjoy all the power of Grocery CRUD at the documentation (and you didn't use any terminal at all).
 
-
 <h3>Troubleshooting</h3>
 
 In case you have issues with the installation we have created a video tutorial on how to solve some common issues that
 you may experience:
+
 - Getting the "Ooooops, something went wrong! If you can see this message, this is probably a misconfiguration in Grocery
   CRUD Enterprise!" message. Video tutorial: <a target="_blank" href="https://www.youtube.com/watch?v=bCJTU6PWhYs">Troubleshooting Grocery CRUD Enteprise part 1</a>
 

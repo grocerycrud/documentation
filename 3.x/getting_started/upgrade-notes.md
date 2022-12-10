@@ -9,6 +9,13 @@ next:
 
 # Upgrade Draft Notes
 
+## Main changes
+
+- The package is renamed from `grocerycrud/enterprise` to `grocery-crud/enterprise` (with a dash)
+- The documentation now have as suggested way to install the package via composer. We are trying to automate the process
+to make it easier to install and update the package.
+
+
 ## PHP changes
 - setActionButtonMultiple `iconName` instead of `cssClassIcon`
 - setActionButton  `iconName` instead of `cssClassIcon`
