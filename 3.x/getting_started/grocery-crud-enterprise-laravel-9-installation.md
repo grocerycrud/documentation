@@ -368,9 +368,6 @@ So it is important to have a template that can load all the above. Usually in ou
 
 	&lt;meta name="csrf-token" content="{{ csrf_token() }}"&gt;
 
-	@foreach ($css_files as $css_file)
-    	&lt;link rel="stylesheet" href="{{ $css_file }}"&gt;
-	@endforeach
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;div style="padding: 20px"&gt;
@@ -380,17 +377,6 @@ So it is important to have a template that can load all the above. Usually in ou
 	@foreach ($js_files as $js_file)
     	&lt;script src="{{ $js_file }}"&gt;&lt;/script&gt;
 	@endforeach
-	&lt;script&gt;
-		if (typeof $ !== 'undefined') {
-			$(document).ready(function () {
-				$.ajaxSetup({
-				    headers: {
-				        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-				    }
-				});
-			});
-		}
-	&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 

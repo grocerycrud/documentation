@@ -9,7 +9,23 @@ next: basic-example
 
 # Codeigniter 4 Installation
 
-This is a full tutorial of a suggested way to install Grocery CRUD Enterprise to your already existing project with Codeigniter 4 framework. For some people this tutorial may require too many steps. However have in mind that if you follow the instructions step by step you will have a successful installation as this page is actively updated.
+This is a full tutorial of a suggested way to install Grocery CRUD Enterprise to your already existing project with 
+Codeigniter 4 framework. For some people this tutorial may require too many steps. 
+However, have in mind that if you follow the instructions step by step you will have a successful installation as 
+this page is actively updated.
+
+There are two ways to install Grocery CRUD Enterprise to Codeigniter 4. If you are starting from scratch, and you
+haven't started your project yet, then you can download Grocery CRUD with the integration of the latest version of 
+Codeigniter 4. Click the button that is saying "with Codeigniter v4".
+
+## Install Grocery CRUD to an existing project
+
+<h3>Prerequisites</h3>
+
+- You have purchased <a href="https://www.grocerycrud.com/enterprise" target="_blank">Grocery CRUD Enterprise</a> and
+  you have access to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a>.
+- PHP 7 or later.
+- You have <a href="https://getcomposer.org/" target="_blank">composer</a> installed
 
 <strong>Step 1.</strong> From the email that you've received or from the user's page (you will get instructions at the email of how to access user's page) download the file that say's "Without composer". Once you've downloaded it, unzip it!
 The folder structure that you will get is the following:
@@ -371,12 +387,6 @@ $routes->get('/example/customers', 'Example::customers');
 $routes->post('/example/customers', 'Example::customers');
 ```
 
-## Video Tutorial
-
-If you would like you can also check the above steps into a video tutorial:
-
-<iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/XIoMR38ANnE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 ## Troubleshooting
 <strong>1. Getting the message "Ooooops, something went wrong!"</strong>
 The most common mistake of the installation of grocery CRUD Enteprise is when the assets_folder has a wrong path. If you did follow all the steps and you see that your webpage looks like that:
@@ -428,3 +438,5 @@ For example in our case we've forgot to change the default database credentials 
 to your specific database credentials everything is just working smoothly.
 
 <strong>Notice:</strong> Grocery CRUD Enterprise is a framework agnostic library. That simply means that it doesn't matter which framework you are using and it doesn't matter the architecture you are using. This tutorial is taking some architecture decisions basically for you. If you need to have the full freedom of what structure to choose we are suggesting to see the full installation guide <a href="/docs/grocery-crud-enterprise-installation">here</a>.
+
+## New project with Grocery CRUD and Codeigniter 4
