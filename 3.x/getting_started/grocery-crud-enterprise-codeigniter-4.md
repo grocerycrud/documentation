@@ -9,16 +9,32 @@ next: basic-example
 
 # Codeigniter 4 Installation
 
-This is a full tutorial of a suggested way to install Grocery CRUD Enterprise to your already existing project with 
-Codeigniter 4 framework. For some people this tutorial may require too many steps. 
-However, have in mind that if you follow the instructions step by step you will have a successful installation as 
-this page is actively updated.
+This is a full tutorial of how to install Grocery CRUD Enterprise on Codeigniter version 4. 
+Since currently Codeigniter 4 is suggested to be installed <strong>via Composer</strong>, we will follow the same approach.
+If you would like to install Grocery CRUD Enterprise on Codeigniter 4 without composer you can follow this tutorial:
+[Install without composer](/v3.x/docs/grocery-crud-enterprise-installation#without-composer)
 
-There are two ways to install Grocery CRUD Enterprise to Codeigniter 4. If you are starting from scratch, and you
-haven't started your project yet, then you can download Grocery CRUD with the integration of the latest version of 
-Codeigniter 4. Click the button that is saying "with Codeigniter v4".
+Below you will find the steps to install Grocery CRUD Enterprise on Codeigniter 4.
+If you follow these steps carefully, you should be able to successfully install Grocery CRUD Enterprise
+on your Codeigniter project easily.
+Keep in mind that this tutorial may require several steps, but it is actively updated to provide the most accurate
+and up-to-date instructions.
 
-## Install Grocery CRUD to an existing project
+> <strong>Notice:</strong> Grocery CRUD Enterprise is a framework-agnostic library. 
+> That simply means that it doesn't matter which framework you are using, and it doesn't matter which architecture 
+> or tools (e.g. composer) you are using.
+> This tutorial is taking some architecture decisions basically for you. If you need to have the full 
+> freedom of what structure to choose, we are suggesting to see the full installation guide 
+> <a href="/v3.x/docs/grocery-crud-enterprise-installation">here</a>.
+
+There are two ways to install Grocery CRUD Enterprise for Codeigniter 4. 
+You can either install it to an existing project, or you can download the latest version of Grocery CRUD with the 
+integration of latest Codeigniter 4 if you are starting a new project.
+
+- [Install Grocery CRUD to an existing CI 4 project](#install-grocery-crud-to-an-existing-ci-4-project)
+- [New project with Grocery CRUD and Codeigniter 4](#new-project-with-grocery-crud-and-codeigniter-4)
+
+## Install Grocery CRUD to an existing CI 4 project
 
 <h3>Prerequisites</h3>
 
@@ -73,7 +89,7 @@ class GroceryCrudEnterprise extends BaseConfig
             'default_language'	=> 'English',
         
             // This is the assets folder where all the JavaScript, CSS, images and font files are located
-            'assets_folder' => base_url() . '/grocery-crud/',
+            'assets_folder' => base_url() . '/vendor/grocery-crud/',
         
             // There are only three choices: "uk-date" (dd/mm/yyyy), "us-date" (mm/dd/yyyy) or "sql-date" (yyyy-mm-dd)
             'date_format' => 'uk-date',
@@ -436,7 +452,5 @@ For example in our case we've forgot to change the default database credentials 
 # database.default.password = root
 # database.default.DBDriver = MySQLi</code></pre>
 to your specific database credentials everything is just working smoothly.
-
-<strong>Notice:</strong> Grocery CRUD Enterprise is a framework agnostic library. That simply means that it doesn't matter which framework you are using and it doesn't matter the architecture you are using. This tutorial is taking some architecture decisions basically for you. If you need to have the full freedom of what structure to choose we are suggesting to see the full installation guide <a href="/docs/grocery-crud-enterprise-installation">here</a>.
 
 ## New project with Grocery CRUD and Codeigniter 4

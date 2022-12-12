@@ -350,17 +350,19 @@ In case you have issues with the installation we have created a video tutorial o
 you may experience:
 
 - Getting the "Ooooops, something went wrong! If you can see this message, this is probably a misconfiguration in Grocery
-  CRUD Enterprise!" message. Video tutorial: <a target="_blank" href="https://www.youtube.com/watch?v=bCJTU6PWhYs">Troubleshooting Grocery CRUD Enteprise part 1</a>
+  CRUD Enterprise!" message. I've created a video tutorial for Grocery CRUD Enterprise version 2 but it can be also applied
+  to version 3: <a target="_blank" href="https://www.youtube.com/watch?v=bCJTU6PWhYs">Troubleshooting Grocery CRUD Enteprise part 1</a>
 
 <br/>
 
 <div id="without-composer"></div>
 
 <h2>2. Installation without Composer</h2>
-For many people composer seems too complicated, and they prefer the old-fashioned copy-paste way.
-Also, if you are using a framework that it is not requiring composer, or you are using native PHP then the installation without composer is the best choice.
-There is nothing bad with the installation without composer, it is just that on updates it will require more manual steps.
 
+Many people find using a composer to be intimidating, so they opt for the more familiar copy-and-paste method 😃. 
+This is especially common when working with frameworks that don't require a composer (e.g. Codeigniter 3), or when 
+using native PHP. While there's nothing wrong with this approach, it does require more manual steps when we install
+or upgrade Grocery CRUD Enterprise.
 
 <h3>Prerequisites</h3>
 
@@ -528,7 +530,6 @@ At the config file there are 3 basic sections that we need to be aware of:
  	<li><strong>The assets_folder: </strong> The assets folder is the folder that can publicly be accessible by the end user. 
 These folders include: images, JavaScript files, fonts and stylesheets files.</li>
  	<li><strong>The environment: </strong>Make sure that the <code>development</code> environment is the one that you are using when you are developing the project. and <code>production</code> is the one that is used when you are publishing the website to production.</li>
- 	<li><strong>The cache: </strong>Grocery CRUD is based on cache to do as less queries to the database as possible it is <strong>strongly </strong><b>advised </b>to use cache to your project. The default cache is the files cache but of course you can change the cache configurations to add a faster method to cache. All the configurations for the cache can be found at:  <a href="https://framework.zend.com/manual/2.4/en/modules/zend.cache.storage.adapter.html">Zend\Cache\Storage\Adapter</a></li>
 </ol>
 <h3>Step3.</h3>
 
@@ -538,33 +539,152 @@ As it is always better to have a real example. Let's say that you have a PHP pro
 (usually when people are using native PHP they don't use routes and hence the following structure).
 
 <pre>├── assets
-├── libs
 ├── index.php
-├── customers.php
-└── films.php
+└── customers.php
 </pre>
 
 and all the JavaScript and CSS files are in the <code>assets</code> folder.
 
-Copy the config files: config.php, database.php, example.php, view.php at your app folder.
+> Important Warning: The above structure is just an example, and we have over-simplified the example to make it easily
+> understandable and configurable. We don't recommend to use the above (or the below) structure for real 
+> projects since it is exposing the real PHP files to the end user. 
+
+Copy the config files: `config.php`, `database.php`, `example.php`, `view.php` and the `libraries` folder at your 
+project folder.
 
 So now your folder will look like this:
 
-<pre>├── assets
-├── libs
+<pre>
+├── assets
+├── libraries
+│   ├── autoload.php
+│   ├── composer
+│   ├── grocery-crud
+│   ├── laminas
+│   ├── scoumbourdis
+│   └── vlucas
 ├── index.php
 ├── config.php
 ├── database.php
 ├── example.php
 ├── view.php
-├── customers.php
-└── films.php
+└── customers.php
 </pre>
 
-And the example.php looks like this:
+Now also copy the assets to your project. For this specific example you will need to copy the assets folder from the 
+`public` folder. So the final structure will look like this:
+
+<pre>
+├── assets
+│   └── vendor
+│       └── grocery-crud
+│           ├── css
+│           ├── icons
+│           ├── js
+│           └── static
+├── libraries
+│   ├── autoload.php
+│   ├── composer
+│   ├── grocery-crud
+│   ├── laminas
+│   ├── scoumbourdis
+│   └── vlucas
+├── index.php
+├── config.php
+├── database.php
+├── example.php
+├── view.php
+└── customers.php
+</pre>
+
+Now the last changes that you need to do is to change the `assets_folder` at the `config.php` file to be 
+`assets/vendor/grocery-crud`. So your new `config.php` file will look like this:
+
+<pre><code class="language-php">&lt;?php
+// config.php
+
+return [
+    // So far 34 languages including: Afrikaans, Arabic, Bengali, Bulgarian, Catalan, Chinese, Czech, Danish,
+    // Dutch, English, French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
+    // Lithuanian, Mongolian, Norwegian, Persian, Polish, Portuguese, Brazilian Portuguese, Romanian,
+    // Russian, Slovak, Spanish, Thai, Turkish, Ukrainian, Vietnamese
+    'default_language'  => 'English',
+
+    // This is the assets folder where all the JavaScript, CSS, images and font files are located
+    'assets_folder' => '/assets/vendor/grocery-crud/',
+
+    // The default per page when a user firstly see a list page
+    'default_per_page'	=> '10',
+
+    // Having some options at the list paging. This is the default one that all the websites are using.
+    // Make sure that the number of grocery_crud_default_per_page variable is included to this array.
+    'paging_options' => ['10', '25', '50', '100'],
+
+    // The environment is important, so we can have specific configurations for specific environments
+    'environment' => 'development',
+
+    // The default theme that Grocery CRUD will use. Currently, you can choose between 'bootstrap-v4' and 'bootstrap-v5'
+    'theme' => 'bootstrap-v5',
+
+    'xss_clean' => false,
+
+    // The character limiter at the datagrid columns, zero(0) value if you don't want any character
+    // limitation to the column
+    'column_character_limiter' => 50,
+
+    // The allowed file types on upload. If the file extension doesn't exist in the array
+    // it will throw an error and the upload will not be completed
+    'upload_allowed_file_types' =>  [
+        'gif', 'jpeg', 'jpg', 'png', 'svg', 'tiff', 'doc', 'docx',  'rtf', 'txt', 'odt', 'xls', 'xlsx', 'pdf',
+        'ppt', 'pptx', 'pps', 'ppsx', 'mp3', 'm4a', 'ogg', 'wav', 'mp4', 'm4v', 'mov', 'wmv', 'flv', 'avi',
+        'mpg', 'ogv', '3gp', '3g2', 'psd'
+    ],
+
+    'remove_file_on_delete' => false,
+
+    // Show image preview - As we currently don't have thumbnails to show please keep in mind that the full
+    // image will be loaded in the browser.
+    'show_image_preview' => true,
+
+    'open_in_modal' => true,
+
+    'url_history' => true,
+
+    // Configuration to publish action events (coming from Redux) with all the details that the action is having
+    // This is useful to have a better control over the events that are being triggered in the application
+    // However, please use with caution as this may leak some sensitive information to the application
+    // For more read about security issues about XSS see wikipedia link
+    // here https://en.wikipedia.org/wiki/Cross-site_scripting
+    'publish_events' => false,
+
+    // The button style that we have for the action buttons at the datagrid (list) page
+    // Choose between 'icon', 'text', 'icon-text'
+    'action_button_type' => 'icon-text',
+
+    'max_action_buttons' => [
+        'mobile' => 1,
+        'desktop' => 2
+    ],
+
+    // Choose between 'left' or 'right'
+    'actions_column_side' => 'left',
+
+    // We have noticed that especially after using setRelation within a table that had more than 10K rows
+    // that the datagrid was getting slower. For that reason we have optimized SQL wherever possible, and we
+    // also have disabled the ordering for setRelation fields.  Keep in mind that the optimization of the queries
+    // can be up to 20x faster!! Especially in big tables (e.g. with 1 million rows).
+    // In case you would like though to use the ordering for the setRelation field, and you don't have big tables
+    // you can set this to `false` and you will probably not notice any difference
+    'optimize_sql_queries' => true,
+];
+
+</code></pre>
+
+And the `example.php` looks like this:
 
 <pre><code class="language-php">&lt?php
-// example.php
+// This is the RAW file of example.php. We are going
+// to change this file to fit our new project structure
 
 include("../libraries/autoload.php");
 
@@ -592,24 +712,24 @@ $output = $output-&gt;output;
 
 include('view.php');</code></pre>
 
-So now we will basically change just slightly the example.php to fit to our needs for the <code>films.php</code>. So first of all let's assume that the <code>films.php</code> has some code of your own project. For that reason, I will include the <code>...</code> at the below example so you can understand that this is basically your code (e.g. header, footer, some functionality... e.t.c.).
+As a last step, we are going to change just slightly the `example.php` to fit to our needs. 
 
-So the final example for films.php will look like this:
+Copy the file `example.php` to `films.php` and change the following lines:
 
 <pre><code class="language-php">&lt;?php
 // films.php
 
-include("libraries/autoload.php");
+include("libraries/autoload.php"); // Changed this line here
 
 use GroceryCrud\Core\GroceryCrud;
 
-$database = include('database.php');
-$config = include('config.php');
+$database = include('database.php'); // Maybe those paths also need a change
+$config = include('config.php'); // Maybe those paths also need a change
 
 $crud = new GroceryCrud($config, $database);
 
-$crud-&gt;setTable('films');
-$crud-&gt;setSubject('Film', 'Films');
+$crud-&gt;setTable('films'); // And of course our specific CRUD
+$crud-&gt;setSubject('Film', 'Films'); // And of course our specific CRUD
 
 $output = $crud-&gt;render();
 
@@ -630,7 +750,8 @@ $output = $output-&gt;output;
 include('view.php');
 </code></pre>
 
-Now from the above code you will have a full working CRUD without the need to do anything else! You can now enjoy all the power of Grocery CRUD at the documentation (and you didn't use any terminal at all).
+Now from the above code you will have a full working CRUD without the need to do anything else! 
+You can now enjoy all the power of Grocery CRUD at the documentation (and you haven't used any terminal at all).
 
 <h3>Troubleshooting</h3>
 
@@ -638,6 +759,7 @@ In case you have issues with the installation we have created a video tutorial o
 you may experience:
 
 - Getting the "Ooooops, something went wrong! If you can see this message, this is probably a misconfiguration in Grocery
-  CRUD Enterprise!" message. Video tutorial: <a target="_blank" href="https://www.youtube.com/watch?v=bCJTU6PWhYs">Troubleshooting Grocery CRUD Enteprise part 1</a>
+CRUD Enterprise!" message. I've created a video tutorial for Grocery CRUD Enterprise version 2 but it can be also applied
+to version 3: <a target="_blank" href="https://www.youtube.com/watch?v=bCJTU6PWhYs">Troubleshooting Grocery CRUD Enteprise part 1</a>
 
 <br/>
