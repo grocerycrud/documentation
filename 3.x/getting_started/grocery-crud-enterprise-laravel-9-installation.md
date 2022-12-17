@@ -10,7 +10,7 @@ next: basic-example
 # Laravel 9 installation
 
 <blockquote>
-<p>This is the documentation for Grocery CRUD Enterprise version 3 BETA which is not yet released.</p>
+<p>This is the documentation for Grocery CRUD Enterprise version 3 BETA.</p>
 <p>Please do not confuse it with the main documentation since this may be misleading.</p> 
 </blockquote>
 
@@ -35,7 +35,7 @@ to your already existing project with Laravel version 9
 - You have purchased <a href="https://www.grocerycrud.com/enterprise" target="_blank">Grocery CRUD Enterprise</a> and 
 you have access to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a>.
 - PHP 8 or later.
-- You've already installed Laravel 9 to your project.
+- You've already installed Laravel 9 to your project via composer.
 - You've already installed composer to your project and the vendor files by using the command `composer install`. 
 
 ## Download Grocery CRUD zip file
@@ -68,7 +68,6 @@ Your file will look something like this: <code>grocery-crud-enterprise-3.0.0-bet
 Add the following commands:
 
 <pre><code class="language-sh">composer config repositories.grocery-crud artifact artifacts/
-composer config --json extra.laravel.providers '["GroceryCrud\\LaravelAssetsServiceProvider"]'
 composer require grocery-crud/enterprise:3.0.*@dev</code></pre>
 
 After those commands your `composer.json` file will look more or less like this:
@@ -126,8 +125,7 @@ After those commands your `composer.json` file will look more or less like this:
         "laravel": {
             "dont-discover": {
 
-            },
-            "providers": ["GroceryCrud\\LaravelAssetsServiceProvider"]
+            }
         }
     },
     "config": {

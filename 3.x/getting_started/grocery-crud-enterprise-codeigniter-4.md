@@ -9,16 +9,15 @@ next: basic-example
 
 # Codeigniter 4 Installation
 
-This is a full tutorial of how to install Grocery CRUD Enterprise on Codeigniter version 4. 
-Since currently Codeigniter 4 is suggested to be installed <strong>via Composer</strong>, we will follow the same approach.
-If you would like to install Grocery CRUD Enterprise on Codeigniter 4 without composer you can follow this tutorial:
-[Install without composer](/v3.x/docs/grocery-crud-enterprise-installation#without-composer)
-
 Below you will find the steps to install Grocery CRUD Enterprise on Codeigniter 4.
 If you follow these steps carefully, you should be able to successfully install Grocery CRUD Enterprise
 on your Codeigniter project easily.
 Keep in mind that this tutorial may require several steps, but it is actively updated to provide the most accurate
 and up-to-date instructions.
+
+Since currently Codeigniter 4 is suggested to be installed <strong>via Composer</strong>, we will follow the same approach.
+If you would like to install Grocery CRUD Enterprise on Codeigniter 4 without composer you can follow this tutorial:
+[Install without composer](/v3.x/docs/grocery-crud-enterprise-installation#without-composer)
 
 > <strong>Notice:</strong> Grocery CRUD Enterprise is a framework-agnostic library. 
 > That simply means that it doesn't matter which framework you are using, and it doesn't matter which architecture 
@@ -31,46 +30,143 @@ There are two ways to install Grocery CRUD Enterprise for Codeigniter 4.
 You can either install it to an existing project, or you can download the latest version of Grocery CRUD with the 
 integration of latest Codeigniter 4 if you are starting a new project.
 
-- [Install Grocery CRUD to an existing CI 4 project](#install-grocery-crud-to-an-existing-ci-4-project)
-- [New project with Grocery CRUD and Codeigniter 4](#new-project-with-grocery-crud-and-codeigniter-4)
-
-## Install Grocery CRUD to an existing CI 4 project
-
 <h3>Prerequisites</h3>
 
 - You have purchased <a href="https://www.grocerycrud.com/enterprise" target="_blank">Grocery CRUD Enterprise</a> and
   you have access to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a>.
-- PHP 7 or later.
+- PHP 7.4 or later.
 - You have <a href="https://getcomposer.org/" target="_blank">composer</a> installed
+- You already have installed Codeigniter 4 into your project via composer.
 
-<strong>Step 1.</strong> From the email that you've received or from the user's page (you will get instructions at the email of how to access user's page) download the file that say's "Without composer". Once you've downloaded it, unzip it!
-The folder structure that you will get is the following:
-<pre>├── examples
-│   ├── config.php
-│   ├── database.php
-│   ├── example.php
-│   └── view.php
-├── libraries
-│   ├── autoload.php
-│   ├── bin
-│   ├── composer
-│   ├── ...
-│   ├── phpunit
-│   ├── symfony
-│   └── zendframework
-└── public
-    └── grocery-crud
-        ├── css
-        ├── fonts
-        ├── images
-        └── js</pre>
-<strong>Step 2.</strong> rename the folder <code>libraries</code> to <code>GroceryCrudEnterprise</code> and move it to your project at the following path <code>app/Libraries/GroceryCrudEnterprise</code> with this structure we simply follow the "Codeigniter way" of adding libraries.
+<h3>Step 1. Download</h3>
+Login to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a> and navigate to
+"Version 3 BETA" from the sidebar menu.
 
-<strong>Notice:</strong> Have in mind here that although the folder of Grocery CRUD Enterprise has the name <code>libraries</code> (with lowercase) that has almost nothing to do with the Codeigniter folder <code>Libraries</code> (with capital L). This is a very common confusion that people may have during the installation. As per step 2. you will basically rename the folder <code>libraries</code> to <code>GroceryCrudEnterprise</code> to also avoid this confusion.
+![Version 3 Sidebar Menu](/uploads/documentation/version-3-sidebar-menu.png)
 
-<strong>Step 3.</strong> go to the folder <code>public</code> and copy the folder <code>grocery-crud</code> to your <code>public</code> folder of your Codeigniter project.
+Then download the zip file that say's "Installation with composer".
 
-<strong>Step4.</strong> We did currently installed Grocery CRUD Enterprise in our project and we need to create our configuration files in order to make it work! Go to <code>app/Config</code> and create a file with name <code>GroceryCrudEnterprise.php</code>. As the configuration is different than other frameworks we will use a custom one that will look like this (just copy really the code below)
+![Download composer zip file](/uploads/documentation/download-composer-zip-file.png)
+
+Your file will look something like this: <code>grocery-crud-enterprise-3.0.0-beta.1.zip</code>.
+
+<h3>Step 2. Creation of artifacts folder</h3>
+
+Go to your project root folder and create a new folder with the name <code>artifacts</code>. Now copy the zip file as-is.
+Do not extract or change the name of the zip file.
+
+After this change your folder structure will look like this:
+
+<pre>
+├── app
+├── artifacts
+│   └── grocery-crud-enterprise-3.0.0-beta.1.zip
+├── public
+├── tests
+├── writable
+├── vendor
+├── .env
+├── spark
+├── composer.json
+├── composer.lock
+├── preload.php
+...
+</pre>
+
+Considering that you've already had a `composer.json` file into your project, run the following command:
+
+<pre><code class="language-sh">composer config repositories.grocery-crud artifact artifacts/</code></pre>
+
+If the above code succeeds, your `composer.json` file will look like this:
+
+<pre><code class="language-json">{
+    "name": "codeigniter4/appstarter",
+    "type": "project",
+    "description": "CodeIgniter4 starter app",
+    "homepage": "https://codeigniter.com",
+    "license": "MIT",
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "codeigniter4/framework": "^4.0"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.9",
+        "mikey179/vfsstream": "^1.6",
+        "phpunit/phpunit": "^9.1"
+    },
+    "suggest": {
+        "ext-fileinfo": "Improves mime type detection for files"
+    },
+    "autoload": {
+        "exclude-from-classmap": [
+            "**/Database/Migrations/**"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Support\\": "tests/_support"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "support": {
+        "forum": "http://forum.codeigniter.com/",
+        "source": "https://github.com/codeigniter4/CodeIgniter4",
+        "slack": "https://codeigniterchat.slack.com"
+    },
+    "repositories": {
+        "grocery-crud": {
+            "type": "artifact",
+            "url": "artifacts/"
+        }
+    }
+}
+</code></pre>
+
+If the command fails for any reason don't worry too much! You can always copy the sections "repositories" from the above code and paste them in your
+`composer.json`.
+
+<h3>Step 3. Installation</h3>
+
+Now you can install the library with the following command:
+
+<pre><code class="language-sh">composer require "grocery-crud/enterprise:3.*.*@dev"</code></pre>
+
+If the command succeeds, you will see something like this:
+
+![Installing grocery-crud/enterprise 3.0.0-beta.1](/uploads/documentation/composer-success.png)
+
+Now theoretically you've just installed Grocery CRUD. However, there are few more steps in order to make it work.
+
+<h3>Step 4. Copying assets folder</h3>
+
+As Grocery CRUD is a CRUD Generator that also has CSS and JavaScript files we need to make sure that we also have the
+public assets including in our public folder.
+
+In order to install all your assets to your project. You need to <strong>manually copy</strong> the content of the
+folder `public` to your Codeigniter `public` folder. More specifically go to : <code>vendor/grocery-crud/enterprise/public</code> and copy
+the folder `vendor` to your Codeigniter `public` folder. For example after the copy of the folder your folder structure will look like this:
+
+<pre>
+├── app
+├── public
+│   └── vendor
+│       └── grocery-crud
+│           ├── css
+│           ├── icons
+│           ├── js
+│           └── static
+...
+├── composer.json
+├── composer.lock
+├── preload.php
+└── vendor
+</pre>
+
+<h3>Step 5. Configuration file</h3> 
+
+We did currently install Grocery CRUD Enterprise in our project, and we need to create our configuration files in order to make it work! Go to <code>app/Config</code> and create a file with name <code>GroceryCrudEnterprise.php</code>. As the configuration is different than other frameworks we will use a custom one that will look like this (just copy really the code below)
 
 <pre><code class="language-php">&lt;?php namespace Config;
 
@@ -101,11 +197,11 @@ class GroceryCrudEnterprise extends BaseConfig
             // Make sure that the number of grocery_crud_default_per_page variable is included to this array.
             'paging_options' => ['10', '25', '50', '100'],
         
-            // The environment is important so we can have specific configurations for specific environments
+            // The environment is important, so we can have specific configurations for specific environments
             'environment' => 'development',
         
             // Currently you can choose between 'bootstrap-v3', 'bootstrap-v4' and 'bootstrap-v5'
-            'skin' => 'bootstrap-v5',
+            'theme' => 'bootstrap-v5',
         
             // Automatically cleans all the inputs by trimming strings and by completely removing any HTML tag
             // to prevent XSS attacks. This is a global configuration for all the inputs so be aware in case you
@@ -162,9 +258,10 @@ class GroceryCrudEnterprise extends BaseConfig
             // In case you would like though to use the ordering for the setRelation field, and you don't have big tables
             // you can set this to `false` and you will probably not notice any difference
             'optimize_sql_queries' => true,
-
-            // Remember the quick search upon refresh. The search information is stored in the browser local storage
-            'remember_quick_search' => false,
+        
+            // Publish external events to the frontend (e.g. when the user clicks at the edit button)
+            // For security reasons the configuration is set to false by default.
+            'publish_events' => false,
         ];
     }
 }</code></pre>
@@ -172,58 +269,42 @@ class GroceryCrudEnterprise extends BaseConfig
 <pre>.
 ├── LICENSE
 ├── README.md
-├── _support
 ├── app
-│   ├── Common.php
-│   ├── Config
-│   │   ├── App.php
-│   │   ├── Autoload.php
-│   │   ├── ...
-│   │   ├── Format.php
-│   │   ├── <strong>GroceryCrudEnterprise.php</strong>
-│   │   ├── Honeypot.php
-│   │   ├── ...
-│   │   └── View.php
-│   ├── Controllers
-│   │   ├── BaseController.php
-│   │   └── Home.php
-│   ├── Database
-│   │   ├── Migrations
-│   │   └── Seeds
-│   ├── Filters
-│   ├── Helpers
-│   ├── Language
-│   ├── Libraries
-│   │   ├── <strong>GroceryCrudEnterprise</strong>
-│   │   │   ├── <strong>autoload.php</strong>
-│   │   │   ├── <strong>bin</strong>
-│   │   │   ├── <strong>composer</strong>
-│   │   │   ├── ...
-│   │   │   ├── <strong>phpunit</strong>
-│   │   │   ├── <strong>symfony</strong>
-│   │   │   └── <strong>zendframework</strong>
-│   ├── Models
-│   ├── ThirdParty
-│   ├── Views
-│   │   ├── errors
-│   │   └── welcome_message.php
-│   └── index.html
+│   ├── Common.php
+│   ├── Config
+│   │   ├── App.php
+│   │   ├── Autoload.php
+│   │   ├── ...
+│   │   ├── Format.php
+│   │   ├── <strong>GroceryCrudEnterprise.php</strong>
+│   │   ├── Honeypot.php
+│   │   ├── ...
+│   │   └── View.php
+│   ├── Filters
+│   ├── Helpers
+│   ├── Language
+│   ├── Models
+│   ├── ThirdParty
+│   ├── Views
+│   └── index.html
 ├── composer.json
 ├── contributing.md
 ├── env
 ├── license.txt
 ├── phpunit.xml.dist
 ├── public
-│   ├── <strong>grocery-crud</strong>
-│   │   ├── <strong>css</strong>
-│   │   ├── <strong>fonts</strong>
-│   │   ├── <strong>images</strong>
-│   │   └── <strong>js</strong>
-│   ├── favicon.ico
-│   ├── index.php
-│   └── robots.txt
+│   └── vendor
+│       └── grocery-crud
+│           ├── css
+│           ├── icons
+│           ├── js
+│           └── static
+│   ├── favicon.ico
+│   ├── index.php
+│   └── robots.txt
 ├── spark
 ├── system
+├── vendor
 ├── tests
 └── writable</pre>
 <strong>Step5.</strong> Now you are ready basically to use grocery CRUD Enterprise. You only need some small modifications. The easiest way to create two private methods to your controller that it will look like this:
@@ -391,17 +472,16 @@ body
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
-Step 6. Change the routes to correspond to your controller
+<h3>Step 6. Change the routes to correspond to your controller</h3>
 
 Since Codeigniter 4.2.0 or later the Routing is not defaulting to auto-routing. 
 This means that you will need to add the routes manually. Go to <code>app/Config/Routes.php</code> and add the 
 below code for every function that is using grocery CRUD:
 
-```
-// Make sure that you always add get and post functions
+<pre><code class="language-php">// Make sure that you always add get and post functions
 $routes->get('/example/customers', 'Example::customers');
 $routes->post('/example/customers', 'Example::customers');
-```
+</code></pre>
 
 ## Troubleshooting
 <strong>1. Getting the message "Ooooops, something went wrong!"</strong>
@@ -445,12 +525,10 @@ If you are using Google Chrome press right click "Inspect Element" and then go t
 
 You can also press right click "Open in new Tab" to see the error at full screen rather than the "Preview" tab.
 
-For example in our case we've forgot to change the default database credentials to our ones. So by going to <code>.env</code> file and uncommenting this lines:
+For example in our case we've forgotten to change the default database credentials to our ones. So by going to <code>.env</code> file and uncommenting this lines:
 <pre><code class="language-php"># database.default.hostname = localhost
 # database.default.database = ci4
 # database.default.username = root
 # database.default.password = root
 # database.default.DBDriver = MySQLi</code></pre>
 to your specific database credentials everything is just working smoothly.
-
-## New project with Grocery CRUD and Codeigniter 4
