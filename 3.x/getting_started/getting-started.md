@@ -11,9 +11,11 @@ next: installation
 
 Hiya 👋,
 
-Welcome to Grocery CRUD version 3 documentation. Please keep in mind that we are still working on this documentation 
-and it is not yet complete. The beta version is still not available for download but very soon it will be available for 
-Enterprise users. For more about Grocery CRUD Enterprise version 3 please read the blog post:
+Welcome to Grocery CRUD version 3 documentation. Please keep in mind that we are still working on this documentation, 
+and it is not yet complete. The beta version is now available to be downloaded for Enterprise users and the instructions
+of how to install it are available in the [Installation](/v3.x/docs/grocery-crud-enterprise-installation) page.
+
+For more about Grocery CRUD Enterprise version 3 please read the blog post:
 
 <div class="blog-posts">
     <div class="blog-post">
