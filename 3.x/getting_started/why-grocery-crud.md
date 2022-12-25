@@ -11,7 +11,7 @@ next: api-and-functions-list
 
 Grocery CRUD is not just another CRUD generator or just another codeigniter grid generator. It is a totally different idea and... more simple idea! With few simple PHP lines of code you can have all the functionality that you need to create your CRUD. So this means you don't have to copy the same Javascripts,CSS, views,models,vaildation rules,html code, grid, upload functionality ... e.t.c . again and again. To create again a CRUD for a different table you will just need simple PHP lines of code.
 
-The good part is that you don't even have to change the CSS to make it more user friendly. Grocery CRUD is ready for the production mode with all the required security and views.
+The good part is that you don't even have to change the CSS to make it more user-friendly. Grocery CRUD is ready for the production mode with all the required security and views.
  
 **Grocery CRUD is an automatic CRUD generator**, and it can cover almost all your needs for a CRUD system (simple or complex one) as it has many features and still keep going.
 
@@ -31,4 +31,4 @@ Some main features of grocery CRUD are:
 - mobile compatible, works fine with the default browsers of Android , Windows and Apple mobiles
 - multilingual functionality. Translated to 34 languages so far. More specifically: Afrikaans, Arabic, Bengali, Bulgarian, Catalan, Chinese, Czech, Danish, Dutch, English, French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean, Lithuanian, Mongolian, Norwegian, Persian, Polish, Portuguese, Brazilian Portuguese, Romanian, Russian, Slovak, Spanish, Thai, Turkish, Ukrainian, Vietnamese.
 
-Still reading? Stop treating this place like a hotel! Go to the installation guide and add grocery CRUD to your project ... it will take just 5 minutes :)
+Still reading? Stop treating this place like a hotel! Go to the [installation guide](/v3.x/docs/grocery-crud-enterprise-installation) and add grocery CRUD to your project ... it will take just 5 minutes :)

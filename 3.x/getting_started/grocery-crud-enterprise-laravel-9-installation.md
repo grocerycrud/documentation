@@ -179,14 +179,11 @@ The easiest way to copy the public assets is with our wonderful artisan tool of 
 
 <pre><code class="language-sh">php artisan vendor:publish --provider="GroceryCrud\LaravelAssetsServiceProvider"</code></pre>
 
-If this doesn't work for you for any reason you can also do the steps manually.
+From the above command you will get the following result:
 
-More specifically, navigate to: <code>vendor/grocery-crud/enterprise/public</code> and copy it to the public folder:
-<code>public/vendor</code>. There is a big possibility that you don't have a <code>vendor</code> folder at your public 
-folder. If that's the case, just create it. Now rename the <code>public</code> folder to <code>grocery-crud</code> 
-and your final path will look like this: <code>public/vendor/grocery-crud</code>.
+![Laravel copy assets through artisan](/uploads/documentation/laravel-assets-copy.png)
 
-Your public folder should look something like this:
+and your `public` folder will look like this:
 
 <pre>├── favicon.ico
 ├── index.php
@@ -198,6 +195,13 @@ Your public folder should look something like this:
         ├── js
         └── static
 </pre>
+
+If this worked then go to the next step ⏩. If not don't worry as you can also do the steps manually.
+
+More specifically, navigate to: <code>vendor/grocery-crud/enterprise/public</code> and copy it to the public folder:
+<code>public/vendor</code>. There is a big possibility that you don't have a <code>vendor</code> folder at your public 
+folder. If that's the case, just create it! Now rename the <code>public</code> folder to <code>grocery-crud</code> 
+and your final path will look like this: <code>public/vendor/grocery-crud</code>.
 
 ## Configuration file
 
