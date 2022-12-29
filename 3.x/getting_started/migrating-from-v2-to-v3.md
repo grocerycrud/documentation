@@ -18,6 +18,8 @@ Changes in v3:
 - [Change in Assets Folder Location](#change-in-assets-folder-location)
 - [PHP Configuration Changes](#php-configuration-changes)
 - [Library API Changes](#library-api-changes)
+- [New Features](#new-features)
+- [Functionality Changes](#functionality-changes)
 
 <br/>
 
@@ -56,52 +58,77 @@ This change was inspired by the assets folder structure used by
 was made to provide a more familiar structure for the public assets folder.
 
 ## PHP Configuration Changes
--   `hash_in_url` configuration is renamed to `url_history` . The URLs doesn’t follow the structure to have hashes into 
-the end. Instead, they have the slash as a normal URL behaviour. For example: `admin/customers/edit/123` instead of:
-`admin/customers#/edit/123` that we've previously had. Also, the default value for `url_history` is now 
-`false` instead of `true` that was before.
+
+Breaking changes:
+- The argument `skin` is now used for ‘light’ and ‘dark’ skin, and we use the `theme` for the configuration of the 
+theming. For example: `’theme’ ⇒ ‘bootstrap-v5’,` `’skin’ ⇒ ‘dark’`
+
+Configuration arguments that has been <strong>removed</strong>:
+- `hash_in_url` has been removed. Replaced by `url_history`.
+- The configuration argument `text_editor_type` has been removed. 
+We are currently using <a href='https://www.npmjs.com/package/react-quill' target='_blank'>React Quill</a> as our text 
+editor. We made this change since we have plans for the future of being able to add your favorite text editor more 
+easily and not to rely on pre-configured text editors.
+-   PHP Configuration `date_format` is removed. no more date configuration from the backend (e.g. UK-date or US-date).
+    The date will be transformed into the frontend from the language and with the locale by trying to guest the best
+    possible mapping. We appreciate any feedback on date formatting as it is an area that we are always looking to improve.
+- PHP Configuration `remember_quick_search` is removed as we always remember our search values into the frontend
+
+New configuration arguments:
+-  Introducing new configuration argument `url_history` instead of `hash_in_url` as the functionality of the URL has been modified.
+The `url_history` is a boolean value that can be set to `true` or `false`.
+The new URL is more user-friendly, such as `admin/customers/edit/123` instead of `admin/customers#/edit/123`. 
+The default value for `url_history` is `false`, as this may require additional 
+route configuration in the framework being used.
+
 - Introducing new configuration with name `publish_events` which allow more details to the frontend JavaScript actions.
 The default value for this configuration is `false` since this is used from more advanced users.
-- `skin` configuration is now used for ‘light’ and ‘dark’ skin and we use the `theme` for the configuration of the theming. For example: `’theme’ ⇒ ‘bootstrap-v5’,` `’skin’ ⇒ ‘dark’`
-- `text_editor_type` is now removed.
--   PHP Configuration `date_format` is removed. no more date configuration from the backend (e.g. UK-date or US-date). 
-The date will be transformed into the frontend from the language and with the locale by trying to guest the best 
-possible mapping. We appreciate any feedback on date formatting as it is an area that we are always looking to improve. 
-- PHP Configuration `remember_quick_search` is removed as we always remember our search values into the frontend
-- PHP Configuration `optimize_sql_queries` is now defaulting to `false`
+
+Configuration changes:
+- PHP Configuration `optimize_sql_queries` is now defaulting to `false`. As currently this is used for relational 
+queries, it is more important to have functionalities like ordering to work as expected and to set it to `true` 
+exceptionally when you have big relational data. Also, since we are now providing the new function 
+[setRelationDynamic](/v3.x/docs/set-relation-dynamic) we are able to optimize the queries for relational data anyway, so
+we can safely assume that this configuration is needed only on exceptional cases.
 
 ## Library API changes
-- setActionButtonMultiple `iconName` instead of `cssClassIcon`
-- setActionButton  `iconName` instead of `cssClassIcon`
-- We have removed the functions: **`unsetBootstrap` , `unsetJquery`, `unsetJqueryUi`, `unsetReact` instead use the `unsetCssTheme`, `unsetCssIcons`, `unsetCssThirdParty`**
+
+Functions that has been <strong>removed</strong>:
+- We have removed the functions: `unsetBootstrap` , `unsetJquery`, `unsetJqueryUi`, `unsetReact`
+instead use the `unsetCssTheme`, `unsetCssIcons`, `unsetCssThirdParty`. Documentation to be updated soon.
+
+API changes:
+- The function `setActionButtonMultiple` is using the argument `iconName` instead of `cssClassIcon`.
+- The function `setActionButton` is using the argument  `iconName` instead of `cssClassIcon`.
+- The function `setActionButtonMultiple` has two more parameters `$idFieldQueryName = 'id'` and `$querySeparator = '?'`.
+Documentation to be updated soon.
+- Field type `time` is removed. Instead, use `native_time`.
+- **`callbackAddField` first parameter has the add field value and not the field type as we had on version 2. 
+More specifically we have: `function ($fieldVlue, $fieldName)`**. Documentation to be updated soon.
 
 ## New features
-- new functions `unsetColumnsButton` and `setColumnsButton`
-- new function `setMasterDetail`
-- new function `unsetTools`
-- new function `defaultColumnWidth`
-- `setRelationDynamic` function which can is getting the data dynamically on search. Very useful for relational tables with big amount of data (e.g. more than 300 rows). The syntax is exactly the same as `setRelation` function
-
+- New function `setRelationDynamic` which is getting the data dynamically on search.
+  Very useful for relational tables with big amount of data (e.g. more than 300 rows).
+  The syntax is exactly the same as `setRelation` function. For more check the documentation about [setRelationDynamic](/v3.x/docs/set-relation-dynamic).
+- New function `setMasterDetail`. For more check the documentation about [Master Detail](/v3.x/docs/set-master-detail)
+- New function `unsetTools`.
+- New function `defaultColumnWidth`. Documentation to be updated soon.
+- New functions `unsetColumnsButton` and `setColumnsButton` since we now have a new button "Columns".
+- Introducing new native field types which are using the browser native input types. New field types are `native_time`, 
+`native_date` and `native_datetime`. Very useful for mobile devices.
 
 ## Functionality Changes
-We have changed the way that we upload. Now the upload is triggered after the submit form.
+We have changed the way that we upload. Now the upload is triggered after the submit form and the UI is the standard 
+native upload input.
 
-## Changes
+====================================================================================================
 
--   Renaming package from `grocerycrud/enterprise` to `grocery-crud/enterprise`
--   field type `time` is removed. Instead use `native_time`.
--   **`callbackAddField` first parameter has the add field value and not the field type as we had on version 2. More specifically we have: `function ($fieldVlue, $fieldName)`**
--   Removing jQuery loader `$('.gc-container').groceryCrud()` and instead having the function `groceryCrudLoader` with an html element as the first attribue and `settings` as a second `object` attribute
-
-## PHP function changes
-
-- `setActionButtonMultiple` has two more parameters that are now documented (previously they were experimental) `$idFieldQueryName = 'id'` and `$querySeparator = '?'`
-
-## Documentation
-- Explain about `native_fields` such as `native_time`, `native_date` and `native_datetime`
-- Add two new segments examples for `setActionButtonMultiple`
+The below documentation is yet to be improved and updated.
 
 ## JavaScript changes
+
+-   Removing jQuery loader `$('.gc-container').groceryCrud()` and instead having the function `groceryCrudLoader` with 
+a HTML element as the first attribue and `settings` as a second `object` attribute
 
 As you may expect, since we have completely rewritten the JavaScript code, there are many changes to the 
 JavaScript events:
@@ -110,17 +137,16 @@ JavaScript events:
 -  `settings` object has slight changes on the callbacks. Mainly all the callback functions are getting as a first parameter an object instead of directly the values.
 
 Examples:
-```
-actionButtons = [{ 
+<pre><code class="language-javascript">actionButtons = [{ 
 	iconName: 'smile',
 	label: 'Smiley',
 	onClick: function ({primaryKeyValue}) {
-    console.log('Smiley is clicked with primary key:' + primaryKeyValue);  
-  }
+        console.log('Smiley is clicked with primary key:' + primaryKeyValue);  
+    }
 }];
-```
-```
-{
+</code></pre>
+and:
+<pre><code class="language-javascript">{
         callbackBeforeInsert: function ({data}) {
             console.log('callback that is called right before the insert', {data});
         },
@@ -141,9 +167,9 @@ actionButtons = [{
             }
         ],
 }
-```
+</code></pre>
 
-You can see the full documentation of the new JavaScript settings __here__
+You can see the full documentation of the new JavaScript settings at [JavaScript Events](/v3.x/docs/javascript-events)
 - `settings` object of JavaScript has renamed some values. More specifically:
     -  `hashEvents` has been removed to keep the "one source of truth" configuration. We now have the `urlHistory` coming from PHP configurations only
     -  `openInModal` has been removed to keep the "one source of truth" configuration. We now have the `openInModal` coming from PHP configurations only
@@ -153,15 +179,15 @@ You can see the full documentation of the new JavaScript settings __here__
 New properties/callbacks:
 - `actionButtonsMultiple` that work with the same way as `actionButtons` but it will only show up when we have selected rows. Example:
 
-```
+<pre><code class="language-javascript">
 actionButtonsMultiple: [{
          iconName: 'smile',
          label: 'Smiley',
          onClick: function ({selectedIds}) {
              console.log(selectedIds);
          }
-        }],
-```
+}],
+</code></pre>
 
 
 ## JavaScript Events
