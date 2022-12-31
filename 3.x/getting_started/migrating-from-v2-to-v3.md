@@ -11,8 +11,7 @@ next:
 
 <strong>Table of contents:</strong>
 
-Changes in v3:
-
+- [Quick summary](#quick-summary)
 - [Package new name](#package-new-name)
 - [Composer as the suggested way of installation](#composer-as-the-suggested-way-of-installation)
 - [Change in Assets Folder Location](#change-in-assets-folder-location)
@@ -20,10 +19,23 @@ Changes in v3:
 - [Library API Changes](#library-api-changes)
 - [New Features](#new-features)
 - [Functionality Changes](#functionality-changes)
+- [Javascript Changes](#javascript-changes)
+- [JavaScript Events](#javascript-events)
+- [JavaScript Configuration Changes](#javascript-configuration-changes)
 
 <br/>
 
-<strong>Changes in v3:</strong>
+## Quick summary
+
+In short the upgrade from version 2 to version 3 should be very straight forward. Since we haven't changed a lot the API 
+of the library, you should be able to upgrade without any problems. There are 3 main areas that you should be aware of:
+
+- The configuration file has changed, so it is better to copy the new configuration file rather than just updating 
+the old one. It is easier and faster.
+- The composer package name has changed from `grocerycrud/enterprise` to `grocery-crud/enterprise`. The library name 
+though is still the same. For example, you can call `$crud = new GroceryCrud($config, $database);` as before.
+- The JavaScript events has changed a lot! So if you were using the JavaScript events then please read the
+  [JavaScript changes](#javascript-changes) below. If not, then you can skip this part.
 
 ## Package new name
 
@@ -121,80 +133,103 @@ More specifically we have: `function ($fieldVlue, $fieldName)`**. Documentation 
 We have changed the way that we upload. Now the upload is triggered after the submit form and the UI is the standard 
 native upload input.
 
-====================================================================================================
-
-The below documentation is yet to be improved and updated.
-
 ## JavaScript changes
 
--   Removing jQuery loader `$('.gc-container').groceryCrud()` and instead having the function `groceryCrudLoader` with 
-a HTML element as the first attribue and `settings` as a second `object` attribute
+Since we are using the new ReactJS library we have changed the way that we load the library. So instead of loading the
+library with the below code:
 
-As you may expect, since we have completely rewritten the JavaScript code, there are many changes to the 
-JavaScript events:
+<pre><code class="language-php">// code before
+$(document).ready(function () {
+    $('.gc-container').groceryCrud();
+});</code></pre>
+
+We now load the library with the below code instead:
+
+<pre><code class="language-php">// code now
+groceryCrudLoader(document.querySelectorAll(".grocery-crud")[0]);</code></pre>
+
+Also, the `settings` object is now called by the second parameter of the `groceryCrudLoader` function instead of the 
+first one that we've used before. 
+
+For example, previously we had:
+
+<pre><code class="language-javascript">// code before
+$('.gc-container').groceryCrud({
+    callbackBeforeInsert: function () {
+        console.log('callback that is called right before the insert');
+    }
+});</code></pre>
+
+And now we should have:
+
+<pre><code class="language-javascript">// code now
+groceryCrudLoader(document.querySelectorAll(".grocery-crud")[0], {
+    callbackBeforeInsert: function () {
+        console.log('callback that is called right before the insert');
+    }
+});</code></pre>
+
+## JavaScript Events
+
+Keep in mind that for security reasons, the publishing of the events by default are now configured to be `false`.
+This means that in order to start using the JavaScript events you need to set the configuration `publish_events`
+to `true` first.
+
+All the events has changed and there will come from the redux action by replacing `/` with `.` starting with `gcrud`. 
+For example the redux action type `datagrid/data-render` will be published as an event `gcrud.datagrid.data-render` instead.
+
+Also, as now the published events are actual JavaScript events, all the payload will be available through the property 
+name `detail` according to the latest  <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent" target="_blank">Custom Event</a> docs.
+
+All the event names are available through the documentation page of [JavaScript events](/v3.x/docs/javascript-events)
+
 
 ## JavaScript Configuration Changes
--  `settings` object has slight changes on the callbacks. Mainly all the callback functions are getting as a first parameter an object instead of directly the values.
 
-Examples:
-<pre><code class="language-javascript">actionButtons = [{ 
-	iconName: 'smile',
-	label: 'Smiley',
-	onClick: function ({primaryKeyValue}) {
-        console.log('Smiley is clicked with primary key:' + primaryKeyValue);  
-    }
-}];
-</code></pre>
-and:
-<pre><code class="language-javascript">{
-        callbackBeforeInsert: function ({data}) {
-            console.log('callback that is called right before the insert', {data});
-        },
-        callbackBeforeUpdate: function ({data, primaryKeyValue}) {
-            console.log('callback that is called right before the update', 
-               {data, primaryKeyValue}
-            );
-        },
-        editFields: [ // works with $crud->callbackEditField
-            {
-                fieldName: 'contact_last_name',
-                onMount: function onMount({fieldName}) {
-                    console.log(fieldName, 'on mount!!');
-                },
-                onUnmount: function onUnmount({fieldName}) {
-                    console.log(fieldName, 'on unmount');
-                }
-            }
-        ],
-}
-</code></pre>
+> Keep in mind that since we now have the `publish_events` configuration, we are now suggesting to use the JavaScript 
+events instead of the callbacks. They are easier to implement, and you don't need any extra steps to start using them. 
+For more information about the JavaScript events check the documentation page of [JavaScript events](/v3.x/docs/javascript-events)
 
-You can see the full documentation of the new JavaScript settings at [JavaScript Events](/v3.x/docs/javascript-events)
-- `settings` object of JavaScript has renamed some values. More specifically:
+<strong>Settings Removals:</strong>
+
+- `settings` object of JavaScript has removed some values. More specifically:
     -  `hashEvents` has been removed to keep the "one source of truth" configuration. We now have the `urlHistory` coming from PHP configurations only
     -  `openInModal` has been removed to keep the "one source of truth" configuration. We now have the `openInModal` coming from PHP configurations only
        The below callbacks has been removed:
-- `onRowMount` is removed since it is only confusing the developement as it is not triggered when the primaryKeyValue is updated. Use `onRowUpdate` instead
+    - `onRowMount` is removed since it is only confusing the developement as it is not triggered when the primaryKeyValue is updated. Use `onRowUpdate` instead
 
-New properties/callbacks:
+<strong>New settings:</strong>
+
 - `actionButtonsMultiple` that work with the same way as `actionButtons` but it will only show up when we have selected rows. Example:
 
-<pre><code class="language-javascript">
-actionButtonsMultiple: [{
-         iconName: 'smile',
-         label: 'Smiley',
-         onClick: function ({selectedIds}) {
-             console.log(selectedIds);
-         }
-}],
+<pre><code class="language-javascript">actionButtonsMultiple: [{
+     iconName: 'smile',
+     label: 'Smiley',
+     onClick: function ({selectedIds}) {
+         console.log(selectedIds);
+     }
+}],</code></pre>
+
+<strong>Settings changes:</strong>
+
+The `settings` object (second parameter of the loader) has slight changes on the callbacks as well.
+The callbacks are now getting an object instead of the arguments that we had before.
+
+For example previously we had the below code:
+<pre><code class="language-javascript">// code before
+callbackBeforeUpdate: function (data, primaryKeyValue) {
+    console.log('callback that is called right before the update', 
+       {data, primaryKeyValue}
+    );
+},
 </code></pre>
 
+And now we should have:
 
-## JavaScript Events
-All the events has changed and there will come from the redux action by replacing `/` with `.` starting with `gcrud`. For example the redux action type `datagrid/data-render` will be published as an event `gcrud.datagrid.data-render`
-
-Also as now the published events are actual JavaScript events, all the payload will be available through the property name `detail` according to the latest  <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent" target="_blank">Custom Event</a> docs.
-
-All the event names will be available through the documentation page of [JavaScript events](/v3.x/docs/javascript-events)
-
-We are still keeping some events as is as they are triggered as non redux action (e.g. to show that the datagrid is ready). For example: `gcrud.datagrid.ready` event
+<pre><code class="language-javascript">// code now
+callbackBeforeUpdate: ({data, primaryKeyValue}) => { // <-- We now have an object parameter
+    console.log('callback that is called right before the update', 
+       {data, primaryKeyValue}
+    );
+},
+</code></pre>
