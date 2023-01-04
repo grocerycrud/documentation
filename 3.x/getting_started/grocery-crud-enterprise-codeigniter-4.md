@@ -15,6 +15,21 @@ on your Codeigniter project easily.
 Keep in mind that this tutorial may require several steps, but it is actively updated to provide the most accurate
 and up-to-date instructions.
 
+Table of Contents
+
+- [Introduction](#introduction)
+- [Prerequisites](#prerequisites)
+- [Step 1. Download the library](#step-1-download-the-library)
+- [Step 2. Creation of artifacts folder](#step-2-creation-of-artifacts-folder)
+- [Step 3. Installation](#step-3-installation)
+- [Step 4. Copying assets folder](#step-4-copying-assets-folder)
+- [Step 5. Configuration file](#step-5-configuration-file)
+- [Step 6. Your Controller](#step-6-your-controller)
+- [Step 7. Routing](#step-7-routing)
+- [Troubleshooting](#troubleshooting)
+
+## Introduction
+
 Since currently Codeigniter 4 is suggested to be installed <strong>via Composer</strong>, we will follow the same approach.
 If you would like to install Grocery CRUD Enterprise on Codeigniter 4 without composer you can follow this tutorial:
 [Install without composer](/v3.x/docs/grocery-crud-enterprise-installation#without-composer)
@@ -26,11 +41,7 @@ If you would like to install Grocery CRUD Enterprise on Codeigniter 4 without co
 > freedom of what structure to choose, we are suggesting to see the full installation guide 
 > <a href="/v3.x/docs/grocery-crud-enterprise-installation">here</a>.
 
-There are two ways to install Grocery CRUD Enterprise for Codeigniter 4. 
-You can either install it to an existing project, or you can download the latest version of Grocery CRUD with the 
-integration of latest Codeigniter 4 if you are starting a new project.
-
-<h3>Prerequisites</h3>
+## Prerequisites
 
 - You have purchased <a href="https://www.grocerycrud.com/enterprise" target="_blank">Grocery CRUD Enterprise</a> and
   you have access to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a>.
@@ -38,7 +49,8 @@ integration of latest Codeigniter 4 if you are starting a new project.
 - You have <a href="https://getcomposer.org/" target="_blank">composer</a> installed
 - You already have installed Codeigniter 4 into your project via composer.
 
-<h3>Step 1. Download</h3>
+## Step 1. Download the library
+
 Login to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a> and navigate to
 "Version 3 BETA" from the sidebar menu.
 
@@ -50,7 +62,7 @@ Then download the zip file that say's "Installation with composer".
 
 Your file will look something like this: <code>grocery-crud-enterprise-3.0.0-beta.1.zip</code>.
 
-<h3>Step 2. Creation of artifacts folder</h3>
+## Step 2. Creation of artifacts folder
 
 Go to your project root folder and create a new folder with the name <code>artifacts</code>. Now copy the zip file as-is.
 Do not extract or change the name of the zip file.
@@ -127,7 +139,7 @@ If the above code succeeds, your `composer.json` file will look like this:
 If the command fails for any reason don't worry too much! You can always copy the sections "repositories" from the above code and paste them in your
 `composer.json`.
 
-<h3>Step 3. Installation</h3>
+## Step 3. Installation
 
 Now you can install the library with the following command:
 
@@ -139,7 +151,7 @@ If the command succeeds, you will see something like this:
 
 Now theoretically you've just installed Grocery CRUD. However, there are few more steps in order to make it work.
 
-<h3>Step 4. Copying assets folder</h3>
+## Step 4. Copying assets folder
 
 As Grocery CRUD is a CRUD Generator that also has CSS and JavaScript files we need to make sure that we also have the
 public assets including in our public folder.
@@ -164,7 +176,7 @@ the folder `vendor` to your Codeigniter `public` folder. For example after the c
 └── vendor
 </pre>
 
-<h3>Step 5. Configuration file</h3> 
+## Step 5. Configuration file 
 
 We did currently install Grocery CRUD Enterprise in our project, and we need to create our configuration files in order to make it work! Go to <code>app/Config</code> and create a file with name <code>GroceryCrudEnterprise.php</code>. As the configuration is different than other frameworks we will use a custom one that will look like this (just copy really the code below)
 
@@ -307,7 +319,10 @@ class GroceryCrudEnterprise extends BaseConfig
 ├── vendor
 ├── tests
 └── writable</pre>
-<strong>Step5.</strong> Now you are ready basically to use grocery CRUD Enterprise. You only need some small modifications. The easiest way to create two private methods to your controller that it will look like this:
+
+## Step 6. Your Controller
+
+Now you are ready basically to use grocery CRUD Enterprise. You only need some small modifications. The easiest way to create two private methods to your controller that it will look like this:
 <pre><code class="language-php">&lt;?php namespace App\Controllers;
 
 // Add those two lines at the beginning of your controller
@@ -472,7 +487,7 @@ body
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
-<h3>Step 6. Change the routes to correspond to your controller</h3>
+## Step 7. Routing
 
 Since Codeigniter 4.2.0 or later the Routing is not defaulting to auto-routing. 
 This means that you will need to add the routes manually. Go to <code>app/Config/Routes.php</code> and add the 
