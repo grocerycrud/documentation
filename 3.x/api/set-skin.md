@@ -1,7 +1,7 @@
 ---
 id: set-skin
 title: setSkin
-description: Change the default skin for the CRUD. So far we have two skins: bootstrap v3 and bootstrap v4. 
+description: Change the default skin for the CRUD. So far we have two skins: light and dark. 
 canonical: docs/set-skin
 previous: where
 next: columns
@@ -11,15 +11,15 @@ next: columns
 
 <pre><code class="language-php">setSkin(string $skin)</code></pre>
 
-Choose between two skins: Bootstrap v3 and Bootstrap V4
+Choose between two skins: 'light' and 'dark'. The default skin is 'light'.
 
-The default skin is Bootstrap V4 or else you can set the skin as 'bootstrap-v4'. In order to change the default skin to Bootstrap V4, you simply need to add the below line of code:
+## Example
 
-<pre><code class="language-php">// Choose between 'bootstrap-v3', 'bootstrap-v4' and 'bootstrap-v5'
-$crud->setSkin('bootstrap-v3'); </code></pre>
+<pre><code class="language-php">$crud->setSkin('dark'); </code></pre>
 
-<pre><code class="language-php">
-$crud->setSkin('bootstrap-v3');
+## Full Example
+
+<pre><code class="language-php">$crud->setSkin('dark');
 $crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
 $crud->columns(['customerName','phone','addressLine1','creditLimit']);
