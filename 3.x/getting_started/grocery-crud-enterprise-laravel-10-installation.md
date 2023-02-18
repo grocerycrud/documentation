@@ -1,18 +1,13 @@
 ---
-id: grocery-crud-enterprise-laravel-9-installation
-title: Install Grocery CRUD Enterprise in Laravel 9
-description: Step-by-step installation guidance of Grocery CRUD Enterprise in Laravel 9 framework.
-canonical: docs/grocery-crud-laravel-8-installation
+id: grocery-crud-enterprise-laravel-10-installation
+title: Install Grocery CRUD Enterprise in Laravel 10
+description: Step-by-step installation guidance of Grocery CRUD Enterprise in Laravel 10 framework.
+canonical: docs/grocery-crud-enterprise-laravel-8-installation
 previous: api-and-functions-list
 next: basic-example
 ---
 
-# Laravel 9 installation
-
-<blockquote>
-<p>This is the documentation for Grocery CRUD Enterprise version 3 BETA.</p>
-<p>Please do not confuse it with the main documentation since this may be misleading.</p> 
-</blockquote>
+# Laravel 10 installation
 
 **Table of contents:**
 
@@ -28,14 +23,14 @@ next: basic-example
 10. [Celebrate 🎉](#celebrate)
 
 This is a full tutorial of a suggested way to install Grocery CRUD Enterprise
-to your already existing project with Laravel version 9
+to your already existing project with Laravel version 10
 
 ## Prerequisites
 
 - You have purchased <a href="https://www.grocerycrud.com/enterprise" target="_blank">Grocery CRUD Enterprise</a> and 
 you have access to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a>.
 - PHP 8 or later.
-- You've already installed Laravel 9 to your project via composer.
+- You've already installed Laravel 10 to your project via composer.
 - You've already installed composer to your project and the vendor files by using the command `composer install`. 
 
 ## Download Grocery CRUD zip file
@@ -75,24 +70,27 @@ After those commands your `composer.json` file will look more or less like this:
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "require": {
-        "php": "^8.0.2",
+        "php": "^8.1",
         "grocery-crud/enterprise": "3.0.*@dev",
         "guzzlehttp/guzzle": "^7.2",
-        "laravel/framework": "^9.19",
-        "laravel/sanctum": "^3.0",
-        "laravel/tinker": "^2.7"
+        "laravel/framework": "^10.0",
+        "laravel/sanctum": "^3.2",
+        "laravel/tinker": "^2.8"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
         "laravel/pint": "^1.0",
-        "laravel/sail": "^1.0.1",
+        "laravel/sail": "^1.18",
         "mockery/mockery": "^1.4.4",
-        "nunomaduro/collision": "^6.1",
-        "phpunit/phpunit": "^9.5.10",
-        "spatie/laravel-ignition": "^1.0"
+        "nunomaduro/collision": "^7.0",
+        "phpunit/phpunit": "^10.0",
+        "spatie/laravel-ignition": "^2.0"
     },
     "autoload": {
         "psr-4": {
@@ -123,9 +121,7 @@ After those commands your `composer.json` file will look more or less like this:
     },
     "extra": {
         "laravel": {
-            "dont-discover": {
-
-            }
+            "dont-discover": []
         }
     },
     "config": {
@@ -133,10 +129,11 @@ After those commands your `composer.json` file will look more or less like this:
         "preferred-install": "dist",
         "sort-packages": true,
         "allow-plugins": {
-            "pestphp/pest-plugin": true
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "repositories": {
         "grocery-crud": {
