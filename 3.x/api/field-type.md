@@ -38,13 +38,13 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
 'email'
 'color'
 'dropdown'
-'dropdown_search' // version 2.3.0 or later
-'relational_native' // version 2.3.0 or later
-'multiselect_searchable' // version 2.3.4 or later
-'multiselect_native' // version 2.3.4 or later
-'float' // version 2.7.1 or later
-'time' // version 2.7.4 or later
-'invisible' // version 2.8.0 or later
+'dropdown_search'
+'relational_native' 
+'multiselect_searchable' 
+'multiselect_native' 
+'float' 
+'time' 
+'invisible'
 </code></pre>
 
 <h2>Examples</h2>
