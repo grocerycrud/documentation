@@ -33,7 +33,6 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
 'int'
 'password'
 'numeric'
-'checkbox_boolean'
 'url'
 'email'
 'color'

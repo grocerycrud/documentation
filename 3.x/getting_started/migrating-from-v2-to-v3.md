@@ -114,6 +114,7 @@ API changes:
 - The function `setActionButton` is using the argument  `iconName` instead of `cssClassIcon`.
 - The function `setActionButtonMultiple` has two more parameters `$idFieldQueryName = 'id'` and `$querySeparator = '?'`.
 Documentation to be updated soon.
+- Field type `checkbox_boolean` is removed since it was introducing many bugs. We will revisit this field type in the future.
 - Field type `time` is removed. Instead, use `native_time`.
 - **`callbackAddField` first parameter has the add field value and not the field type as we had on version 2. 
 More specifically we have: `function ($fieldVlue, $fieldName)`**. Documentation to be updated soon.
