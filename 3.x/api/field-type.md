@@ -42,7 +42,7 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
 'multiselect_searchable' 
 'multiselect_native' 
 'float' 
-'time' 
+'native_time' 
 'invisible'
 </code></pre>
 
