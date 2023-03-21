@@ -19,18 +19,18 @@ For more about Grocery CRUD Enterprise version 3 please read the blog post:
 
 <div class="blog-posts">
     <div class="blog-post">
-        <div class="blog-post-image-container">
-            <a href="/blog/grocery-crud-v3" title="Grocery CRUD v3">
-                                                <div class="blog-post__image" style="background-image: url('https://www.grocerycrud.com/uploads/blog/thumb_derick-mckinney-TZ8IFQBg9Ao-unsplash-with-version.jpg');"></div>
-                                        </a>
-        </div>
-        <div class="blog-post-description-container">
-            <a href="/blog/grocery-crud-v3">
-                <h2>Grocery CRUD v3</h2>
-            </a>
-            <p>Grocery CRUD v3 is almost done. Here are some things that you need to know about.</p>
-            <p>Nov 06,2022 by <a href="/credits">John Skoubourdis</a></p>
-        </div>
+                    <div class="blog-post-image-container">
+                        <a href="/blog/grocery-crud-version-3-stable" title="Grocery CRUD version 3 stable">
+                                                            <div class="blog-post__image" style="background-image: url('/uploads/blog/thumb_zachary-nelson-98Elr-LIvD8-unsplash.png');"></div>
+                                                    </a>
+                    </div>
+                    <div class="blog-post-description-container">
+                        <a href="/blog/grocery-crud-version-3-stable">
+                            <h2>Grocery CRUD version 3 stable</h2>
+                        </a>
+                        <p>We are glad to announce you that the Grocery CRUD version 3 is now stable! This is a major release with a lot of new UI improvements and a better installation process.</p>
+                        <p>Mar 25, 2023 by <a href="/credits">John Skoubourdis</a></p>
+                    </div>
     </div>
 </div>
 
