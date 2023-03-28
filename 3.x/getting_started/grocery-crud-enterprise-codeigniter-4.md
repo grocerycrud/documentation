@@ -52,7 +52,7 @@ If you would like to install Grocery CRUD Enterprise on Codeigniter 4 without co
 ## Step 1. Download the library
 
 Login to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a> and navigate to
-"Version 3 BETA" from the sidebar menu.
+"Version 3" from the sidebar menu.
 
 ![Version 3 Sidebar Menu](/uploads/documentation/version-3-sidebar-menu.png)
 
@@ -60,7 +60,7 @@ Then download the zip file that say's "Installation with composer".
 
 ![Download composer zip file](/uploads/documentation/download-composer-zip-file.png)
 
-Your file will look something like this: <code>grocery-crud-enterprise-3.0.0-beta.1.zip</code>.
+Your file will look something like this: <code>grocery-crud-enterprise-3.0.0.zip</code>.
 
 ## Step 2. Creation of artifacts folder
 
@@ -72,7 +72,7 @@ After this change your folder structure will look like this:
 <pre>
 ├── app
 ├── artifacts
-│   └── grocery-crud-enterprise-3.0.0-beta.1.zip
+│   └── grocery-crud-enterprise-3.0.0.zip
 ├── public
 ├── tests
 ├── writable
@@ -147,7 +147,7 @@ Now you can install the library with the following command:
 
 If the command succeeds, you will see something like this:
 
-![Installing grocery-crud/enterprise 3.0.0-beta.1](/uploads/documentation/composer-success.png)
+![Installing grocery-crud/enterprise 3.0.0](/uploads/documentation/composer-success.png)
 
 Now theoretically you've just installed Grocery CRUD. However, there are few more steps in order to make it work.
 

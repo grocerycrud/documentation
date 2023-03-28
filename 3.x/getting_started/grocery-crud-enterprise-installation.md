@@ -37,7 +37,7 @@ This extra steps will change at the future however this work is still in progres
 
 <h3>Step 1. Download</h3>
 Login to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a> and navigate to
-"Version 3 BETA" from the sidebar menu.
+"Version 3" from the sidebar menu.
 
 ![Version 3 Sidebar Menu](/uploads/documentation/version-3-sidebar-menu.png)
 
@@ -45,7 +45,7 @@ Then download the zip file that say's "Installation with composer".
 
 ![Download composer zip file](/uploads/documentation/download-composer-zip-file.png)
 
-Your file will look something like this: <code>grocery-crud-enterprise-3.0.0-beta.1.zip</code>.
+Your file will look something like this: <code>grocery-crud-enterprise-3.0.0.zip</code>.
 
 <h3>Step 2. Creation of artifacts folder</h3>
 
@@ -57,7 +57,7 @@ After this change your folder structure will look like this:
 <pre>
 ├── app
 ├── artifacts
-│   └── grocery-crud-enterprise-3.0.0-beta.1.zip
+│   └── grocery-crud-enterprise-3.0.0.zip
 ├── vendor
 ├── composer.json
 ...
@@ -101,7 +101,7 @@ Now you can install the library with the following command:
 
 If the command succeeds, you will see something like this:
 
-![Installing grocery-crud/enterprise 3.0.0-beta.1](/uploads/documentation/composer-success.png)
+![Installing grocery-crud/enterprise 3.0.0](/uploads/documentation/composer-success.png)
 
 and your composer file will look like this:
 
@@ -373,7 +373,7 @@ or upgrade Grocery CRUD Enterprise.
 
 <h3>Step 1. Download</h3>
 Login to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a> and navigate to
-"Version 3 BETA" from the sidebar menu.
+"Version 3" from the sidebar menu.
 
 ![Version 3 Sidebar Menu](/uploads/documentation/version-3-sidebar-menu.png)
 
@@ -381,7 +381,7 @@ Then download the zip file that say's "Installation without composer".
 
 ![Download composer zip file](/uploads/documentation/download-without-composer.png)
 
-Your file will look something like this: <code>grocery-crud-enterprise-3.0.0-beta.1-without-composer.zip</code>.
+Your file will look something like this: <code>grocery-crud-enterprise-3.0.0-without-composer.zip</code>.
 
 <h3>Step2.</h3>
 

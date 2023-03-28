@@ -35,7 +35,7 @@ you have access to <a href="https://www.grocerycrud.com/users/" rel="nofollow" t
 
 ## Download Grocery CRUD zip file
 
-Login to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a> and navigate to "Version 3 BETA" sidebar menu
+Login to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a> and navigate to "Version 3" sidebar menu
 
 ![Version 3 Sidebar Menu](/uploads/documentation/version-3-sidebar-menu.png)
 
@@ -43,10 +43,10 @@ Then download the zip file that say's "with composer".
 
 ![Download composer zip file](/uploads/documentation/download-composer-zip-file.png)
 
-Your file will look something like this: <code>grocery-crud-enterprise-3.0.0-beta.1.zip</code>. Now at your root directory create a new directory with name <code>artifacts</code> and copy the zip file there <strong>without</strong> unziping it. The final file structure will look something like this:
+Your file will look something like this: <code>grocery-crud-enterprise-3.0.0.zip</code>. Now at your root directory create a new directory with name <code>artifacts</code> and copy the zip file there <strong>without</strong> unziping it. The final file structure will look something like this:
 <pre>├── app
 ├── artifacts
-│   └── grocery-crud-enterprise-3.0.0-beta.1.zip
+│   └── grocery-crud-enterprise-3.0.0.zip
 ├── artisan
 ├── bootstrap
 ├── composer.json
@@ -151,7 +151,7 @@ Now go to your root folder with your terminal and simply type:
 
 You will be able to see many updates such us lamina db and also:
 
-<pre><code> - Installing grocery-crud/enterprise (3.0.0-beta.1)</code></pre>
+<pre><code> - Installing grocery-crud/enterprise (3.0.0)</code></pre>
 
 Now Grocery CRUD Enterprise is available through composer so you could see the below folder structure at your <code>vendor</code> folder:
 
