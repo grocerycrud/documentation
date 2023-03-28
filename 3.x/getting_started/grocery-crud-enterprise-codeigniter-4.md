@@ -52,7 +52,7 @@ If you would like to install Grocery CRUD Enterprise on Codeigniter 4 without co
 ## Step 1. Download the library
 
 Login to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a> and navigate to
-"Version 3" from the sidebar menu.
+"Version 3" and then "All files for download" from the sidebar menu.
 
 ![Version 3 Sidebar Menu](/uploads/documentation/version-3-sidebar-menu.png)
 

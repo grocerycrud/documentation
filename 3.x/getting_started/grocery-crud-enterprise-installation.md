@@ -37,7 +37,7 @@ This extra steps will change at the future however this work is still in progres
 
 <h3>Step 1. Download</h3>
 Login to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a> and navigate to
-"Version 3" from the sidebar menu.
+"Version 3" and then "All files for download" from the sidebar menu.
 
 ![Version 3 Sidebar Menu](/uploads/documentation/version-3-sidebar-menu.png)
 
@@ -238,6 +238,10 @@ return [
         'mpg', 'ogv', '3gp', '3g2', 'psd'
     ],
 
+    // Set this variable to true if you want to remove the file from the server
+    // when a row is deleted. The file will also be removed when the user is 
+    // removing the file from the upload field.
+    // By default, the file is not deleted from the server in these cases.
     'remove_file_on_delete' => false,
 
     // Show image preview - As we currently don't have thumbnails to show please keep in mind that the full
@@ -373,7 +377,7 @@ or upgrade Grocery CRUD Enterprise.
 
 <h3>Step 1. Download</h3>
 Login to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a> and navigate to
-"Version 3" from the sidebar menu.
+"Version 3" and then "All files for download" from the sidebar menu.
 
 ![Version 3 Sidebar Menu](/uploads/documentation/version-3-sidebar-menu.png)
 
@@ -484,6 +488,10 @@ return [
         'mpg', 'ogv', '3gp', '3g2', 'psd'
     ],
 
+    // Set this variable to true if you want to remove the file from the server
+    // when a row is deleted. The file will also be removed when the user is 
+    // removing the file from the upload field.
+    // By default, the file is not deleted from the server in these cases.
     'remove_file_on_delete' => false,
 
     // Show image preview - As we currently don't have thumbnails to show please keep in mind that the full
@@ -640,6 +648,10 @@ return [
         'mpg', 'ogv', '3gp', '3g2', 'psd'
     ],
 
+    // Set this variable to true if you want to remove the file from the server
+    // when a row is deleted. The file will also be removed when the user is 
+    // removing the file from the upload field.
+    // By default, the file is not deleted from the server in these cases.
     'remove_file_on_delete' => false,
 
     // Show image preview - As we currently don't have thumbnails to show please keep in mind that the full

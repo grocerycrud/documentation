@@ -244,6 +244,10 @@ return [
         'mpg', 'ogv', '3gp', '3g2', 'psd'
     ],
 
+    // Set this variable to true if you want to remove the file from the server
+    // when a row is deleted. The file will also be removed when the user is 
+    // removing the file from the upload field.
+    // By default, the file is not deleted from the server in these cases.
     'remove_file_on_delete' => false,
 
     // Show image preview - As we currently don't have thumbnails to show please keep in mind that the full
