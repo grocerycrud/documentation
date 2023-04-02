@@ -29,7 +29,7 @@ For more about Grocery CRUD Enterprise version 3 please read the blog post:
                             <h2>Grocery CRUD version 3 stable</h2>
                         </a>
                         <p>We are glad to announce you that the Grocery CRUD version 3 is now stable! This is a major release with a lot of new UI improvements and a better installation process.</p>
-                        <p>Mar 25, 2023 by <a href="/credits">John Skoubourdis</a></p>
+                        <p>Apr 2, 2023 by <a href="/credits">John Skoubourdis</a></p>
                     </div>
     </div>
 </div>
