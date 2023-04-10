@@ -23,8 +23,7 @@ font awesome v5. For example "file-csv"</li>
 
 You can see an example of the setDatagridButton below:
 
-<pre><code class="language-php">$crud->setDatagridButton('Add Customer', 'plus', 'https://example.com');
-</code></pre>
+<pre><code class="language-php">$crud->setDatagridButton('Add Customer', 'plus', 'https://example.com', false, 'top-right');</code></pre>
 
 A full working example can be found below:
 
@@ -37,7 +36,7 @@ $crud->displayAs('officeCode','City');
 $crud->setDatagridButton('Add Office', 'plus', '#add-office-mock');
 
 // A better real-world example would be the below line:
-// $crud->setDatagridButton('Add Employee', 'external-link-alt', '/full/url/to/add/employee', true);
+// $crud->setDatagridButton('Add Office', 'external-link-alt', 'https://example.com', true);
 </code></pre>
 
 You can see the result of the above code at the below datagrid. In order to see the functionality of the datagrid button, 
