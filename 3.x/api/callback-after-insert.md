@@ -52,7 +52,7 @@ For reference the code for `CallbackAfterInsert` class can be found below:
 <pre><code class="language-php">&lt;?php
 namespace App\Models;
 use GroceryCrud\Core\Model;
-use Zend\Db\Sql\Sql;
+use Laminas\Db\Sql\Sql;
 
 class CallbackAfterInsert extends Model {
     public function updateCustomerName($customerId) {

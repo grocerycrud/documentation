@@ -54,7 +54,7 @@ For reference the code for `CallbackInsert` class can be found below:
 namespace App\Models;
 use GroceryCrud\Core\Exceptions\Exception;
 use GroceryCrud\Core\Model;
-use Zend\Db\Sql\Sql;
+use Laminas\Db\Sql\Sql;
 
 // This specific custom model example is for Grocery CRUD Enterprise edition
 class CallbackInsert extends Model {

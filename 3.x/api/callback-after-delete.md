@@ -65,7 +65,7 @@ For reference the code for `CallbackDelete` class can be found below:
 namespace App\Models;
 use GroceryCrud\Core\Exceptions\Exception;
 use GroceryCrud\Core\Model;
-use Zend\Db\Sql\Sql;
+use Laminas\Db\Sql\Sql;
 
 class CallbackDelete extends Model {
     public function deleteEmployee($employeeNumber) {

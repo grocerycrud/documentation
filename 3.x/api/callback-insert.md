@@ -29,6 +29,7 @@ Below we have a full example to understand it better. At the below example we ar
 <pre><code class="language-php">$crud->setTable('orders');
 $crud->setSubject('Order', 'Orders');
 $crud->setRelation('customerNumber','customers','contactLastName');
+$crud->requiredFields(['orderDate', 'requiredDate', 'shippedDate', 'status', 'customerNumber']);
 
 $crud->callbackInsert(function ($stateParameters) use ($callbackInsertModel) {
     $stateParameters->data['comments'] = '[Insert date - ' .date('d M Y') . '] '. $stateParameters->data['comments'];
@@ -54,7 +55,7 @@ For reference the code for `CallbackInsert` class can be found below:
 namespace App\Models;
 use GroceryCrud\Core\Exceptions\Exception;
 use GroceryCrud\Core\Model;
-use Zend\Db\Sql\Sql;
+use Laminas\Db\Sql\Sql;
 
 // This specific custom model example is for Grocery CRUD Enterprise edition
 class CallbackInsert extends Model {

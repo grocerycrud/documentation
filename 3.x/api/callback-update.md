@@ -49,7 +49,7 @@ For reference the code for `CallbackUpdate` class can be found below:
 namespace App\Models;
 use GroceryCrud\Core\Exceptions\Exception;
 use GroceryCrud\Core\Model;
-use Zend\Db\Sql\Sql;
+use Laminas\Db\Sql\Sql;
 
 class CallbackUpdate extends Model {
     public function updateOrder($data, $primaryKeyValue) {
