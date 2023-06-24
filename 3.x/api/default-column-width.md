@@ -2,7 +2,7 @@
 id: default-column-width
 title: defaultColumnWidth
 description: Set the default column width for the specified column.
-canonical: v3.x/docs/default-column-width
+canonical: docs/default-column-width
 previous: default-ordering
 next: unset-export
 ---

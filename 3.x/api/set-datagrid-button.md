@@ -2,7 +2,7 @@
 id: set-datagrid-button
 title: setDatagridButton
 description: setDatagridButton is used when we need to add extra action buttons on top or bottom of the datagrid.
-canonical: v3.x/docs/set-datagrid-button
+canonical: docs/set-datagrid-button
 previous:
 next:
 ---

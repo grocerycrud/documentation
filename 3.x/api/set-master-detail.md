@@ -2,7 +2,7 @@
 id: set-master-detail
 title: setMasterDetail
 description: Create a master detail grid for your CRUD. 
-canonical: v3.x/docs/set-master-detail
+canonical: docs/set-master-detail
 previous: set-csrf-token-value
 next: get-state
 ---

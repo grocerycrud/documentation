@@ -2,7 +2,7 @@
 id: migrating-from-v2-to-v3
 title: Migrating from v2 to v3
 description: Upgrade notes to update from version 2 to version 3 for Grocery CRUD Enterprise.
-canonical: v3.x/docs/migrating-from-v2-to-v3
+canonical: docs/migrating-from-v2-to-v3
 previous:
 next:
 ---

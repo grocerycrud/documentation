@@ -2,7 +2,7 @@
 id: set-relation-dynamic
 title: setRelationDynamic
 description: Database relation with a 1 to n (1:n) relation with dynamic search.
-canonical: v3.x/docs/set-relation-dynamic
+canonical: docs/set-relation-dynamic
 previous: set-relation
 next: set-relation-n-to-n
 ---
