@@ -2,7 +2,7 @@
 id: grocery-crud-enterprise-laravel-8-installation
 title: Install Grocery CRUD Enterprise in Laravel 8
 description: Step-by-step installation guidance of Grocery CRUD Enterprise in Laravel 8 framework.
-canonical: docs/grocery-crud-laravel-8-installation
+canonical: v2.x/docs/grocery-crud-enterprise-laravel-8-installation
 previous: api-and-functions-list
 next: basic-example
 ---
