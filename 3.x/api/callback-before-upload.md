@@ -10,38 +10,43 @@ next: callback-upload
 # callbackBeforeUpload
 
 <pre><code class="language-php">callbackBeforeUpload(string $fieldName, callable $callback)</code></pre>
-The callback is used in cases we need to filter the uploaded data before the upload functionality. This can also be used to cancel an upload in case that it doesn't fit with the requirements.
+The callback is used in cases we need to filter the uploaded data before the upload functionality. 
+This can also be used to cancel an upload in case that it doesn't fit with the requirements.
 
-First of all, if we just want to dump the data that we will receive we can easily do it with the below code:
+First of all, if we just want to dump the data that we will receive within the callback we can easily do it with the below code:
 
 <pre><code class="language-php">$crud->callbackBeforeUpload(function ($test1 = null) {
     var_dump($test1);
-    var_dump($_FILES);
 
     return false;
 });</code></pre>
 
 will result the below output:
 
-<pre><code>object(stdClass)[36]
-  public 'field_name' => string 'photo_url' (length=14)</code></pre>
-
-<pre><code>array (size=1)
-  'photo_url' => 
-    array (size=5)
-      'name' => string 'photo-1191.jpg' (length=14)
-      'type' => string 'image/jpeg' (length=10)
-      'tmp_name' => string '/tmp/php/phpxSfeuZ' (length=19)
-      'error' => int 0
-      'size' => int 6756
-</code></pre>
+<pre><code>object(stdClass)#85 (5) {
+  ["uploadFieldName"]=>
+  string(28) "photo_url__gcrud_upload"
+  ["uploadPath"]=>
+  string(81) "/path/to/project/Uploads"
+  ["maxUploadSize"]=>
+  string(3) "20M"
+  ["minUploadSize"]=>
+  string(2) "1B"
+  ["allowedFileTypes"]=>
+  array(4) {
+    [0]=> string(3) "gif"
+    [1]=> string(4) "jpeg"
+    [2]=> string(3) "jpg"
+    [3]=> string(3) "png"
+  }
+}</code></pre>
 
 The most common usage of callback before upload is when we need to validate the data with some extra custom validation. For example at the below example we are validating the upload to make sure that it has an image extension only. A full example will be as follows:
 
 <pre><code class="language-php">$crud->callbackBeforeUpload(function ($uploadData) {
-    $fieldName = $uploadData->field_name;
+    $fieldName = $uploadData->uploadFieldName;
 
-    $filename = isset($_FILES[$fieldName]) ? $_FILES[$fieldName]['name'] : null;
+    $filename = !empty($_FILES["data"]) ? $_FILES["data"]["name"][$fieldName][0] : '';
 
     if (!preg_match('/\.(png|jpg|jpeg|gif)$/',$filename)) {
         return (new \GroceryCrud\Core\Error\ErrorMessage())
