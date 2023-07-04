@@ -547,6 +547,11 @@ class AdminController extends Controller
 
         $crud = new GroceryCrud($config, $database);
 
+        // Don't forget those two below lines if you are 
+        // using CSRF protection (enabled by default on Laravel 10)
+        $crud->setCsrfTokenName('_token');
+        $crud->setCsrfTokenValue(csrf_token());
+
         return $crud;
     }
 
