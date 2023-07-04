@@ -2,7 +2,7 @@
 id: grocery-crud-enterprise-laravel-10-installation
 title: Install Grocery CRUD Enterprise in Laravel 10
 description: Step-by-step installation guidance of Grocery CRUD Enterprise in Laravel 10 framework.
-canonical: docs/grocery-crud-enterprise-laravel-8-installation
+canonical: docs/grocery-crud-enterprise-laravel-10-installation
 previous: api-and-functions-list
 next: basic-example
 ---
