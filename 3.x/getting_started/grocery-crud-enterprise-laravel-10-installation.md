@@ -383,23 +383,9 @@ So it is important to have a template that can load all the above. Usually in ou
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
-As you may also notice (and this is the second most common mistake for Laravel installations) we are also adding the CSRF token as a meta tag on the header:
+As you may also notice we are also adding the CSRF token as a meta tag on the header:
 
 <pre><code class="language-php">&lt;meta name="csrf-token" content="{{ csrf_token() }}"&gt;</code></pre>
-
-And we are are having the CSRF token as a default header with the below code:
-
-<pre><code class="language-javascript">$(document).ready(function () {
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
-});</code></pre>
-
-As this will be a generic template we are also making sure that we are checking if jQuery exists with the below code:
-
-<pre><code class="language-javascript">if (typeof $ !== 'undefined') {</code></pre>
 
 ## See it working!
 
@@ -429,6 +415,11 @@ class AdminController extends Controller
 
         $crud->setTable('customers');
         $crud->setSubject('Customer', 'Customers');
+
+        // Don't forget those two below lines if you are 
+        // using CSRF protection (enabled by default on Laravel 10)
+        $crud->setCsrfTokenName('_token');
+        $crud->setCsrfTokenValue(csrf_token());
 
         $output = $crud->render();
 
