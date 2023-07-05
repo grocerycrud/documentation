@@ -16,25 +16,29 @@ For example the below code will show us an error at the page (so we can dump the
 
 <pre><code class="language-php">$crud->callbackUpload(function ($test1 = null) {
     var_dump($test1);
-    var_dump($_FILES);
 
     return false;
 });</code></pre>
 
-will result the below:
+will result the below output:
 
-<pre><code>object(stdClass)[36]
-  public 'field_name' => string 'photo_url' (length=14)</code></pre>
-
-<pre><code>array (size=1)
-  'photo_url' => 
-    array (size=5)
-      'name' => string 'photo-1191.jpg' (length=14)
-      'type' => string 'image/jpeg' (length=10)
-      'tmp_name' => string '/tmp/php/phpxSfeuZ' (length=19)
-      'error' => int 0
-      'size' => int 6756
-</code></pre>
+<pre><code>object(stdClass)#85 (5) {
+  ["uploadFieldName"]=>
+  string(28) "photo_url__gcrud_upload"
+  ["uploadPath"]=>
+  string(81) "/path/to/project/Uploads"
+  ["maxUploadSize"]=>
+  string(3) "20M"
+  ["minUploadSize"]=>
+  string(2) "1B"
+  ["allowedFileTypes"]=>
+  array(4) {
+    [0]=> string(3) "gif"
+    [1]=> string(4) "jpeg"
+    [2]=> string(3) "jpg"
+    [3]=> string(3) "png"
+  }
+}</code></pre>
 
 Please have in mind that this is completely <strong>replacing</strong> the functionality of the default upload. That means that once you use this function you will need to make sure that:
 <ul>
