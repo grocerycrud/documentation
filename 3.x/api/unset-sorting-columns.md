@@ -18,7 +18,7 @@ Unset the sorting on the datagrid from column ordering and sorting. Especially u
 $crud->setSubject('Customer', 'Customers');
 
 $crud->columns(['customerName','phone','creditLimit', 'addressLine1', 'salesRepEmployeeNumber']);
-$crud->unsetSortingColumns(['addressLine1', 'salesRepEmployeeNumber']);
+$crud->unsetSortingColumns(['phone', 'addressLine1', 'salesRepEmployeeNumber']);
 
 $output = $crud->render();</code></pre>
 
