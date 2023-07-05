@@ -1,9 +1,9 @@
 ---
 id: unset-search-columns
 title: unsetSearchColumns
-description: Unset the search on the datagrid from quick column search and from filtering. 
+description: Unset the search for the specified columns from quick column search and filtering. 
 canonical: docs/unset-search-columns
-previous: unset-print
+previous: unset-sorting-columns
 next: unset-export
 ---
 
