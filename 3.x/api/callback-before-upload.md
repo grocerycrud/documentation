@@ -24,16 +24,12 @@ First of all, if we just want to dump the data that we will receive within the c
 will result the below output:
 
 <pre><code>object(stdClass)#85 (5) {
-  ["uploadFieldName"]=>
-  string(28) "photo_url__gcrud_upload"
-  ["uploadPath"]=>
-  string(81) "/path/to/project/Uploads"
-  ["maxUploadSize"]=>
-  string(3) "20M"
-  ["minUploadSize"]=>
-  string(2) "1B"
-  ["allowedFileTypes"]=>
-  array(4) {
+  ["fieldName"] => string(9) "photo_url"
+  ["uploadFieldName"] => string(28) "photo_url__gcrud_upload"
+  ["uploadPath"] => string(81) "/path/to/project/Uploads"
+  ["maxUploadSize"] => string(3) "20M"
+  ["minUploadSize"] => string(2) "1B"
+  ["allowedFileTypes"] => array(4) {
     [0]=> string(3) "gif"
     [1]=> string(4) "jpeg"
     [2]=> string(3) "jpg"
