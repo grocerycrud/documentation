@@ -498,9 +498,9 @@ Since Codeigniter 4.2.0 or later the Routing is not defaulting to auto-routing.
 This means that you will need to add the routes manually. Go to <code>app/Config/Routes.php</code> and add the 
 below code for every function that is using grocery CRUD:
 
-<pre><code class="language-php">// Make sure that you always add get and post functions
-$routes->get('/example/customers', 'Example::customers');
-$routes->post('/example/customers', 'Example::customers');
+<pre><code class="language-php">// Make sure that you always add both lines for each CRUD function
+$routes->add('/example/customers', 'Example::customers');
+$routes->add('/example/customers/(:segment)(/(:segment))?', 'Example::customers/$1/$2');
 </code></pre>
 
 ## Troubleshooting
