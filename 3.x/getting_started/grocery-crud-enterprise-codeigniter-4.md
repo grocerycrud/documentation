@@ -332,23 +332,27 @@ use GroceryCrud\Core\GroceryCrud;
 ...
 
 private function _getDbData() {
-$db = (new \Config\Database())-&gt;default;
-return [
-'adapter' =&gt; [
-'driver' =&gt; 'Pdo_Mysql',
-'host'     =&gt; $db['hostname'],
-'database' =&gt; $db['database'],
-'username' =&gt; $db['username'],
-'password' =&gt; $db['password'],
-'charset' =&gt; 'utf8'
-]
-];
+    $db = (new \Config\Database())-&gt;default;
+          return [
+              'adapter' =&gt; [
+              'driver' =&gt; 'Pdo_Mysql',
+              'host'     =&gt; $db['hostname'],
+              'database' =&gt; $db['database'],
+              'username' =&gt; $db['username'],
+              'password' =&gt; $db['password'],
+              'charset' =&gt; 'utf8'
+          ]
+    ];
 }
 private function _getGroceryCrudEnterprise($bootstrap = true, $jquery = true) {
-$db = $this-&gt;_getDbData();
-$config = (new \Config\GroceryCrudEnterprise())-&gt;getDefaultConfig();
+        $db = $this-&gt;_getDbData();
+        $config = (new \Config\GroceryCrudEnterprise())-&gt;getDefaultConfig();
 
         $groceryCrud = new GroceryCrud($config, $db);
+
+        $groceryCrud->setCsrfTokenName(csrf_token());
+        $groceryCrud->setCsrfTokenValue(csrf_hash());
+
         return $groceryCrud;
 }</code></pre>
 And now when you want to use groceryCRUD enterprise you will simply do this:
@@ -398,9 +402,6 @@ class Example extends BaseController
     {
         $crud = $this->_getGroceryCrudEnterprise();
 
-        $crud->setCsrfTokenName(csrf_token());
-        $crud->setCsrfTokenValue(csrf_hash());
-
         $crud->setTable('customers');
         $crud->setSubject('Customer', 'Customers');
 
@@ -437,6 +438,10 @@ class Example extends BaseController
         $config = (new \Config\GroceryCrudEnterprise())->getDefaultConfig();
 
         $groceryCrud = new GroceryCrud($config, $db);
+
+        $groceryCrud->setCsrfTokenName(csrf_token());
+        $groceryCrud->setCsrfTokenValue(csrf_hash());
+
         return $groceryCrud;
     }
 }</code></pre>
