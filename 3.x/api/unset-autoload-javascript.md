@@ -4,7 +4,7 @@ title: unsetAutoloadJavaScript
 description: 
 canonical: docs/unset-autoload-javascript
 previous: unset-add-fields
-next: unset-bootstrap
+next: custom-model
 ---
 
 # unsetAutoloadJavaScript
@@ -29,7 +29,7 @@ $output->js_files[] = '/assets/js/custom-gc-load.js';
 will output everything that it is necessary for Grocery CRUD but without the initial load. The initial call will need to be manually triggered through the code:
 
 (JavaScript)
-<pre><code class="language-javascript">$('.gc-container').groceryCrud();</code></pre>
+<pre><code class="language-javascript">groceryCrudLoader(document.querySelectorAll(".grocery-crud")[0]);</code></pre>
 
 So if in our example we create a button like this:
 
@@ -37,43 +37,21 @@ So if in our example we create a button like this:
 <pre><code class="language-javascript">// custom-gc-load.js
 $(document).ready(function () {
     $('.load-grocery-crud-button').click(function () {
-         $('.gc-container').groceryCrud({
-            openInModal: false,
-            hashEvents: false,
-         });
-	 $('.load-grocery-crud-button').fadeOut();
+        groceryCrudLoader(document.querySelectorAll(".grocery-crud")[0]);
+	    $('.load-grocery-crud-button').fadeOut();
     });
 });</code></pre>
 
 (HTML)
-<pre><code class="language-html">&lt;button class="load-grocery-crud-button btn btn-default"&gt;Press Button to load GroceryCRUD&lt;/button&gt;</code></pre>
+<pre><code class="language-html">&lt;button class="load-grocery-crud-button"&gt;Press Button to load GroceryCRUD&lt;/button&gt;
+</code></pre>
 
 
-It will output the below result:
-
-`embed--no-min-height:demo_unset-autoload-javascript`
-
-So far we have two options that you can add at the groceryCRUD JavaScript function:
-<ol>
-	<li>The option: <code>openInModal</code> that will enable or disable (default is enabled) the form to open in modal. Instead it will run at it's own page.</li>
-	<li>The option: <code>hashEvents</code> that will enable or disable the hashtag from the URLs (really useful if other applications are also using the hashtag at the URL and you have conflicts</li>
-
-	<li>The option: <code>actionButtons</code> that it is an array with three options: 
-              	<ul>
-			<li>iconCssClass</li>
-			<li>label</li>
-			<li>actionCallback</li>
-		</ul>
-   </li>
-</ol> 
-
-An example will be:
+A full example will be:
 
 <pre><code class="language-javascript">$(document).ready(function () {
 
-	$('.gc-container').groceryCrud({
-		openInModal: false, // Prevent forms to open in modal. (Default = true)
-		hashEvents: false, // Remove the hash events from the URL (Default = true)
+	groceryCrudLoader(document.querySelectorAll(".grocery-crud")[0], {
 		callbackBeforeInsert: function (currentForm) {
 		    console.log('callback that is called right before the insert');
 		},
