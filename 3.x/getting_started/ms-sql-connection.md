@@ -108,7 +108,6 @@ class Example extends BaseController
     public function index() 
     {
         $output = (object)[
-            'css_files' => [],
             'js_files' => [],
             'output' => ''
         ];

@@ -391,7 +391,6 @@ class Example extends BaseController
     public function index() 
     {
         $output = (object)[
-            'css_files' => [],
             'js_files' => [],
             'output' => ''
         ];
@@ -452,12 +451,7 @@ Go to <code>app/Views</code> and create a file with name <code>example.php</code
 &lt;html lang="en"&gt;
 &lt;head&gt;
  &lt;meta charset="utf-8" /&gt;
- 
-&lt;?php 
-foreach($css_files as $file): ?&gt;
- &lt;link type="text/css" rel="stylesheet" href="&lt;?php echo $file; ?&gt;" /&gt;
- 
-&lt;?php endforeach; ?&gt;
+
 &lt;?php foreach($js_files as $file): ?&gt;
  
  &lt;script src="&lt;?php echo $file; ?&gt;"&gt;&lt;/script&gt;

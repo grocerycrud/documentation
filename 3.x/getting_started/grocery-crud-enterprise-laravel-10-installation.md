@@ -429,13 +429,11 @@ class AdminController extends Controller
                 ->header('charset', 'utf-8');
         }
 
-        $css_files = $output->css_files;
         $js_files = $output->js_files;
         $output = $output->output;
 
         return view('default_template', [
             'output' => $output,
-            'css_files' => $css_files,
             'js_files' => $js_files
         ]);
     }
@@ -568,13 +566,11 @@ class AdminController extends Controller
                 ->header('charset', 'utf-8');
         }
 
-        $css_files = $output->css_files;
         $js_files = $output->js_files;
         $output = $output->output;
 
         return view('default_template', [
             'output' => $output,
-            'css_files' => $css_files,
             'js_files' => $js_files
         ]);
     }

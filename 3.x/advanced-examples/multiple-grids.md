@@ -30,7 +30,6 @@ $crud-&gt;setApiUrlPath('/films.php');
 
 $output = $crud-&gt;render();
 
-$css_files = $output-&gt;css_files;
 $js_files = $output-&gt;js_files;
 
 $output = $output-&gt;output;
@@ -62,7 +61,6 @@ Is simply telling to Grocery CRUD that it will not use the default path (that in
 Then the below lines:
 <pre><code class="language-php">$output = $crud-&gt;render();
 
-$css_files = $output-&gt;css_files;
 $js_files = $output-&gt;js_files;
 
 $output = $output-&gt;output;</code></pre>
@@ -85,10 +83,6 @@ Where view.php is the below code:
 &lt;head&gt;
     &lt;meta charset="utf-8" /&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;?php
-    foreach($css_files as $file): ?&gt;
-        &lt;link type="text/css" rel="stylesheet" href="&lt;?php echo $file; ?&gt;" /&gt;
-    &lt;?php endforeach; ?&gt;
 
 &lt;/head&gt;
 &lt;body&gt;

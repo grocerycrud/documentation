@@ -330,7 +330,6 @@ if ($output->isJSONResponse) {
     exit;
 }
 
-$css_files = $output->css_files;
 $js_files = $output->js_files;
 $output = $output->output;
 
@@ -344,9 +343,7 @@ And the <code>view.php</code> is a simple page (of course the implementation can
 &lt;head&gt;
     &lt;meta charset="utf-8" /&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;?php foreach($css_files as $file): ?&gt;
-        &lt;link type="text/css" rel="stylesheet" href="&lt;?php echo $file; ?&gt;" /&gt;
-    &lt;?php endforeach; ?&gt;
+
 &lt;/head&gt;
 &lt;body&gt;
         &lt;div style="padding: 20px 10px;"&gt;
@@ -731,7 +728,6 @@ if ($output-&gt;isJSONResponse) {
     exit;
 }
 
-$css_files = $output-&gt;css_files;
 $js_files = $output-&gt;js_files;
 $output = $output-&gt;output;
 
@@ -764,7 +760,6 @@ if ($output-&gt;isJSONResponse) {
     exit;
 }
 
-$css_files = $output-&gt;css_files;
 $js_files = $output-&gt;js_files;
 $output = $output-&gt;output;
 
