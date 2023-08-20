@@ -28,8 +28,8 @@ per refresh and **not** in every datagrid refresh/update.
 
 The add form event is triggered when the add/insert form is loaded.
 
-<pre><code class="language-js">window.addEventListener('gcrud.form.add_form', () => {
-    console.log('add_form triggered');
+<pre><code class="language-js">window.addEventListener('gcrud.form.add', () => {
+    console.log('Add Form triggered');
 });</code></pre>
 
 ## Edit, Clone and Read Form
@@ -38,16 +38,16 @@ All the below events are very similar, and I guess they are self-explanatory. Th
 difference is that you are also getting some extra details from this event.
 The most common info is the primary key value for the event.
 
-<pre><code class="language-js">window.addEventListener('gcrud.form.edit_form', ({detail}) => {
-    console.log('edit_form triggered', detail);
+<pre><code class="language-js">window.addEventListener('gcrud.form.edit', ({detail}) => {
+    console.log('edit form triggered', detail);
 });
 
-window.addEventListener('gcrud.form.clone_form', ({detail}) => {
-    console.log('clone_form triggered', detail);
+window.addEventListener('gcrud.form.clone', ({detail}) => {
+    console.log('clone form triggered', detail);
 });
 
-window.addEventListener('gcrud.form.read_form', ({detail}) => {
-    console.log('read_form triggered', detail);
+window.addEventListener('gcrud.form.read', ({detail}) => {
+    console.log('read form triggered', detail);
 });</code></pre>
 
 ## All the events that we have so far
