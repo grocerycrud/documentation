@@ -70,9 +70,6 @@ A full example will be:
 		callbackAfterDelete: function(itemIds) { // itemIds variable is always an array
 		    console.log('callback that is called right after a successful delete operation');
 		},
-		onRowMount: function (primaryKeyField) { // When the row loads for the very first time
-		    console.log('row mounted for:' + primaryKeyField);
-		},
 		onRowUpdate: function (primaryKeyField) { // When the row is getting updated (e.g. it is not re-rendered)
 		    console.log('row updated for:' + primaryKeyField);
 		},
