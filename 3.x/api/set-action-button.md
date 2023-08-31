@@ -34,7 +34,10 @@ $crud->unsetDelete();
 
 $crud->setActionButton('Avatar', 'fa fa-user', function ($row) {
     return '#/avatar/' . $row->employeeNumber;
-}, false);</code></pre>
+});</code></pre>
 
-You can see the result of the above code here. In order to see the functionality of the action buttons, press the More button in any of the rows.
+You can see the result of the above code below. In order to see the functionality of the action buttons, press the 
+"Avatar" button in any of the rows, and you will see that there is a change in the top of the URL with 
+`#/avatar/[row-id]` . We haven't provided a full URL just to not break the demo page or to redirect you to another page.
+
 `embed:demo_set-action-button`
