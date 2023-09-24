@@ -25,6 +25,14 @@ next: basic-example
 This is a full tutorial of a suggested way to install Grocery CRUD Enterprise
 to your already existing project with Laravel version 10
 
+> Instead of relying solely on this tutorial, we'd like to draw your attention to the availability of
+> a <a href="/users/enterprise-version-wizard" target="_blank">helpful wizard</a> specially designed to streamline
+> the installation process of Grocery CRUD Enterprise for your specific project 🚀.
+> This wizard provides a concise, step-by-step tutorial with five easy-to-follow instructions.
+> To access this tool, simply click on the following
+> link: <a href="/users/enterprise-version-wizard" target="_blank">Grocery CRUD Enterprise Installation Wizard</a>.
+> Users are already using it, and their feedback has been overwhelmingly positive ❤️. Enjoy!
+
 ## Prerequisites
 
 - You have purchased <a href="https://www.grocerycrud.com/enterprise" target="_blank">Grocery CRUD Enterprise</a> and 

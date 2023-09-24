@@ -19,6 +19,14 @@ If you are looking for more specific installation guidance, you can also check t
 - <a href="/v3.x/docs/grocery-crud-enterprise-codeigniter-4">Installation in Codeigniter v4</a>
 - <a href="/v3.x/docs/grocery-crud-enterprise-laravel-10-installation">Laravel v10 installation</a>
 
+> Instead of relying solely on this tutorial, we'd like to draw your attention to the availability of
+> a <a href="/users/enterprise-version-wizard" target="_blank">helpful wizard</a> specially designed to streamline
+> the installation process of Grocery CRUD Enterprise for your specific project 🚀.
+> This wizard provides a concise, step-by-step tutorial with five easy-to-follow instructions.
+> To access this tool, simply click on the following
+> link: <a href="/users/enterprise-version-wizard" target="_blank">Grocery CRUD Enterprise Installation Wizard</a>.
+> Users are already using it, and their feedback has been overwhelmingly positive ❤️. Enjoy!
+
 <div id="with-composer"></div>
 
 <h2>1. Installation with composer</h2>

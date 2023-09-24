@@ -15,6 +15,14 @@ on your Codeigniter project easily.
 Keep in mind that this tutorial may require several steps, but it is actively updated to provide the most accurate
 and up-to-date instructions.
 
+> Instead of relying solely on this tutorial, we'd like to draw your attention to the availability of 
+> a <a href="/users/enterprise-version-wizard" target="_blank">helpful wizard</a> specially designed to streamline 
+> the installation process of Grocery CRUD Enterprise for your specific project 🚀. 
+> This wizard provides a concise, step-by-step tutorial with five easy-to-follow instructions. 
+> To access this tool, simply click on the following 
+> link: <a href="/users/enterprise-version-wizard" target="_blank">Grocery CRUD Enterprise Installation Wizard</a>. 
+> Users are already using it, and their feedback has been overwhelmingly positive ❤️. Enjoy!
+
 Table of Contents
 
 - [Introduction](#introduction)
