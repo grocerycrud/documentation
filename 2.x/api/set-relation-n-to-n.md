@@ -36,6 +36,8 @@ The variable <code>$referrerTitleField</code> can also be written with brackets.
 The above example will output strings that will take the fields from <code>actor.reference_id</code>, <code>actor.first_name</code> and <code>actor.last_name</code> . The final output will look like this <code>"345 - John Smith"</code>, <code>"367 - George Brown"</code>,... e.t.c. 
 
 <h2>$where</h2>
+Please be aware that the <code>$where</code> variable is only available in grocery CRUD Enterprise.
+
 The where statement will take the exact same format as <a href="https://www.grocerycrud.com/enterprise/api-and-function-list/where-3" target="_blank">where</a> function of grocery CRUD Enterprise. 
 
 For example a common usage will look like this:
