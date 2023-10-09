@@ -9,29 +9,23 @@ next: set-rules
 
 # setRule
 
-The <code>setRule</code> is the validation rule that you add for the insert/update form. 
-
-Please keep in mind that although we've tried very had to have the exact same documentation for the community edition
-and to the enterprise edition, the `setRules` is the only exception as the API is different in the community edition
-as we are using the core validation of Codeigniter 4.
-
-## Community edition
-
-<pre><code class="language-php">setRule(string $fieldName, string $label , string $rules[, array $errors])</code></pre>
-
-Set validation backend rules with the core implementation of Codeigniter 4. For more about examples and syntax please
-check the official documentation for <a href="https://codeigniter4.github.io/userguide/libraries/validation.html#setrule" target="_blank">Codeigniter 4 setRule</a>
-
-## Grocery CRUD Enterprise
+The <code>setRule</code> is the validation rule that you add for the insert/update form.
 
 <pre><code class="language-php">setRule(string $fieldName, string $rule[, array $parameters])</code></pre>
 
-We wanted to use a very simple to use library and we chose <a href="https://github.com/vlucas/valitron" target="_blank" rel="noopener noreferrer">Valitron</a>. You can see all parameters that you can add for valitron for the <code>rule</code> method at: <a href="https://github.com/vlucas/valitron" target="_blank" rel="noopener noreferrer">https://github.com/vlucas/valitron</a>. Have in mind that the fieldName however comes <strong>first</strong> and the rules as a <strong>second</strong> parameter. We did that on purpose in order to have consistency with all the GroceryCRUD functions.
+We wanted to use a very simple to use library and we chose 
+<a href="https://github.com/vlucas/valitron" target="_blank" rel="noopener noreferrer">Valitron</a>. 
+You can see all parameters that you can add for valitron for the <code>rule</code> method 
+at: <a href="https://github.com/vlucas/valitron" target="_blank" rel="noopener noreferrer">https://github.com/vlucas/valitron</a>. Have in mind that the fieldName however comes <strong>first</strong> and the rules as a <strong>second</strong> parameter. We did that on purpose in order to have consistency with all the GroceryCRUD functions.
 
 ## Examples
 
 <pre><code class="language-php">$crud-&gt;setRule('nickname', 'slug')</code></pre>
-<strong>Important notice:</strong> The <strong>only</strong> difference that the GroceryCrud <code>setRule</code> is having by the <code>rule</code> of Valitron is that if you need a 4rd parameter then you will need to add it as an array. This was the only proper way that grocery CRUD could handle it. Valitron is using <code>func_get_args()</code> and GroceryCRUD enterprise is avoiding using that as it is easy to lose control of the parameters (a lesson well learned from grocery CRUD community edition).
+<strong>Important notice:</strong> The <strong>only</strong> difference that the GroceryCrud <code>setRule</code> is 
+having by the <code>rule</code> of Valitron is that if you need a 4rd parameter then you will need to add it as an array. 
+This was the only proper way that grocery CRUD could handle it. Valitron is using <code>func_get_args()</code> and 
+GroceryCRUD enterprise is avoiding using that as it is easy to lose control of the parameters 
+(a lesson well learned from grocery CRUD Free edition).
 
 So for example instead of the Valitron rule:
 <pre><code class="language-php">rule('fieldName', 'lengthBetween', '4','6');</code></pre>
