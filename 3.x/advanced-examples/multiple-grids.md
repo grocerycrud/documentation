@@ -174,7 +174,7 @@ public function demo_multigrid() {
 
     $output-&gt;output .= '&lt;br/&gt;' . $output2-&gt;output;
 
-    $this-&gt;_example_output($output);
+    return $this-&gt;_example_output($output);
 }
 
 public function demo_example_films() {
@@ -188,7 +188,7 @@ public function demo_example_films() {
 
     $output = $crud-&gt;render();
     
-    $this-&gt;_example_output($output);
+    return $this-&gt;_example_output($output);
 }
 
 public function demo_example_customers() {
@@ -200,7 +200,7 @@ public function demo_example_customers() {
 
     $output = $crud-&gt;render();
  
-    $this-&gt;_example_output($output);
+    return $this-&gt;_example_output($output);
 }
 
 public function _example_output($output = null) {
