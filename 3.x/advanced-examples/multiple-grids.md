@@ -170,7 +170,7 @@ public function demo_multigrid() {
     $crud2 = $this-&gt;_getGroceryCrudEnterprise();
 
     $crud2-&gt;setApiUrlPath('/demo_example_customers');
-    $output2 = $crud-&gt;render();
+    $output2 = $crud2-&gt;render();
 
     $output-&gt;output .= '&lt;br/&gt;' . $output2-&gt;output;
 
