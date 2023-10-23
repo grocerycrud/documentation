@@ -10,8 +10,11 @@ next:
 # JavaScript Events
 
 Grocery CRUD Enterprise is dispatching some events on some actions. For performance and security reasons the external
-events are not enabled by default on Grocery CRUD Enterprise version 3. In order to enable it you will need to change 
-the configuration value `publish_events` to `true`. 
+events are not enabled by default on Grocery CRUD Enterprise version 3.
+
+> Important note: To enable JavaScript events, please be aware that you need to set the configuration value 
+> "publish_events" to `true`. If this value is left as the default `false`, the events will not be triggered,
+> so make sure to update it accordingly.
 
 ## Datagrid Update Event
 
