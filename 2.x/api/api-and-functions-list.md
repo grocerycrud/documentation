@@ -18,9 +18,8 @@ next: getting-started
 | [editFields](/v2.x/docs/edit-fields)  | The fields that will be visible to the end user for edit/update form.  |
 | [fieldType](/v2.x/docs/field-type)  | Changing the default field type from the database to fit to our needs.  |
 | [fields](/v2.x/docs/fields)  | This function is really just a facade function to call all the 4 functions at once: addFields, editFields, readFields and cloneFields.  |
-| [getState](/v2.x/docs/getState)  | Simply get the current state name as a string.  |
+| [getState](/v2.x/docs/get-state)  | Simply get the current state name as a string.  |
 | [getStateInfo](/v2.x/docs/get-state-info)  | Get all the information about the current state.  |
-| [like](/v2.x/docs/like)  | Filter the queries with a extra where LIKE statement. |
 | [readFields](/v2.x/docs/read-fields)  | The fields that will be visible when the end-user navigates to the view form.  |
 | [render](/v2.x/docs/render)  | This is the most basic function. In other words this means “make it work”.  |
 | [requiredFields](/v2.x/docs/required-fields)  | The most common validation. Checks is the field provided by the user is empty.  |

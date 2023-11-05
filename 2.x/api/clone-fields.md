@@ -2,7 +2,7 @@
 id: clone-fields
 title: cloneFields
 description: The fields that will be visible to the end user for clone form.
-canonical: docs/gcc/2.x/clone-fields
+canonical: docs/clone-fields
 previous: callback-clone-field
 next: set-clone
 ---
