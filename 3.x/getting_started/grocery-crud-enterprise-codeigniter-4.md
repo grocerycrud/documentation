@@ -118,6 +118,16 @@ Now you can install the library with the following command:
 
 <pre><code class="language-sh">composer require "grocery-crud/enterprise:^3.0" --prefer-dist</code></pre>
 
+The first time you run the above command, you'll be asked to provide your `username` and `password` for the
+composer package `grocery-crud/enterprise`. Your username is your email address and your password is the license key
+for Grocery CRUD Enterprise. You can find your credentials in
+the <a href="https://www.grocerycrud.com/users/profile" target="_blank">My Profile</a> page at the top right avatar
+icon of <a href="https://www.grocerycrud.com/users/enterprise-version-wizard" target="_blank">user's page</a>.
+
+After entering the correct username and password in the command line, you'll be asked if you want to store your
+credentials in the `auth.json` file. I recommend answering `Y` (yes) to this question, so you won't have to
+provide the credentials again in the future.
+
 If the command succeeds, you will see something like this:
 
 ![Installing grocery-crud/enterprise 3.0.0](/uploads/documentation/composer-success.png)
