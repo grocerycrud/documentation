@@ -12,6 +12,10 @@ next: custom-model
 <pre><code class="language-php">unsetAutoloadJavaScript(void)</code></pre>
 Unset the initial load of the GroceryCRUD so we can load it dynamically. That simply means that the Grocery CRUD will NOT load if we will not call it manually from the JavaScript code.
 
+> Important note: To enable JavaScript events, please be aware that you need to set the configuration value
+> "publish_events" to `true`. If this value is left as the default `false`, the events will not be triggered,
+> so make sure to update it accordingly.
+
 ## Example
 
 For example the below code:
