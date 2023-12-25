@@ -87,6 +87,13 @@ A full example will be:
 		     console.log('Smiley is clicked with primary key:' + primaryKeyValue);
 		 }
 		}],
+		actionButtonsMultiple: [{
+          iconCssClass: 'fa fa-smile-o',
+          label: 'Smiley',
+          onClick: function ({selectedIds}) {
+            console.log('Smiley selected ids: ' + selectedIds);
+          }
+    	}],
 		// addFields, editFields, cloneFields and readFields works only
 		// with the combination of: 
 		// callbackAddField for addFields
