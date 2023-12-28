@@ -303,7 +303,7 @@ return [
     // Remember the filters upon refresh. The information is stored in the browser local storage
     // Please note that if you have remember_state_upon_refresh set to false then this configuration
     // will also be set to false.
-    'remember_filters_upon_refresh' => false,
+    'remember_filters_upon_refresh' => true,
 ];
 </code></pre>
 
@@ -568,7 +568,7 @@ return [
     // Remember the filters upon refresh. The information is stored in the browser local storage
     // Please note that if you have remember_state_upon_refresh set to false then this configuration
     // will also be set to false.
-    'remember_filters_upon_refresh' => false,
+    'remember_filters_upon_refresh' => true,
 ];
 
 </code></pre>
@@ -746,7 +746,7 @@ return [
     // Remember the filters upon refresh. The information is stored in the browser local storage
     // Please note that if you have remember_state_upon_refresh set to false then this configuration
     // will also be set to false.
-    'remember_filters_upon_refresh' => false,
+    'remember_filters_upon_refresh' => true,
 ];
 
 </code></pre>
