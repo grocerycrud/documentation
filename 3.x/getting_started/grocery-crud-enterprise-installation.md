@@ -32,8 +32,7 @@ If you are looking for more specific installation guidance, you can also check t
 <h2>1. Installation with composer</h2>
 
 The most recommended way to install PHP libraries nowadays is through <a href="https://getcomposer.org/" target="_blank" rel="noopener noreferrer">composer</a>.
-Grocery CRUD Enterprise has private code and there are two more steps from the normal composer installations.
-This extra steps will change at the future however this work is still in progress.
+Since we have a private composer url for grocery CRUD Enterprise, you can install it by following the below steps.
 
 <h3>Prerequisites</h3>
 
@@ -43,39 +42,12 @@ This extra steps will change at the future however this work is still in progres
 - You already have a `composer.json` file into your project.
 - You've already installed composer to your project and the vendor files by using the command `composer install`.
 
-<h3>Step 1. Download</h3>
-Login to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a> and navigate to
-"Version 3" and then "All files for download" from the sidebar menu.
-
-![Version 3 Sidebar Menu](/uploads/documentation/version-3-sidebar-menu.png)
-
-Then download the zip file that say's "Installation with composer".
-
-![Download composer zip file](/uploads/documentation/download-composer-zip-file.png)
-
-Your file will look something like this: <code>grocery-crud-enterprise-3.0.0.zip</code>.
-
-<h3>Step 2. Creation of artifacts folder</h3>
-
-Go to your project root folder and create a new folder with the name <code>artifacts</code>. Now copy the zip file as-is.
-Do not extract or change the name of the zip file.
-
-After this change your folder structure will look like this:
-
-<pre>
-├── app
-├── artifacts
-│   └── grocery-crud-enterprise-3.0.0.zip
-├── vendor
-├── composer.json
-...
-</pre>
-
+<h3>Step 1. Preparation</h3>
 Considering that you've already had a `composer.json` file into your project, run the following command:
 
-<pre><code class="language-sh">composer config repositories.grocery-crud artifact artifacts/</code></pre>
+<pre><code class="language-sh">composer config repositories.grocery-crud '{"type": "composer", "url": "https://composer.grocerycrud.com/"}' --file composer.json</code></pre>
 
-If the above code succeeds, your composer file will look like this:
+If the above code succeeds, your `composer.json` file will look like this:
 
 <pre><code class="language-json">{
     "name": "johnny/my-awesome-project",
@@ -91,8 +63,8 @@ If the above code succeeds, your composer file will look like this:
     ],
     "repositories": {
         "grocery-crud": {
-            "type": "artifact",
-            "url": "artifacts/"
+            "type": "composer",
+            "url": "https://composer.grocerycrud.com/"
         }
     }
 }
@@ -101,44 +73,48 @@ If the above code succeeds, your composer file will look like this:
 If the command fails for any reason don't worry too much! You can always copy the sections "repositories" from the above code and paste them in your
 `composer.json`.
 
-<h3>Step 3. Installation</h3>
+<h3>Step 2. Install Grocery CRUD Enterprise via composer</h3>
 
 Now you can install the library with the following command:
 
-<pre><code class="language-sh">composer require "grocery-crud/enterprise:3.*.*@dev"</code></pre>
+<pre><code class="language-sh">composer require "grocery-crud/enterprise:^3.0" --prefer-dist</code></pre>
+
+The first time you run the above command, you'll be asked to provide your `username` and `password` for the
+composer package `grocery-crud/enterprise`. Your username is your email address and your password is the license key
+for Grocery CRUD Enterprise. You can find your credentials in
+the <a href="https://www.grocerycrud.com/users/profile" target="_blank">My Profile</a> page at the top right avatar
+icon of <a href="https://www.grocerycrud.com/users/enterprise-version-wizard" target="_blank">user's page</a>.
+
+After entering the correct username and password in the command line, you'll be asked if you want to store your
+credentials in the `auth.json` file. I recommend answering `Y` (yes) to this question, so you won't have to
+provide the credentials again in the future.
 
 If the command succeeds, you will see something like this:
 
 ![Installing grocery-crud/enterprise 3.0.0](/uploads/documentation/composer-success.png)
 
-and your composer file will look like this:
+You will be able to see many updates such us lamina db and also:
 
-<pre><code class="language-json">{
-    "name": "johnny/my-awesome-project",
-    "autoload": {
-        "psr-4": {
-            "Johnny\\MyAwesomeProject\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "John Skoubourdis"
-        }
-    ],
-    "repositories": {
-        "grocery-crud": {
-            "type": "artifact",
-            "url": "artifacts/"
-        }
-    },
-    "require": {
-        "grocery-crud/enterprise": "3.*.*@dev"
-    }
-}</code></pre>
+<pre><code> - Installing grocery-crud/enterprise (3.0.19)</code></pre>
 
-Now theoretically you've just installed Grocery CRUD. However, there are few more steps in order to make it work.
+Now Grocery CRUD Enterprise is available through composer, so you could see the below folder structure at your <code>vendor</code> folder:
 
-<h3>Step 4. Copying assets folder</h3>
+<pre>vendor
+├── ...
+...
+├── laminas
+├── grocery-crud
+│   └── enterprise
+│       ├── change-log.txt
+│       ├── composer.json
+│       ├── example
+│       ├── LICENCE.md
+│       ├── public
+│       └── src
+├── scoumbourdis
+...</pre>
+
+<h3>Step 3. Copying assets folder</h3>
 
 As Grocery CRUD is a CRUD Generator that also has CSS and JavaScript files we need to make sure that we also have the
 public assets including in our public folder.
@@ -178,7 +154,7 @@ to the public folder of your project. So after the copy of the folders, your new
 └── vendor
 </pre>
 
-<h3>Step 6.</h3>
+<h3>Step 4. Configuration files</h3>
 
 Now you need to create your configurations files in order to make grocery CRUD Enterprise to work. So basically there are 3 things that you will need to configure:
 
@@ -313,7 +289,7 @@ At the config file there are 2 basic sections that we need to be aware of:
  	<li><strong>The assets_folder: </strong> The assets folder is the folder that can publicly be accessible by the end user. These folders includes: images, JavaScript files, fonts and stylesheets files.</li>
  	<li><strong>The environment: </strong>Make sure that the <code>development</code> environment is the one that you are using when you are developing the project. and <code>production</code> is the one that is used when you are publishing the website to production.</li>
 </ol>
-<h3>Step 7.</h3>
+<h3>Step 5. See it working 👀</h3>
 
 And now we are ready to make grocery CRUD Enterprise to put it to work! As per the previous step, the files `view.php` 
 and `example.php` are included in the `vendor/grocery-crud/enterprise/example` folder.
