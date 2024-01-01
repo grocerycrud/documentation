@@ -12,14 +12,14 @@ next: basic-example
 **Table of contents:**
 
 1. [Prerequisites](#prerequisites)
-2. [Download Grocery CRUD zip file](#download-grocery-crud-zip-file)
+2. [Preparation](#preparation)
 3. [Install Grocery CRUD Enterprise via composer](#install-grocery-crud-enterprise-via-composer)
 4. [Copy assets folder](#copy-assets-folder)
 5. [Configuration file](#configuration-file)
 6. [Routes Configuration](#routes-configuration)
 7. [Preparing our Resources](#preparing-our-resources)
 8. [See it working 👀](#see-it-working)
-9. [Let's refactor our Controller](#let's-refactor-our-controller)
+9. [Let's refactor our Controller](#lets-refactor-our-controller)
 10. [Celebrate 🎉](#celebrate)
 
 This is a full tutorial of a suggested way to install Grocery CRUD Enterprise
@@ -39,41 +39,16 @@ to your already existing project with Laravel version 10
 you have access to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a>.
 - PHP 8 or later.
 - You've already installed Laravel 10 to your project via composer.
-- You've already installed composer to your project and the vendor files by using the command `composer install`. 
+- You've already installed composer to your project and the vendor files by using the command `composer install`.
 
-## Download Grocery CRUD zip file
+## Preparation
 
-Login to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a> and navigate to "Version 3" sidebar menu
+Considering that you've already had a `composer.json` file into your project, run the following command:
 
-![Version 3 Sidebar Menu](/uploads/documentation/version-3-sidebar-menu.png)
+<pre><code class="language-sh">composer config repositories.grocery-crud '{"type": "composer", "url": "https://composer.grocerycrud.com/"}' --file composer.json</code></pre>
 
-Then download the zip file that say's "with composer".
+If the above code succeeds, your `composer.json` file will look like this:
 
-![Download composer zip file](/uploads/documentation/download-composer-zip-file.png)
-
-Your file will look something like this: <code>grocery-crud-enterprise-3.0.0.zip</code>. Now at your root directory create a new directory with name <code>artifacts</code> and copy the zip file there <strong>without</strong> unziping it. The final file structure will look something like this:
-<pre>├── app
-├── artifacts
-│   └── grocery-crud-enterprise-3.0.0.zip
-├── artisan
-├── bootstrap
-├── composer.json
-├── config
-├── database
-├── lang
-...
-├── tests
-└── vendor
-</pre>
-
-## Install Grocery CRUD Enterprise via composer
-
-Add the following commands:
-
-<pre><code class="language-sh">composer config repositories.grocery-crud artifact artifacts/
-composer require grocery-crud/enterprise:3.0.*@dev</code></pre>
-
-After those commands your `composer.json` file will look more or less like this:
 <pre><code class="language-json">{
     "name": "laravel/laravel",
     "type": "project",
@@ -85,7 +60,6 @@ After those commands your `composer.json` file will look more or less like this:
     "license": "MIT",
     "require": {
         "php": "^8.1",
-        "grocery-crud/enterprise": "3.0.*@dev",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.0",
         "laravel/sanctum": "^3.2",
@@ -145,21 +119,39 @@ After those commands your `composer.json` file will look more or less like this:
     "prefer-stable": true,
     "repositories": {
         "grocery-crud": {
-            "type": "artifact",
-            "url": "artifacts/"
+            "type": "composer",
+            "url": "https://composer.grocerycrud.com/"
         }
     }
 }
 </code></pre>
 
-Update composer in order to get the library of Grocery CRUD Enterprise at the <code>vendor</code> folder
-Now go to your root folder with your terminal and simply type:
+If the command fails for any reason don't worry too much! You can always copy the sections "repositories" from the above code and paste them in your
+`composer.json`.
 
-<pre><code class="language-sh">composer update</code></pre>
+## Install Grocery CRUD Enterprise via composer
+
+Now you can install the library with the following command:
+
+<pre><code class="language-sh">composer require "grocery-crud/enterprise:^3.0" --prefer-dist</code></pre>
+
+The first time you run the above command, you'll be asked to provide your `username` and `password` for the
+composer package `grocery-crud/enterprise`. Your username is your email address and your password is the license key
+for Grocery CRUD Enterprise. You can find your credentials in
+the <a href="https://www.grocerycrud.com/users/profile" target="_blank">My Profile</a> page at the top right avatar
+icon of <a href="https://www.grocerycrud.com/users/enterprise-version-wizard" target="_blank">user's page</a>.
+
+After entering the correct username and password in the command line, you'll be asked if you want to store your
+credentials in the `auth.json` file. I recommend answering `Y` (yes) to this question, so you won't have to
+provide the credentials again in the future.
+
+If the command succeeds, you will see something like this:
+
+![Installing grocery-crud/enterprise 3.0.0](/uploads/documentation/composer-success.png)
 
 You will be able to see many updates such us lamina db and also:
 
-<pre><code> - Installing grocery-crud/enterprise (3.0.0)</code></pre>
+<pre><code> - Installing grocery-crud/enterprise (3.0.19)</code></pre>
 
 Now Grocery CRUD Enterprise is available through composer so you could see the below folder structure at your <code>vendor</code> folder:
 
@@ -412,7 +404,7 @@ As you may also notice we are also adding the CSRF token as a meta tag on the he
 
 ## See it working!
 
-Now finally after 6 steps it is time to see Grocery CRUD Enterprise working on your screen 👀! In order to do that your final controller will look like below:
+Now finally after 5 steps it is time to see Grocery CRUD Enterprise working on your screen 👀! In order to do that your final controller will look like below:
 
 <pre><code class="language-php">&lt;?php
 // app/Http/Controllers/AdminController.php
