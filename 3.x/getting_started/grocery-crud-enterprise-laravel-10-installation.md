@@ -126,7 +126,7 @@ If the above code succeeds, your `composer.json` file will look like this:
 }
 </code></pre>
 
-If the command fails for any reason don't worry too much! You can always copy the sections "repositories" from the above code and paste them in your
+If the command fails for any reason don't worry too much! You can always copy the section "repositories" from the above code and paste them in your
 `composer.json`.
 
 ## Install Grocery CRUD Enterprise via composer
