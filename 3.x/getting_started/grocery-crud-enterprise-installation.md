@@ -93,10 +93,6 @@ If the command succeeds, you will see something like this:
 
 ![Installing grocery-crud/enterprise 3.0.0](/uploads/documentation/composer-success.png)
 
-You will be able to see many updates such us lamina db and also:
-
-<pre><code> - Installing grocery-crud/enterprise (3.0.19)</code></pre>
-
 Now Grocery CRUD Enterprise is available through composer, so you could see the below folder structure at your <code>vendor</code> folder:
 
 <pre>vendor
