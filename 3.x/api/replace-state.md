@@ -12,10 +12,31 @@ next: set-api-url-path
 <pre><code class="language-php">replaceState(string $stateName, StateInterface $newState)</code></pre>
 Replace the default state by the custom object state that we are adding as an input.
 
-## Example
+<h2>Example 1</h2>
 
-<pre><code class="language-php">$exportState = new MyCustomExportState($crud);
+A simple example of replacing the default ExportState with a custom one that will export all the columns and not only the visible ones.
+
+<pre><code class="language-php">&lt;?php
+use GroceryCrud\Core\State\ExportState;
+use GroceryCrud\Core\State\StateInterface;
+
+class CustomExportState extends ExportState implements StateInterface {
+    public function getStateParameters() {
+        $stateParameters = parent::getStateParameters();
+
+        $stateParameters->visible_columns = null;
+
+        return $stateParameters;
+    }
+
+}</code></pre>
+
+And you can use the above custom state by using the below code:
+
+<pre><code class="language-php">$exportState = new CustomExportState($crud);
 $crud->replaceState('Export', $exportState);</code></pre>
+
+<h2>Example 2</h2>
 
 A most common use of this state is on export, where we would like to have a different export way for your data. The below example still uses the queries from Zend Db calls but you can literally use your own libraries even for database calls (e.g. when we have more than 10.000 rows).
 
