@@ -74,6 +74,7 @@ All the events that we have so far are listed below ordered alphabetically for t
     "gcrud.datagrid.data-fetch",
     "gcrud.datagrid.data-render",
     "gcrud.datagrid.ordering-reset",
+    "gcrud.datagrid.page-change",
     "gcrud.datagrid.ready",
     "gcrud.filtering.form-submit",
     "gcrud.filtering.modal-open",
