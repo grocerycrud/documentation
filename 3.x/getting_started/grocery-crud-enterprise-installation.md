@@ -276,6 +276,13 @@ return [
     // Please note that if you have remember_state_upon_refresh set to false then this configuration
     // will also be set to false.
     'remember_filters_upon_refresh' => true,
+
+    // Include JavaScript files in the main output and don't return them at 'js_files' variable
+    // This is useful for quicker installations/demos, but it is recommended to set this to false
+    // and have all of your JavaScript files at the bottom of your page before the body tag ends.
+    // Please consider that when JavaScript files are included directly in the output, you lose the ability
+    // to control when and where these files are loaded.
+    'display_js_files_in_output' => false,
 ];
 </code></pre>
 
@@ -541,6 +548,13 @@ return [
     // Please note that if you have remember_state_upon_refresh set to false then this configuration
     // will also be set to false.
     'remember_filters_upon_refresh' => true,
+
+    // Include JavaScript files in the main output and don't return them at 'js_files' variable
+    // This is useful for quicker installations/demos, but it is recommended to set this to false
+    // and have all of your JavaScript files at the bottom of your page before the body tag ends.
+    // Please consider that when JavaScript files are included directly in the output, you lose the ability
+    // to control when and where these files are loaded.
+    'display_js_files_in_output' => false,
 ];
 
 </code></pre>
@@ -719,6 +733,13 @@ return [
     // Please note that if you have remember_state_upon_refresh set to false then this configuration
     // will also be set to false.
     'remember_filters_upon_refresh' => true,
+
+    // Include JavaScript files in the main output and don't return them at 'js_files' variable
+    // This is useful for quicker installations/demos, but it is recommended to set this to false
+    // and have all of your JavaScript files at the bottom of your page before the body tag ends.
+    // Please consider that when JavaScript files are included directly in the output, you lose the ability
+    // to control when and where these files are loaded.
+    'display_js_files_in_output' => false,
 ];
 
 </code></pre>
