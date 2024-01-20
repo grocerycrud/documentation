@@ -116,7 +116,7 @@ If the command fails for any reason don't worry too much! You can always copy th
 
 Now you can install the library with the following command:
 
-<pre><code class="language-sh">composer require "grocery-crud/enterprise:^3.0" --prefer-dist</code></pre>
+<pre><code class="language-sh">composer require "grocery-crud/enterprise:^3.1" --prefer-dist</code></pre>
 
 The first time you run the above command, you'll be asked to provide your `username` and `password` for the
 composer package `grocery-crud/enterprise`. Your username is your email address and your password is the license key
@@ -130,7 +130,7 @@ provide the credentials again in the future.
 
 If the command succeeds, you will see something like this:
 
-![Installing grocery-crud/enterprise 3.0.0](/uploads/documentation/composer-success.png)
+![Installing grocery-crud/enterprise](/uploads/documentation/composer-success.png)
 
 Now theoretically you've just installed Grocery CRUD. However, there are few more steps in order to make it work.
 
