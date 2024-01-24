@@ -27,10 +27,11 @@ $output = $crud->render();</code></pre>
 Orders CRUD:
 
 <pre><code class="language-php">$crud->setTable('orders');
-$crud->unsetDatagridTitle();
+$crud->setSubject('Order', 'Orders');
 $crud->unsetTools();
-$crud->unsetOperations();
 $crud->unsetSearchColumns(['orderNumber', 'orderDate', 'requiredDate', 'shippedDate', 'status', 'comments', 'customerNumber']);
+
+$crud->fieldType('customerNumber', 'hidden');
 
 if (!empty($_POST['master_id'])) {
     if (is_numeric($_POST['master_id'])) {
@@ -39,6 +40,19 @@ if (!empty($_POST['master_id'])) {
         throw new InvalidArgumentException("Invalid argument for the field 'master_id'");
     }
 }
+
+$crud->callbackBeforeInsert(function ($stateParameters) {
+
+    if (!empty($_POST['master_id'])) {
+        if (is_numeric($_POST['master_id'])) {
+            $stateParameters->data['customerNumber'] = $_POST['master_id'];
+        } else {
+            throw new InvalidArgumentException("Invalid argument for the field 'master_id'");
+        }
+    }
+
+    return $stateParameters;
+});
 
 $output = $crud->render();</code></pre>
 
