@@ -22,8 +22,9 @@ or:
 
 You can find all the types that exists from grocery crud by typing <code>GroceryCrud:FIELD_</code> if you are using an editor that it is recognizing the field types then you should see all the list of available fields. To make things more simple to you we have the full list (that will be always up to date) in case you need to copy-paste it really fast. Although it is strongly suggested to use the constants of GroceryCrud class for that:
 
-<pre><code class="language-php">'string' //default
+<pre><code class="language-php">'string' // default
 'text' 
+'boolean' // available from version 3.1.1 and later
 'date'
 'enum'
 'enum_searchable'
