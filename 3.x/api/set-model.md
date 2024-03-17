@@ -4,7 +4,7 @@ title: setModel
 description: Changing the default model with a custom one. 
 canonical: docs/set-model
 previous: set-dependent-relation
-next: set-primary-key
+next: get-model
 ---
 
 # setModel
