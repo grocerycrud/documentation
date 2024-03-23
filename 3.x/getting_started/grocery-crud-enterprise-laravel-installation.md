@@ -1,13 +1,13 @@
 ---
-id: grocery-crud-enterprise-laravel-10-installation
-title: Install Grocery CRUD Enterprise in Laravel 10
-description: Step-by-step installation guidance of Grocery CRUD Enterprise in Laravel 10 framework.
-canonical: docs/grocery-crud-enterprise-laravel-10-installation
+id: grocery-crud-enterprise-laravel-installation
+title: Install Grocery CRUD Enterprise in Laravel
+description: Step-by-step installation guidance of Grocery CRUD Enterprise in Laravel framework.
+canonical: docs/grocery-crud-enterprise-laravel-installation
 previous: api-and-functions-list
 next: basic-example
 ---
 
-# Laravel 10 installation
+# Laravel installation
 
 **Table of contents:**
 
@@ -22,8 +22,8 @@ next: basic-example
 9. [Let's refactor our Controller](#lets-refactor-our-controller)
 10. [Celebrate 🎉](#celebrate)
 
-This is a full tutorial of a suggested way to install Grocery CRUD Enterprise
-to your already existing project with Laravel version 10
+This is a full tutorial of a suggested way to install Grocery CRUD Enterprise to your 
+already existing project with Laravel.
 
 > Instead of relying solely on this tutorial, we'd like to draw your attention to the availability of
 > a <a href="/users/enterprise-version-wizard" target="_blank">helpful wizard</a> specially designed to streamline
@@ -37,8 +37,8 @@ to your already existing project with Laravel version 10
 
 - You have purchased <a href="https://www.grocerycrud.com/enterprise" target="_blank">Grocery CRUD Enterprise</a> and 
 you have access to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a>.
-- PHP 8 or later.
-- You've already installed Laravel 10 to your project via composer.
+- PHP 8.2 or later.
+- You've already installed latest Laravel version to your project via composer.
 - You've already installed composer to your project and the vendor files by using the command `composer install`.
 
 ## Preparation
@@ -52,27 +52,25 @@ If the above code succeeds, your `composer.json` file will look like this:
 <pre><code class="language-json">{
     "name": "laravel/laravel",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "The skeleton application for the Laravel framework.",
     "keywords": [
-        "framework",
-        "laravel"
+        "laravel",
+        "framework"
     ],
     "license": "MIT",
     "require": {
-        "php": "^8.1",
-        "guzzlehttp/guzzle": "^7.2",
-        "laravel/framework": "^10.0",
-        "laravel/sanctum": "^3.2",
-        "laravel/tinker": "^2.8"
+        "php": "^8.2",
+        "laravel/framework": "^11.0",
+        "laravel/tinker": "^2.9"
     },
     "require-dev": {
-        "fakerphp/faker": "^1.9.1",
-        "laravel/pint": "^1.0",
-        "laravel/sail": "^1.18",
-        "mockery/mockery": "^1.4.4",
-        "nunomaduro/collision": "^7.0",
-        "phpunit/phpunit": "^10.0",
-        "spatie/laravel-ignition": "^2.0"
+        "fakerphp/faker": "^1.23",
+        "laravel/pint": "^1.13",
+        "laravel/sail": "^1.26",
+        "mockery/mockery": "^1.6",
+        "nunomaduro/collision": "^8.0",
+        "phpunit/phpunit": "^10.5",
+        "spatie/laravel-ignition": "^2.4"
     },
     "autoload": {
         "psr-4": {
@@ -92,13 +90,16 @@ If the above code succeeds, your `composer.json` file will look like this:
             "@php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
+            "@php artisan vendor:publish --provider=\"GroceryCrud\\LaravelAssetsServiceProvider\""
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
-            "@php artisan key:generate --ansi"
+            "@php artisan key:generate --ansi",
+            "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
+            "@php artisan migrate --graceful --ansi"
         ]
     },
     "extra": {
