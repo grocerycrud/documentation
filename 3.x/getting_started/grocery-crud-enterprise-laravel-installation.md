@@ -190,6 +190,55 @@ and your `public` folder will look like this:
         └── static
 </pre>
 
+In order to simplify the process of publishing assets for the `GroceryCrud\LaravelAssetsServiceProvider`, you can add a specific command to the `post-update-cmd` scripts in your `composer.json` file. 
+This command will be automatically executed every time you run :
+
+<pre><code class="language-sh">composer update --prefer-dist</code></pre>
+
+Here's how you can do it:
+
+1. Open your `composer.json` file.
+
+2. Locate the `scripts` section. It should look something like this:
+
+```json
+"scripts": {
+    "post-autoload-dump": [
+        "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+        "@php artisan package:discover --ansi"
+    ],
+    "post-update-cmd": [
+        "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+    ],
+    // rest of your scripts...
+},
+```
+
+3. Add the following line to the `post-update-cmd` array:
+
+```json
+"@php artisan vendor:publish --provider=\"GroceryCrud\\LaravelAssetsServiceProvider\""
+```
+
+After the addition, your `scripts` section should look like this:
+
+```json
+"scripts": {
+    "post-autoload-dump": [
+        "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+        "@php artisan package:discover --ansi"
+    ],
+    "post-update-cmd": [
+        "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
+        "@php artisan vendor:publish --provider=\"GroceryCrud\\LaravelAssetsServiceProvider\""
+    ],
+},
+```
+
+4. Save your `composer.json` file.
+
+Now, every time you run `composer update --prefer-dist`, the assets for the `GroceryCrud\LaravelAssetsServiceProvider` will be automatically published. This means they will be copied to your project's public directory, making future updates easier.
+
 If this worked then go to the next step ⏩. If not don't worry as you can also do the steps manually.
 
 More specifically, navigate to: <code>vendor/grocery-crud/enterprise/public</code> and copy it to the public folder:
@@ -436,7 +485,7 @@ class AdminController extends Controller
         $crud->setSubject('Customer', 'Customers');
 
         // Don't forget those two below lines if you are 
-        // using CSRF protection (enabled by default on Laravel 10)
+        // using CSRF protection (enabled by default on Laravel)
         $crud->setCsrfTokenName('_token');
         $crud->setCsrfTokenValue(csrf_token());
 
@@ -565,7 +614,7 @@ class AdminController extends Controller
         $crud = new GroceryCrud($config, $database);
 
         // Don't forget those two below lines if you are 
-        // using CSRF protection (enabled by default on Laravel 10)
+        // using CSRF protection (enabled by default on Laravel)
         $crud->setCsrfTokenName('_token');
         $crud->setCsrfTokenValue(csrf_token());
 
