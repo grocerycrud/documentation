@@ -54,14 +54,36 @@ $crud->where([
 
 The developer can also add as many where statements are required. For example:
 
-<pre><code class="language-php">$crud->where([
+<pre><code class="language-php"> // AND Statement
+$crud->where([
     'customers.country = ?' => 'USA',
     'contact_last_name LIKE ?' => '%Tse%'
 ]);</code></pre>
 
+<strong>OR Statements:</strong>
+
+You can also add OR statements with the below syntax:
+
+<pre><code class="language-php"> // OR Statement
+$crud->where(['customers.country' => ['US', 'GR']]);</code></pre>
+
+or for more complex OR statements:
+
+<pre><code class="language-php">$crud->where([
+    '(customers.country = ? OR customers.country = ?)' => ['USA', 'UK']
+]);</code></pre>
+
+In case you follow the above syntax you need to use the parenthesis as the
+above example. If the parenthesis is not present then the filter will not 
+work as expected.
+
+
+
+
+
 <strong>Notices:</strong>
 1. You should already notice that you can also have a string input at where statement. Please have in mind that this <strong>is not a suggested way</strong> as it is easier to have SQL injections in case that the field is dynamic. If you need to use the string, please make sure that you are already filtering any dynamic input or you are using a non-dynamic string. Please be careful when you are using a full string for where as <code>where</code> statement is added in all the operations. The syntax is as follows:
-<pre><code class="language-php">$crud->where("customers.country = 'USA'")</code></pre>
+<pre><code class="language-php">$crud->where("(customers.country = 'USA')")</code></pre>
 
 2. Please notice that <code>where</code> statements are also added at all the operations except the insert for security reasons.
    Also have in mind that for the update functionality, you should also use callbackBeforeUpdate in case the field is visible to the user. If the field is not visible to the user then you don't really need to do anything. As this is a bit complicated to understand, we did create two examples to completely understand the two different concepts that I am describing.
