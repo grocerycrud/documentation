@@ -16,7 +16,7 @@ next: set-sequence-name
         string  $primaryKeyJunctionToCurrent, 
         string $primaryKeyToReferrerTable, 
         string $referrerTitleField
-        [, string $sortingFieldName [, array|string $where]]
+        [, string $sortingFieldName [, array|string $where, [, string $orderingFieldName]]]
 )</code></pre>
 At relational databases it is very common to have many to many relationship (also known as n:n or m:n). Grocery CRUD is doing it easy for you to connect 3 tables and also use it in your datagrid and forms. The syntax is easy and you just need to add the tables and the relations. All the primary keys are automatically added so you will not need to. 
 
@@ -44,14 +44,40 @@ For example a common usage will look like this:
      'actor.state' => 'public'
 ]);</code></pre>
 
+<h2>$sortingFieldName</h2>
+The sorting field name is the field that you want to sort the results if you have a field in the database at the 
+juction table. You can drag and drop the sorting field in order to sort the results.
+
+For example:
+
+<pre><code class="language-php">$crud->setRelationNtoN(
+    'actors', 'film_actor', 
+    'actor', 'film_id', 
+    'actor_id', 'fullname', 
+    null, null, 'priority'
+);</code></pre>
+
 ## Full example
 
 A full working example can be found below:
 <pre><code class="language-php">$crud->setTable('film');
 $crud->setSubject('Film', 'Films');
 
-$crud->setRelationNtoN('actors', 'film_actor', 'actor', 'film_id', 'actor_id', 'fullname');
-$crud->setRelationNtoN('categories', 'film_category', 'category', 'film_id', 'category_id', 'name');
+// Without the ability to order the results
+$crud->setRelationNtoN(
+    'categories', 'film_category',
+    'category', 'film_id',
+    'category_id', 'name'
+);
+
+// With the ability to order the results
+$crud->setRelationNtoN(
+    'actors', 'film_actor',
+    'actor', 'film_id',
+    'actor_id', 'fullname',
+    null, null, 'priority'
+);
+
 
 $output = $crud->render();</code></pre>
 
