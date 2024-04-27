@@ -63,19 +63,19 @@ A full working example can be found below:
 <pre><code class="language-php">$crud->setTable('film');
 $crud->setSubject('Film', 'Films');
 
-// Without the ability to order the results
-$crud->setRelationNtoN(
-    'categories', 'film_category',
-    'category', 'film_id',
-    'category_id', 'name'
-);
-
 // With the ability to order the results
 $crud->setRelationNtoN(
     'actors', 'film_actor',
     'actor', 'film_id',
     'actor_id', 'fullname',
     null, null, 'priority'
+);
+
+// Without the ability to order the results
+$crud->setRelationNtoN(
+    'categories', 'film_category',
+    'category', 'film_id',
+    'category_id', 'name'
 );
 
 
