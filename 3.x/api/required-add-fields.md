@@ -29,6 +29,12 @@ Here's a complete example:
 <pre><code class="language-php">$crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
 $crud->columns(['customerName','phone','addressLine1','creditLimit']);
+$crud->displayAs('customerName', 'Name');
+$crud->displayAs('contactLastName', 'Last Name');
+
+// A real case example where you need to have some fields required to add 
+// form but the user can't edit them later.
+$crud->readOnlyEditFields(['customerName', 'contactLastName', 'contactFirstName']);
 
 $crud->requiredAddFields(['customerName', 'contactLastName', 'contactFirstName']);
 
