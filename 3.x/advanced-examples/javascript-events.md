@@ -93,5 +93,63 @@ All the events that we have so far are listed below ordered alphabetically for t
 ]
 </code></pre>
 
+## Set Quick Search Value
 
+<pre><code class="language-js">groceryCrudSetQuickSearchValue('columnName', 'columnValue')</code></pre>
+
+The `groceryCrudSetQuickSearchValue` function is a JavaScript utility that allows you to programmatically 
+set the value of a quick search field in Grocery CRUD Enterprise. 
+This function is particularly useful when you need to implement custom filter buttons or other advanced filtering mechanisms.
+
+<strong>Parameters:</strong>
+
+<ul>
+    <li><code>columnName</code>: The name of the column in the datagrid that you want to filter.</li>
+    <li><code>columnValue</code>: The value that you want to set for the quick search field.</li>
+</ul>
+
+Here's an example of how to use the `groceryCrudSetQuickSearchValue` function:
+
+An external button sets the quick search value for the `department_id` column to '3' upon being clicked:
+
+<pre><code class="language-html">&lt;button id="setSearchValue"&gt;Marketing Department&lt;/button&gt;</code></pre>
+
+And in the JavaScript file:
+
+<pre><code class="language-js">document.getElementById('setSearchValue').addEventListener('click', () => {
+    groceryCrudSetQuickSearchValue('department_id', '3');
+});</code></pre>
+
+In this example, the function sets the quick search value for the `department_id` column to '3' when the button with
+the ID `setSearchValue` is clicked.
+
+## Set Form Field Value
+
+<pre><code class="language-js">groceryCrudSetFieldValue('fieldName', 'fieldValue')</code></pre>
+
+`groceryCrudSetFieldValue` function is a JavaScript utility that allows you to set the value of a form field in 
+Grocery CRUD Enterprise. This function is particularly useful when you need  to dynamically fill form fields 
+in add or edit forms.
+
+<strong>Parameters:</strong>
+
+- `fieldName`: The name of the form field that you want to set.
+- `fieldValue`: The value that you want to set for the form field.
+
+<strong>Usage:</strong>
+
+Here's an example of how to use the `groceryCrudSetFieldValue` function:
+
+An external button sets the value for the `department_name` field to 'Marketing' upon being clicked:
+
+<pre><code class="language-html">&lt;button id="setFieldValue"&gt;Marketing Department&lt;/button&gt;</code></pre>
+
+And in the JavaScript file:
+
+<pre><code class="language-js">document.getElementById('setFieldValue').addEventListener('click', () => {
+    groceryCrudSetFieldValue('department_name', 'Marketing');
+});</code></pre>
+
+In this example, the function sets the value for the `department_name` field to 'Marketing' when the button 
+with the ID `setFieldValue` is clicked.
 
