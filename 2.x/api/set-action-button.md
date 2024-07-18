@@ -20,9 +20,17 @@ next: set-action-button-multiple
 
 You can see an example of the setActionButton below:
 
-<pre><code class="language-php">$crud->setActionButton('Avatar', 'fa fa-user', function ($row) {
+<pre><code class="language-php">// code for enterprise version 
+$crud->setActionButton('Avatar', 'fa fa-user', function ($row) {
     return '/view_avatar/' . $row->url;
 }, true);</code></pre>
+
+> **Note:** For the community edition the `$row` object is at the second argument of the callback function (instead of 
+> first which is on Enterprise one). For example:
+> <pre><code class="language-php">// code for community edition
+> $crud->setActionButton('Avatar', 'fa fa-user', function ($value, $row) {
+>     return '/view_avatar/' . $row->url;
+> }, true);</code></pre>
 
 A full working example can be found below:
 
