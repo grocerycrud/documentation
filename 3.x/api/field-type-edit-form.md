@@ -10,7 +10,7 @@ next: field-type-form-fields
 # fieldTypeEditForm
 
 
-<pre><code class="language-php">fieldTypeEditForm(string $fieldName, string|ModelFieldType $fieldType)</code></pre>
+<pre><code class="language-php">fieldTypeEditForm(string $fieldName, string|ModelFieldType $fieldType[, array $permittedValues[, array $options]])</code></pre>
 This function is used for cases that you need to change the field type but only for the edit/update form. You can choose any field type from the <a href="https://www.grocerycrud.com/enterprise/api-and-function-list/fieldType">list of field types</a>.
 
 Any of the of the below 2 examples have the exact same results:

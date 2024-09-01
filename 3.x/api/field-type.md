@@ -9,22 +9,32 @@ next: field-type-add-form
 
 # fieldType
 
-<pre><code class="language-php">fieldType(string $fieldName, string $fieldType[, array $permittedValues[, array $options]])</code></pre>
+<pre><code class="language-php">fieldType(string $fieldName, string|ModelFieldType $fieldType[, array $permittedValues[, array $options]])</code></pre>
 
 The are many cases that the default field type of the database is not the required or that the field type is a simple varchar although we need to have a specific type for add/edit/view. In that case you can use the function <code>fieldType</code> to force the field as that kind of type. Have in mind that this function was renamed from <code>changeFieldType </code>for simplicity.
 
-Below you can see an example:
+Below you can see some examples of how you can use the <code>fieldType</code> function:
+
+<strong>Example 1:</strong>
 <pre><code class="language-php">$crud->fieldType('website_url', GroceryCrud::FIELD_TYPE_URL);</code></pre>
 
-or:
-
+<strong>Example 2:</strong>
 <pre><code class="language-php">$crud->fieldType('website_url', 'url');</code></pre>
+
+<strong>Example 3:</strong> 
+<pre><code class="language-php">
+// At the beginning of the file
+use GroceryCrud\Core\Model\ModelFieldType;
+...
+$myField = new ModelFieldType();
+$myField->setDataType(GroceryCrud::FIELD_TYPE_NUMERIC);
+$crud->fieldType('date_birth_year', $myField);</code></pre>
 
 You can find all the types that exists from grocery crud by typing <code>GroceryCrud:FIELD_</code> if you are using an editor that it is recognizing the field types then you should see all the list of available fields. To make things more simple to you we have the full list (that will be always up to date) in case you need to copy-paste it really fast. Although it is strongly suggested to use the constants of GroceryCrud class for that:
 
 <pre><code class="language-php">'string' // default
 'text' 
-'boolean' // available from version 3.1.1 and later
+'boolean'
 'date'
 'enum'
 'enum_searchable'

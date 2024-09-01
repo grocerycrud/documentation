@@ -9,7 +9,7 @@ next: field-type-read-form
 
 # fieldTypeFormFields
 
-<pre><code class="language-php">fieldTypeFormFields(string $fieldName, string|ModelFieldType $fieldType)</code></pre>
+<pre><code class="language-php">fieldTypeFormFields(string $fieldName, string|ModelFieldType $fieldType[, array $permittedValues[, array $options]])</code></pre>
 This function is really just a facade function to call all the 4 functions at once:
 <ol>
 	<li>fieldTypeAddForm</li>

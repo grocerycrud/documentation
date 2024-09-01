@@ -9,7 +9,7 @@ next: field-type-column
 
 # fieldTypeCloneForm
 
-<pre><code class="language-php">fieldTypeCloneForm(string $fieldName, string|ModelFieldType $fieldType)</code></pre>
+<pre><code class="language-php">fieldTypeCloneForm(string $fieldName, string|ModelFieldType $fieldType[, array $permittedValues[, array $options]])</code></pre>
 This function is used for cases that you need to change the field type but only for the Clone form. You can choose any field type from the <a href="https://www.grocerycrud.com/enterprise/api-and-function-list/fieldType">list of field types</a>.
 
 Both 3 below examples will have the exact same results:

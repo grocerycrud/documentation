@@ -9,7 +9,7 @@ next: field-type-edit-form
 
 # fieldTypeColumn
 
-<pre><code class="language-php">fieldTypeColumn(string $columnName, string|ModelFieldType $fieldType)</code></pre>
+<pre><code class="language-php">fieldTypeColumn(string $columnName, string|ModelFieldType $fieldType[, array $permittedValues[, array $options]])</code></pre>
 This function is used for cases that you need to change the field type but only for the column (e.g. not for add/edit/read form). You can choose any field type from the <a href="https://www.grocerycrud.com/enterprise/api-and-function-list/fieldType">list of field types</a>.
 
 <h2>Example</h2>

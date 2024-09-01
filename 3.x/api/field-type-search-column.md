@@ -9,7 +9,7 @@ next: field-type-edit-form
 
 # fieldTypeSearchColumn
 
-<pre><code class="language-php">fieldTypeSearchColumn(string $columnName, string|ModelFieldType $fieldType)</code></pre>
+<pre><code class="language-php">fieldTypeSearchColumn(string $columnName, string|ModelFieldType $fieldType[, array $permittedValues[, array $options]])</code></pre>
 This function is designed for scenarios where you need to alter the field type exclusively for the search column. 
 You can select any field type from the <a href="https://www.grocerycrud.com/enterprise/api-and-function-list/fieldType">list of field types</a>.
 
