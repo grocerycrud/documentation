@@ -32,29 +32,30 @@ $crud->fieldType('date_birth_year', $myField);</code></pre>
 
 You can find all the types that exists from grocery crud by typing <code>GroceryCrud:FIELD_</code> if you are using an editor that it is recognizing the field types then you should see all the list of available fields. To make things more simple to you we have the full list (that will be always up to date) in case you need to copy-paste it really fast. Although it is strongly suggested to use the constants of GroceryCrud class for that:
 
-<pre><code class="language-php">'string' // default
-'text' 
-'boolean'
-'date'
-'enum'
-'enum_searchable'
-'datetime'
-'hidden'
-'timestamp'
-'int'
-'password'
-'numeric'
-'url'
-'email'
+<pre><code class="language-php">'boolean'
 'color'
+'date'
+'datetime'
 'dropdown'
 'dropdown_search'
-'relational_native' 
-'multiselect_searchable' 
-'multiselect_native' 
+'email'
+'enum'
+'enum_searchable'
 'float' 
-'native_time' 
+'hidden'
+'int'
 'invisible'
+'multiselect_native' 
+'multiselect_searchable' 
+'native_time' 
+'numeric'
+'password'
+'password_toggle' // Available from version 3.1.9 and later
+'relational_native'
+'string' // default
+'text' 
+'timestamp'
+'url'
 </code></pre>
 
 <h2>Examples</h2>
