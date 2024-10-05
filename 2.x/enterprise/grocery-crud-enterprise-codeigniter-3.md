@@ -11,7 +11,7 @@ next: basic-example
 
 This is a full tutorial of a suggested way to install Grocery CRUD Enterprise to your already existing project with Codeigniter framework.
 
-First of all, the most common usage of Grocery CRUD Enterprise is an upgrade from the community edition. That simply means the project is built with Codeigniter framework and it is very possible to already have installed Grocery CRUD Community edition. So at the below steps we are trying to have an installation guide without causing any conflicts to the already existing community version (so you can use both if you like).
+First of all, the most common usage of Grocery CRUD Enterprise is an upgrade from the open-source edition. That simply means the project is built with Codeigniter framework and it is very possible to already have installed Grocery CRUD Free edition. So at the below steps we are trying to have an installation guide without causing any conflicts to the already existing community version (so you can use both if you like).
 
 <strong>Step 1.</strong> From the email that you've received or from the user's page (you will get instructions at the email of how to access user's page) download the file that say's "Without composer". Once you've downloaded it, unzip it!
 The folder structure that you will get is the following:
@@ -231,7 +231,7 @@ function _example_output($output = null) {
     $this-&gt;load-&gt;view('example.php',$output);    
 }
 </code></pre>
-The example.php is located at: application/views/example.php and it is the exact same view that we were using as an example at Community edition. More specifically the view <em>example.php</em> contains the below code:
+The example.php is located at: application/views/example.php and it is the exact same view that we were using as an example at Free edition. More specifically the view <em>example.php</em> contains the below code:
 <pre><code class="language-php">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;

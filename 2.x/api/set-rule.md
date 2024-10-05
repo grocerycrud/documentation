@@ -11,11 +11,11 @@ next: set-rules
 
 The <code>setRule</code> is the validation rule that you add for the insert/update form. 
 
-Please keep in mind that although we've tried very had to have the exact same documentation for the community edition
-and to the enterprise edition, the `setRules` is the only exception as the API is different in the community edition
+Please keep in mind that although we've tried very had to have the exact same documentation for the open-source edition
+and to the enterprise edition, the `setRules` is the only exception as the API is different in the open-source edition
 as we are using the core validation of Codeigniter 4.
 
-## Community edition
+## Free edition
 
 <pre><code class="language-php">setRule(string $fieldName, string $label , string $rules[, array $errors])</code></pre>
 
@@ -31,7 +31,7 @@ We wanted to use a very simple to use library and we chose <a href="https://gith
 ## Examples
 
 <pre><code class="language-php">$crud-&gt;setRule('nickname', 'slug')</code></pre>
-<strong>Important notice:</strong> The <strong>only</strong> difference that the GroceryCrud <code>setRule</code> is having by the <code>rule</code> of Valitron is that if you need a 4rd parameter then you will need to add it as an array. This was the only proper way that grocery CRUD could handle it. Valitron is using <code>func_get_args()</code> and GroceryCRUD enterprise is avoiding using that as it is easy to lose control of the parameters (a lesson well learned from grocery CRUD community edition).
+<strong>Important notice:</strong> The <strong>only</strong> difference that the GroceryCrud <code>setRule</code> is having by the <code>rule</code> of Valitron is that if you need a 4rd parameter then you will need to add it as an array. This was the only proper way that grocery CRUD could handle it. Valitron is using <code>func_get_args()</code> and GroceryCRUD enterprise is avoiding using that as it is easy to lose control of the parameters (a lesson well learned from grocery CRUD open-source edition).
 
 So for example instead of the Valitron rule:
 <pre><code class="language-php">rule('fieldName', 'lengthBetween', '4','6');</code></pre>

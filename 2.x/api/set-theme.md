@@ -14,16 +14,16 @@ The setTheme is used in order to change the default theme (bootstrap). Have in m
 
 <pre><code class="language-php">$crud->setTheme('myCustomTheme')</code></pre>
 
-This is one of the few functions that are used differently in community edition from Grocery CRUD Enterprise.
+This is one of the few functions that are used differently in open-source edition from Grocery CRUD Enterprise.
 
-More specifically in community edition we can use the `setTheme` for the existing themes that we have, more specifically:
+More specifically in open-source edition we can use the `setTheme` for the existing themes that we have, more specifically:
 
  - flexigrid (default)
  - datatables
  - bootstrap-v3 (only with after a purchase)
  - bootstrap-v4 (only with after a purchase)
 
-## Example (Community edition)
+## Example (Free edition)
 
 <pre><code class="language-php">$crud->setTheme('bootstrap-v3');
 $crud->setTable('customers');

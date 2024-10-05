@@ -9,7 +9,7 @@ next:
 
 # Change Logs
 
-All the changes for each new version in one page for Grocery CRUD Community edition. 
+All the changes for each new version in one page for Grocery CRUD Free edition. 
 
 <blockquote>Please have in mind that the change logs for Grocery CRUD Enterprise will be available only after the purchase.</blockquote>
 
