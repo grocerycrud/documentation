@@ -445,7 +445,7 @@ class Example extends BaseController
     }
 }</code></pre>
 
-Go to <code>app/Views</code> and create a file with name <code>example.php</code> and it is the exact same view that we were using as an example at Community edition. More specifically the view <em>example.php</em> will contain the below code:
+Go to <code>app/Views</code> and create a file with name <code>example.php</code> that will look like this:
 
 <pre><code class="language-php">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
