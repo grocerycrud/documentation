@@ -19,7 +19,8 @@ For example:
     'Other' => ['phone', 'notes']
 ]);</code></pre>
 
-<strong>Note:</strong> The keys of the array represent the tab names, and the values are arrays of field names that will be grouped under each tab.
+<strong>Note:</strong> The keys of the array are displaying the tab names.
+The values are arrays of field names that will be grouped under each tab.
 
 You can find a fully working example below:
 <pre><code class="language-php">$crud->setTable('customers');
