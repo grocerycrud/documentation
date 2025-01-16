@@ -47,12 +47,14 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
 'invisible'
 'multiselect_native' 
 'multiselect_searchable' 
+'native_date'
+'native_datetime'
 'native_time' 
 'numeric'
 'password'
-'password_toggle' // Available from version 3.1.9 and later
+'password_toggle'
 'relational_native'
-'string' // default
+'string'
 'text' 
 'timestamp'
 'url'
