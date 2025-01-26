@@ -9,6 +9,28 @@ next: field-type-add-form
 
 # fieldType
 
+<style>
+    .loader {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #FFF;
+        border-bottom-color: #f25f0a;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    } 
+</style>
+
 <pre><code class="language-php">fieldType(string $fieldName, string|ModelFieldType $fieldType[, array $permittedValues[, array $options]])</code></pre>
 
 The are many cases that the default field type of the database is not the required or that the field type is a simple varchar although we need to have a specific type for add/edit/view. In that case you can use the function <code>fieldType</code> to force the field as that kind of type. Have in mind that this function was renamed from <code>changeFieldType </code>for simplicity.
@@ -60,9 +82,9 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
 'url'
 </code></pre>
 
-<h2>Examples</h2>
+<div class="grocery-crud">
 
-<div>
+<h2>Examples</h2>
 
 <h3 id="boolean">boolean</h3>
 
@@ -74,10 +96,7 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
 
 <p>Preview:</p>
 
-<!-- Code will be replaced by the actual demo preview -->
-<div class="form-check form-switch">
-    <input name="boolean" class="form-check-input" type="checkbox" role="switch" value="1" checked="">
-</div>
+<div class="loader"></div>
 
 <br/>
 
@@ -106,12 +125,7 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
 <p>Preview:</p>
 
 <!-- Code will be replaced by the actual demo preview -->
-<select name="enum" class="form-control form-select">
-    <option value="Option 1">Option 1</option>
-    <option value="Option 2">Option 2</option>
-    <option value="Option 3">Option 3</option>
-    <option value="Option 4">Option 4</option>
-</select>
+<select name="enum" class="form-control form-select"></select>
 <br/>
 </div>
 
@@ -188,26 +202,20 @@ $crud->fieldType('officeCode', 'relational_native');</code></pre>
 
 The above code will simply transform the select input to a native one.
 
-<h2 id="demo">Full Example with Demo</h2>
+<h2 id="demo">Full Example</h2>
 You can find a full example below:
 
 <pre><code class="language-php">$crud->setTable('orders');
 $crud->setSubject('Order', 'Orders');
-$crud->unsetAdd();
 
 $crud->fieldType('orderDate', 'datetime');
 $crud->fieldType('requiredDate', 'datetime');
 $crud->fieldType('shippedDate', 'datetime');
 
 $crud->setRelation('customerNumber','customers','contactLastName');
+$crud->fieldType('customerNumber', 'relational_native');
 
 $output = $crud->render();</code></pre>
 
-As you will also notice at the below example the fields: 'orderDate', 'requiredDate', 'shippedDate' are now a datetime field. GroceryCRUD is recognizing if the browser is supporting the datetime native input and if not it is falling back to a jQuery plugin (in our case this is the jQuery UI for datetime). You can see the difference by opening the page in chrome and the same page in firefox.
-
 `embed:demo_field-type`
-
-
-
-
  
