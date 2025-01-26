@@ -9,28 +9,6 @@ next: field-type-add-form
 
 # fieldType
 
-<style>
-    .loader {
-        width: 20px;
-        height: 20px;
-        border: 2px solid #FFF;
-        border-bottom-color: #f25f0a;
-        border-radius: 50%;
-        display: inline-block;
-        box-sizing: border-box;
-        animation: rotation 1s linear infinite;
-    }
-
-    @keyframes rotation {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(360deg);
-        }
-    } 
-</style>
-
 <pre><code class="language-php">fieldType(string $fieldName, string|ModelFieldType $fieldType[, array $permittedValues[, array $options]])</code></pre>
 
 The are many cases that the default field type of the database is not the required or that the field type is a simple varchar although we need to have a specific type for add/edit/view. In that case you can use the function <code>fieldType</code> to force the field as that kind of type. Have in mind that this function was renamed from <code>changeFieldType </code>for simplicity.
@@ -96,8 +74,7 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
 
 <p>Preview:</p>
 
-<div class="loader"></div>
-
+<br/>
 <br/>
 
 <h3 id="color">color</h3>
@@ -110,10 +87,8 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
 
 <p>Preview:</p>
 
-<!-- Code will be replaced by the actual demo preview -->
-<input type="color" name="color" value="#ff0000">
-
-<br/><br/>
+<br/>
+<br/>
 <h3 id="enum">enum</h3>
 
 <p>Input dropdown list with predefined options. The main difference with `dropdown` is that the values of the arrays are also the ones that will be used as keys into the dropdown list.</p>
