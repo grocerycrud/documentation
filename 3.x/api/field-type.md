@@ -62,6 +62,59 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
 
 <h2>Examples</h2>
 
+<div>
+
+<h3 id="boolean">boolean</h3>
+
+<p>Input type for boolean (0 or 1) values.</p>
+
+<p>Code example:</p>
+
+<pre class="language-php"><code class="language-php">$crud-&gt;fieldType('field_name', 'boolean');</code></pre>
+
+<p>Preview:</p>
+
+<!-- Code will be replaced by the actual demo preview -->
+<div class="form-check form-switch">
+    <input name="boolean" class="form-check-input" type="checkbox" role="switch" value="1" checked="">
+</div>
+
+<br/>
+
+<h3 id="color">color</h3>
+
+<p>Input type for HEX color values.</p>
+
+<p>Code example:</p>
+
+<pre class="language-php"><code class="language-php">$crud-&gt;fieldType('field_name', 'color');</code></pre>
+
+<p>Preview:</p>
+
+<!-- Code will be replaced by the actual demo preview -->
+<input type="color" name="color" value="#ff0000">
+
+<br/><br/>
+<h3 id="enum">enum</h3>
+
+<p>Input dropdown list with predefined options. The main difference with `dropdown` is that the values of the arrays are also the ones that will be used as keys into the dropdown list.</p>
+
+<p>Code example:</p>
+
+<pre class="language-php"><code class="language-php">$crud-&gt;fieldType('field_name', 'enum', ['Option 1', 'Option 2', 'Option 3', 'Option 4']);</code></pre>
+
+<p>Preview:</p>
+
+<!-- Code will be replaced by the actual demo preview -->
+<select name="enum" class="form-control form-select">
+    <option value="Option 1">Option 1</option>
+    <option value="Option 2">Option 2</option>
+    <option value="Option 3">Option 3</option>
+    <option value="Option 4">Option 4</option>
+</select>
+<br/>
+</div>
+
 <h3 id="float">float</h3>
 
 In order to change the field type into a float number is as simple as one line of code:
