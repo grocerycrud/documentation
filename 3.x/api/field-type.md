@@ -16,10 +16,10 @@ The are many cases that the default field type of the database is not the requir
 Below you can see some examples of how you can use the <code>fieldType</code> function:
 
 <strong>Example 1:</strong>
-<pre><code class="language-php">$crud->fieldType('website_url', GroceryCrud::FIELD_TYPE_URL);</code></pre>
+<pre><code class="language-php">$crud->fieldType('website_url', GroceryCrud::FIELD_TYPE_NUMERIC);</code></pre>
 
 <strong>Example 2:</strong>
-<pre><code class="language-php">$crud->fieldType('website_url', 'url');</code></pre>
+<pre><code class="language-php">$crud->fieldType('website_url', 'numeric');</code></pre>
 
 <strong>Example 3:</strong> 
 <pre><code class="language-php">
@@ -57,51 +57,504 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
 'string'
 'text' 
 'timestamp'
-'url'
 </code></pre>
 
-<div class="grocery-crud">
+<div class="grocery-crud page-dynamic-content">
 
 <h2>Examples</h2>
 
-<h3 id="boolean">boolean</h3>
+
+<h3 id="boolean">
+  <a href="#boolean">boolean</a>
+</h3>
 
 <p>Input type for boolean (0 or 1) values.</p>
 
 <p>Code example:</p>
-
-<pre class="language-php"><code class="language-php">$crud-&gt;fieldType('field_name', 'boolean');</code></pre>
+<pre class="language-php"><code class="language-php">$crud->fieldType('active', 'boolean');</code></pre>
 
 <p>Preview:</p>
 
-<br/>
-<br/>
+<div class="mb-3 row dynamic-content-preview">
+  <label class="col-sm-3 col-form-label">Active</label>
+  <div class="col-sm-9 dynamic-content-input">
+    <InputBoolean
+      register={register}
+      setValue={setValue}
+      class={classes["form-checkbox"]}
+      name="boolean"
+      value="1"
+    />
+  </div>
+</div>
+<br />
 
-<h3 id="color">color</h3>
+
+
+
+<h3 id="color">
+  <a href="#color">color</a>
+</h3>
 
 <p>Input type for HEX color values.</p>
 
 <p>Code example:</p>
-
-<pre class="language-php"><code class="language-php">$crud-&gt;fieldType('field_name', 'color');</code></pre>
+<pre class="language-php"><code class="language-php">$crud->fieldType('background_color', 'color');</code></pre>
 
 <p>Preview:</p>
 
-<br/>
-<br/>
-<h3 id="enum">enum</h3>
+<div class="mb-3 row dynamic-content-preview">
+  <label class="col-sm-3 col-form-label">Background Color</label>
+  <div class="col-sm-9 dynamic-content-input">
+    <InputColor
+      control={control}
+      class="form-control"
+      name="color"
+      value="#ff0000"
+    />
+  </div>
+</div>
 
-<p>Input dropdown list with predefined options. The main difference with `dropdown` is that the values of the arrays are also the ones that will be used as keys into the dropdown list.</p>
+<br />
+
+
+
+
+<h3 id="date">
+  <a href="#date">date</a>
+</h3>
+<p>Input type for date values.</p>
+<p>Code example:</p>
+<pre class="language-php"><code class="language-php">$crud->fieldType('inserted_date', 'date');</code></pre>
+<p>Preview:</p>
+
+<div class="mb-3 row dynamic-content-preview">
+  <label class="col-sm-3 col-form-label">Inserted Date</label>
+  <div class="col-sm-9">
+    <InputDate
+      control={control}
+      class="form-control"
+      name="date"
+      value="2021-12-31"
+    />
+  </div>
+</div>
+
+<br />
+
+
+
+
+<h3 id="datetime">
+  <a href="#datetime">datetime</a>
+</h3>
+<p>Input type for date and time values at the same input.</p>
+<p>Code example:</p>
+<pre class="language-php"><code class="language-php">$crud->fieldType('field_name', 'datetime');</code></pre>
+<p>Preview:</p>
+
+<div class="mb-3 row dynamic-content-preview">
+  <label class="col-sm-3 col-form-label">Inserted Datetime</label>
+  <div class="col-sm-9">
+    <InputDateTime
+      control={control}
+      class="form-control"
+      name="datetime"
+      value="2021-12-31 23:59:59"
+    />
+  </div>
+</div>
+
+<br />
+
+
+
+
+<h3 id="dropdown">
+  <a href="#dropdown">dropdown</a>
+</h3>
+
+<p>Native dropdown list input type with predefined options.</p>
 
 <p>Code example:</p>
+<pre class="language-php"><code class="language-php">$crud->fieldType('field_name', 'dropdown', ['123' => 'Option 1', '456' => 'Option 2']);</code></pre>
+<p>Preview:</p>
 
-<pre class="language-php"><code class="language-php">$crud-&gt;fieldType('field_name', 'enum', ['Option 1', 'Option 2', 'Option 3', 'Option 4']);</code></pre>
+<div class="mb-3 row dynamic-content-preview">
+  <label class="col-sm-3 col-form-label">Contact Preferences</label>
+  <div class="col-sm-9">
+    <InputDropdown
+      control={control}
+      class="form-control form-select"
+      name="dropdown"
+      value="email"
+      permittedValues={MOCK_PERMITTED_VALUES_SHORT_LIST}
+    />
+  </div>
+</div>
+<br />
+
+
+
+
+<h3 id="dropdown_search">
+  <a href="#dropdown_search">dropdown_search</a>
+</h3>
+
+<p>
+  Dropdown list with text search input type with predefined options.
+</p>
+
+<p>Code example:</p>
+<pre class="language-php"><code class="language-php">$crud->fieldType('field_name', 'dropdown_search', ['123' => 'Option 1', '456' => 'Option 2']);</code></pre>
 
 <p>Preview:</p>
 
-<!-- Code will be replaced by the actual demo preview -->
-<select name="enum" class="form-control form-select"></select>
-<br/>
+<div class="mb-3 row dynamic-content-preview">
+  <label class="col-sm-3 col-form-label">Job position</label>
+  <div class="col-sm-9">
+    <InputDropdownSearch
+      control={control}
+      name="dropdown_search"
+      value="software_engineer"
+      permittedValues={MOCK_PERMITTED_VALUES}
+    />
+  </div>
+</div>
+<br />
+
+
+
+
+
+<h3 id="email">
+  <a href="#email">email</a>
+</h3>
+<p>
+  Input type for email. This is using the native <code>email</code> 
+  input type. The validation is triggered when you submit the form.
+</p>
+
+<p>Code example:</p>
+<pre class="language-php"><code class="language-php">$crud->fieldType('email_address', 'email');</code></pre>
+
+<p>Preview:</p>
+
+<div class="mb-3 row dynamic-content-preview">
+  <label class="col-sm-3 col-form-label">Email Address</label>
+  <div class="col-sm-9">
+    <InputEmail
+      control={control}
+      class="form-control"
+      name="email"
+      value="test@example.com"
+    />
+  </div>
+</div>
+
+
+
+
+<h3 id="enum">
+  <a href="#enum">enum</a>
+</h3>
+
+<p>
+  Input dropdown list with predefined options. The main difference with
+  `dropdown` is that the values of the arrays are also the ones that
+  will be used as keys into the dropdown list.
+</p>
+
+<p>Code example:</p>
+<pre class="language-php"><code class="language-php">$crud->fieldType('field_name', 'enum', ['Option 1', 'Option 2', 'Option 3', 'Option 4']);</code></pre>
+<p>Preview:</p>
+<div class="mb-3 row dynamic-content-preview">
+  <label class="col-sm-3 col-form-label">Contact Preferences</label>
+  <div class="col-sm-9">
+    <InputEnum
+      control={control}
+      class="form-control form-select"
+      value="Postal Mail"
+      name="enum"
+      permittedValues={MOCK_PERMITTED_VALUES_FOR_ENUM}
+    />
+  </div>
+</div>
+<br />
+
+
+
+
+<h3 id="enum_searchable">
+  <a href="#enum_searchable">enum_searchable</a>
+</h3>
+
+<p>
+  Input dropdown list with predefined options with a text search. The
+  main difference with `dropdown_search` is that the values of the
+  arrays are also the ones that will be used as keys into the dropdown
+  list.
+</p>
+
+<p>Code example:</p>
+<pre class="language-php"><code class="language-php">$crud->fieldType('field_name', 'enum_searchable', ['Option 1', 'Option 2', 'Option 3']);</code></pre>
+
+<p>Preview:</p>
+<div class="mb-3 row dynamic-content-preview">
+  <label class="col-sm-3 col-form-label">Contact Preferences</label>
+  <div class="col-sm-9">
+    <InputEnumSearchable
+      control={control}
+      value="Postal Mail"
+      name="enum_searchable"
+      permittedValues={MOCK_PERMITTED_VALUES_FOR_ENUM}
+    />
+  </div>
+</div>
+
+<br />
+
+
+
+
+<h3 id="float">
+  <a href="#float">float</a>
+</h3>
+
+<p>
+  Input type for numeric values. This is using the native 
+  <code>number</code> input type with <code>step=.01</code>
+</p>
+
+<p>Code example:</p>
+<pre class="language-php"><code class="language-php">$crud->fieldType('total_distance', 'float');</code></pre>
+
+<p>Preview:</p>
+<div class="mb-3 row dynamic-content-preview">
+  <label class="col-sm-3 col-form-label">Total Distance</label>
+  <div class="col-sm-9">
+    <InputFloat
+      control={control}
+      class="form-control"
+      name="total_distance"
+      value="100.52"
+    />
+  </div>
+</div>
+
+<br />
+
+
+
+
+
+<h3 id="hidden">
+  <a href="#hidden">hidden</a>
+</h3>
+
+<p>
+  Input type which is not visible in the form. Hidden fields are useful
+  when there is a need to pass a value to the form data without the user
+  being able to see or change it. For example a category id which is
+  passed by session. The main difference with the `invisible` field type
+  is that `hidden` field type is having an HTML input with type 
+  <code>hidden</code>
+  in the form so it will send a value from the add and edit form. You
+  can set the value of the hidden field by using the functions 
+  <code>callbackAddForm</code> or <code>callbackEditForm</code>.
+</p>
+
+<p>Code example:</p>
+<pre class="language-php"><code class="language-php">$crud->fieldType('category_id', 'hidden');</code></pre>
+
+<p>
+  Preview: (the only way to see the output of this field type is to
+  inspect the below element)
+</p>
+<div class="mb-3 row dynamic-content-preview">
+  <InputHidden
+    control={control}
+    class="form-control"
+    name="category_id"
+    value="45"
+  />
+</div>
+
+<br />
+
+
+
+
+<h3 id="int">
+  <a href="#int">int</a>
+</h3>
+
+<p>
+  Input type for numeric values. Same as `numeric` field type. This is
+  using the native <code>number</code> input type.
+</p>
+
+<p>Code example:</p>
+<pre class="language-php"><code class="language-php">$crud->fieldType('field_name', 'numeric');</code></pre>
+
+<p>Preview:</p>
+<div class="mb-3 row dynamic-content-preview">
+  <label class="col-sm-3 col-form-label">Total Distance</label>
+  <div class="col-sm-9">
+    <InputNumeric
+      control={control}
+      class="form-control"
+      name="total_distance"
+      value="100"
+    />
+  </div>
+</div>
+<br />
+
+
+
+
+<h3 id="invisible">
+  <a href="#invisible">invisible</a>
+</h3>
+
+<p>
+  Input type which is not visible at all in the add/edit form or in
+  datagrid. Invisible fields are useful when you would like to pass a
+  value to the insert or update with <code>callbackBeforeInsert</code> 
+  or
+  <code>callbackBeforeUpdate</code> or to add a value to an input that
+  was generated with JavaScript. The main reason to use it is in order
+  to not be filtered out by the validation rules.
+</p>
+
+<p>
+  Another useful case to use `invisible` field type is when you would
+  like to use the data with <code>callbackColumn</code>. Please note
+  that if the `invisible` field type is used on datagrid then although
+  the column will not be visible the JSON response will include the
+  field.
+</p>
+
+<p>Code example:</p>
+<pre class="language-php"><code class="language-php">$crud->fieldType('category_id', 'invisible');</code></pre>
+
+<p>
+  There is no example for this field type because it is literally not a
+  visible HTML element.
+</p>
+
+<br />
+
+
+
+
+<h3 id="multiselect_native">
+  <a href="#multiselect_native">multiselect_native</a>
+</h3>
+
+<p>Multiselect list input type using the native HTML multiselect.</p>
+
+<p>Code example:</p>
+<pre class="language-php"><code class="language-php">$crud->fieldType('name', 'multiselect_native', ['123' => 'Option 1', '456' => 'Option 2']);</code></pre>
+
+<p>Preview:</p>
+<div class="mb-3 row dynamic-content-preview">
+  <label class="col-sm-3 col-form-label">Contact Preferences</label>
+  <div class="col-sm-9">
+    <InputMultiselectNative
+      control={control}
+      class="form-control"
+      name="multiselect_native"
+      value={["email", "sms"]}
+      permittedValues={MOCK_PERMITTED_VALUES_SHORT_LIST}
+    />
+  </div>
+</div>
+<br />
+
+
+
+<h3 id="multiselect_searchable">
+  <a href="#multiselect_searchable">multiselect_searchable</a>
+</h3>
+
+<p>Multiselect list input type with text search.</p>
+
+<p>Code example:</p>
+<pre class="language-php"><code class="language-php">$crud->fieldType('name', 'multiselect_searchable', ['123' => 'Option 1', '456' => 'Option 2']);</code></pre>
+
+<p>Preview:</p>
+<div class="mb-3 row dynamic-content-preview">
+  <label class="col-sm-3 col-form-label">Contact Preferences</label>
+  <div class="col-sm-9">
+    <InputMultiselectSearchable
+      control={control}
+      name="multiselect_searchable"
+      value={["email", "sms", "post_mail"]}
+      permittedValues={MOCK_PERMITTED_VALUES_SHORT_LIST}
+    />
+  </div>
+</div>
+<br />
+
+
+
+
+<h3 id="native_date">
+  <a href="#native_date">native_date</a>
+</h3>
+
+<p>
+  Input type for date values, with a browser/device native date picker.
+</p>
+
+<p>Code example:</p>
+<pre class="language-php"><code class="language-php">$crud->fieldType('field_name', 'native_date');</code></pre>
+
+<p>Preview:</p>
+<div class="mb-3 row dynamic-content-preview">
+  <label class="col-sm-3 col-form-label">Date</label>
+  <div class="col-sm-9">
+    <InputDate
+      control={control}
+      class="form-control"
+      name="native_date"
+      value="2021-12-31"
+    />
+  </div>
+</div>
+<br />
+
+
+
+
+<h3 id="native_datetime">
+  <a href="#native_datetime">native_datetime</a>
+</h3>
+
+<p>
+  Input type for date and time values at the same input, with a
+  browser/device native date and time picker.
+</p>
+
+<p>Code example:</p>
+<pre class="language-php"><code class="language-php">$crud->fieldType('field_name', 'native_datetime');</code></pre>
+
+<p>Preview:</p>
+<div class="mb-3 row dynamic-content-preview">
+  <label class="col-sm-3 col-form-label">Date and Time</label>
+  <div class="col-sm-9">
+    <InputNativeDateTime
+      control={control}
+      class="form-control"
+      name="native_datetime"
+      value="2021-12-31 23:59:59"
+    />
+  </div>
+</div>
+<br />
+
 </div>
 
 <h3 id="float">float</h3>
