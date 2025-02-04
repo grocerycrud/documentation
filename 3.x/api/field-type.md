@@ -60,7 +60,6 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
 </code></pre>
 
 <div class="grocery-crud page-dynamic-content">
-
 <h2>Examples</h2>
 
 
@@ -90,8 +89,6 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
 <br />
 
 
-
-
 <h3 id="color">
   <a href="#color">color</a>
 </h3>
@@ -118,8 +115,6 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
 <br />
 
 
-
-
 <h3 id="date">
   <a href="#date">date</a>
 </h3>
@@ -141,8 +136,6 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
 </div>
 
 <br />
-
-
 
 
 <h3 id="datetime">
@@ -168,8 +161,6 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
 <br />
 
 
-
-
 <h3 id="dropdown">
   <a href="#dropdown">dropdown</a>
 </h3>
@@ -193,8 +184,6 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
   </div>
 </div>
 <br />
-
-
 
 
 <h3 id="dropdown_search">
@@ -225,13 +214,11 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
 
 
 
-
-
 <h3 id="email">
   <a href="#email">email</a>
 </h3>
 <p>
-  Input type for email. This is using the native <code>email</code> 
+  Input type for email. This is using the native <code>email</code>{" "}
   input type. The validation is triggered when you submit the form.
 </p>
 
@@ -251,8 +238,6 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
     />
   </div>
 </div>
-
-
 
 
 <h3 id="enum">
@@ -281,8 +266,6 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
   </div>
 </div>
 <br />
-
-
 
 
 <h3 id="enum_searchable">
@@ -315,14 +298,12 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
 <br />
 
 
-
-
 <h3 id="float">
   <a href="#float">float</a>
 </h3>
 
 <p>
-  Input type for numeric values. This is using the native 
+  Input type for numeric values. This is using the native{" "}
   <code>number</code> input type with <code>step=.01</code>
 </p>
 
@@ -346,8 +327,6 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
 
 
 
-
-
 <h3 id="hidden">
   <a href="#hidden">hidden</a>
 </h3>
@@ -357,10 +336,10 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
   when there is a need to pass a value to the form data without the user
   being able to see or change it. For example a category id which is
   passed by session. The main difference with the `invisible` field type
-  is that `hidden` field type is having an HTML input with type 
+  is that `hidden` field type is having an HTML input with type{" "}
   <code>hidden</code>
   in the form so it will send a value from the add and edit form. You
-  can set the value of the hidden field by using the functions 
+  can set the value of the hidden field by using the functions{" "}
   <code>callbackAddForm</code> or <code>callbackEditForm</code>.
 </p>
 
@@ -381,8 +360,6 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
 </div>
 
 <br />
-
-
 
 
 <h3 id="int">
@@ -412,8 +389,6 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
 <br />
 
 
-
-
 <h3 id="invisible">
   <a href="#invisible">invisible</a>
 </h3>
@@ -421,7 +396,7 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
 <p>
   Input type which is not visible at all in the add/edit form or in
   datagrid. Invisible fields are useful when you would like to pass a
-  value to the insert or update with <code>callbackBeforeInsert</code> 
+  value to the insert or update with <code>callbackBeforeInsert</code>{" "}
   or
   <code>callbackBeforeUpdate</code> or to add a value to an input that
   was generated with JavaScript. The main reason to use it is in order
@@ -447,8 +422,6 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
 <br />
 
 
-
-
 <h3 id="multiselect_native">
   <a href="#multiselect_native">multiselect_native</a>
 </h3>
@@ -466,14 +439,11 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
       control={control}
       class="form-control"
       name="multiselect_native"
-      value={["email", "sms"]}
       permittedValues={MOCK_PERMITTED_VALUES_SHORT_LIST}
     />
   </div>
 </div>
 <br />
-
-
 
 <h3 id="multiselect_searchable">
   <a href="#multiselect_searchable">multiselect_searchable</a>
@@ -491,7 +461,6 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
     <InputMultiselectSearchable
       control={control}
       name="multiselect_searchable"
-      value={["email", "sms", "post_mail"]}
       permittedValues={MOCK_PERMITTED_VALUES_SHORT_LIST}
     />
   </div>
@@ -499,7 +468,37 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
 <br />
 
 
+<h3 id="native_date">
+  <a href="#native_date">native_date</a>
+</h3>
 
+<p>
+  Input type for date values, with a browser/device native date picker.
+</p>
+
+<p>Code example:</p>
+<pre class="language-php"><code class="language-php">$crud->fieldType('field_name', 'native_date');</code></pre>
+
+<p>Preview:</p>
+<div class="mb-3 row dynamic-content-preview">
+  <label class="col-sm-3 col-form-label">Date</label>
+  <div class="col-sm-9">
+    <InputNativeDate
+      control={control}
+      class="form-control"
+      name="native_date"
+      value="2021-12-31"
+    />
+  </div>
+</div>
+<br />
+
+
+Input type for date values, with a browser/device native date picker.
+
+Example: `$crud->fieldType('field_name', 'native_date');`
+
+<Story name="NativeDate" of={InputTypeNativeDate} />*/}
 
 <h3 id="native_date">
   <a href="#native_date">native_date</a>
@@ -525,8 +524,6 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
   </div>
 </div>
 <br />
-
-
 
 
 <h3 id="native_datetime">
@@ -555,83 +552,175 @@ You can find all the types that exists from grocery crud by typing <code>Grocery
 </div>
 <br />
 
+
+<h3 id="native_time">
+  <a href="#native_time">native_time</a>
+</h3>
+
+<p>
+  Input type for time values with native browser/device time picker.
+</p>
+
+<p>Code example:</p>
+<pre class="language-php"><code class="language-php">$crud->fieldType('field_name', 'native_time');</code></pre>
+
+<p>Preview:</p>
+<div class="mb-3 row dynamic-content-preview">
+  <label class="col-sm-3 col-form-label">Time</label>
+  <div class="col-sm-9">
+    <InputNativeTime
+      control={control}
+      class="form-control"
+      name="native_time"
+      value="23:59:59"
+    />
+  </div>
+</div>
+<br />
+
+
+<h3 id="numeric">
+  <a href="#numeric">numeric</a>
+</h3>
+
+<p>
+  Input type for numeric values. This is using the native `number` input
+  type.
+</p>
+
+<p>Code example:</p>
+<pre class="language-php"><code class="language-php">$crud->fieldType('field_name', 'numeric');</code></pre>
+
+<p>Preview:</p>
+<div class="mb-3 row dynamic-content-preview">
+  <label class="col-sm-3 col-form-label">Total Distance</label>
+  <div class="col-sm-9">
+    <InputNumeric
+      control={control}
+      class="form-control"
+      name="total_distance"
+      value="100"
+    />
+  </div>
+</div>
+<br />
+
+
+<h3 id="password">
+  <a href="#password">password</a>
+</h3>
+
+<p>Input type for password values.</p>
+
+<p>Code example:</p>
+<pre class="language-php"><code class="language-php">$crud->fieldType('field_name', 'password');</code></pre>
+
+<p>Preview:</p>
+<div class="mb-3 row dynamic-content-preview">
+  <label class="col-sm-3 col-form-label">Password</label>
+  <div class="col-sm-9">
+    <InputPassword
+      control={control}
+      class="form-control"
+      name="password"
+      value="password"
+    />
+  </div>
+</div>
+<br />
+
+
+<h3 id="password_toggle">
+  <a href="#password_toggle">password_toggle</a>
+</h3>
+
+<p>
+  Input type for password values with a toggle to show/hide the
+  password.
+</p>
+
+<p>Code example:</p>
+<pre class="language-php"><code class="language-php">$crud->fieldType('field_name', 'password_toggle');</code></pre>
+
+<p>Preview:</p>
+<div class="mb-3 row dynamic-content-preview">
+  <label class="col-sm-3 col-form-label">Password</label>
+  <div class="col-sm-9">
+    <InputPasswordToggle
+      control={control}
+      class="form-control"
+      name="password_toggle"
+      value="password"
+    />
+  </div>
+</div>
+<br />
+
+
+<h3 id="string">
+  <a href="#string">string</a>
+</h3>
+
+<p>Input type for any text value.</p>
+
+<p>Code example:</p>
+<pre class="language-php"><code class="language-php">$crud->fieldType('field_name', 'string');</code></pre>
+
+<p>Preview:</p>
+<div class="mb-3 row dynamic-content-preview">
+  <label class="col-sm-3 col-form-label">Text</label>
+  <div class="col-sm-9">
+    <InputText
+      control={control}
+      class="form-control"
+      name="text"
+      value="Hello, World!"
+    />
+  </div>
+</div>
+<br />
+
+
+<h3 id="relational_native">
+  <a href="#relational_native">relational_native</a>
+</h3>
+
+<p>
+  There are cases that people do not need to have a searchable
+  setRelation. As by default however the selection is searchable since
+  this is the most common usage. For that reason, we did create a
+  different field type that we can easily switch the setRelation to a
+  native select input.
+</p>
+
+<p>Example:</p>
+<pre class="language-php"><code class="language-php">$crud->setRelation('office_city', 'offices', 'city');
+$crud->fieldType('office_city', 'relational_native');</code></pre>
+
+<p>
+  The above code will simply transform the select input to a native one.
+</p>
+
+<p>Preview:</p>
+
+<div class="mb-3 row dynamic-content-preview">
+  <label class="col-sm-3 col-form-label">Office City</label>
+  <div class="col-sm-9">
+    <InputRelationalNative
+      control={control}
+      class="form-control form-select"
+      name="relation_native"
+      value="london"
+      permittedValues={MOCK_PERMITTED_VALUES_SET_RELATION}
+    />
+  </div>
 </div>
 
-<h3 id="float">float</h3>
-
-In order to change the field type into a float number is as simple as one line of code:
-
-<pre><code class="language-php">$crud->fieldType('total_distance', 'float');</code></pre>
-
-
-<h3 id="dropdown_search">dropdown_search</h3>
-A dropdown list that it is also searchable.
-
-<pre><code class="language-php">// Example by referring to a database id (e.g.12,13, 14... e.t.c.)
-$crud->fieldType('contact_title', 'dropdown_search', [
-    '12' => 'Master',
-    '13' => 'Mr',
-    '14' => 'Miss',
-    '15' => 'Mrs',
-    '16' => 'Missus',
-    '17' => 'Ms',
-    '18' => 'Mx'
-]);</code></pre>
-
-<pre><code class="language-php">// Example by adding the actual value
-$crud->fieldType('contact_title', 'dropdown_search', [
-    'Master' => 'Master',
-    'Mr' => 'Mr',
-    'Miss' => 'Miss',
-    'Mrs' => 'Mrs',
-    'Missus' => 'Missus',
-    'Ms' => 'Ms',
-    'Mx' => 'Mx'
-]);</code></pre>
-
-
-<h3>multiselect_native</h3>
-A multiselect HTML field. More specifically the native &lt;select multiple="multiple"&gt; On insert and update, all the values are inserted to the same field separated by comma.
-
-<pre><code class="language-php">$crud->fieldType('gift_category', 'multiselect_native', [
-    'baby' => 'Baby',
-    'beauty' => 'Beauty',
-    'stripbooks' => 'Books',
-    'automotive' => 'Car & Motorbike',
-    'popular' => 'CDs & Vinyl',
-    'classical' => 'Classical Music',
-    'clothing' => 'Clothing',
-    'computers' => 'Computers & Accessories',
-    'outdoor' => 'Garden & Outdoors',
-    'gift-cards' => 'Gift Cards'
-]);</code></pre>
-
-<h3>multiselect_searchable</h3>
-A multiselect field with the ability to search. On insert and update, all the values are inserted to the same field separated by comma.
-
-<pre><code class="language-php">$crud->fieldType('gift_category', 'multiselect_searchable', [
-    'baby' => 'Baby',
-    'beauty' => 'Beauty',
-    'stripbooks' => 'Books',
-    'automotive' => 'Car & Motorbike',
-    'popular' => 'CDs & Vinyl',
-    'classical' => 'Classical Music',
-    'clothing' => 'Clothing',
-    'computers' => 'Computers & Accessories',
-    'outdoor' => 'Garden & Outdoors',
-    'gift-cards' => 'Gift Cards'
-]);</code></pre>
-
-<h3>relational_native</h3>
-There are cases that people doesn't like or doesn't need to have a searchable setRelation. As by default however the selection is searchable (most common usage is with a search) we did create a different field type that we can easy switch the setRelation to a <a href="https://www.w3schools.com/tags/tag_select.asp" target="_blank" rel="noopener noreferrer">native select input</a>. With the below example things will be more clear:
-
-<pre><code class="language-php">$crud->setRelation('officeCode', 'offices', 'city');
-$crud->fieldType('officeCode', 'relational_native');</code></pre>
-
-The above code will simply transform the select input to a native one.
+<br />
+</div>
 
 <h2 id="demo">Full Example</h2>
-You can find a full example below:
+You can find also full example below:
 
 <pre><code class="language-php">$crud->setTable('orders');
 $crud->setSubject('Order', 'Orders');
