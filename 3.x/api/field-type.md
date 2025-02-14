@@ -717,6 +717,41 @@ $crud->fieldType('office_city', 'relational_native');</code></pre>
 </div>
 
 <br />
+
+<h3 id="virtual">
+    <a href="#virtual">virtual</a>
+</h3>
+
+<p>
+    This field type is a special field type that is not stored in the
+    database. You can use this type when you would like to use callbacks
+    to manipulate the data. This is in order to not break the queries in
+    the database since any field that is defined need to be in the
+    database or mapped in normal cases. In case this field type is used
+    without a callback then it will appear as column or a form field as
+    a `string` field type with an empty value. Also it is very important
+    to understand that if the data from the form will not be filtered by
+    an insert or update callback then it will throw a database error
+    since the specific field is not in the database.
+</p>
+
+<p>Example:</p>
+<pre class="language-php"><code class="language-php">$crud->fieldType('field_name', 'virtual');</code></pre>
+
+<p>Preview:</p>
+
+<div class="mb-3 row dynamic-content-preview">
+    <label class="col-sm-3 col-form-label">Virtual Field</label>
+    <div class="col-sm-9">
+    <InputText
+        control={control}
+        class="form-control"
+        name="virtual"
+        value=""
+    />
+    </div>
+</div>
+<br />
 </div>
 
 <h2 id="demo">Full Example</h2>
