@@ -153,3 +153,50 @@ And in the JavaScript file:
 In this example, the function sets the value for the `department_name` field to 'Marketing' when the button 
 with the ID `setFieldValue` is clicked.
 
+## Use Redux Actions
+
+There are cases that you would like to trigger some Redux actions directly from your JavaScript code.
+In that case from version 3.1.15, or later you can use the `groceryCrudEmitReduxAction` function.
+
+Below you can see some examples of how to use the `groceryCrudEmitReduxAction` function. Please keep in mind 
+that for not all the actions are available to use. Currently, we have only the necessary actions, followed by the
+below examples.
+
+### Trigger Depended Fields
+
+With the usage of <a href="/docs/set-dependent-relation" target="_blank">setDependentRelation</a> you can set a field 
+to be depended on another field. If you would like to trigger the dependent field from your JavaScript code though, you
+will notice that the dependency is not triggered automatically.
+More specifically when we use `groceryCrudSetFieldValue` the dependency is not triggered. 
+In that case you can use the `groceryCrudEmitReduxAction` function as follows:
+
+<pre><code class="language-js">groceryCrudSetFieldValue('country', 'GR');
+groceryCrudEmitReduxAction('depended-fields/update-dependency', {
+  fieldName: 'country',
+  fieldValue: 'GR'
+});</code></pre>
+
+### Trigger Insert Form
+
+If you would like to trigger the add form from your JavaScript code, you can use the
+`groceryCrudEmitReduxAction` function as follows:
+
+<pre><code class="language-js">groceryCrudEmitReduxAction('form/add');</code></pre>
+
+### Trigger Edit Form
+
+For the edit form triggering, you can use the `groceryCrudEmitReduxAction` function as follows:
+
+<pre><code class="language-js">groceryCrudEmitReduxAction('form/edit', {
+    primaryKeyValue: '42'
+});
+</code></pre>
+
+### Trigger Clone Form
+
+With a similar way as the edit form, you can trigger the clone form as well.
+
+<pre><code class="language-js">groceryCrudEmitReduxAction('form/clone', {
+    primaryKeyValue: '42'
+});</code></pre>
+
