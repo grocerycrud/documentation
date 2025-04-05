@@ -17,7 +17,9 @@ it in your datagrid and forms.
 The syntax is easy, and you just need to add the tables and the relations. 
 All the primary keys are automatically added so you will not need to add them.
 
-<img src="/uploads/documentation/set-relation-1-to-1.png" alt="Set Relation 1 to 1 tables" />
+<div style="text-align: center">
+    <img src="/uploads/documentation/set-relation-1-to-1.png" alt="Set Database Relation 1 to 1" />
+</div>
 
 For example:
 
