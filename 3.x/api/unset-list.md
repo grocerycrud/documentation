@@ -14,7 +14,7 @@ The method <code>unsetList</code> is completely removing the list operation for 
 This is useful when you want to use standalone forms for your CRUD. The method will also remove the access to the list
 operation from the API, meaning that if the user tries to access the list operation, they will not be able to do so.
 
-The syntax is simple. You can find an example below:
+The syntax is straightforward. You can find an example below:
 <pre><code class="language-php">$crud->unsetList();</code></pre>
 
 This function is usually combines with the function `unsetBackToList` to remove the back to list button from the form
