@@ -31,5 +31,3 @@ $crud->unsetList();
 $output = $crud->render();</code></pre>
 
 The result is a form that operates independently without any connection to a datagrid view.
-
-`embed:demo_unset-back-to-list`
