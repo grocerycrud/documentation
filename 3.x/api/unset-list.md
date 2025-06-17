@@ -27,7 +27,12 @@ $crud->setSubject('Customer', 'Customers');
 
 $crud->unsetBackToList();
 $crud->unsetList();
+$crud->setDefaultState('EditForm', [
+    'primaryKeyValue' => '175'
+]);
 
 $output = $crud->render();</code></pre>
 
 You can see the results of the above example here. As you can see by your own, the operation List is completely removed:
+
+`embed:demo_unset-list`
