@@ -17,6 +17,7 @@ The fields that will have inline quick edit functionality with double-click on d
 You can see a full working example below:
 <pre><code class="language-php">$crud->setTable('customers');
 $crud->setSubject('Customer', 'Customers');
+$crud->fieldType('creditLimit', 'numeric');
 
 $crud->columns(['customerName','phone','addressLine1','creditLimit']);
 $crud->inlineEditFields(['customerName','phone','addressLine1','creditLimit']);
