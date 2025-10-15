@@ -326,8 +326,7 @@ class GroceryCrudEnterprise extends BaseConfig
 Now you are ready basically to use grocery CRUD Enterprise. You only need some small modifications. The easiest way to create two private methods to your controller that it will look like this:
 <pre><code class="language-php">&lt;?php namespace App\Controllers;
 
-// Add those two lines at the beginning of your controller
-include(APPPATH . 'Libraries/GroceryCrudEnterprise/autoload.php');
+// At the top of your controller file, add the following import
 use GroceryCrud\Core\GroceryCrud;
 
 ...
@@ -384,7 +383,6 @@ A full working example of a controller with name <code>Example</code> located at
 <pre><code class="language-php">&lt;?php
 namespace App\Controllers;
 
-include(APPPATH . 'Libraries/GroceryCrudEnterprise/autoload.php');
 use GroceryCrud\Core\GroceryCrud;
 
 class Example extends BaseController
