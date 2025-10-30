@@ -32,12 +32,11 @@ the data will be fetched in the datagrid without pagination.
                 FROM users 
                 JOIN roles ON users.role_id = roles.id 
                 WHERE users.active = 1";
-$countQuery = "SELECT COUNT(*) as total 
+$countQuery = "SELECT COUNT(*) as num 
                 FROM users 
                 JOIN roles ON users.role_id = roles.id 
                 WHERE users.active = 1";
-$crud->setCustomQuery($selectQuery, $countQuery);
-$output = $crud->render();</code></pre>
+$crud->setCustomQuery($selectQuery, $countQuery);</code></pre>
 
 or without pagination:
 
@@ -46,8 +45,7 @@ or without pagination:
                 JOIN roles ON users.role_id = roles.id 
                 WHERE users.active = 1 AND roles.role_name = 'Manager'";
 $crud->setCustomQuery($selectQuery);
-$crud->unsetPagination();
-$output = $crud->render();</code></pre>
+$crud->unsetPagination();</code></pre>
 
 <h2>Full Example</h2>
 
@@ -66,7 +64,7 @@ You can find a full working example below:
     GROUP BY f.film_id, f.title, f.release_year
 ";
 $countQuery = "
-    SELECT COUNT(DISTINCT f.film_id) AS total
+    SELECT COUNT(DISTINCT f.film_id) AS num
     FROM film f
     JOIN film_actor fa ON f.film_id = fa.film_id
     JOIN actor a ON fa.actor_id = a.actor_id
@@ -74,13 +72,13 @@ $countQuery = "
 ";
 $crud->setCustomQuery($selectQuery, $countQuery);
 
-$crud->setSubject('Film', 'Films');
+$crud->setSubject('Film', 'PG Rating Films');
 $crud->columns(['title', 'release_year', 'actors']);
 $crud->setTable('film'); // Table name is still required for CRUD operations
 
 // Some additional configurations which will make more sense for this example
 $crud->unsetAdd();
-$crud->unsetEditFields(['rating']);
+$crud->readOnlyEditFields(['rating']);
 // Using where to filter CRUD operations so users with no access to not be able to
 // edit/delete films that are not 'PG'
 $crud->where(['rating' => 'PG']);
@@ -94,8 +92,18 @@ $crud->setRelationNtoN(
     'categories', 'film_category',
     'category', 'film_id',
     'category_id', 'name',
-     null, null, 'priority'
+    null, null, 'priority'
 );
+
+// Last changes, since we are using a custom query, we need to disable filtering and ordering
+// and do some changes on the default field types for columns:
+$crud->fieldTypeColumn('title', 'varchar');
+$crud->fieldTypeColumn('release_year', 'varchar');
+$crud->fieldTypeColumn('actors', 'varchar');
+$crud->unsetFilters();
+$crud->unsetSearchColumns(['title', 'release_year', 'actors']);
+$crud->unsetSortingColumns(['title', 'release_year', 'actors']);
+$crud->unsetDeleteMultiple();
 
 $output = $crud->render();</code></pre>
 
