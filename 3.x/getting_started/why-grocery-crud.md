@@ -31,6 +31,6 @@ Some main features of grocery CRUD are:
 - want to do something more complex? In grocery CRUD you can add your own model by extending the basic model
 - works fine with all the modern browsers, such as: Mozilla Firefox, Google Chrome,Opera, Safari, Internet Explorer 8 or later and works fine for all the modern OS systems such as Windows, Linux, MACOS
 - mobile compatible, works fine with the default browsers of Android , Windows and Apple mobiles
-- multilingual functionality. Translated to 34 languages so far. More specifically: Afrikaans, Arabic, Bengali, Bulgarian, Catalan, Chinese, Czech, Danish, Dutch, English, French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean, Lithuanian, Mongolian, Norwegian, Persian, Polish, Portuguese, Brazilian Portuguese, Romanian, Russian, Slovak, Spanish, Thai, Turkish, Ukrainian, Vietnamese.
+- multilingual functionality. Translated to 34 languages so far. More specifically: Afrikaans, Arabic, Bengali, Bulgarian, Catalan, Chinese, Czech, Danish, Dutch, English, French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean, Lithuanian, Latvian, Mongolian, Norwegian, Persian, Polish, Portuguese, Brazilian Portuguese, Romanian, Russian, Slovak, Spanish, Thai, Turkish, Ukrainian, Vietnamese.
 
 Still reading? Stop treating this place like a hotel! Go to the [installation guide](/v3.x/docs/grocery-crud-enterprise-installation) and add grocery CRUD to your project ... it will take just 5 minutes :)

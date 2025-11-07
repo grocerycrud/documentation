@@ -254,9 +254,9 @@ Go to your project's <code>config</code> folder and create a file with name <cod
 // config/grocerycrud.php
 
 return [
-    // So far 34 languages including: Afrikaans, Arabic, Bengali, Bulgarian, Catalan, Chinese, Czech, Danish,
+    // So far 35 languages including: Afrikaans, Arabic, Bengali, Bulgarian, Catalan, Chinese, Czech, Danish,
     // Dutch, English, French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
-    // Lithuanian, Mongolian, Norwegian, Persian, Polish, Portuguese (pt-PT.Portuguese), Brazilian Portuguese (pt-BR.Portuguese), Romanian,
+    // Lithuanian, Latvian, Mongolian, Norwegian, Persian, Polish, Portuguese (pt-PT.Portuguese), Brazilian Portuguese (pt-BR.Portuguese), Romanian,
     // Russian, Slovak, Spanish, Thai, Turkish, Ukrainian, Vietnamese
     'default_language'  => 'English',
 
