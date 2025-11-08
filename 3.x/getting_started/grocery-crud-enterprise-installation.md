@@ -38,7 +38,7 @@ Since we have a private composer url for grocery CRUD Enterprise, you can instal
 
 - You have purchased <a href="https://www.grocerycrud.com/enterprise" target="_blank">Grocery CRUD Enterprise</a> and
   you have access to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a>.
-- PHP 7 or later.
+- PHP 8 or later.
 - You already have a `composer.json` file into your project.
 - You've already installed composer to your project and the vendor files by using the command `composer install`.
 
@@ -374,7 +374,7 @@ or upgrade Grocery CRUD Enterprise.
 
 - You have purchased <a href="https://www.grocerycrud.com/enterprise" target="_blank">Grocery CRUD Enterprise</a> and
   you have access to <a href="https://www.grocerycrud.com/users/" rel="nofollow" target="_blank">Client's page</a>.
-- PHP 7 or later.
+- PHP 8 or later.
 - You have enough patience to copy-paste some files and folders 😃.
 
 <h3>Step 1. Download</h3>
