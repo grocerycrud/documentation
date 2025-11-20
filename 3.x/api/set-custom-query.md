@@ -16,7 +16,7 @@ for the listing/datagrid operation. This is useful when you need to have complex
 subqueries, or specific filtering.
 
 > ⚠️ There are some limitations when using `setCustomQuery`:
->  - Currently, we are not supporting filtering and sorting. We may add support for these features in future releases.
+>  - Currently, we are not supporting filtering. We may add support for these features in future releases.
 >  - Pagination is only supported when you provide the second parameter `$countQuery`.
 >  - You always need to return the primary key of the table in the select query for proper functioning of the CRUD operations.
 >  - The filtering on the custom query will not filter the results of the CRUD operations (edit, delete, etc). 
