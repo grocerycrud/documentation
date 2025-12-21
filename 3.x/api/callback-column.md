@@ -48,6 +48,26 @@ $crud-&gt;callbackColumn('customerName', function ($value, $row) {
 
 $output = $crud-&gt;render();</code></pre>
 
+## Virtual field
+
+The <code>callbackColumn</code> function does not work with virtual columns directly. 
+If you need to use <code>callbackColumn</code> with a virtual column,
+you will need to map it with a database column 
+using <code>mapColumn</code>. For example:
+
+<pre><code class="language-php">$crud-&gt;setTable('employees');
+$crud-&gt;setSubject('Employee', 'Employees');
+$crud-&gt;columns(['firstName','lastName','email','fullName']);
+
+// Map the virtual column 'fullName' to any real column
+$crud-&gt;mapColumn('fullName', 'employeeNumber');
+
+$crud-&gt;callbackColumn('fullName', function ($value, $row) {
+    return $row-&gt;firstName . ' ' . $row-&gt;lastName;
+});
+
+$output = $crud-&gt;render();</code></pre>
+
 ## Example
 A full example of a standard implementation is also available below:
 <pre><code class="language-php">$crud-&gt;setTable('customers');
