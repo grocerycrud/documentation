@@ -69,6 +69,8 @@ All the events that we have so far are listed below ordered alphabetically for t
     "gcrud.configuration.init",
     "gcrud.configuration.init-fetch",
     "gcrud.configuration.main-configuration",
+    "gcrud.datagrid-quick-edit.cancel-inline-edit",
+    "gcrud.datagrid-quick-edit.inline-edit",
     "gcrud.datagrid.clear-cache",
     "gcrud.datagrid.clear-filtering",
     "gcrud.datagrid.data-fetch",
@@ -88,6 +90,7 @@ All the events that we have so far are listed below ordered alphabetically for t
     "gcrud.form.read",
     "gcrud.form.read-load",
     "gcrud.form.update",
+    "gcrud.form.update-inline-edit",
     "gcrud.form.update-success",
     "gcrud.search-async.search",
 ]
