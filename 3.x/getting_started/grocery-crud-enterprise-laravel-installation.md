@@ -355,6 +355,11 @@ return [
     // Please consider that when JavaScript files are included directly in the output, you lose the ability
     // to control when and where these files are loaded.
     'display_js_files_in_output' => false,
+
+    // Show toast notifications for successful operations (e.g. insert, update, delete).
+    // When set to true, a toast message will appear in the top-right corner of the screen
+    // confirming the success of the operation. Set to `true` to enable those notifications.
+    'show_toast_notifications' => false,
 ];</code></pre>
 
 <strong>Important Notice:</strong> Make sure that you have configured the correct website path at the file <code>.env</code>. More specifically change the below code:
